@@ -1,0 +1,304 @@
+{
+  "_fv": 89,
+  "_type": "livingentity",
+  "definition": {
+    "mobName": "Civilian",
+    "mobLabel": "",
+    "mobModelName": "Modelcivilian1",
+    "mobModelTexture": "civi1.png",
+    "transparentModelCondition": {
+      "fixedValue": false
+    },
+    "isShakingCondition": {
+      "fixedValue": false
+    },
+    "solidBoundingBox": {
+      "fixedValue": false
+    },
+    "visualScale": {
+      "fixedValue": 1.0
+    },
+    "boundingBoxScale": {
+      "fixedValue": 1.0
+    },
+    "modelLayers": [],
+    "animations": [
+      {
+        "animation": "CUSTOM:civilian1Animation.idle",
+        "speed": 1.0,
+        "walking": false,
+        "amplitude": 1.0
+      },
+      {
+        "animation": "CUSTOM:civilian1Animation.walking",
+        "speed": 1.0,
+        "walking": true,
+        "amplitude": 1.0
+      },
+      {
+        "animation": "CUSTOM:civilian1Animation.panic",
+        "speed": 2.1,
+        "condition": "Civilian1PlaybackCondition",
+        "walking": false,
+        "amplitude": 1.0
+      },
+      {
+        "animation": "CUSTOM:civilian1Animation.farming",
+        "speed": 1.0,
+        "condition": "Civilian1DarmingPlaybackCondition",
+        "walking": false,
+        "amplitude": 1.0
+      },
+      {
+        "animation": "CUSTOM:civilian1Animation.sleep",
+        "speed": 1.0,
+        "condition": "Civilian1sleepPlaybackCondition",
+        "walking": false,
+        "amplitude": 1.0
+      },
+      {
+        "animation": "CUSTOM:civilian1Animation.wake",
+        "speed": 1.0,
+        "condition": "CiviliansWakeupPlaybackCondition",
+        "walking": false,
+        "amplitude": 1.0
+      },
+      {
+        "animation": "CUSTOM:civilian1Animation.buy",
+        "speed": 1.0,
+        "condition": "Civilian1BuyPlaybackCondition",
+        "walking": false,
+        "amplitude": 1.0
+      },
+      {
+        "animation": "CUSTOM:civilian1Animation.eat",
+        "speed": 1.0,
+        "condition": "Civilian1EatPlaybackCondition",
+        "walking": false,
+        "amplitude": 1.0
+      },
+      {
+        "animation": "CUSTOM:civilian1Animation.die",
+        "speed": 1.0,
+        "condition": "Civilian1IsondeathPlaybackCondition",
+        "walking": false,
+        "amplitude": 1.0
+      },
+      {
+        "animation": "CUSTOM:civilian1Animation.carrying",
+        "speed": 1.0,
+        "condition": "Civilian1CarryPlaybackCondition",
+        "walking": false,
+        "amplitude": 1.0
+      }
+    ],
+    "modelWidth": 0.6,
+    "modelHeight": 1.8,
+    "modelShadowSize": 0.5,
+    "mountedYOffset": 0.0,
+    "hasSpawnEgg": true,
+    "spawnEggBaseColor": {
+      "value": -1,
+      "falpha": 0.0
+    },
+    "spawnEggDotColor": {
+      "value": -16711732,
+      "falpha": 0.0
+    },
+    "spawnEggTexture": "",
+    "creativeTabs": [
+      "MISC"
+    ],
+    "isBoss": false,
+    "bossBarColor": "PINK",
+    "bossBarType": "PROGRESS",
+    "equipmentMainHand": "",
+    "equipmentOffHand": "",
+    "equipmentHelmet": "",
+    "equipmentBody": "",
+    "equipmentLeggings": "",
+    "equipmentBoots": "",
+    "mobBehaviourType": "Mob",
+    "mobCreatureType": "UNDEFINED",
+    "attackStrength": 3,
+    "attackKnockback": 0.0,
+    "knockbackResistance": 0.0,
+    "movementSpeed": 0.3,
+    "stepHeight": 0.6,
+    "armorBaseValue": 0.0,
+    "trackingRange": 64,
+    "followRange": 16,
+    "health": 20,
+    "xpAmount": 0,
+    "waterMob": false,
+    "breatheUnderwater": {
+      "fixedValue": false
+    },
+    "pushedByFluids": {
+      "fixedValue": true
+    },
+    "flyingMob": false,
+    "inventorySize": 9,
+    "inventoryStackSize": 99,
+    "disableCollisions": false,
+    "ridable": false,
+    "canControlForward": false,
+    "canControlStrafe": false,
+    "immuneToFire": false,
+    "immuneToArrows": false,
+    "immuneToFallDamage": false,
+    "immuneToCactus": false,
+    "immuneToDrowning": false,
+    "immuneToLightning": false,
+    "immuneToPotions": false,
+    "immuneToPlayer": false,
+    "immuneToExplosion": false,
+    "immuneToTrident": false,
+    "immuneToAnvil": false,
+    "immuneToWither": false,
+    "immuneToDragonBreath": false,
+    "mobDrop": "",
+    "livingSound": "",
+    "hurtSound": "entity.generic.hurt",
+    "deathSound": "entity.generic.death",
+    "stepSound": "",
+    "raidCelebrationSound": "",
+    "entityDataEntries": [
+      {
+        "name": "wasDoing",
+        "type": "logic",
+        "value": false
+      },
+      {
+        "name": "stillDoing",
+        "type": "logic",
+        "value": false
+      },
+      {
+        "min": -2147483648,
+        "max": 2147483647,
+        "name": "Eat",
+        "type": "integer",
+        "value": 0
+      },
+      {
+        "min": -2147483648,
+        "max": 2147483647,
+        "name": "giveThanks",
+        "type": "integer",
+        "value": 0
+      },
+      {
+        "min": -2147483648,
+        "max": 2147483647,
+        "name": "moneyGive",
+        "type": "integer",
+        "value": 0
+      },
+      {
+        "min": -2147483648,
+        "max": 2147483647,
+        "name": "farming",
+        "type": "integer",
+        "value": 0
+      },
+      {
+        "min": -2147483648,
+        "max": 2147483647,
+        "name": "buy",
+        "type": "integer",
+        "value": 0
+      },
+      {
+        "min": -2147483648,
+        "max": 2147483647,
+        "name": "hungry",
+        "type": "integer",
+        "value": 0
+      },
+      {
+        "min": -2147483648,
+        "max": 2147483647,
+        "name": "TimeToDie",
+        "type": "integer",
+        "value": 0
+      },
+      {
+        "min": -2147483648,
+        "max": 2147483647,
+        "name": "GraveCarry",
+        "type": "integer",
+        "value": 0
+      },
+      {
+        "min": -2147483648,
+        "max": 2147483647,
+        "name": "gettingrobbed",
+        "type": "integer",
+        "value": 0
+      },
+      {
+        "name": "notRobbingAgain",
+        "type": "logic",
+        "value": false
+      },
+      {
+        "min": -2147483648,
+        "max": 2147483647,
+        "name": "Money",
+        "type": "integer",
+        "value": 0
+      },
+      {
+        "min": -2147483648,
+        "max": 2147483647,
+        "name": "Vegetables",
+        "type": "integer",
+        "value": 0
+      },
+      {
+        "min": -2147483648,
+        "max": 2147483647,
+        "name": "carry",
+        "type": "integer",
+        "value": 0
+      }
+    ],
+    "whenMobDies": "Civilian1EntityDiesReached",
+    "onMobTickUpdate": "Civilian1OnEntityTickUpdate",
+    "onInitialSpawn": "Civilian1OnInitialEntitySpawn",
+    "hasAI": true,
+    "aiBase": "(none)",
+    "aixml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"aitasks_container\" deletable=\"false\" x=\"40\" y=\"40\"><next><block type=\"look_around\"><field name=\"condition\">null,null</field><next><block type=\"wander\"><field name=\"speed\">1</field><field name=\"condition\">null,null</field><next><block type=\"swim_in_water\"><field name=\"condition\">null,null</field><next><block type=\"panic_when_attacked\"><field name=\"speed\">2</field><field name=\"condition\">null,null</field><next><block type=\"doors_open\"><field name=\"condition\">null,null</field><next><block type=\"doors_close\"><field name=\"condition\">null,null</field><next><block type=\"move_indoors\"><field name=\"condition\">null,null</field><next><block type=\"avoid_entity\"><field name=\"entity\">CUSTOM:DarkKnight</field><field name=\"radius\">6</field><field name=\"farspeed\">1</field><field name=\"nearspeed\">1.2</field><field name=\"condition\">null,null</field><next><block type=\"avoid_entity\"><field name=\"entity\">CUSTOM:EnemyArcher</field><field name=\"radius\">6</field><field name=\"farspeed\">1</field><field name=\"nearspeed\">1.2</field><field name=\"condition\">null,null</field><next><block type=\"avoid_entity\"><field name=\"entity\">CUSTOM:DarkSoldier</field><field name=\"radius\">6</field><field name=\"farspeed\">1</field><field name=\"nearspeed\">1.2</field><field name=\"condition\">null,null</field></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></xml>",
+    "breedable": false,
+    "tameable": false,
+    "breedTriggerItems": [],
+    "ranged": false,
+    "rangedAttackItem": "",
+    "rangedItemType": "Default item",
+    "rangedAttackInterval": 20,
+    "rangedAttackRadius": 10.0,
+    "spawnThisMob": false,
+    "doesDespawnWhenIdle": false,
+    "spawningProbability": 20,
+    "mobSpawningType": "monster",
+    "minNumberOfMobsPerGroup": 4,
+    "maxNumberOfMobsPerGroup": 4,
+    "restrictionBiomes": [],
+    "spawnInDungeons": false,
+    "raidSpawnsCount": [
+      4,
+      3,
+      3,
+      4,
+      4,
+      4,
+      2
+    ],
+    "sensitiveToVibration": false,
+    "vibrationalEvents": [],
+    "vibrationSensitivityRadius": {
+      "fixedValue": 7.0
+    }
+  }
+}

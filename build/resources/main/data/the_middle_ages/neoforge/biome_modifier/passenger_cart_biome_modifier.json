@@ -1,0 +1,12 @@
+{
+  "type": "neoforge:add_spawns",
+  "biomes": {
+    "type": "neoforge:any"
+  },
+  "spawners": {
+    "type": "the_middle_ages:passenger_cart",
+    "weight": 20,
+    "minCount": 4,
+    "maxCount": 4
+  }
+}

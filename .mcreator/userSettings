@@ -1,0 +1,30 @@
+{
+  "workspacePanelIconSize": "TILES",
+  "workspacePanelSortType": "CREATED",
+  "workspacePanelSortAscending": true,
+  "projectBrowserState": {
+    "expandedPaths": [
+      "[, The Middle Ages]",
+      "[, The Middle Ages, Source (Gradle)]",
+      "[, The Middle Ages, Source (Gradle), C:\\Users\\Greenboy\\MCreatorWorkspaces\\the_middle_ages\\src\\main\\java\\net]",
+      "[, The Middle Ages, Source (Gradle), C:\\Users\\Greenboy\\MCreatorWorkspaces\\the_middle_ages\\src\\main\\java\\net, C:\\Users\\Greenboy\\MCreatorWorkspaces\\the_middle_ages\\src\\main\\java\\net\\mcreator]",
+      "[, The Middle Ages, Source (Gradle), C:\\Users\\Greenboy\\MCreatorWorkspaces\\the_middle_ages\\src\\main\\java\\net, C:\\Users\\Greenboy\\MCreatorWorkspaces\\the_middle_ages\\src\\main\\java\\net\\mcreator, C:\\Users\\Greenboy\\MCreatorWorkspaces\\the_middle_ages\\src\\main\\java\\net\\mcreator\\themiddleages]"
+    ]
+  },
+  "leftDockState": {
+    "dockSizes": {
+      "project_browser": 280,
+      "local_history": 280
+    }
+  },
+  "rightDockState": {
+    "dockSizes": {}
+  },
+  "bottomDockState": {
+    "dockSizes": {
+      "console": 686,
+      "code_viewer": 300,
+      "debugger": 300
+    }
+  }
+}
