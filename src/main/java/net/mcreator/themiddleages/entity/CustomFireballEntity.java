@@ -7,21 +7,22 @@ import net.neoforged.bus.api.SubscribeEvent;
 import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.phys.EntityHitResult;
 import net.minecraft.world.phys.BlockHitResult;
+import net.minecraft.world.level.storage.ValueOutput;
+import net.minecraft.world.level.storage.ValueInput;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.entity.projectile.Fireball;
+import net.minecraft.world.entity.projectile.hurtingprojectile.Fireball;
 import net.minecraft.world.entity.MobCategory;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.util.RandomSource;
 import net.minecraft.server.level.ServerLevel;
-import net.minecraft.resources.ResourceLocation;
 import net.minecraft.resources.ResourceKey;
+import net.minecraft.resources.Identifier;
 import net.minecraft.network.syncher.SynchedEntityData;
 import net.minecraft.network.syncher.EntityDataSerializers;
 import net.minecraft.network.syncher.EntityDataAccessor;
-import net.minecraft.nbt.CompoundTag;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.core.particles.ParticleOptions;
@@ -29,14 +30,14 @@ import net.minecraft.core.BlockPos;
 
 @EventBusSubscriber
 public class CustomFireballEntity extends Fireball {
-	public static final ResourceLocation ENTITY_ID = ResourceLocation.fromNamespaceAndPath("the_middle_ages", "custom_fireball");
+	public static final Identifier ENTITY_ID = Identifier.fromNamespaceAndPath("the_middle_ages", "custom_fireball");
 	public static final ResourceKey<EntityType<?>> ENTITY_KEY = ResourceKey.create(Registries.ENTITY_TYPE, ENTITY_ID);
 	public static EntityType<CustomFireballEntity> TYPE;
 
 	@SubscribeEvent
 	public static void registerEntity(RegisterEvent event) {
 		event.register(Registries.ENTITY_TYPE, ENTITY_ID, () -> {
-			TYPE = EntityType.Builder.<CustomFireballEntity>of(CustomFireballEntity::new, MobCategory.MISC).sized(1.0F, 1.0F).clientTrackingRange(4).updateInterval(10).build(ENTITY_ID.toString());
+			TYPE = EntityType.Builder.<CustomFireballEntity>of(CustomFireballEntity::new, MobCategory.MISC).sized(1.0F, 1.0F).clientTrackingRange(4).updateInterval(10).build(ENTITY_KEY);
 			return TYPE;
 		});
 	}
@@ -163,32 +164,22 @@ public class CustomFireballEntity extends Fireball {
 	}
 
 	@Override
-	public void addAdditionalSaveData(CompoundTag tag) {
-		super.addAdditionalSaveData(tag);
-		tag.putFloat("CustomSize", this.getCustomSize());
-		tag.putFloat("ExplosionRadius", this.explosionRadius);
-		tag.putInt("FireRadius", this.fireRadius);
-		tag.putBoolean("EnableFire", this.isVisualFireEnabled());
-		tag.putBoolean("EnableGravity", this.enableGravity);
+	protected void addAdditionalSaveData(ValueOutput output) {
+		super.addAdditionalSaveData(output);
+		output.putFloat("CustomSize", this.getCustomSize());
+		output.putFloat("ExplosionRadius", this.explosionRadius);
+		output.putInt("FireRadius", this.fireRadius);
+		output.putBoolean("EnableFire", this.isVisualFireEnabled());
+		output.putBoolean("EnableGravity", this.enableGravity);
 	}
 
 	@Override
-	public void readAdditionalSaveData(CompoundTag tag) {
-		super.readAdditionalSaveData(tag);
-		if (tag.contains("CustomSize")) {
-			this.setCustomSize(tag.getFloat("CustomSize"));
-		}
-		if (tag.contains("ExplosionRadius")) {
-			this.explosionRadius = tag.getFloat("ExplosionRadius");
-		}
-		if (tag.contains("FireRadius")) {
-			this.fireRadius = tag.getInt("FireRadius");
-		}
-		if (tag.contains("EnableFire")) {
-			this.getEntityData().set(DATA_ENABLE_FIRE, tag.getBoolean("EnableFire"));
-		}
-		if (tag.contains("EnableGravity")) {
-			this.enableGravity = tag.getBoolean("EnableGravity");
-		}
+	protected void readAdditionalSaveData(ValueInput input) {
+		super.readAdditionalSaveData(input);
+		this.setCustomSize(input.getFloatOr("CustomSize", 1.0F));
+		this.explosionRadius = input.getFloatOr("ExplosionRadius", 3.0F);
+		this.fireRadius = input.getIntOr("FireRadius", 0);
+		this.getEntityData().set(DATA_ENABLE_FIRE, input.getBooleanOr("EnableFire", true));
+		this.enableGravity = input.getBooleanOr("EnableGravity", false);
 	}
 }

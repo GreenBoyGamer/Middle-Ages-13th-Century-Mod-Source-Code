@@ -1,0 +1,28 @@
+{
+  "_fv": 89,
+  "_type": "structure",
+  "definition": {
+    "structure": "middle_ages_gate",
+    "projection": "rigid",
+    "ignoredBlocks": [
+      "Blocks.STRUCTURE_BLOCK"
+    ],
+    "spacing": 256,
+    "separation": 128,
+    "restrictionBiomes": [
+      "jungle",
+      "bamboo_jungle",
+      "jungle_edge"
+    ],
+    "terrainAdaptation": "beard_thin",
+    "generationStep": "SURFACE_STRUCTURES",
+    "surfaceDetectionType": "WORLD_SURFACE_WG",
+    "useStartHeight": false,
+    "startHeightProviderType": "UNIFORM",
+    "startHeightMin": 0,
+    "startHeightMax": 128,
+    "size": 1,
+    "maxDistanceFromCenter": 64,
+    "jigsawPools": []
+  }
+}

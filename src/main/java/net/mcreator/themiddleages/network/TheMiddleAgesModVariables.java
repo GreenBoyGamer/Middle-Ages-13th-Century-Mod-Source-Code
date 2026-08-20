@@ -4,22 +4,22 @@ import net.neoforged.neoforge.registries.NeoForgeRegistries;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import net.neoforged.neoforge.network.handling.IPayloadContext;
 import net.neoforged.neoforge.network.PacketDistributor;
-import net.neoforged.neoforge.event.tick.PlayerTickEvent;
 import net.neoforged.neoforge.event.tick.LevelTickEvent;
 import net.neoforged.neoforge.event.entity.player.PlayerEvent;
-import net.neoforged.neoforge.common.util.INBTSerializable;
 import net.neoforged.neoforge.attachment.AttachmentType;
 import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.bus.api.SubscribeEvent;
 
+import net.minecraft.world.level.saveddata.SavedDataType;
 import net.minecraft.world.level.saveddata.SavedData;
 import net.minecraft.world.level.ServerLevelAccessor;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.entity.Entity;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.server.level.ServerLevel;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.network.protocol.common.custom.CustomPacketPayload;
 import net.minecraft.network.protocol.PacketFlow;
 import net.minecraft.network.codec.StreamCodec;
@@ -30,58 +30,14 @@ import net.minecraft.core.HolderLookup;
 
 import net.mcreator.themiddleages.TheMiddleAgesMod;
 
-import java.util.function.Supplier;
-
 @EventBusSubscriber
 public class TheMiddleAgesModVariables {
 	public static final DeferredRegister<AttachmentType<?>> ATTACHMENT_TYPES = DeferredRegister.create(NeoForgeRegistries.Keys.ATTACHMENT_TYPES, TheMiddleAgesMod.MODID);
-	public static final Supplier<AttachmentType<PlayerVariables>> PLAYER_VARIABLES = ATTACHMENT_TYPES.register("player_variables", () -> AttachmentType.serializable(PlayerVariables::new).build());
+	public static Entity entity_gotAttacked = null;
 
 	@SubscribeEvent
 	public static void init(FMLCommonSetupEvent event) {
 		TheMiddleAgesMod.addNetworkMessage(SavedDataSyncMessage.TYPE, SavedDataSyncMessage.STREAM_CODEC, SavedDataSyncMessage::handleData);
-		TheMiddleAgesMod.addNetworkMessage(PlayerVariablesSyncMessage.TYPE, PlayerVariablesSyncMessage.STREAM_CODEC, PlayerVariablesSyncMessage::handleData);
-	}
-
-	@SubscribeEvent
-	public static void onPlayerLoggedInSyncPlayerVariables(PlayerEvent.PlayerLoggedInEvent event) {
-		if (event.getEntity() instanceof ServerPlayer player)
-			PacketDistributor.sendToPlayer(player, new PlayerVariablesSyncMessage(player.getData(PLAYER_VARIABLES)));
-	}
-
-	@SubscribeEvent
-	public static void onPlayerRespawnedSyncPlayerVariables(PlayerEvent.PlayerRespawnEvent event) {
-		if (event.getEntity() instanceof ServerPlayer player)
-			PacketDistributor.sendToPlayer(player, new PlayerVariablesSyncMessage(player.getData(PLAYER_VARIABLES)));
-	}
-
-	@SubscribeEvent
-	public static void onPlayerChangedDimensionSyncPlayerVariables(PlayerEvent.PlayerChangedDimensionEvent event) {
-		if (event.getEntity() instanceof ServerPlayer player)
-			PacketDistributor.sendToPlayer(player, new PlayerVariablesSyncMessage(player.getData(PLAYER_VARIABLES)));
-	}
-
-	@SubscribeEvent
-	public static void onPlayerTickUpdateSyncPlayerVariables(PlayerTickEvent.Post event) {
-		if (event.getEntity() instanceof ServerPlayer player && player.getData(PLAYER_VARIABLES)._syncDirty) {
-			PacketDistributor.sendToPlayer(player, new PlayerVariablesSyncMessage(player.getData(PLAYER_VARIABLES)));
-			player.getData(PLAYER_VARIABLES)._syncDirty = false;
-		}
-	}
-
-	@SubscribeEvent
-	public static void clonePlayer(PlayerEvent.Clone event) {
-		PlayerVariables original = event.getOriginal().getData(PLAYER_VARIABLES);
-		PlayerVariables clone = new PlayerVariables();
-		if (!event.isWasDeath()) {
-			clone.Wealth = original.Wealth;
-			clone.Dignity = original.Dignity;
-			clone.Local_Civilians = original.Local_Civilians;
-			clone.Local_Civilians_In_Danger = original.Local_Civilians_In_Danger;
-			clone.Soldiers = original.Soldiers;
-			clone.Knights = original.Knights;
-		}
-		event.getEntity().setData(PLAYER_VARIABLES, clone);
 	}
 
 	@SubscribeEvent
@@ -122,19 +78,16 @@ public class TheMiddleAgesModVariables {
 	}
 
 	public static class WorldVariables extends SavedData {
-		public static final String DATA_NAME = "the_middle_ages_worldvars";
+		public static final SavedDataType<WorldVariables> TYPE = new SavedDataType<>(Identifier.parse("the_middle_ages:worldvars"), level -> new WorldVariables(), level -> CompoundTag.CODEC.xmap(tag -> {
+			WorldVariables instance = new WorldVariables();
+			instance.read(tag, level.registryAccess());
+			return instance;
+		}, instance -> instance.save(new CompoundTag(), level.registryAccess())));
 		boolean _syncDirty = false;
-
-		public static WorldVariables load(CompoundTag tag, HolderLookup.Provider lookupProvider) {
-			WorldVariables data = new WorldVariables();
-			data.read(tag, lookupProvider);
-			return data;
-		}
 
 		public void read(CompoundTag nbt, HolderLookup.Provider lookupProvider) {
 		}
 
-		@Override
 		public CompoundTag save(CompoundTag nbt, HolderLookup.Provider lookupProvider) {
 			return nbt;
 		}
@@ -148,7 +101,7 @@ public class TheMiddleAgesModVariables {
 
 		public static WorldVariables get(LevelAccessor world) {
 			if (world instanceof ServerLevel level) {
-				return level.getDataStorage().computeIfAbsent(new SavedData.Factory<>(WorldVariables::new, WorldVariables::load), DATA_NAME);
+				return level.getDataStorage().computeIfAbsent(WorldVariables.TYPE);
 			} else {
 				return clientSide;
 			}
@@ -156,42 +109,93 @@ public class TheMiddleAgesModVariables {
 	}
 
 	public static class MapVariables extends SavedData {
-		public static final String DATA_NAME = "the_middle_ages_mapvars";
+		public static final SavedDataType<MapVariables> TYPE = new SavedDataType<>(Identifier.parse("the_middle_ages:mapvars"), level -> new MapVariables(), level -> CompoundTag.CODEC.xmap(tag -> {
+			MapVariables instance = new MapVariables();
+			instance.read(tag, level.registryAccess());
+			return instance;
+		}, instance -> instance.save(new CompoundTag(), level.registryAccess())));
 		boolean _syncDirty = false;
+		public double Wealth = 100.0;
+		public double Dignity = 10.0;
+		public double Local_Civilians = 0;
+		public double Local_Civilians_In_Danger = 0;
+		public double Soldiers = 0;
+		public double Knights = 0;
 		public boolean Attack = false;
 		public double ticksforAttacks = 0;
 		public double world_Time = 0;
-
-		public static MapVariables load(CompoundTag tag, HolderLookup.Provider lookupProvider) {
-			MapVariables data = new MapVariables();
-			data.read(tag, lookupProvider);
-			return data;
-		}
+		public double CoordX = 0;
+		public double CoordY = 0;
+		public double CoordZ = 0;
+		public String XText = "\"\"";
+		public String YText = "\"\"";
+		public String ZText = "\"\"";
+		public double dist = 0;
+		public double animation_blank = 0;
+		public double tick_passing_animation = 0;
+		public boolean saved = false;
+		public double lettoDie = 0;
+		public double GUIController = 0;
 
 		public void read(CompoundTag nbt, HolderLookup.Provider lookupProvider) {
-			Attack = nbt.getBoolean("Attack");
-			ticksforAttacks = nbt.getDouble("ticksforAttacks");
-			world_Time = nbt.getDouble("world_Time");
+			Wealth = nbt.getDoubleOr("Wealth", 0);
+			Dignity = nbt.getDoubleOr("Dignity", 0);
+			Local_Civilians = nbt.getDoubleOr("Local_Civilians", 0);
+			Local_Civilians_In_Danger = nbt.getDoubleOr("Local_Civilians_In_Danger", 0);
+			Soldiers = nbt.getDoubleOr("Soldiers", 0);
+			Knights = nbt.getDoubleOr("Knights", 0);
+			Attack = nbt.getBooleanOr("Attack", false);
+			ticksforAttacks = nbt.getDoubleOr("ticksforAttacks", 0);
+			world_Time = nbt.getDoubleOr("world_Time", 0);
+			CoordX = nbt.getDoubleOr("CoordX", 0);
+			CoordY = nbt.getDoubleOr("CoordY", 0);
+			CoordZ = nbt.getDoubleOr("CoordZ", 0);
+			XText = nbt.getStringOr("XText", "");
+			YText = nbt.getStringOr("YText", "");
+			ZText = nbt.getStringOr("ZText", "");
+			dist = nbt.getDoubleOr("dist", 0);
+			animation_blank = nbt.getDoubleOr("animation_blank", 0);
+			tick_passing_animation = nbt.getDoubleOr("tick_passing_animation", 0);
+			saved = nbt.getBooleanOr("saved", false);
+			lettoDie = nbt.getDoubleOr("lettoDie", 0);
+			GUIController = nbt.getDoubleOr("GUIController", 0);
 		}
 
-		@Override
 		public CompoundTag save(CompoundTag nbt, HolderLookup.Provider lookupProvider) {
+			nbt.putDouble("Wealth", Wealth);
+			nbt.putDouble("Dignity", Dignity);
+			nbt.putDouble("Local_Civilians", Local_Civilians);
+			nbt.putDouble("Local_Civilians_In_Danger", Local_Civilians_In_Danger);
+			nbt.putDouble("Soldiers", Soldiers);
+			nbt.putDouble("Knights", Knights);
 			nbt.putBoolean("Attack", Attack);
 			nbt.putDouble("ticksforAttacks", ticksforAttacks);
 			nbt.putDouble("world_Time", world_Time);
+			nbt.putDouble("CoordX", CoordX);
+			nbt.putDouble("CoordY", CoordY);
+			nbt.putDouble("CoordZ", CoordZ);
+			nbt.putString("XText", XText);
+			nbt.putString("YText", YText);
+			nbt.putString("ZText", ZText);
+			nbt.putDouble("dist", dist);
+			nbt.putDouble("animation_blank", animation_blank);
+			nbt.putDouble("tick_passing_animation", tick_passing_animation);
+			nbt.putBoolean("saved", saved);
+			nbt.putDouble("lettoDie", lettoDie);
+			nbt.putDouble("GUIController", GUIController);
 			return nbt;
 		}
 
 		public void markSyncDirty() {
 			this.setDirty();
-			_syncDirty = true;
+			this._syncDirty = true;
 		}
 
 		static MapVariables clientSide = new MapVariables();
 
 		public static MapVariables get(LevelAccessor world) {
-			if (world instanceof ServerLevelAccessor serverLevelAcc) {
-				return serverLevelAcc.getLevel().getServer().getLevel(Level.OVERWORLD).getDataStorage().computeIfAbsent(new SavedData.Factory<>(MapVariables::new, MapVariables::load), DATA_NAME);
+			if (world instanceof ServerLevelAccessor serverLevelAccessor) {
+				return serverLevelAccessor.getLevel().getServer().getLevel(Level.OVERWORLD).getDataStorage().computeIfAbsent(MapVariables.TYPE);
 			} else {
 				return clientSide;
 			}
@@ -199,11 +203,13 @@ public class TheMiddleAgesModVariables {
 	}
 
 	public record SavedDataSyncMessage(int dataType, SavedData data) implements CustomPacketPayload {
-		public static final Type<SavedDataSyncMessage> TYPE = new Type<>(ResourceLocation.fromNamespaceAndPath(TheMiddleAgesMod.MODID, "saved_data_sync"));
+		public static final Type<SavedDataSyncMessage> TYPE = new Type<>(Identifier.fromNamespaceAndPath(TheMiddleAgesMod.MODID, "saved_data_sync"));
 		public static final StreamCodec<RegistryFriendlyByteBuf, SavedDataSyncMessage> STREAM_CODEC = StreamCodec.of((RegistryFriendlyByteBuf buffer, SavedDataSyncMessage message) -> {
 			buffer.writeInt(message.dataType);
-			if (message.data != null)
-				buffer.writeNbt(message.data.save(new CompoundTag(), buffer.registryAccess()));
+			if (message.data instanceof MapVariables mapVariables)
+				buffer.writeNbt(mapVariables.save(new CompoundTag(), buffer.registryAccess()));
+			else if (message.data instanceof WorldVariables worldVariables)
+				buffer.writeNbt(worldVariables.save(new CompoundTag(), buffer.registryAccess()));
 		}, (RegistryFriendlyByteBuf buffer) -> {
 			int dataType = buffer.readInt();
 			CompoundTag nbt = buffer.readNbt();
@@ -227,70 +233,10 @@ public class TheMiddleAgesModVariables {
 			if (context.flow() == PacketFlow.CLIENTBOUND && message.data != null) {
 				context.enqueueWork(() -> {
 					if (message.dataType == 0)
-						MapVariables.clientSide.read(message.data.save(new CompoundTag(), context.player().registryAccess()), context.player().registryAccess());
+						MapVariables.clientSide.read(((MapVariables) message.data).save(new CompoundTag(), context.player().registryAccess()), context.player().registryAccess());
 					else
-						WorldVariables.clientSide.read(message.data.save(new CompoundTag(), context.player().registryAccess()), context.player().registryAccess());
+						WorldVariables.clientSide.read(((WorldVariables) message.data).save(new CompoundTag(), context.player().registryAccess()), context.player().registryAccess());
 				}).exceptionally(e -> {
-					context.connection().disconnect(Component.literal(e.getMessage()));
-					return null;
-				});
-			}
-		}
-	}
-
-	public static class PlayerVariables implements INBTSerializable<CompoundTag> {
-		boolean _syncDirty = false;
-		public double Wealth = 100.0;
-		public double Dignity = 0;
-		public double Local_Civilians = 0;
-		public double Local_Civilians_In_Danger = 0;
-		public double Soldiers = 0;
-		public double Knights = 0;
-
-		@Override
-		public CompoundTag serializeNBT(HolderLookup.Provider lookupProvider) {
-			CompoundTag nbt = new CompoundTag();
-			nbt.putDouble("Wealth", Wealth);
-			nbt.putDouble("Dignity", Dignity);
-			nbt.putDouble("Local_Civilians", Local_Civilians);
-			nbt.putDouble("Local_Civilians_In_Danger", Local_Civilians_In_Danger);
-			nbt.putDouble("Soldiers", Soldiers);
-			nbt.putDouble("Knights", Knights);
-			return nbt;
-		}
-
-		@Override
-		public void deserializeNBT(HolderLookup.Provider lookupProvider, CompoundTag nbt) {
-			Wealth = nbt.getDouble("Wealth");
-			Dignity = nbt.getDouble("Dignity");
-			Local_Civilians = nbt.getDouble("Local_Civilians");
-			Local_Civilians_In_Danger = nbt.getDouble("Local_Civilians_In_Danger");
-			Soldiers = nbt.getDouble("Soldiers");
-			Knights = nbt.getDouble("Knights");
-		}
-
-		public void markSyncDirty() {
-			_syncDirty = true;
-		}
-	}
-
-	public record PlayerVariablesSyncMessage(PlayerVariables data) implements CustomPacketPayload {
-		public static final Type<PlayerVariablesSyncMessage> TYPE = new Type<>(ResourceLocation.fromNamespaceAndPath(TheMiddleAgesMod.MODID, "player_variables_sync"));
-		public static final StreamCodec<RegistryFriendlyByteBuf, PlayerVariablesSyncMessage> STREAM_CODEC = StreamCodec
-				.of((RegistryFriendlyByteBuf buffer, PlayerVariablesSyncMessage message) -> buffer.writeNbt(message.data().serializeNBT(buffer.registryAccess())), (RegistryFriendlyByteBuf buffer) -> {
-					PlayerVariablesSyncMessage message = new PlayerVariablesSyncMessage(new PlayerVariables());
-					message.data.deserializeNBT(buffer.registryAccess(), buffer.readNbt());
-					return message;
-				});
-
-		@Override
-		public Type<PlayerVariablesSyncMessage> type() {
-			return TYPE;
-		}
-
-		public static void handleData(final PlayerVariablesSyncMessage message, final IPayloadContext context) {
-			if (context.flow() == PacketFlow.CLIENTBOUND && message.data != null) {
-				context.enqueueWork(() -> context.player().getData(PLAYER_VARIABLES).deserializeNBT(context.player().registryAccess(), message.data.serializeNBT(context.player().registryAccess()))).exceptionally(e -> {
 					context.connection().disconnect(Component.literal(e.getMessage()));
 					return null;
 				});

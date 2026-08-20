@@ -2,7 +2,8 @@ package net.mcreator.themiddleages.entity;
 
 import net.neoforged.neoforge.event.entity.RegisterSpawnPlacementsEvent;
 
-import net.minecraft.world.level.levelgen.Heightmap;
+import net.minecraft.world.level.storage.ValueOutput;
+import net.minecraft.world.level.storage.ValueInput;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.item.ItemStack;
@@ -13,22 +14,23 @@ import net.minecraft.world.entity.ai.goal.target.HurtByTargetGoal;
 import net.minecraft.world.entity.ai.goal.*;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
-import net.minecraft.world.entity.*;
+import net.minecraft.world.entity.Mob;
+import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.EntityType;
+import net.minecraft.world.entity.Entity;
+import net.minecraft.world.entity.AnimationState;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.InteractionHand;
-import net.minecraft.tags.BlockTags;
 import net.minecraft.sounds.SoundEvent;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.network.syncher.SynchedEntityData;
 import net.minecraft.network.syncher.EntityDataSerializers;
 import net.minecraft.network.syncher.EntityDataAccessor;
-import net.minecraft.nbt.CompoundTag;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.BlockPos;
 
 import net.mcreator.themiddleages.procedures.*;
-import net.mcreator.themiddleages.init.TheMiddleAgesModEntities;
 
 public class DarkSoldierEntity extends Monster {
 	public static final EntityDataAccessor<Integer> DATA_actionstate = SynchedEntityData.defineId(DarkSoldierEntity.class, EntityDataSerializers.INT);
@@ -149,17 +151,17 @@ public class DarkSoldierEntity extends Monster {
 
 	@Override
 	public void playStepSound(BlockPos pos, BlockState blockIn) {
-		this.playSound(BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("item.armor.equip_iron")), 0.15f, 1);
+		this.playSound(BuiltInRegistries.SOUND_EVENT.getValue(Identifier.parse("item.armor.equip_iron")), 0.15f, 1);
 	}
 
 	@Override
 	public SoundEvent getHurtSound(DamageSource ds) {
-		return BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("entity.generic.hurt"));
+		return BuiltInRegistries.SOUND_EVENT.getValue(Identifier.parse("entity.generic.hurt"));
 	}
 
 	@Override
 	public SoundEvent getDeathSound() {
-		return BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("entity.generic.death"));
+		return BuiltInRegistries.SOUND_EVENT.getValue(Identifier.parse("entity.generic.death"));
 	}
 
 	@Override
@@ -169,34 +171,29 @@ public class DarkSoldierEntity extends Monster {
 	}
 
 	@Override
-	public void addAdditionalSaveData(CompoundTag compound) {
-		super.addAdditionalSaveData(compound);
-		compound.putInt("Dataactionstate", this.entityData.get(DATA_actionstate));
-		compound.putInt("DatafightingState", this.entityData.get(DATA_fightingState));
-		compound.putBoolean("Datanotgonnarob", this.entityData.get(DATA_notgonnarob));
-		compound.putInt("DataScared", this.entityData.get(DATA_Scared));
-		compound.putInt("DataStopRobbing", this.entityData.get(DATA_StopRobbing));
+	public void addAdditionalSaveData(ValueOutput valueOutput) {
+		super.addAdditionalSaveData(valueOutput);
+		valueOutput.putInt("Dataactionstate", this.entityData.get(DATA_actionstate));
+		valueOutput.putInt("DatafightingState", this.entityData.get(DATA_fightingState));
+		valueOutput.putBoolean("Datanotgonnarob", this.entityData.get(DATA_notgonnarob));
+		valueOutput.putInt("DataScared", this.entityData.get(DATA_Scared));
+		valueOutput.putInt("DataStopRobbing", this.entityData.get(DATA_StopRobbing));
 	}
 
 	@Override
-	public void readAdditionalSaveData(CompoundTag compound) {
-		super.readAdditionalSaveData(compound);
-		if (compound.contains("Dataactionstate"))
-			this.entityData.set(DATA_actionstate, compound.getInt("Dataactionstate"));
-		if (compound.contains("DatafightingState"))
-			this.entityData.set(DATA_fightingState, compound.getInt("DatafightingState"));
-		if (compound.contains("Datanotgonnarob"))
-			this.entityData.set(DATA_notgonnarob, compound.getBoolean("Datanotgonnarob"));
-		if (compound.contains("DataScared"))
-			this.entityData.set(DATA_Scared, compound.getInt("DataScared"));
-		if (compound.contains("DataStopRobbing"))
-			this.entityData.set(DATA_StopRobbing, compound.getInt("DataStopRobbing"));
+	public void readAdditionalSaveData(ValueInput valueInput) {
+		super.readAdditionalSaveData(valueInput);
+		this.entityData.set(DATA_actionstate, valueInput.getIntOr("Dataactionstate", 0));
+		this.entityData.set(DATA_fightingState, valueInput.getIntOr("DatafightingState", 0));
+		this.entityData.set(DATA_notgonnarob, valueInput.getBooleanOr("Datanotgonnarob", false));
+		this.entityData.set(DATA_Scared, valueInput.getIntOr("DataScared", 0));
+		this.entityData.set(DATA_StopRobbing, valueInput.getIntOr("DataStopRobbing", 0));
 	}
 
 	@Override
 	public InteractionResult mobInteract(Player sourceentity, InteractionHand hand) {
 		ItemStack itemstack = sourceentity.getItemInHand(hand);
-		InteractionResult retval = InteractionResult.sidedSuccess(this.level().isClientSide());
+		InteractionResult retval = InteractionResult.SUCCESS;
 		super.mobInteract(sourceentity, hand);
 		double x = this.getX();
 		double y = this.getY();
@@ -230,8 +227,6 @@ public class DarkSoldierEntity extends Monster {
 	}
 
 	public static void init(RegisterSpawnPlacementsEvent event) {
-		event.register(TheMiddleAgesModEntities.DARK_SOLDIER.get(), SpawnPlacementTypes.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES,
-				(entityType, world, reason, pos, random) -> (world.getBlockState(pos.below()).is(BlockTags.ANIMALS_SPAWNABLE_ON) && world.getRawBrightness(pos, 0) > 8), RegisterSpawnPlacementsEvent.Operation.REPLACE);
 	}
 
 	public static AttributeSupplier.Builder createAttributes() {

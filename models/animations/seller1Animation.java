@@ -1,7 +1,7 @@
 // Save this class in your mod and generate all required imports
 
 /**
- * Made with Blockbench 5.1.5 Exported for Minecraft version 1.19 or later with
+ * Made with Blockbench 5.1.6 Exported for Minecraft version 1.19 or later with
  * Mojang mappings
  * 
  * @author Author
@@ -70,14 +70,6 @@ public class seller1Animation {
 									AnimationChannel.Interpolations.LINEAR),
 							new Keyframe(0.1667F, KeyframeAnimations.scaleVec(1.0F, 1.0F, 1.0F),
 									AnimationChannel.Interpolations.LINEAR)))
-			.addAnimation("mouth",
-					new AnimationChannel(AnimationChannel.Targets.POSITION,
-							new Keyframe(0.0F, KeyframeAnimations.posVec(0.0F, -0.2F, 0.0F),
-									AnimationChannel.Interpolations.LINEAR)))
-			.addAnimation("mouth",
-					new AnimationChannel(AnimationChannel.Targets.SCALE,
-							new Keyframe(0.0F, KeyframeAnimations.scaleVec(1.0F, 0.2F, 1.0F),
-									AnimationChannel.Interpolations.LINEAR)))
 			.addAnimation("RightArm",
 					new AnimationChannel(AnimationChannel.Targets.ROTATION,
 							new Keyframe(0.0F, KeyframeAnimations.degreeVec(0.0F, 0.0F, 0.0F),
@@ -94,6 +86,9 @@ public class seller1Animation {
 									AnimationChannel.Interpolations.LINEAR),
 							new Keyframe(3.0F, KeyframeAnimations.degreeVec(0.0F, 0.0F, 0.0F),
 									AnimationChannel.Interpolations.LINEAR)))
+			.addAnimation("mouth",
+					new AnimationChannel(AnimationChannel.Targets.SCALE, new Keyframe(0.0F,
+							KeyframeAnimations.scaleVec(0.3333F, 0.2F, 1.0F), AnimationChannel.Interpolations.LINEAR)))
 			.build();
 
 	public static final AnimationDefinition walking = AnimationDefinition.Builder.withLength(1.0F).looping()
@@ -156,14 +151,6 @@ public class seller1Animation {
 							new Keyframe(0.75F, KeyframeAnimations.degreeVec(0.0F, 0.0F, 0.0F),
 									AnimationChannel.Interpolations.LINEAR),
 							new Keyframe(1.0F, KeyframeAnimations.degreeVec(-17.5F, 0.0F, 0.0F),
-									AnimationChannel.Interpolations.LINEAR)))
-			.addAnimation("mouth",
-					new AnimationChannel(AnimationChannel.Targets.POSITION,
-							new Keyframe(0.0F, KeyframeAnimations.posVec(0.0F, -0.2F, 0.0F),
-									AnimationChannel.Interpolations.LINEAR)))
-			.addAnimation("mouth",
-					new AnimationChannel(AnimationChannel.Targets.SCALE,
-							new Keyframe(0.0F, KeyframeAnimations.scaleVec(1.0F, 0.2F, 1.0F),
 									AnimationChannel.Interpolations.LINEAR)))
 			.addAnimation("LeftLeg2",
 					new AnimationChannel(AnimationChannel.Targets.ROTATION,
@@ -233,6 +220,9 @@ public class seller1Animation {
 									AnimationChannel.Interpolations.LINEAR),
 							new Keyframe(1.0F, KeyframeAnimations.posVec(0.0F, -0.0033F, 0.0F),
 									AnimationChannel.Interpolations.LINEAR)))
+			.addAnimation("mouth",
+					new AnimationChannel(AnimationChannel.Targets.SCALE, new Keyframe(0.0F,
+							KeyframeAnimations.scaleVec(0.3333F, 0.2F, 1.0F), AnimationChannel.Interpolations.LINEAR)))
 			.build();
 
 	public static final AnimationDefinition panic = AnimationDefinition.Builder.withLength(0.5F).looping()
@@ -309,24 +299,6 @@ public class seller1Animation {
 			.addAnimation("EyeR",
 					new AnimationChannel(AnimationChannel.Targets.SCALE,
 							new Keyframe(0.0F, KeyframeAnimations.scaleVec(1.0F, 1.3333F, 1.0F),
-									AnimationChannel.Interpolations.LINEAR)))
-			.addAnimation("mouth",
-					new AnimationChannel(AnimationChannel.Targets.ROTATION,
-							new Keyframe(0.0F, KeyframeAnimations.degreeVec(0.0F, 0.0F, -10.0F),
-									AnimationChannel.Interpolations.LINEAR)))
-			.addAnimation("mouth",
-					new AnimationChannel(AnimationChannel.Targets.POSITION,
-							new Keyframe(0.0F, KeyframeAnimations.posVec(0.0F, -0.2F, 0.0F),
-									AnimationChannel.Interpolations.LINEAR),
-							new Keyframe(0.125F, KeyframeAnimations.posVec(0.25F, -0.2F, 0.0F),
-									AnimationChannel.Interpolations.LINEAR),
-							new Keyframe(0.2917F, KeyframeAnimations.posVec(0.0F, -0.45F, 0.0F),
-									AnimationChannel.Interpolations.LINEAR),
-							new Keyframe(0.5F, KeyframeAnimations.posVec(0.0F, 0.0F, 0.0F),
-									AnimationChannel.Interpolations.LINEAR)))
-			.addAnimation("mouth",
-					new AnimationChannel(AnimationChannel.Targets.SCALE,
-							new Keyframe(0.0F, KeyframeAnimations.scaleVec(1.0F, 0.2F, 1.0F),
 									AnimationChannel.Interpolations.LINEAR)))
 			.addAnimation("LeftLeg2",
 					new AnimationChannel(AnimationChannel.Targets.ROTATION,
@@ -413,8 +385,28 @@ public class seller1Animation {
 							new Keyframe(0.4583F, KeyframeAnimations.posVec(0.0F, 0.0F, 0.0F),
 									AnimationChannel.Interpolations.LINEAR)))
 			.addAnimation("Head2",
-					new AnimationChannel(AnimationChannel.Targets.SCALE, new Keyframe(0.0F,
-							KeyframeAnimations.scaleVec(1.0F, 0.5333F, 1.0F), AnimationChannel.Interpolations.LINEAR)))
+					new AnimationChannel(AnimationChannel.Targets.SCALE,
+							new Keyframe(0.0F, KeyframeAnimations.scaleVec(1.0F, 0.5333F, 1.0F),
+									AnimationChannel.Interpolations.LINEAR)))
+			.addAnimation("mouth",
+					new AnimationChannel(AnimationChannel.Targets.SCALE,
+							new Keyframe(0.0F, KeyframeAnimations.scaleVec(0.3333F, 0.2F, 1.0F),
+									AnimationChannel.Interpolations.LINEAR)))
+			.addAnimation("frown_L",
+					new AnimationChannel(AnimationChannel.Targets.ROTATION,
+							new Keyframe(0.0F, KeyframeAnimations.degreeVec(0.0F, 0.0F, 42.5F),
+									AnimationChannel.Interpolations.LINEAR)))
+			.addAnimation("frown_L",
+					new AnimationChannel(AnimationChannel.Targets.POSITION,
+							new Keyframe(0.0F, KeyframeAnimations.posVec(-0.6F, 0.1719F, 0.0F),
+									AnimationChannel.Interpolations.LINEAR)))
+			.addAnimation("frown_R",
+					new AnimationChannel(AnimationChannel.Targets.ROTATION,
+							new Keyframe(0.0F, KeyframeAnimations.degreeVec(0.0F, 0.0F, -55.0F),
+									AnimationChannel.Interpolations.LINEAR)))
+			.addAnimation("frown_R",
+					new AnimationChannel(AnimationChannel.Targets.POSITION, new Keyframe(0.0F,
+							KeyframeAnimations.posVec(0.8359F, 0.25F, 0.0F), AnimationChannel.Interpolations.LINEAR)))
 			.build();
 
 	public static final AnimationDefinition farming = AnimationDefinition.Builder.withLength(0.75F).looping()
@@ -487,8 +479,12 @@ public class seller1Animation {
 							new Keyframe(0.75F, KeyframeAnimations.posVec(0.0F, 0.0F, -2.0F),
 									AnimationChannel.Interpolations.LINEAR)))
 			.addAnimation("whole",
-					new AnimationChannel(AnimationChannel.Targets.POSITION, new Keyframe(0.0F,
-							KeyframeAnimations.posVec(0.0F, -2.6667F, 0.0F), AnimationChannel.Interpolations.LINEAR)))
+					new AnimationChannel(AnimationChannel.Targets.POSITION,
+							new Keyframe(0.0F, KeyframeAnimations.posVec(0.0F, -2.6667F, 0.0F),
+									AnimationChannel.Interpolations.LINEAR)))
+			.addAnimation("mouth",
+					new AnimationChannel(AnimationChannel.Targets.SCALE, new Keyframe(0.0F,
+							KeyframeAnimations.scaleVec(0.3333F, 0.2F, 1.0F), AnimationChannel.Interpolations.LINEAR)))
 			.build();
 
 	public static final AnimationDefinition die = AnimationDefinition.Builder.withLength(2.0F)
@@ -552,6 +548,17 @@ public class seller1Animation {
 									AnimationChannel.Interpolations.LINEAR),
 							new Keyframe(0.3333F, KeyframeAnimations.posVec(0.0F, -10.6667F, 12.6667F),
 									AnimationChannel.Interpolations.LINEAR)))
+			.addAnimation("mouth",
+					new AnimationChannel(AnimationChannel.Targets.SCALE,
+							new Keyframe(0.0F, KeyframeAnimations.scaleVec(0.3333F, 0.2F, 1.0F),
+									AnimationChannel.Interpolations.LINEAR)))
+			.addAnimation("frown_L",
+					new AnimationChannel(AnimationChannel.Targets.SCALE,
+							new Keyframe(0.0F, KeyframeAnimations.scaleVec(0.0F, 0.0F, 0.0F),
+									AnimationChannel.Interpolations.LINEAR)))
+			.addAnimation("frown_R",
+					new AnimationChannel(AnimationChannel.Targets.SCALE, new Keyframe(0.0F,
+							KeyframeAnimations.scaleVec(0.0F, 0.0F, 0.0F), AnimationChannel.Interpolations.LINEAR)))
 			.build();
 
 	public static final AnimationDefinition thanks = AnimationDefinition.Builder.withLength(1.2917F)
@@ -583,14 +590,6 @@ public class seller1Animation {
 									AnimationChannel.Interpolations.CATMULLROM),
 							new Keyframe(0.2917F, KeyframeAnimations.degreeVec(0.0F, 0.0F, 0.0F),
 									AnimationChannel.Interpolations.CATMULLROM)))
-			.addAnimation("mouth",
-					new AnimationChannel(AnimationChannel.Targets.POSITION,
-							new Keyframe(0.0F, KeyframeAnimations.posVec(0.0F, -0.2F, 0.0F),
-									AnimationChannel.Interpolations.CATMULLROM)))
-			.addAnimation("mouth",
-					new AnimationChannel(AnimationChannel.Targets.SCALE,
-							new Keyframe(0.0F, KeyframeAnimations.scaleVec(1.0F, 0.2F, 1.0F),
-									AnimationChannel.Interpolations.CATMULLROM)))
 			.addAnimation("RightArm",
 					new AnimationChannel(AnimationChannel.Targets.ROTATION,
 							new Keyframe(0.2917F, KeyframeAnimations.degreeVec(0.0F, 0.0F, 0.0F),
@@ -607,5 +606,8 @@ public class seller1Animation {
 									AnimationChannel.Interpolations.CATMULLROM),
 							new Keyframe(1.1667F, KeyframeAnimations.degreeVec(0.0F, 0.0F, 0.0F),
 									AnimationChannel.Interpolations.CATMULLROM)))
+			.addAnimation("mouth",
+					new AnimationChannel(AnimationChannel.Targets.SCALE, new Keyframe(0.0F,
+							KeyframeAnimations.scaleVec(0.3333F, 0.2F, 1.0F), AnimationChannel.Interpolations.LINEAR)))
 			.build();
 }

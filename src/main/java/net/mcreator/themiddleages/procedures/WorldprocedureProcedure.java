@@ -6,6 +6,7 @@ import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.bus.api.Event;
 
 import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.world.level.Level;
 
 import net.mcreator.themiddleages.network.TheMiddleAgesModVariables;
 
@@ -23,11 +24,30 @@ public class WorldprocedureProcedure {
 	}
 
 	private static void execute(@Nullable Event event, LevelAccessor world) {
-		TheMiddleAgesModVariables.MapVariables.get(world).world_Time = TheMiddleAgesModVariables.MapVariables.get(world).world_Time + 1;
+		TheMiddleAgesModVariables.MapVariables.get(world).world_Time = world instanceof Level _level0 ? _level0.getDefaultClockTime() : 0;
 		TheMiddleAgesModVariables.MapVariables.get(world).markSyncDirty();
 		if (TheMiddleAgesModVariables.MapVariables.get(world).world_Time > 24000) {
 			TheMiddleAgesModVariables.MapVariables.get(world).world_Time = 0;
 			TheMiddleAgesModVariables.MapVariables.get(world).markSyncDirty();
+		}
+		if (TheMiddleAgesModVariables.MapVariables.get(world).animation_blank == 1) {
+			TheMiddleAgesModVariables.MapVariables.get(world).tick_passing_animation = TheMiddleAgesModVariables.MapVariables.get(world).tick_passing_animation + 1;
+			TheMiddleAgesModVariables.MapVariables.get(world).markSyncDirty();
+			if (TheMiddleAgesModVariables.MapVariables.get(world).tick_passing_animation > 512) {
+				TheMiddleAgesModVariables.MapVariables.get(world).animation_blank = TheMiddleAgesModVariables.MapVariables.get(world).animation_blank + 1;
+				TheMiddleAgesModVariables.MapVariables.get(world).markSyncDirty();
+			}
+		} else if (TheMiddleAgesModVariables.MapVariables.get(world).animation_blank == 2) {
+			if (TheMiddleAgesModVariables.MapVariables.get(world).tick_passing_animation > 60) {
+				TheMiddleAgesModVariables.MapVariables.get(world).animation_blank = TheMiddleAgesModVariables.MapVariables.get(world).animation_blank + 1;
+				TheMiddleAgesModVariables.MapVariables.get(world).markSyncDirty();
+			}
+		} else if (TheMiddleAgesModVariables.MapVariables.get(world).animation_blank == 3) {
+			if (TheMiddleAgesModVariables.MapVariables.get(world).tick_passing_animation > 60) {
+				TheMiddleAgesModVariables.MapVariables.get(world).animation_blank = 0;
+				TheMiddleAgesModVariables.MapVariables.get(world).tick_passing_animation = 0;
+				TheMiddleAgesModVariables.MapVariables.get(world).markSyncDirty();
+			}
 		}
 	}
 }

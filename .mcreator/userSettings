@@ -8,12 +8,13 @@
       "[, The Middle Ages, Source (Gradle)]",
       "[, The Middle Ages, Source (Gradle), C:\\Users\\Greenboy\\MCreatorWorkspaces\\the_middle_ages\\src\\main\\java\\net]",
       "[, The Middle Ages, Source (Gradle), C:\\Users\\Greenboy\\MCreatorWorkspaces\\the_middle_ages\\src\\main\\java\\net, C:\\Users\\Greenboy\\MCreatorWorkspaces\\the_middle_ages\\src\\main\\java\\net\\mcreator]",
-      "[, The Middle Ages, Source (Gradle), C:\\Users\\Greenboy\\MCreatorWorkspaces\\the_middle_ages\\src\\main\\java\\net, C:\\Users\\Greenboy\\MCreatorWorkspaces\\the_middle_ages\\src\\main\\java\\net\\mcreator, C:\\Users\\Greenboy\\MCreatorWorkspaces\\the_middle_ages\\src\\main\\java\\net\\mcreator\\themiddleages]"
+      "[, The Middle Ages, Source (Gradle), C:\\Users\\Greenboy\\MCreatorWorkspaces\\the_middle_ages\\src\\main\\java\\net, C:\\Users\\Greenboy\\MCreatorWorkspaces\\the_middle_ages\\src\\main\\java\\net\\mcreator, C:\\Users\\Greenboy\\MCreatorWorkspaces\\the_middle_ages\\src\\main\\java\\net\\mcreator\\themiddleages]",
+      "[, The Middle Ages, Source (Gradle), C:\\Users\\Greenboy\\MCreatorWorkspaces\\the_middle_ages\\src\\main\\java\\net, C:\\Users\\Greenboy\\MCreatorWorkspaces\\the_middle_ages\\src\\main\\java\\net\\mcreator, C:\\Users\\Greenboy\\MCreatorWorkspaces\\the_middle_ages\\src\\main\\java\\net\\mcreator\\themiddleages, C:\\Users\\Greenboy\\MCreatorWorkspaces\\the_middle_ages\\src\\main\\java\\net\\mcreator\\themiddleages\\network]"
     ]
   },
   "leftDockState": {
     "dockSizes": {
-      "project_browser": 280,
+      "project_browser": 376,
       "local_history": 280
     }
   },
@@ -22,7 +23,7 @@
   },
   "bottomDockState": {
     "dockSizes": {
-      "console": 686,
+      "console": 937,
       "code_viewer": 300,
       "debugger": 300
     }

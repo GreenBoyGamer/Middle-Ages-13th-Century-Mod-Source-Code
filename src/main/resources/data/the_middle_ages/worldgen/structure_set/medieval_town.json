@@ -1,0 +1,14 @@
+{
+  "structures": [
+    {
+      "structure": "the_middle_ages:medieval_town",
+      "weight": 1
+    }
+  ],
+  "placement": {
+    "type": "minecraft:random_spread",
+    "spacing": 4045,
+    "separation": 4043,
+    "salt": 64566885
+  }
+}

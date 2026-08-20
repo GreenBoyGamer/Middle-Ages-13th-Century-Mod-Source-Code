@@ -1,0 +1,115 @@
+[21Aug2026 02:17:48.455] [main/INFO] [net.neoforged.fml.startup.Entrypoint/]: JVM Uptime at startup: 894ms
+[21Aug2026 02:17:48.488] [main/INFO] [net.neoforged.fml.loading.FMLLoader/]: Starting FancyModLoader version 11.0.13 (CLIENT in DEV)
+[21Aug2026 02:17:48.489] [main/INFO] [net.neoforged.fml.loading.FMLLoader/]: Game directory: C:\Users\Greenboy\MCreatorWorkspaces\the_middle_ages\run
+[21Aug2026 02:17:48.634] [main/INFO] [net.neoforged.fml.loading.EarlyServiceDiscovery/]: Found 2 early service jars (out of 107) in 67ms
+[21Aug2026 02:17:48.637] [main/INFO] [net.neoforged.fml.loading.FMLLoader/]: Loading FML Early Services:
+[21Aug2026 02:17:48.639] [main/INFO] [net.neoforged.fml.loading.FMLLoader/]:  - C:/Users/Greenboy/.mcreator/gradle/caches/modules-2/files-2.1/net.neoforged.fancymodloader/loader/11.0.13/c9c89eaf35535990110088224d188748d81eaecf/loader-11.0.13.jar
+[21Aug2026 02:17:48.641] [main/INFO] [net.neoforged.fml.loading.FMLLoader/]:  - C:/Users/Greenboy/.mcreator/gradle/caches/modules-2/files-2.1/net.neoforged.fancymodloader/earlydisplay/11.0.13/491a1bedecb33802fa118cae384b60f91f6f0241/earlydisplay-11.0.13.jar
+[21Aug2026 02:17:48.651] [main/INFO] [net.neoforged.fml.loading.ImmediateWindowHandler/]: Loading ImmediateWindowProvider fmlearlywindow
+[21Aug2026 02:17:50.391] [ForkJoinPool.commonPool-worker-4/INFO] [net.neoforged.fml.loading.moddiscovery.locators.GameLocator/]: Detected a joined NeoForge and Minecraft configuration. Applying filtering...
+[21Aug2026 02:17:50.481] [fml-loadingscreen/INFO] [net.neoforged.fml.earlydisplay.render.LoadingScreenRenderer/]: GL info: Intel(R) HD Graphics 4000 GL version 3.3.0 - Build 10.18.10.4252, Intel
+[21Aug2026 02:17:50.701] [ForkJoinPool.commonPool-worker-4/INFO] [net.neoforged.fml.loading.moddiscovery.locators.InDevFolderLocator/CORE]: Got mod coordinates mcreator%%C:\Users\Greenboy\MCreatorWorkspaces\the_middle_ages\build\classes\java\main;mcreator%%C:\Users\Greenboy\MCreatorWorkspaces\the_middle_ages\build\resources\main from env
+[21Aug2026 02:17:51.077] [ForkJoinPool.commonPool-worker-4/INFO] [net.neoforged.fml.loading.moddiscovery.locators.JarInJarDependencyLocator/]: Found 2 dependencies adding them to mods collection
+[21Aug2026 02:17:51.086] [ForkJoinPool.commonPool-worker-4/INFO] [net.neoforged.fml.loading.moddiscovery.ModDiscoverer/]: 
+     Mod List:
+		Name Version (Mod Id)
+
+		Minecraft 26.1.2 (minecraft)
+		NeoForge 26.1.2.71 (neoforge)
+		The Middle Ages 1.0 (the_middle_ages)
+[21Aug2026 02:17:51.780] [main/INFO] [mixin/]: SpongePowered MIXIN Subsystem Version=0.8.7 Source=file:/C:/Users/Greenboy/.mcreator/gradle/caches/modules-2/files-2.1/net.fabricmc/sponge-mixin/0.17.3+mixin.0.8.7/41c4a3984a80f4679e759fb9f495587acc5cdac7/sponge-mixin-0.17.3+mixin.0.8.7.jar Service=FML Env=CLIENT
+[21Aug2026 02:17:51.843] [main/INFO] [net.neoforged.fml.loading.FMLLoader/]: Loading FML Plugins:
+[21Aug2026 02:17:51.845] [main/INFO] [net.neoforged.fml.loading.FMLLoader/]:  - C:/Users/Greenboy/.mcreator/gradle/caches/modules-2/files-2.1/net.neoforged/neoforge/26.1.2.71/2fb61eae2ea7b55fe17d0dba69cab130beb0a054/neoforge-26.1.2.71-universal.jar > net.neoforged.neoforge-coremods-26.1.2.71.jar
+[21Aug2026 02:17:52.223] [main/INFO] [net.neoforged.fml.loading.FMLLoader/]: Building game content classloader:
+ - minecraft (composite(filtered(jar(C:/Users/Greenboy/MCreatorWorkspaces/the_middle_ages/build/moddev/artifacts/minecraft-patched-26.1.2.71.jar)), filtered(jar(C:/Users/Greenboy/MCreatorWorkspaces/the_middle_ages/build/moddev/artifacts/minecraft-patched-26.1.2.71.jar))))
+ - mixinextras.neoforge (jar(C:/Users/Greenboy/.mcreator/gradle/caches/modules-2/files-2.1/net.neoforged/neoforge/26.1.2.71/2fb61eae2ea7b55fe17d0dba69cab130beb0a054/neoforge-26.1.2.71-universal.jar > mixinextras-neoforge-0.5.4.jar))
+ - neoforge (composite(filtered(jar(C:/Users/Greenboy/.mcreator/gradle/caches/modules-2/files-2.1/net.neoforged/neoforge/26.1.2.71/2fb61eae2ea7b55fe17d0dba69cab130beb0a054/neoforge-26.1.2.71-universal.jar))))
+ - net.neoforged.fml.generated (empty(VirtualJar/net.neoforged.fml.generated))
+ - the_middle_ages (composite(folder(C:/Users/Greenboy/MCreatorWorkspaces/the_middle_ages/build/classes/java/main), folder(C:/Users/Greenboy/MCreatorWorkspaces/the_middle_ages/build/resources/main)))
+[21Aug2026 02:17:52.251] [main/INFO] [net.neoforged.fml.loading.FMLLoader/]: Built game content classloader in 55ms
+[21Aug2026 02:17:56.604] [Datafixer Bootstrap/INFO] [com.mojang.datafixers.DataFixerBuilder/]: 294 Datafixer optimizations took 1069 milliseconds
+[21Aug2026 02:17:56.682] [pool-8-thread-1/INFO] [MixinExtras|Service/]: Initializing MixinExtras via com.llamalad7.mixinextras.service.MixinExtrasServiceImpl(version=0.5.4).
+[21Aug2026 02:18:07.453] [main/WARN] [net.minecraft.commands.Commands/]: Ambiguity between arguments [teleport, location] and [teleport, destination] with inputs: [0.1 -0.5 .9, 0 0 0]
+[21Aug2026 02:18:07.460] [main/WARN] [net.minecraft.commands.Commands/]: Ambiguity between arguments [teleport, location] and [teleport, targets] with inputs: [0.1 -0.5 .9, 0 0 0]
+[21Aug2026 02:18:07.468] [main/WARN] [net.minecraft.commands.Commands/]: Ambiguity between arguments [teleport, destination] and [teleport, targets] with inputs: [Player, 0123, @e, dd12be42-52a9-4a91-a8a1-11c01849e498]
+[21Aug2026 02:18:07.473] [main/WARN] [net.minecraft.commands.Commands/]: Ambiguity between arguments [teleport, targets] and [teleport, destination] with inputs: [Player, 0123, dd12be42-52a9-4a91-a8a1-11c01849e498]
+[21Aug2026 02:18:07.482] [main/WARN] [net.minecraft.commands.Commands/]: Ambiguity between arguments [teleport, targets, location] and [teleport, targets, destination] with inputs: [0.1 -0.5 .9, 0 0 0]
+[21Aug2026 02:18:07.491] [main/WARN] [net.minecraft.commands.Commands/]: Ambiguity between arguments [time, set, time] and [time, set, timemarker] with inputs: [0, 0s, 0d, 0t]
+[21Aug2026 02:18:07.501] [main/WARN] [net.minecraft.commands.Commands/]: Ambiguity between arguments [time, set, timemarker] and [time, set, time] with inputs: [012]
+[21Aug2026 02:18:07.518] [main/WARN] [net.minecraft.commands.Commands/]: Ambiguity between arguments [time, of, clock, set, time] and [time, of, clock, set, timemarker] with inputs: [0, 0s, 0d, 0t]
+[21Aug2026 02:18:07.526] [main/WARN] [net.minecraft.commands.Commands/]: Ambiguity between arguments [time, of, clock, set, timemarker] and [time, of, clock, set, time] with inputs: [012]
+[21Aug2026 02:18:07.537] [main/WARN] [net.minecraft.commands.Commands/]: Ambiguity between arguments [waypoint, modify, waypoint, color, reset] and [waypoint, modify, waypoint, color, color] with inputs: [reset]
+[21Aug2026 02:18:07.879] [modloading-worker-0/INFO] [net.neoforged.neoforge.common.NeoForgeMod/NEOFORGE-MOD]: NeoForge mod loading, version 26.1.2.71, for MC 26.1.2
+[21Aug2026 02:18:10.612] [Render thread/INFO] [com.mojang.authlib.yggdrasil.YggdrasilAuthenticationService/]: Environment: Environment[sessionHost=https://sessionserver.mojang.com, servicesHost=https://api.minecraftservices.com, profilesHost=https://api.mojang.com, name=PROD]
+[21Aug2026 02:18:10.665] [Render thread/INFO] [net.minecraft.client.Minecraft/]: Setting user: Dev
+[21Aug2026 02:18:10.914] [Render thread/INFO] [net.minecraft.client.Minecraft/]: Backend library: LWJGL version 3.4.1+2
+[21Aug2026 02:18:11.481] [Render thread/INFO] [net.minecraft.client.Minecraft/]: Using optional rendering extensions: GL_ARB_buffer_storage, GL_KHR_debug, GL_ARB_vertex_attrib_binding, GL_EXT_texture_filter_anisotropic
+[21Aug2026 02:18:14.234] [Render thread/INFO] [net.minecraft.server.packs.resources.ReloadableResourceManager/]: Reloading ResourceManager: vanilla, mod_resources, mod/neoforge, mod/the_middle_ages
+[21Aug2026 02:18:15.363] [resourceLoad/INFO] [net.minecraft.client.gui.font.providers.UnihexProvider/]: Found unifont_all_no_pua-17.0.01.hex, loading
+[21Aug2026 02:18:15.363] [resourceLoad/INFO] [net.minecraft.client.gui.font.providers.UnihexProvider/]: Found unifont_pua-17.0.01.hex, loading
+[21Aug2026 02:18:15.882] [resourceLoad/INFO] [net.minecraft.client.gui.font.providers.UnihexProvider/]: Found unifont_jp_patch-17.0.01.hex, loading
+[21Aug2026 02:18:17.509] [resourceLoad/WARN] [net.minecraft.client.resources.model.ModelDiscovery/]: Missing block model: the_middle_ages:item/sit_spawn_egg
+[21Aug2026 02:18:17.512] [resourceLoad/WARN] [net.minecraft.client.resources.model.ModelDiscovery/]: Missing block model: the_middle_ages:item/entity_path_finder_spawn_egg
+[21Aug2026 02:18:17.514] [resourceLoad/WARN] [net.minecraft.client.resources.model.ModelDiscovery/]: Missing block model: the_middle_ages:item/knight_riding_horse_spawn_egg
+[21Aug2026 02:18:20.156] [Render thread/INFO] [com.mojang.blaze3d.audio.Library/]: OpenAL initialized on device OpenAL Soft on Speakers (2- High Definition Audio Device)
+[21Aug2026 02:18:20.164] [Render thread/INFO] [net.minecraft.client.sounds.SoundEngine/SOUNDS]: Sound engine started
+[21Aug2026 02:18:20.165] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x256x0 minecraft:textures/atlas/particles.png-atlas
+[21Aug2026 02:18:20.240] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 128x128x0 minecraft:textures/atlas/decorated_pot.png-atlas
+[21Aug2026 02:18:20.252] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 2048x1024x0 minecraft:textures/atlas/armor_trims.png-atlas
+[21Aug2026 02:18:20.368] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x256x0 minecraft:textures/atlas/paintings.png-atlas
+[21Aug2026 02:18:20.386] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 1024x512x0 minecraft:textures/atlas/shield_patterns.png-atlas
+[21Aug2026 02:18:20.395] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 4096x4096x4 minecraft:textures/atlas/blocks.png-atlas
+[21Aug2026 02:18:20.861] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x512x0 minecraft:textures/atlas/chest.png-atlas
+[21Aug2026 02:18:20.866] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 256x128x0 minecraft:textures/atlas/celestials.png-atlas
+[21Aug2026 02:18:20.870] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 1024x512x0 minecraft:textures/atlas/banner_patterns.png-atlas
+[21Aug2026 02:18:20.882] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x512x0 minecraft:textures/atlas/beds.png-atlas
+[21Aug2026 02:18:20.886] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 1024x512x0 minecraft:textures/atlas/items.png-atlas
+[21Aug2026 02:18:21.055] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 1024x1024x0 minecraft:textures/atlas/gui.png-atlas
+[21Aug2026 02:18:21.192] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 128x64x0 minecraft:textures/atlas/map_decorations.png-atlas
+[21Aug2026 02:18:21.199] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x256x0 minecraft:textures/atlas/signs.png-atlas
+[21Aug2026 02:18:21.206] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x512x0 minecraft:textures/atlas/shulker_boxes.png-atlas
+[21Aug2026 02:18:21.575] [Render thread/INFO] [net.neoforged.neoforge.client.entity.animation.json.AnimationLoader/]: Loaded 0 entity animations
+[21Aug2026 02:18:29.753] [Worker-Main-4/ERROR] [net.minecraft.server.packs.resources.SimpleJsonResourceReloadListener/]: Couldn't parse data file 'the_middle_ages:recipes/medieval_bed_recipe' from 'the_middle_ages:advancement/recipes/medieval_bed_recipe.json': DataResult.Error['Missing tag: 'the_middle_ages:beds' in 'minecraft:item' missed input: {"has_ingredient_2":{"conditions":{"items":[{"items":"#the_middle_ages:beds"}]},"trigger":"minecraft:inventory_changed"}}': Optional[Advancement[parent=Optional[minecraft:recipes/root], display=Optional.empty, rewards=AdvancementRewards[experience=0, loot=[], recipes=[ResourceKey[minecraft:recipe / the_middle_ages:medieval_bed_recipe]], function=Optional.empty], criteria={has_ingredient_2=Criterion[trigger=net.minecraft.advancements.criterion.InventoryChangeTrigger@32bf7123, triggerInstance=TriggerInstance[player=Optional.empty, slots=Slots[occupied=Ints[bounds=Bounds[min=Optional.empty, max=Optional.empty], boundsSqr=Bounds[min=Optional.empty, max=Optional.empty]], full=Ints[bounds=Bounds[min=Optional.empty, max=Optional.empty], boundsSqr=Bounds[min=Optional.empty, max=Optional.empty]], empty=Ints[bounds=Bounds[min=Optional.empty, max=Optional.empty], boundsSqr=Bounds[min=Optional.empty, max=Optional.empty]]], items=[ItemPredicate[items=Optional.empty, count=Ints[bounds=Bounds[min=Optional.empty, max=Optional.empty], boundsSqr=Bounds[min=Optional.empty, max=Optional.empty]], components=DataComponentMatchers[exact=[], partial={}]]]]], has_the_recipe=Criterion[trigger=net.minecraft.advancements.criterion.RecipeUnlockedTrigger@374e1c02, triggerInstance=TriggerInstance[player=Optional.empty, recipe=ResourceKey[minecraft:recipe / the_middle_ages:medieval_bed_recipe]]], has_ingredient_1=Criterion[trigger=net.minecraft.advancements.criterion.InventoryChangeTrigger@32bf7123, triggerInstance=TriggerInstance[player=Optional.empty, slots=Slots[occupied=Ints[bounds=Bounds[min=Optional.empty, max=Optional.empty], boundsSqr=Bounds[min=Optional.empty, max=Optional.empty]], full=Ints[bounds=Bounds[min=Optional.empty, max=Optional.empty], boundsSqr=Bounds[min=Optional.empty, max=Optional.empty]], empty=Ints[bounds=Bounds[min=Optional.empty, max=Optional.empty], boundsSqr=Bounds[min=Optional.empty, max=Optional.empty]]], items=[ItemPredicate[items=Optional[NamedSet(TagKey[minecraft:item / minecraft:wool])[null]], count=Ints[bounds=Bounds[min=Optional.empty, max=Optional.empty], boundsSqr=Bounds[min=Optional.empty, max=Optional.empty]], components=DataComponentMatchers[exact=[], partial={}]]]]], has_ingredient_0=Criterion[trigger=net.minecraft.advancements.criterion.InventoryChangeTrigger@32bf7123, triggerInstance=TriggerInstance[player=Optional.empty, slots=Slots[occupied=Ints[bounds=Bounds[min=Optional.empty, max=Optional.empty], boundsSqr=Bounds[min=Optional.empty, max=Optional.empty]], full=Ints[bounds=Bounds[min=Optional.empty, max=Optional.empty], boundsSqr=Bounds[min=Optional.empty, max=Optional.empty]], empty=Ints[bounds=Bounds[min=Optional.empty, max=Optional.empty], boundsSqr=Bounds[min=Optional.empty, max=Optional.empty]]], items=[ItemPredicate[items=Optional[NamedSet(TagKey[minecraft:item / minecraft:planks])[null]], count=Ints[bounds=Bounds[min=Optional.empty, max=Optional.empty], boundsSqr=Bounds[min=Optional.empty, max=Optional.empty]], components=DataComponentMatchers[exact=[], partial={}]]]]]}, requirements=[[has_the_recipe, has_ingredient_0, has_ingredient_1, has_ingredient_2]], sendsTelemetryEvent=false, name=Optional.empty]]]
+[21Aug2026 02:18:29.862] [Render thread/INFO] [net.minecraft.world.item.crafting.RecipeManager/]: Loaded 1532 recipes
+[21Aug2026 02:18:29.886] [Render thread/INFO] [net.minecraft.advancements.AdvancementTree/]: Loaded 1632 advancements
+[21Aug2026 02:18:29.891] [Render thread/INFO] [net.neoforged.neoforge.common.crafting.RecipePriorityManager/]: Loaded 0 recipe priority overrides
+[21Aug2026 02:18:30.277] [Server thread/INFO] [net.minecraft.client.server.IntegratedServer/]: Starting integrated minecraft server version 26.1.2
+[21Aug2026 02:18:30.278] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Generating keypair
+[21Aug2026 02:18:31.115] [Server thread/INFO] [net.minecraft.server.level.progress.LoggingLevelLoadListener/]: Loading 0 persistent chunks...
+[21Aug2026 02:18:31.116] [Server thread/INFO] [net.minecraft.server.level.progress.LoggingLevelLoadListener/]: Preparing spawn area: 16%
+[21Aug2026 02:18:31.128] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:overworld
+[21Aug2026 02:18:31.163] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:the_end
+[21Aug2026 02:18:31.173] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:the_nether
+[21Aug2026 02:18:31.180] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/the_middle_ages:medieval_dimension
+[21Aug2026 02:18:31.219] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: ThreadedAnvilChunkStorage (world): All chunks are saved
+[21Aug2026 02:18:31.219] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: ThreadedAnvilChunkStorage (DIM1): All chunks are saved
+[21Aug2026 02:18:31.220] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: ThreadedAnvilChunkStorage (DIM-1): All chunks are saved
+[21Aug2026 02:18:31.220] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: ThreadedAnvilChunkStorage (medieval_dimension): All chunks are saved
+[21Aug2026 02:18:31.220] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: ThreadedAnvilChunkStorage: All dimensions are saved
+[21Aug2026 02:18:31.226] [Server thread/INFO] [net.neoforged.neoforge.server.permission.PermissionAPI/]: Successfully initialized permission handler neoforge:default_handler
+[21Aug2026 02:18:32.089] [Server thread/INFO] [net.minecraft.server.level.progress.LoggingLevelLoadListener/]: Loading 49 chunks for player spawn...
+[21Aug2026 02:18:32.089] [Server thread/INFO] [net.minecraft.server.level.progress.LoggingLevelLoadListener/]: Preparing spawn area: 16%
+[21Aug2026 02:18:32.132] [Server thread/INFO] [net.minecraft.server.level.progress.LoggingLevelLoadListener/]: Preparing spawn area: 16%
+[21Aug2026 02:18:32.479] [Server thread/INFO] [net.minecraft.server.level.progress.LoggingLevelLoadListener/]: Time elapsed: 1365 ms
+[21Aug2026 02:18:33.021] [Server thread/INFO] [net.minecraft.server.players.PlayerList/]: Dev[local:E:9cc949ba] logged in with entity id 71 at (-111.53372565064063, -61.94517114323576, -22.706746933290596)
+[21Aug2026 02:18:33.172] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Dev joined the game
+[21Aug2026 02:18:33.363] [Render thread/WARN] [net.minecraft.client.multiplayer.ClientPacketListener/]: Ignoring chat session from Dev due to missing Services public key
+[21Aug2026 02:18:33.393] [Server thread/INFO] [net.minecraft.client.server.IntegratedServer/]: Changing view distance to 2, from 10
+[21Aug2026 02:18:33.398] [Server thread/INFO] [net.minecraft.client.server.IntegratedServer/]: Changing simulation distance to 5, from 0
+[21Aug2026 02:18:33.466] [Render thread/INFO] [net.minecraft.client.renderer.DynamicUniformStorage/]: Resizing Dynamic Transforms UBO, capacity limit of 2 reached during a single frame. New capacity will be 4.
+[21Aug2026 02:18:33.633] [Render thread/INFO] [net.minecraft.advancements.AdvancementTree/]: Loaded 52 advancements
+[21Aug2026 02:18:33.802] [Render thread/INFO] [net.minecraft.client.renderer.DynamicUniformStorage/]: Resizing Dynamic Transforms UBO, capacity limit of 4 reached during a single frame. New capacity will be 8.
+[21Aug2026 02:18:36.291] [Server thread/WARN] [net.minecraft.server.MinecraftServer/]: Can't keep up! Is the server overloaded? Running 2015ms or 40 ticks behind
+[21Aug2026 02:18:36.376] [Render thread/INFO] [net.minecraft.client.renderer.DynamicUniformStorage/]: Resizing Chunk Sections UBO, capacity limit of 2 reached during a single frame. New capacity will be 8.
+[21Aug2026 02:18:37.057] [Render thread/INFO] [net.minecraft.client.renderer.DynamicUniformStorage/]: Resizing Chunk Sections UBO, capacity limit of 8 reached during a single frame. New capacity will be 16.
+[21Aug2026 02:18:37.199] [Server thread/INFO] [net.minecraft.client.server.IntegratedServer/]: Saving and pausing game...
+[21Aug2026 02:18:37.535] [Render thread/INFO] [net.minecraft.client.renderer.DynamicUniformStorage/]: Resizing Chunk Sections UBO, capacity limit of 16 reached during a single frame. New capacity will be 32.
+[21Aug2026 02:18:37.596] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:overworld
+[21Aug2026 02:18:38.036] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:the_end
+[21Aug2026 02:18:38.036] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:the_nether
+[21Aug2026 02:18:38.037] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/the_middle_ages:medieval_dimension
+[21Aug2026 02:19:14.077] [Server thread/INFO] [net.minecraft.client.server.IntegratedServer/]: Saving and pausing game...
+[21Aug2026 02:19:14.098] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:overworld
+[21Aug2026 02:19:14.127] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:the_end
+[21Aug2026 02:19:14.128] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:the_nether
+[21Aug2026 02:19:14.128] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/the_middle_ages:medieval_dimension

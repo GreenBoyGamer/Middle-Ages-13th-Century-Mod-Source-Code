@@ -20,7 +20,7 @@ public class TheMiddleAgesModEntityRenderers {
 		event.registerEntityRenderer(TheMiddleAgesModEntities.SOLDIER.get(), SoldierRenderer::new);
 		event.registerEntityRenderer(TheMiddleAgesModEntities.DARK_KNIGHT.get(), DarkKnightRenderer::new);
 		event.registerEntityRenderer(TheMiddleAgesModEntities.DARK_SOLDIER.get(), DarkSoldierRenderer::new);
-		event.registerEntityRenderer(TheMiddleAgesModEntities.MADIEVAL_HORSE.get(), MadievalHorseRenderer::new);
+		event.registerEntityRenderer(TheMiddleAgesModEntities.MEDIEVAL_HORSE.get(), MadievalHorseRenderer::new);
 		event.registerEntityRenderer(TheMiddleAgesModEntities.KNIGHT_RIDING_HORSE.get(), KnightRidingHorseRenderer::new);
 		event.registerEntityRenderer(TheMiddleAgesModEntities.ARCHER.get(), ArcherRenderer::new);
 		event.registerEntityRenderer(TheMiddleAgesModEntities.ENEMY_ARCHER.get(), EnemyArcherRenderer::new);
@@ -28,5 +28,9 @@ public class TheMiddleAgesModEntityRenderers {
 		event.registerEntityRenderer(TheMiddleAgesModEntities.PASSENGER_CART.get(), PassengerCartRenderer::new);
 		event.registerEntityRenderer(TheMiddleAgesModEntities.BUYER.get(), BuyerRenderer::new);
 		event.registerEntityRenderer(TheMiddleAgesModEntities.PASSENGER_CART_RIDING.get(), PassengerCartRidingRenderer::new);
+		event.registerEntityRenderer(TheMiddleAgesModEntities.CIVILIAN_3.get(), Civilian3Renderer::new);
+		event.registerEntityRenderer(TheMiddleAgesModEntities.ENTITY_PATH_FINDER.get(), EntityPathFinderRenderer::new);
+		event.registerEntityRenderer(TheMiddleAgesModEntities.SIT.get(), SitRenderer::new);
+		event.registerEntityRenderer(TheMiddleAgesModEntities.WANDERER.get(), WandererRenderer::new);
 	}
 }

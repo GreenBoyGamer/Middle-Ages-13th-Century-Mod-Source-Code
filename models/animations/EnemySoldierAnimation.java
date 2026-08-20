@@ -76,12 +76,9 @@ public class EnemySoldierAnimation {
 									AnimationChannel.Interpolations.LINEAR),
 							new Keyframe(1.5F, KeyframeAnimations.degreeVec(0.0F, 0.0F, 0.0F),
 									AnimationChannel.Interpolations.LINEAR)))
-			.addAnimation("event",
-					new AnimationChannel(AnimationChannel.Targets.SCALE, new Keyframe(0.0F,
-							KeyframeAnimations.scaleVec(0.0F, 0.0F, 0.0F), AnimationChannel.Interpolations.LINEAR)))
 			.build();
 
-	public static final AnimationDefinition walking = AnimationDefinition.Builder.withLength(1.0417F).looping()
+	public static final AnimationDefinition walking = AnimationDefinition.Builder.withLength(1.0F).looping()
 			.addAnimation("head",
 					new AnimationChannel(AnimationChannel.Targets.ROTATION,
 							new Keyframe(0.0F, KeyframeAnimations.degreeVec(2.5F, 0.0F, 0.0F),
@@ -134,7 +131,7 @@ public class EnemySoldierAnimation {
 					new AnimationChannel(AnimationChannel.Targets.ROTATION,
 							new Keyframe(0.0F, KeyframeAnimations.degreeVec(35.0F, 0.0F, 0.0F),
 									AnimationChannel.Interpolations.LINEAR),
-							new Keyframe(0.25F, KeyframeAnimations.degreeVec(0.0F, 0.0F, 0.0F),
+							new Keyframe(0.25F, KeyframeAnimations.degreeVec(90.0F, 0.0F, 0.0F),
 									AnimationChannel.Interpolations.LINEAR),
 							new Keyframe(0.5F, KeyframeAnimations.degreeVec(22.5F, 0.0F, 0.0F),
 									AnimationChannel.Interpolations.LINEAR),
@@ -162,7 +159,7 @@ public class EnemySoldierAnimation {
 									AnimationChannel.Interpolations.LINEAR),
 							new Keyframe(0.5F, KeyframeAnimations.degreeVec(32.5F, 0.0F, 0.0F),
 									AnimationChannel.Interpolations.LINEAR),
-							new Keyframe(0.75F, KeyframeAnimations.degreeVec(0.0F, 0.0F, 0.0F),
+							new Keyframe(0.75F, KeyframeAnimations.degreeVec(90.0F, 0.0F, 0.0F),
 									AnimationChannel.Interpolations.LINEAR),
 							new Keyframe(1.0F, KeyframeAnimations.degreeVec(20.0F, 0.0F, 0.0F),
 									AnimationChannel.Interpolations.LINEAR)))
@@ -194,9 +191,6 @@ public class EnemySoldierAnimation {
 									AnimationChannel.Interpolations.LINEAR),
 							new Keyframe(1.0F, KeyframeAnimations.posVec(0.0F, -0.5F, 0.0F),
 									AnimationChannel.Interpolations.LINEAR)))
-			.addAnimation("event",
-					new AnimationChannel(AnimationChannel.Targets.SCALE, new Keyframe(0.0F,
-							KeyframeAnimations.scaleVec(0.0F, 0.0F, 0.0F), AnimationChannel.Interpolations.LINEAR)))
 			.build();
 
 	public static final AnimationDefinition sprint = AnimationDefinition.Builder.withLength(0.6667F).looping()
@@ -336,9 +330,6 @@ public class EnemySoldierAnimation {
 									AnimationChannel.Interpolations.CATMULLROM),
 							new Keyframe(0.6667F, KeyframeAnimations.posVec(0.0F, 0.0F, 0.0F),
 									AnimationChannel.Interpolations.CATMULLROM)))
-			.addAnimation("event",
-					new AnimationChannel(AnimationChannel.Targets.SCALE, new Keyframe(0.0F,
-							KeyframeAnimations.scaleVec(0.0F, 0.0F, 0.0F), AnimationChannel.Interpolations.LINEAR)))
 			.build();
 
 	public static final AnimationDefinition attack = AnimationDefinition.Builder.withLength(0.5417F)
@@ -389,12 +380,8 @@ public class EnemySoldierAnimation {
 							new Keyframe(0.5F, KeyframeAnimations.degreeVec(0.0F, 0.0F, 0.0F),
 									AnimationChannel.Interpolations.LINEAR)))
 			.addAnimation("mouth",
-					new AnimationChannel(AnimationChannel.Targets.SCALE,
-							new Keyframe(0.0F, KeyframeAnimations.scaleVec(1.0F, 0.1333F, 1.0F),
-									AnimationChannel.Interpolations.LINEAR)))
-			.addAnimation("event",
 					new AnimationChannel(AnimationChannel.Targets.SCALE, new Keyframe(0.0F,
-							KeyframeAnimations.scaleVec(0.0F, 0.0F, 0.0F), AnimationChannel.Interpolations.LINEAR)))
+							KeyframeAnimations.scaleVec(1.0F, 0.1333F, 1.0F), AnimationChannel.Interpolations.LINEAR)))
 			.build();
 
 	public static final AnimationDefinition attack2 = AnimationDefinition.Builder.withLength(0.5417F)
@@ -465,12 +452,8 @@ public class EnemySoldierAnimation {
 							new Keyframe(0.5F, KeyframeAnimations.degreeVec(0.0F, 0.0F, 0.0F),
 									AnimationChannel.Interpolations.LINEAR)))
 			.addAnimation("mouth",
-					new AnimationChannel(AnimationChannel.Targets.SCALE,
-							new Keyframe(0.0F, KeyframeAnimations.scaleVec(1.0F, 0.1333F, 1.0F),
-									AnimationChannel.Interpolations.LINEAR)))
-			.addAnimation("event",
 					new AnimationChannel(AnimationChannel.Targets.SCALE, new Keyframe(0.0F,
-							KeyframeAnimations.scaleVec(0.0F, 0.0F, 0.0F), AnimationChannel.Interpolations.LINEAR)))
+							KeyframeAnimations.scaleVec(1.0F, 0.1333F, 1.0F), AnimationChannel.Interpolations.LINEAR)))
 			.build();
 
 	public static final AnimationDefinition die = AnimationDefinition.Builder.withLength(1.0F)
@@ -492,12 +475,20 @@ public class EnemySoldierAnimation {
 									AnimationChannel.Interpolations.LINEAR)))
 			.addAnimation("sword",
 					new AnimationChannel(AnimationChannel.Targets.ROTATION,
-							new Keyframe(0.25F, KeyframeAnimations.degreeVec(0.0F, 0.0F, 0.0F),
+							new Keyframe(0.0F, KeyframeAnimations.degreeVec(0.0F, 0.0F, 0.0F),
 									AnimationChannel.Interpolations.LINEAR),
-							new Keyframe(0.3333F, KeyframeAnimations.degreeVec(0.0F, 122.5F, 0.0F),
+							new Keyframe(0.25F, KeyframeAnimations.degreeVec(-527.5F, 0.0F, 0.0F),
+									AnimationChannel.Interpolations.LINEAR),
+							new Keyframe(0.3333F, KeyframeAnimations.degreeVec(-527.5F, 0.0F, 0.0F),
 									AnimationChannel.Interpolations.LINEAR)))
 			.addAnimation("sword",
 					new AnimationChannel(AnimationChannel.Targets.POSITION,
+							new Keyframe(0.0F, KeyframeAnimations.posVec(0.0F, 0.0F, 0.0F),
+									AnimationChannel.Interpolations.LINEAR),
+							new Keyframe(0.0833F, KeyframeAnimations.posVec(0.0F, 6.0F, -14.6667F),
+									AnimationChannel.Interpolations.LINEAR),
+							new Keyframe(0.125F, KeyframeAnimations.posVec(0.0F, 29.1667F, -11.0F),
+									AnimationChannel.Interpolations.LINEAR),
 							new Keyframe(0.25F, KeyframeAnimations.posVec(0.0F, 0.0F, 0.0F),
 									AnimationChannel.Interpolations.LINEAR),
 							new Keyframe(0.3333F, KeyframeAnimations.posVec(-12.0F, -4.0F, 20.0F),
@@ -542,9 +533,6 @@ public class EnemySoldierAnimation {
 									AnimationChannel.Interpolations.LINEAR),
 							new Keyframe(0.4167F, KeyframeAnimations.posVec(0.0F, 0.0F, 1.3333F),
 									AnimationChannel.Interpolations.LINEAR)))
-			.addAnimation("event",
-					new AnimationChannel(AnimationChannel.Targets.SCALE, new Keyframe(0.0F,
-							KeyframeAnimations.scaleVec(0.0F, 0.0F, 0.0F), AnimationChannel.Interpolations.LINEAR)))
 			.build();
 
 	public static final AnimationDefinition threaten = AnimationDefinition.Builder.withLength(2.7917F)
@@ -603,6 +591,10 @@ public class EnemySoldierAnimation {
 							new Keyframe(2.5F, KeyframeAnimations.degreeVec(0.0F, 0.0F, 0.0F),
 									AnimationChannel.Interpolations.LINEAR),
 							new Keyframe(2.75F, KeyframeAnimations.degreeVec(0.0F, 0.0F, 0.0F),
+									AnimationChannel.Interpolations.LINEAR)))
+			.addAnimation("down_side_L",
+					new AnimationChannel(AnimationChannel.Targets.ROTATION,
+							new Keyframe(0.2083F, KeyframeAnimations.degreeVec(0.0F, 0.0F, 0.0F),
 									AnimationChannel.Interpolations.LINEAR)))
 			.addAnimation("left_arm",
 					new AnimationChannel(AnimationChannel.Targets.ROTATION,
@@ -765,9 +757,6 @@ public class EnemySoldierAnimation {
 									AnimationChannel.Interpolations.LINEAR),
 							new Keyframe(3.25F, KeyframeAnimations.posVec(0.0F, 0.0F, 0.0F),
 									AnimationChannel.Interpolations.LINEAR)))
-			.addAnimation("event",
-					new AnimationChannel(AnimationChannel.Targets.SCALE, new Keyframe(0.0F,
-							KeyframeAnimations.scaleVec(0.0F, 0.0F, 0.0F), AnimationChannel.Interpolations.LINEAR)))
 			.build();
 
 	public static final AnimationDefinition scared = AnimationDefinition.Builder.withLength(0.25F)
@@ -852,18 +841,6 @@ public class EnemySoldierAnimation {
 							new Keyframe(0.0F, KeyframeAnimations.posVec(0.0F, 0.0F, 0.0F),
 									AnimationChannel.Interpolations.LINEAR),
 							new Keyframe(0.25F, KeyframeAnimations.posVec(0.0F, -6.0F, 0.0F),
-									AnimationChannel.Interpolations.LINEAR)))
-			.addAnimation("event",
-					new AnimationChannel(AnimationChannel.Targets.ROTATION,
-							new Keyframe(0.0F, KeyframeAnimations.degreeVec(0.0F, 0.0F, 0.0F),
-									AnimationChannel.Interpolations.LINEAR),
-							new Keyframe(0.25F, KeyframeAnimations.degreeVec(-30.0F, 0.0F, 0.0F),
-									AnimationChannel.Interpolations.LINEAR)))
-			.addAnimation("event",
-					new AnimationChannel(AnimationChannel.Targets.POSITION,
-							new Keyframe(0.0F, KeyframeAnimations.posVec(0.0F, 0.0F, 0.0F),
-									AnimationChannel.Interpolations.LINEAR),
-							new Keyframe(0.25F, KeyframeAnimations.posVec(0.0F, 3.3333F, 12.6667F),
 									AnimationChannel.Interpolations.LINEAR)))
 			.build();
 }

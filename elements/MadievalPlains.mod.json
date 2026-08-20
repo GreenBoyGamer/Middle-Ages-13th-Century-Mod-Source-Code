@@ -5,17 +5,21 @@
     "name": "Madieval Plains",
     "groundBlock": "Blocks.GRASS",
     "undergroundBlock": "Blocks.DIRT#0",
-    "underwaterBlock": "Blocks.GRAVEL",
-    "airColor": {
-      "value": -16731137,
-      "falpha": 0.0
-    },
-    "fogColor": {
-      "value": -16154447,
-      "falpha": 0.0
-    },
+    "underwaterBlock": "Blocks.STONE#0",
     "grassColor": {
       "value": -7226023,
+      "falpha": 0.0
+    },
+    "foliageColor": {
+      "value": -8934609,
+      "falpha": 0.0
+    },
+    "waterColor": {
+      "value": -12618012,
+      "falpha": 0.0
+    },
+    "waterFogColor": {
+      "value": -16448205,
       "falpha": 0.0
     },
     "ambientSound": "",
@@ -53,7 +57,7 @@
     },
     "genDepth": {
       "min": 0.2,
-      "max": 0.9
+      "max": 0.6
     },
     "treesPerChunk": 0,
     "vanillaTreeType": "Default",
@@ -63,7 +67,10 @@
     "treeBranch": "",
     "treeVines": "",
     "treeFruits": "",
-    "defaultFeatures": [],
+    "defaultFeatures": [
+      "PlainsTallGrass",
+      "ForestFlowers"
+    ],
     "spawnStronghold": false,
     "spawnMineshaft": false,
     "spawnMineshaftMesa": false,
@@ -84,6 +91,21 @@
     "spawnBastionRemnant": false,
     "spawnEndCity": false,
     "spawnRuinedPortal": "NONE",
-    "spawnEntries": []
+    "spawnEntries": [
+      {
+        "entity": "EntityCow",
+        "minGroup": 1,
+        "maxGroup": 3,
+        "weight": 10,
+        "spawnType": "creature"
+      },
+      {
+        "entity": "EntitySheep",
+        "minGroup": 1,
+        "maxGroup": 3,
+        "weight": 10,
+        "spawnType": "creature"
+      }
+    ]
   }
 }

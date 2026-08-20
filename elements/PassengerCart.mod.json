@@ -24,13 +24,13 @@
     "modelLayers": [],
     "animations": [
       {
-        "animation": "CUSTOM:archermodelAnimation.idle",
+        "animation": "CUSTOM:horse_cartAnimation.idle",
         "speed": 1.0,
         "walking": false,
         "amplitude": 1.0
       },
       {
-        "animation": "CUSTOM:archermodelAnimation.walking",
+        "animation": "CUSTOM:horse_cartAnimation.moving",
         "speed": 1.0,
         "walking": true,
         "amplitude": 1.0
@@ -49,9 +49,9 @@
       "value": -1,
       "falpha": 0.0
     },
-    "spawnEggTexture": "",
+    "spawnEggTexture": "cart",
     "creativeTabs": [
-      "MISC"
+      "CUSTOM:TheMiddleAgesBlocks"
     ],
     "isBoss": false,
     "bossBarColor": "PINK",
@@ -101,7 +101,7 @@
     "immuneToAnvil": false,
     "immuneToWither": false,
     "immuneToDragonBreath": false,
-    "mobDrop": "",
+    "mobDrop": "CUSTOM:PassengerCart.spawn_egg",
     "livingSound": "",
     "hurtSound": "entity.generic.hurt",
     "deathSound": "entity.generic.death",
@@ -129,8 +129,8 @@
     "rangedItemType": "Default item",
     "rangedAttackInterval": 20,
     "rangedAttackRadius": 10.0,
-    "spawnThisMob": true,
-    "doesDespawnWhenIdle": true,
+    "spawnThisMob": false,
+    "doesDespawnWhenIdle": false,
     "spawningProbability": 20,
     "mobSpawningType": "monster",
     "minNumberOfMobsPerGroup": 4,

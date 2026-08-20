@@ -1,60 +1,109 @@
 package net.mcreator.themiddleages.client.renderer;
 
-import net.minecraft.resources.ResourceLocation;
+import net.neoforged.neoforge.client.renderstate.RegisterRenderStateModifiersEvent;
+import net.neoforged.fml.common.EventBusSubscriber;
+import net.neoforged.bus.api.SubscribeEvent;
+import net.neoforged.api.distmarker.Dist;
+
+import net.minecraft.util.context.ContextKey;
+import net.minecraft.resources.Identifier;
+import net.minecraft.client.renderer.entity.state.LivingEntityRenderState;
 import net.minecraft.client.renderer.entity.MobRenderer;
 import net.minecraft.client.renderer.entity.EntityRendererProvider;
 import net.minecraft.client.model.geom.ModelPart;
-import net.minecraft.client.model.HierarchicalModel;
+import net.minecraft.client.animation.KeyframeAnimation;
+import net.minecraft.client.animation.AnimationDefinition;
 
 import net.mcreator.themiddleages.entity.Civilian1Entity;
-import net.mcreator.themiddleages.client.model.animations.civilian1Animation;
-import net.mcreator.themiddleages.client.model.Modelcivilian1;
+import net.mcreator.themiddleages.client.model.animations.madieval_farmer_civilianAnimation;
+import net.mcreator.themiddleages.client.model.Modelmadieval_farmer_civilian;
 
-public class Civilian1Renderer extends MobRenderer<Civilian1Entity, Modelcivilian1<Civilian1Entity>> {
-	private final ResourceLocation entityTexture = ResourceLocation.parse("the_middle_ages:textures/entities/civi1.png");
+import java.util.Map;
+
+public class Civilian1Renderer extends MobRenderer<Civilian1Entity, LivingEntityRenderState, Modelmadieval_farmer_civilian> {
+	private final Identifier entityTexture = Identifier.parse("the_middle_ages:textures/entities/civi1.png");
 
 	public Civilian1Renderer(EntityRendererProvider.Context context) {
-		super(context, new AnimatedModel(context.bakeLayer(Modelcivilian1.LAYER_LOCATION)), 0.5f);
+		super(context, new AnimatedModel(context.bakeLayer(Modelmadieval_farmer_civilian.LAYER_LOCATION)), 0.5f);
 	}
 
 	@Override
-	public ResourceLocation getTextureLocation(Civilian1Entity entity) {
+	public LivingEntityRenderState createRenderState() {
+		return new LivingEntityRenderState();
+	}
+
+	@Override
+	public void extractRenderState(Civilian1Entity entity, LivingEntityRenderState state, float partialTicks) {
+		super.extractRenderState(entity, state, partialTicks);
+	}
+
+	@Override
+	public Identifier getTextureLocation(LivingEntityRenderState state) {
 		return entityTexture;
 	}
 
-	private static final class AnimatedModel extends Modelcivilian1<Civilian1Entity> {
-		private final ModelPart root;
-		private final HierarchicalModel animator = new HierarchicalModel<Civilian1Entity>() {
-			@Override
-			public ModelPart root() {
-				return root;
-			}
-
-			@Override
-			public void setupAnim(Civilian1Entity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
-				this.root().getAllParts().forEach(ModelPart::resetPose);
-				this.animate(entity.animationState0, civilian1Animation.idle, ageInTicks, 1f);
-				this.animateWalk(civilian1Animation.walking, limbSwing, limbSwingAmount, 1f, 1f);
-				this.animate(entity.animationState2, civilian1Animation.panic, ageInTicks, 2.1f);
-				this.animate(entity.animationState3, civilian1Animation.farming, ageInTicks, 1f);
-				this.animate(entity.animationState4, civilian1Animation.sleep, ageInTicks, 1f);
-				this.animate(entity.animationState5, civilian1Animation.wake, ageInTicks, 1f);
-				this.animate(entity.animationState6, civilian1Animation.buy, ageInTicks, 1f);
-				this.animate(entity.animationState7, civilian1Animation.eat, ageInTicks, 1f);
-				this.animate(entity.animationState8, civilian1Animation.die, ageInTicks, 1f);
-				this.animate(entity.animationState9, civilian1Animation.carrying, ageInTicks, 1f);
-			}
-		};
+	private static final class AnimatedModel extends Modelmadieval_farmer_civilian {
+		private final KeyframeAnimation keyframeAnimation0;
+		private final KeyframeAnimation keyframeAnimation1;
+		private final KeyframeAnimation keyframeAnimation2;
+		private final KeyframeAnimation keyframeAnimation3;
+		private final KeyframeAnimation keyframeAnimation4;
+		private final KeyframeAnimation keyframeAnimation5;
+		private final KeyframeAnimation keyframeAnimation6;
+		private final KeyframeAnimation keyframeAnimation7;
+		private final KeyframeAnimation keyframeAnimation8;
+		private final KeyframeAnimation keyframeAnimation9;
+		private final KeyframeAnimation keyframeAnimation10;
 
 		public AnimatedModel(ModelPart root) {
 			super(root);
-			this.root = root;
+			this.keyframeAnimation0 = safeBake(madieval_farmer_civilianAnimation.idle);
+			this.keyframeAnimation1 = safeBake(madieval_farmer_civilianAnimation.walking);
+			this.keyframeAnimation2 = safeBake(madieval_farmer_civilianAnimation.panic);
+			this.keyframeAnimation3 = safeBake(madieval_farmer_civilianAnimation.farming);
+			this.keyframeAnimation4 = safeBake(madieval_farmer_civilianAnimation.sleep);
+			this.keyframeAnimation5 = safeBake(madieval_farmer_civilianAnimation.wake);
+			this.keyframeAnimation6 = safeBake(madieval_farmer_civilianAnimation.buy);
+			this.keyframeAnimation7 = safeBake(madieval_farmer_civilianAnimation.eat);
+			this.keyframeAnimation8 = safeBake(madieval_farmer_civilianAnimation.die);
+			this.keyframeAnimation9 = safeBake(madieval_farmer_civilianAnimation.carrying);
+			this.keyframeAnimation10 = safeBake(madieval_farmer_civilianAnimation.meet);
+		}
+
+		private KeyframeAnimation safeBake(AnimationDefinition source) {
+			try {
+				return source.bake(root);
+			} catch (IllegalArgumentException e) {
+				return new AnimationDefinition(0, false, Map.of()).bake(root);
+			}
 		}
 
 		@Override
-		public void setupAnim(Civilian1Entity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
-			animator.setupAnim(entity, limbSwing, limbSwingAmount, ageInTicks, netHeadYaw, headPitch);
-			super.setupAnim(entity, limbSwing, limbSwingAmount, ageInTicks, netHeadYaw, headPitch);
+		public void setupAnim(LivingEntityRenderState state) {
+			this.root().getAllParts().forEach(ModelPart::resetPose);
+			Civilian1Entity entity = state.getRenderData(ENTITY_KEY);
+			this.keyframeAnimation0.apply(entity.animationState0, state.ageInTicks, 1f);
+			this.keyframeAnimation1.applyWalk(state.walkAnimationPos, state.walkAnimationSpeed, 1f, 1f);
+			this.keyframeAnimation2.apply(entity.animationState2, state.ageInTicks, 2.1f);
+			this.keyframeAnimation3.apply(entity.animationState3, state.ageInTicks, 1f);
+			this.keyframeAnimation4.apply(entity.animationState4, state.ageInTicks, 1f);
+			this.keyframeAnimation5.apply(entity.animationState5, state.ageInTicks, 1f);
+			this.keyframeAnimation6.apply(entity.animationState6, state.ageInTicks, 1f);
+			this.keyframeAnimation7.apply(entity.animationState7, state.ageInTicks, 1f);
+			this.keyframeAnimation8.apply(entity.animationState8, state.ageInTicks, 1f);
+			this.keyframeAnimation9.apply(entity.animationState9, state.ageInTicks, 1f);
+			this.keyframeAnimation10.apply(entity.animationState10, state.ageInTicks, 1f);
+			super.setupAnim(state);
+		}
+	}
+
+	public static final ContextKey<Civilian1Entity> ENTITY_KEY = new ContextKey<>(Identifier.parse("the_middle_ages:civilian_1_entity"));
+
+	@EventBusSubscriber(Dist.CLIENT)
+	public static class EntityStateAdder {
+		@SubscribeEvent
+		private static void registerRenderStateModifiersEvent(RegisterRenderStateModifiersEvent event) {
+			event.registerEntityModifier(Civilian1Renderer.class, (entity, state) -> state.setRenderData(ENTITY_KEY, entity));
 		}
 	}
 }

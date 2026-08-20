@@ -13,8 +13,8 @@ import net.minecraft.world.entity.EntityType;
 import net.minecraft.util.Mth;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.server.level.ServerLevel;
-import net.minecraft.resources.ResourceLocation;
 import net.minecraft.resources.ResourceKey;
+import net.minecraft.resources.Identifier;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.core.particles.ParticleOptions;
@@ -22,14 +22,14 @@ import net.minecraft.core.BlockPos;
 
 @EventBusSubscriber
 public class CustomEyeOfEnderEntity extends EyeOfEnder {
-	public static final ResourceLocation ENTITY_ID = ResourceLocation.fromNamespaceAndPath("the_middle_ages", "custom_eye_of_ender");
+	public static final Identifier ENTITY_ID = Identifier.fromNamespaceAndPath("the_middle_ages", "custom_eye_of_ender");
 	public static final ResourceKey<EntityType<?>> ENTITY_KEY = ResourceKey.create(Registries.ENTITY_TYPE, ENTITY_ID);
 	public static EntityType<CustomEyeOfEnderEntity> TYPE;
 
 	@SubscribeEvent
 	public static void registerEntity(RegisterEvent event) {
 		event.register(Registries.ENTITY_TYPE, ENTITY_ID, () -> {
-			TYPE = EntityType.Builder.<CustomEyeOfEnderEntity>of(CustomEyeOfEnderEntity::new, MobCategory.MISC).sized(0.25F, 0.25F).clientTrackingRange(4).updateInterval(10).build(ENTITY_ID.toString());
+			TYPE = EntityType.Builder.<CustomEyeOfEnderEntity>of(CustomEyeOfEnderEntity::new, MobCategory.MISC).sized(0.25F, 0.25F).clientTrackingRange(4).updateInterval(10).build(ENTITY_KEY);
 			return TYPE;
 		});
 	}

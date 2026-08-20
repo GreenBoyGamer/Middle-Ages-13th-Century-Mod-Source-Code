@@ -70,14 +70,6 @@ public class fruitselletAnimation {
 									AnimationChannel.Interpolations.LINEAR),
 							new Keyframe(0.1667F, KeyframeAnimations.scaleVec(1.0F, 1.0F, 1.0F),
 									AnimationChannel.Interpolations.LINEAR)))
-			.addAnimation("mouth",
-					new AnimationChannel(AnimationChannel.Targets.POSITION,
-							new Keyframe(0.0F, KeyframeAnimations.posVec(0.0F, -0.2F, 0.0F),
-									AnimationChannel.Interpolations.LINEAR)))
-			.addAnimation("mouth",
-					new AnimationChannel(AnimationChannel.Targets.SCALE,
-							new Keyframe(0.0F, KeyframeAnimations.scaleVec(1.0F, 0.2F, 1.0F),
-									AnimationChannel.Interpolations.LINEAR)))
 			.addAnimation("RightArm",
 					new AnimationChannel(AnimationChannel.Targets.ROTATION,
 							new Keyframe(0.0F, KeyframeAnimations.degreeVec(0.0F, 0.0F, 0.0F),
@@ -94,6 +86,9 @@ public class fruitselletAnimation {
 									AnimationChannel.Interpolations.LINEAR),
 							new Keyframe(3.0F, KeyframeAnimations.degreeVec(0.0F, 0.0F, 0.0F),
 									AnimationChannel.Interpolations.LINEAR)))
+			.addAnimation("mouth",
+					new AnimationChannel(AnimationChannel.Targets.SCALE, new Keyframe(0.0F,
+							KeyframeAnimations.scaleVec(0.4F, 0.2F, 1.0F), AnimationChannel.Interpolations.LINEAR)))
 			.build();
 
 	public static final AnimationDefinition walking = AnimationDefinition.Builder.withLength(1.0F).looping()
@@ -156,14 +151,6 @@ public class fruitselletAnimation {
 							new Keyframe(0.75F, KeyframeAnimations.degreeVec(0.0F, 0.0F, 0.0F),
 									AnimationChannel.Interpolations.LINEAR),
 							new Keyframe(1.0F, KeyframeAnimations.degreeVec(-17.5F, 0.0F, 0.0F),
-									AnimationChannel.Interpolations.LINEAR)))
-			.addAnimation("mouth",
-					new AnimationChannel(AnimationChannel.Targets.POSITION,
-							new Keyframe(0.0F, KeyframeAnimations.posVec(0.0F, -0.2F, 0.0F),
-									AnimationChannel.Interpolations.LINEAR)))
-			.addAnimation("mouth",
-					new AnimationChannel(AnimationChannel.Targets.SCALE,
-							new Keyframe(0.0F, KeyframeAnimations.scaleVec(1.0F, 0.2F, 1.0F),
 									AnimationChannel.Interpolations.LINEAR)))
 			.addAnimation("LeftLeg2",
 					new AnimationChannel(AnimationChannel.Targets.ROTATION,
@@ -233,6 +220,9 @@ public class fruitselletAnimation {
 									AnimationChannel.Interpolations.LINEAR),
 							new Keyframe(1.0F, KeyframeAnimations.posVec(0.0F, -0.0033F, 0.0F),
 									AnimationChannel.Interpolations.LINEAR)))
+			.addAnimation("mouth",
+					new AnimationChannel(AnimationChannel.Targets.SCALE, new Keyframe(0.0F,
+							KeyframeAnimations.scaleVec(0.4F, 0.2F, 1.0F), AnimationChannel.Interpolations.LINEAR)))
 			.build();
 
 	public static final AnimationDefinition panic = AnimationDefinition.Builder.withLength(0.5F).looping()
@@ -309,24 +299,6 @@ public class fruitselletAnimation {
 			.addAnimation("EyeR",
 					new AnimationChannel(AnimationChannel.Targets.SCALE,
 							new Keyframe(0.0F, KeyframeAnimations.scaleVec(1.0F, 1.3333F, 1.0F),
-									AnimationChannel.Interpolations.LINEAR)))
-			.addAnimation("mouth",
-					new AnimationChannel(AnimationChannel.Targets.ROTATION,
-							new Keyframe(0.0F, KeyframeAnimations.degreeVec(0.0F, 0.0F, -10.0F),
-									AnimationChannel.Interpolations.LINEAR)))
-			.addAnimation("mouth",
-					new AnimationChannel(AnimationChannel.Targets.POSITION,
-							new Keyframe(0.0F, KeyframeAnimations.posVec(0.0F, -0.2F, 0.0F),
-									AnimationChannel.Interpolations.LINEAR),
-							new Keyframe(0.125F, KeyframeAnimations.posVec(0.25F, -0.2F, 0.0F),
-									AnimationChannel.Interpolations.LINEAR),
-							new Keyframe(0.2917F, KeyframeAnimations.posVec(0.0F, -0.45F, 0.0F),
-									AnimationChannel.Interpolations.LINEAR),
-							new Keyframe(0.5F, KeyframeAnimations.posVec(0.0F, 0.0F, 0.0F),
-									AnimationChannel.Interpolations.LINEAR)))
-			.addAnimation("mouth",
-					new AnimationChannel(AnimationChannel.Targets.SCALE,
-							new Keyframe(0.0F, KeyframeAnimations.scaleVec(1.0F, 0.2F, 1.0F),
 									AnimationChannel.Interpolations.LINEAR)))
 			.addAnimation("LeftLeg2",
 					new AnimationChannel(AnimationChannel.Targets.ROTATION,
@@ -413,8 +385,28 @@ public class fruitselletAnimation {
 							new Keyframe(0.4583F, KeyframeAnimations.posVec(0.0F, 0.0F, 0.0F),
 									AnimationChannel.Interpolations.LINEAR)))
 			.addAnimation("Head2",
-					new AnimationChannel(AnimationChannel.Targets.SCALE, new Keyframe(0.0F,
-							KeyframeAnimations.scaleVec(1.0F, 0.5333F, 1.0F), AnimationChannel.Interpolations.LINEAR)))
+					new AnimationChannel(AnimationChannel.Targets.SCALE,
+							new Keyframe(0.0F, KeyframeAnimations.scaleVec(1.0F, 0.5333F, 1.0F),
+									AnimationChannel.Interpolations.LINEAR)))
+			.addAnimation("mouth",
+					new AnimationChannel(AnimationChannel.Targets.SCALE,
+							new Keyframe(0.0F, KeyframeAnimations.scaleVec(0.4F, 0.2F, 1.0F),
+									AnimationChannel.Interpolations.LINEAR)))
+			.addAnimation("frown_L",
+					new AnimationChannel(AnimationChannel.Targets.ROTATION,
+							new Keyframe(0.0F, KeyframeAnimations.degreeVec(0.0F, 0.0F, 30.0F),
+									AnimationChannel.Interpolations.LINEAR)))
+			.addAnimation("frown_L",
+					new AnimationChannel(AnimationChannel.Targets.POSITION,
+							new Keyframe(0.0F, KeyframeAnimations.posVec(-0.4258F, 0.0F, 0.0F),
+									AnimationChannel.Interpolations.LINEAR)))
+			.addAnimation("frown_R",
+					new AnimationChannel(AnimationChannel.Targets.ROTATION,
+							new Keyframe(0.0F, KeyframeAnimations.degreeVec(0.0F, 0.0F, -30.0F),
+									AnimationChannel.Interpolations.LINEAR)))
+			.addAnimation("frown_R",
+					new AnimationChannel(AnimationChannel.Targets.POSITION, new Keyframe(0.0F,
+							KeyframeAnimations.posVec(0.4F, 0.0F, 0.0F), AnimationChannel.Interpolations.LINEAR)))
 			.build();
 
 	public static final AnimationDefinition farming = AnimationDefinition.Builder.withLength(0.75F).looping()
@@ -487,8 +479,12 @@ public class fruitselletAnimation {
 							new Keyframe(0.75F, KeyframeAnimations.posVec(0.0F, 0.0F, -2.0F),
 									AnimationChannel.Interpolations.LINEAR)))
 			.addAnimation("whole",
-					new AnimationChannel(AnimationChannel.Targets.POSITION, new Keyframe(0.0F,
-							KeyframeAnimations.posVec(0.0F, -2.6667F, 0.0F), AnimationChannel.Interpolations.LINEAR)))
+					new AnimationChannel(AnimationChannel.Targets.POSITION,
+							new Keyframe(0.0F, KeyframeAnimations.posVec(0.0F, -2.6667F, 0.0F),
+									AnimationChannel.Interpolations.LINEAR)))
+			.addAnimation("mouth",
+					new AnimationChannel(AnimationChannel.Targets.SCALE, new Keyframe(0.0F,
+							KeyframeAnimations.scaleVec(0.4F, 0.2F, 1.0F), AnimationChannel.Interpolations.LINEAR)))
 			.build();
 
 	public static final AnimationDefinition die = AnimationDefinition.Builder.withLength(2.0F)
@@ -552,6 +548,25 @@ public class fruitselletAnimation {
 									AnimationChannel.Interpolations.LINEAR),
 							new Keyframe(0.3333F, KeyframeAnimations.posVec(0.0F, -10.6667F, 12.6667F),
 									AnimationChannel.Interpolations.LINEAR)))
+			.addAnimation("mouth",
+					new AnimationChannel(AnimationChannel.Targets.SCALE,
+							new Keyframe(0.0F, KeyframeAnimations.scaleVec(0.4F, 0.2F, 1.0F),
+									AnimationChannel.Interpolations.LINEAR)))
+			.addAnimation("frown_L",
+					new AnimationChannel(AnimationChannel.Targets.ROTATION,
+							new Keyframe(0.0F, KeyframeAnimations.degreeVec(0.0F, 0.0F, 27.5F),
+									AnimationChannel.Interpolations.LINEAR)))
+			.addAnimation("frown_L",
+					new AnimationChannel(AnimationChannel.Targets.POSITION,
+							new Keyframe(0.0F, KeyframeAnimations.posVec(-0.2695F, 0.0F, 0.0F),
+									AnimationChannel.Interpolations.LINEAR)))
+			.addAnimation("frown_R",
+					new AnimationChannel(AnimationChannel.Targets.ROTATION,
+							new Keyframe(0.0F, KeyframeAnimations.degreeVec(0.0F, 0.0F, -27.5F),
+									AnimationChannel.Interpolations.LINEAR)))
+			.addAnimation("frown_R",
+					new AnimationChannel(AnimationChannel.Targets.POSITION, new Keyframe(0.0F,
+							KeyframeAnimations.posVec(0.3633F, 0.0F, 0.0F), AnimationChannel.Interpolations.LINEAR)))
 			.build();
 
 	public static final AnimationDefinition thanks = AnimationDefinition.Builder.withLength(1.2917F)
@@ -583,14 +598,6 @@ public class fruitselletAnimation {
 									AnimationChannel.Interpolations.CATMULLROM),
 							new Keyframe(0.2917F, KeyframeAnimations.degreeVec(0.0F, 0.0F, 0.0F),
 									AnimationChannel.Interpolations.CATMULLROM)))
-			.addAnimation("mouth",
-					new AnimationChannel(AnimationChannel.Targets.POSITION,
-							new Keyframe(0.0F, KeyframeAnimations.posVec(0.0F, -0.2F, 0.0F),
-									AnimationChannel.Interpolations.CATMULLROM)))
-			.addAnimation("mouth",
-					new AnimationChannel(AnimationChannel.Targets.SCALE,
-							new Keyframe(0.0F, KeyframeAnimations.scaleVec(1.0F, 0.2F, 1.0F),
-									AnimationChannel.Interpolations.CATMULLROM)))
 			.addAnimation("RightArm",
 					new AnimationChannel(AnimationChannel.Targets.ROTATION,
 							new Keyframe(0.2917F, KeyframeAnimations.degreeVec(0.0F, 0.0F, 0.0F),
@@ -607,6 +614,9 @@ public class fruitselletAnimation {
 									AnimationChannel.Interpolations.CATMULLROM),
 							new Keyframe(1.1667F, KeyframeAnimations.degreeVec(0.0F, 0.0F, 0.0F),
 									AnimationChannel.Interpolations.CATMULLROM)))
+			.addAnimation("mouth",
+					new AnimationChannel(AnimationChannel.Targets.SCALE, new Keyframe(0.0F,
+							KeyframeAnimations.scaleVec(0.4F, 0.2F, 1.0F), AnimationChannel.Interpolations.LINEAR)))
 			.build();
 
 	public static final AnimationDefinition sleep = AnimationDefinition.Builder.withLength(0.75F).looping()
@@ -618,10 +628,6 @@ public class fruitselletAnimation {
 					new AnimationChannel(AnimationChannel.Targets.SCALE,
 							new Keyframe(0.0F, KeyframeAnimations.scaleVec(1.0F, 0.0F, 1.0F),
 									AnimationChannel.Interpolations.LINEAR)))
-			.addAnimation("mouth",
-					new AnimationChannel(AnimationChannel.Targets.SCALE,
-							new Keyframe(0.0F, KeyframeAnimations.scaleVec(1.0F, 0.0667F, 1.0F),
-									AnimationChannel.Interpolations.LINEAR)))
 			.addAnimation("whole",
 					new AnimationChannel(AnimationChannel.Targets.SCALE,
 							new Keyframe(0.0F, KeyframeAnimations.scaleVec(1.0F, 1.0F, 1.0F),
@@ -630,6 +636,9 @@ public class fruitselletAnimation {
 									AnimationChannel.Interpolations.LINEAR),
 							new Keyframe(0.75F, KeyframeAnimations.scaleVec(1.0F, 1.0F, 1.0F),
 									AnimationChannel.Interpolations.LINEAR)))
+			.addAnimation("mouth",
+					new AnimationChannel(AnimationChannel.Targets.SCALE, new Keyframe(0.0F,
+							KeyframeAnimations.scaleVec(0.4F, 0.2F, 1.0F), AnimationChannel.Interpolations.LINEAR)))
 			.build();
 
 	public static final AnimationDefinition wake = AnimationDefinition.Builder.withLength(1.5F)
@@ -705,20 +714,6 @@ public class fruitselletAnimation {
 									AnimationChannel.Interpolations.LINEAR),
 							new Keyframe(1.5F, KeyframeAnimations.scaleVec(1.0F, 1.0F, 1.0F),
 									AnimationChannel.Interpolations.LINEAR)))
-			.addAnimation("mouth",
-					new AnimationChannel(AnimationChannel.Targets.POSITION,
-							new Keyframe(0.0F, KeyframeAnimations.posVec(0.0F, -0.2F, 0.0F),
-									AnimationChannel.Interpolations.LINEAR)))
-			.addAnimation("mouth",
-					new AnimationChannel(AnimationChannel.Targets.SCALE,
-							new Keyframe(0.0F, KeyframeAnimations.scaleVec(1.0F, 0.2F, 1.0F),
-									AnimationChannel.Interpolations.LINEAR),
-							new Keyframe(0.25F, KeyframeAnimations.scaleVec(1.0F, 1.5333F, 1.0F),
-									AnimationChannel.Interpolations.LINEAR),
-							new Keyframe(1.25F, KeyframeAnimations.scaleVec(1.0F, 1.5333F, 1.0F),
-									AnimationChannel.Interpolations.LINEAR),
-							new Keyframe(1.5F, KeyframeAnimations.scaleVec(1.0F, 0.2F, 1.0F),
-									AnimationChannel.Interpolations.LINEAR)))
 			.addAnimation("RightArm",
 					new AnimationChannel(AnimationChannel.Targets.ROTATION,
 							new Keyframe(0.0F, KeyframeAnimations.degreeVec(0.0F, 0.0F, 0.0F),
@@ -744,6 +739,20 @@ public class fruitselletAnimation {
 							new Keyframe(1.25F, KeyframeAnimations.posVec(1.33F, 0.67F, 0.0F),
 									AnimationChannel.Interpolations.LINEAR),
 							new Keyframe(1.5F, KeyframeAnimations.posVec(0.0F, 0.0F, 0.0F),
+									AnimationChannel.Interpolations.LINEAR)))
+			.addAnimation("mouth",
+					new AnimationChannel(AnimationChannel.Targets.SCALE,
+							new Keyframe(0.0F, KeyframeAnimations.scaleVec(0.4F, 0.2F, 1.0F),
+									AnimationChannel.Interpolations.LINEAR),
+							new Keyframe(0.1667F, KeyframeAnimations.scaleVec(0.7333F, 1.1333F, 1.0F),
+									AnimationChannel.Interpolations.LINEAR),
+							new Keyframe(0.5F, KeyframeAnimations.scaleVec(0.7333F, 1.0666F, 1.0F),
+									AnimationChannel.Interpolations.LINEAR),
+							new Keyframe(0.8333F, KeyframeAnimations.scaleVec(0.7333F, 1.1333F, 1.0F),
+									AnimationChannel.Interpolations.LINEAR),
+							new Keyframe(1.2083F, KeyframeAnimations.scaleVec(0.7333F, 1.0666F, 1.0F),
+									AnimationChannel.Interpolations.LINEAR),
+							new Keyframe(1.5F, KeyframeAnimations.scaleVec(0.4F, 0.2F, 1.0F),
 									AnimationChannel.Interpolations.LINEAR)))
 			.build();
 
@@ -802,10 +811,6 @@ public class fruitselletAnimation {
 									AnimationChannel.Interpolations.LINEAR),
 							new Keyframe(0.125F, KeyframeAnimations.scaleVec(1.0F, 1.0F, 1.0F),
 									AnimationChannel.Interpolations.LINEAR)))
-			.addAnimation("mouth",
-					new AnimationChannel(AnimationChannel.Targets.SCALE,
-							new Keyframe(0.0F, KeyframeAnimations.scaleVec(1.0F, 0.2667F, 1.0F),
-									AnimationChannel.Interpolations.LINEAR)))
 			.addAnimation("LeftArm2",
 					new AnimationChannel(AnimationChannel.Targets.ROTATION,
 							new Keyframe(0.2083F, KeyframeAnimations.degreeVec(0.0F, 0.0F, 0.0F),
@@ -815,6 +820,10 @@ public class fruitselletAnimation {
 							new Keyframe(1.2083F, KeyframeAnimations.degreeVec(-12.5F, 0.0F, 0.0F),
 									AnimationChannel.Interpolations.LINEAR),
 							new Keyframe(1.4583F, KeyframeAnimations.degreeVec(0.0F, 0.0F, 0.0F),
+									AnimationChannel.Interpolations.LINEAR)))
+			.addAnimation("mouth",
+					new AnimationChannel(AnimationChannel.Targets.SCALE,
+							new Keyframe(0.0F, KeyframeAnimations.scaleVec(0.4F, 0.2F, 1.0F),
 									AnimationChannel.Interpolations.LINEAR)))
 			.addAnimation("LeftArm3",
 					new AnimationChannel(AnimationChannel.Targets.POSITION,
@@ -867,26 +876,6 @@ public class fruitselletAnimation {
 									AnimationChannel.Interpolations.LINEAR),
 							new Keyframe(0.7083F, KeyframeAnimations.degreeVec(0.0F, 0.0F, 0.0F),
 									AnimationChannel.Interpolations.LINEAR)))
-			.addAnimation("mouth",
-					new AnimationChannel(AnimationChannel.Targets.POSITION,
-							new Keyframe(0.0F, KeyframeAnimations.posVec(0.0F, 0.0F, 0.0F),
-									AnimationChannel.Interpolations.LINEAR),
-							new Keyframe(0.0833F, KeyframeAnimations.posVec(0.0F, 0.0F, 0.0F),
-									AnimationChannel.Interpolations.LINEAR),
-							new Keyframe(0.25F, KeyframeAnimations.posVec(0.0F, 0.0F, 0.0F),
-									AnimationChannel.Interpolations.LINEAR),
-							new Keyframe(0.3333F, KeyframeAnimations.posVec(0.0F, 0.0F, 0.0F),
-									AnimationChannel.Interpolations.LINEAR)))
-			.addAnimation("mouth",
-					new AnimationChannel(AnimationChannel.Targets.SCALE,
-							new Keyframe(0.0F, KeyframeAnimations.scaleVec(1.0F, 0.2667F, 1.0F),
-									AnimationChannel.Interpolations.LINEAR),
-							new Keyframe(0.0833F, KeyframeAnimations.scaleVec(1.4667F, 1.8F, 1.0F),
-									AnimationChannel.Interpolations.LINEAR),
-							new Keyframe(0.25F, KeyframeAnimations.scaleVec(1.4667F, 1.8F, 1.0F),
-									AnimationChannel.Interpolations.LINEAR),
-							new Keyframe(0.3333F, KeyframeAnimations.scaleVec(1.0F, 0.2667F, 1.0F),
-									AnimationChannel.Interpolations.LINEAR)))
 			.addAnimation("LeftArm2",
 					new AnimationChannel(AnimationChannel.Targets.ROTATION,
 							new Keyframe(0.0F, KeyframeAnimations.degreeVec(0.0F, 0.0F, 0.0F),
@@ -896,6 +885,16 @@ public class fruitselletAnimation {
 							new Keyframe(0.5F, KeyframeAnimations.degreeVec(0.0F, 0.0F, -55.0F),
 									AnimationChannel.Interpolations.LINEAR),
 							new Keyframe(0.7083F, KeyframeAnimations.degreeVec(0.0F, 0.0F, 0.0F),
+									AnimationChannel.Interpolations.LINEAR)))
+			.addAnimation("mouth",
+					new AnimationChannel(AnimationChannel.Targets.SCALE,
+							new Keyframe(0.0F, KeyframeAnimations.scaleVec(0.4F, 0.2F, 1.0F),
+									AnimationChannel.Interpolations.LINEAR),
+							new Keyframe(0.0833F, KeyframeAnimations.scaleVec(0.6F, 1.1333F, 1.0F),
+									AnimationChannel.Interpolations.LINEAR),
+							new Keyframe(0.25F, KeyframeAnimations.scaleVec(0.6F, 1.1333F, 1.0F),
+									AnimationChannel.Interpolations.LINEAR),
+							new Keyframe(0.375F, KeyframeAnimations.scaleVec(0.4F, 0.2F, 1.0F),
 									AnimationChannel.Interpolations.LINEAR)))
 			.build();
 }

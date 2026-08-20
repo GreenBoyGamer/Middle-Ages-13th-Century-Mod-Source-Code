@@ -2,6 +2,8 @@ package net.mcreator.themiddleages.entity;
 
 import net.neoforged.neoforge.event.entity.RegisterSpawnPlacementsEvent;
 
+import net.minecraft.world.level.storage.ValueOutput;
+import net.minecraft.world.level.storage.ValueInput;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.ServerLevelAccessor;
 import net.minecraft.world.level.Level;
@@ -18,11 +20,10 @@ import net.minecraft.world.entity.*;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.DifficultyInstance;
 import net.minecraft.sounds.SoundEvent;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.network.syncher.SynchedEntityData;
 import net.minecraft.network.syncher.EntityDataSerializers;
 import net.minecraft.network.syncher.EntityDataAccessor;
-import net.minecraft.nbt.CompoundTag;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.BlockPos;
 
@@ -33,8 +34,8 @@ import javax.annotation.Nullable;
 public class ArcherEntity extends Monster {
 	public static final EntityDataAccessor<Integer> DATA_actionstate = SynchedEntityData.defineId(ArcherEntity.class, EntityDataSerializers.INT);
 	public static final EntityDataAccessor<Integer> DATA_fightingState = SynchedEntityData.defineId(ArcherEntity.class, EntityDataSerializers.INT);
+	public final AnimationState animationState0 = new AnimationState();
 	public final AnimationState animationState1 = new AnimationState();
-	public final AnimationState animationState2 = new AnimationState();
 	public final AnimationState animationState3 = new AnimationState();
 
 	public ArcherEntity(EntityType<ArcherEntity> type, Level world) {
@@ -157,17 +158,17 @@ public class ArcherEntity extends Monster {
 
 	@Override
 	public void playStepSound(BlockPos pos, BlockState blockIn) {
-		this.playSound(BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("item.armor.equip_iron")), 0.15f, 1);
+		this.playSound(BuiltInRegistries.SOUND_EVENT.getValue(Identifier.parse("item.armor.equip_iron")), 0.15f, 1);
 	}
 
 	@Override
 	public SoundEvent getHurtSound(DamageSource ds) {
-		return BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("entity.generic.hurt"));
+		return BuiltInRegistries.SOUND_EVENT.getValue(Identifier.parse("entity.generic.hurt"));
 	}
 
 	@Override
 	public SoundEvent getDeathSound() {
-		return BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("entity.generic.death"));
+		return BuiltInRegistries.SOUND_EVENT.getValue(Identifier.parse("entity.generic.death"));
 	}
 
 	@Override
@@ -177,35 +178,33 @@ public class ArcherEntity extends Monster {
 	}
 
 	@Override
-	public SpawnGroupData finalizeSpawn(ServerLevelAccessor world, DifficultyInstance difficulty, MobSpawnType reason, @Nullable SpawnGroupData livingdata) {
+	public SpawnGroupData finalizeSpawn(ServerLevelAccessor world, DifficultyInstance difficulty, EntitySpawnReason reason, @Nullable SpawnGroupData livingdata) {
 		SpawnGroupData retval = super.finalizeSpawn(world, difficulty, reason, livingdata);
-		ArcherInitialEntitySpawnProcedure.execute(this);
+		ArcherInitialEntitySpawnProcedure.execute(world);
 		return retval;
 	}
 
 	@Override
-	public void addAdditionalSaveData(CompoundTag compound) {
-		super.addAdditionalSaveData(compound);
-		compound.putInt("Dataactionstate", this.entityData.get(DATA_actionstate));
-		compound.putInt("DatafightingState", this.entityData.get(DATA_fightingState));
+	public void addAdditionalSaveData(ValueOutput valueOutput) {
+		super.addAdditionalSaveData(valueOutput);
+		valueOutput.putInt("Dataactionstate", this.entityData.get(DATA_actionstate));
+		valueOutput.putInt("DatafightingState", this.entityData.get(DATA_fightingState));
 	}
 
 	@Override
-	public void readAdditionalSaveData(CompoundTag compound) {
-		super.readAdditionalSaveData(compound);
-		if (compound.contains("Dataactionstate"))
-			this.entityData.set(DATA_actionstate, compound.getInt("Dataactionstate"));
-		if (compound.contains("DatafightingState"))
-			this.entityData.set(DATA_fightingState, compound.getInt("DatafightingState"));
+	public void readAdditionalSaveData(ValueInput valueInput) {
+		super.readAdditionalSaveData(valueInput);
+		this.entityData.set(DATA_actionstate, valueInput.getIntOr("Dataactionstate", 0));
+		this.entityData.set(DATA_fightingState, valueInput.getIntOr("DatafightingState", 0));
 	}
 
 	@Override
 	public void tick() {
 		super.tick();
 		if (this.level().isClientSide()) {
+			this.animationState0.animateWhen(true, this.tickCount);
 			this.animationState1.animateWhen(ArcherAttackPlaybackConditionProcedure.execute(this), this.tickCount);
-			this.animationState2.animateWhen(ArcherDiesPlaybackConditionProcedure.execute(this), this.tickCount);
-			this.animationState3.animateWhen(ArcherNotDoingAndIdleProcedure.execute(this), this.tickCount);
+			this.animationState3.animateWhen(ArcherDiesPlaybackConditionProcedure.execute(this), this.tickCount);
 		}
 	}
 

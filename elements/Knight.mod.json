@@ -109,8 +109,8 @@
     "armorBaseValue": 10.0,
     "trackingRange": 64,
     "followRange": 16,
-    "health": 90,
-    "xpAmount": 10,
+    "health": 135,
+    "xpAmount": 23,
     "waterMob": false,
     "breatheUnderwater": {
       "fixedValue": false
@@ -167,9 +167,9 @@
     "rangedItemType": "Default item",
     "rangedAttackInterval": 20,
     "rangedAttackRadius": 10.0,
-    "spawnThisMob": true,
-    "doesDespawnWhenIdle": true,
-    "spawningProbability": 20,
+    "spawnThisMob": false,
+    "doesDespawnWhenIdle": false,
+    "spawningProbability": 1,
     "mobSpawningType": "monster",
     "minNumberOfMobsPerGroup": 4,
     "maxNumberOfMobsPerGroup": 4,

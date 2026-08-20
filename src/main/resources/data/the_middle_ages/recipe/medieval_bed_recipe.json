@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "aaa",
+    "bcb"
+  ],
+  "key": {
+    "a": "#minecraft:wool",
+    "b": "#minecraft:planks",
+    "c": "minecraft:white_bed"
+  },
+  "result": {
+    "id": "the_middle_ages:medievalbed",
+    "count": 1
+  }
+}

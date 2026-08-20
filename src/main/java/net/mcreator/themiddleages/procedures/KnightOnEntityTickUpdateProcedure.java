@@ -4,10 +4,11 @@ import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.phys.AABB;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.ai.attributes.Attributes;
-import net.minecraft.world.entity.MobSpawnType;
 import net.minecraft.world.entity.Mob;
 import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.EntitySpawnReason;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.damagesource.DamageTypes;
 import net.minecraft.world.damagesource.DamageSource;
@@ -15,15 +16,15 @@ import net.minecraft.util.RandomSource;
 import net.minecraft.util.Mth;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.server.level.ServerLevel;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.core.BlockPos;
 import net.minecraft.commands.arguments.EntityAnchorArgument;
 
+import net.mcreator.themiddleages.network.TheMiddleAgesModVariables;
 import net.mcreator.themiddleages.init.TheMiddleAgesModEntities;
-import net.mcreator.themiddleages.entity.MadievalHorseEntity;
-import net.mcreator.themiddleages.entity.KnightEntity;
+import net.mcreator.themiddleages.entity.*;
 
 import java.util.Comparator;
 
@@ -36,11 +37,61 @@ public class KnightOnEntityTickUpdateProcedure {
 		double Ydiff = 0;
 		double actionState = 0;
 		double AttackDamage = 0;
+		if (TheMiddleAgesModVariables.entity_gotAttacked != null) {
+			if (entity instanceof Mob _entity && TheMiddleAgesModVariables.entity_gotAttacked instanceof LivingEntity _ent)
+				_entity.setTarget(_ent);
+		}
+		if ((entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null) != null) {
+			if ((entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null) instanceof Player) {
+				if (entity instanceof Mob _entity)
+					_entity.setTarget(null);
+			} else if ((entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null) instanceof SoldierEntity) {
+				if (entity instanceof Mob _entity)
+					_entity.setTarget(null);
+			} else if ((entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null) instanceof ArcherEntity) {
+				if (entity instanceof Mob _entity)
+					_entity.setTarget(null);
+			} else if ((entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null) instanceof KnightRidingHorseEntity) {
+				if (entity instanceof Mob _entity)
+					_entity.setTarget(null);
+			} else if ((entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null) instanceof KnightEntity) {
+				if (entity instanceof Mob _entity)
+					_entity.setTarget(null);
+			}
+		}
+		if (TheMiddleAgesModVariables.MapVariables.get(world).Attack == true) {
+			if ((entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null) == null) {
+				if (!world.getEntitiesOfClass(Player.class, new AABB(Vec3.ZERO, Vec3.ZERO).move(new Vec3(x, y, z)).inflate(7 / 2d), e -> true).isEmpty()) {
+					if (entity instanceof Mob _entity)
+						_entity.getNavigation().stop();
+				} else if (!world.getEntitiesOfClass(Player.class, new AABB(Vec3.ZERO, Vec3.ZERO).move(new Vec3(x, y, z)).inflate(128 / 2d), e -> true).isEmpty()) {
+					if (!(!world.getEntitiesOfClass(DarkKnightEntity.class, new AABB(Vec3.ZERO, Vec3.ZERO).move(new Vec3(x, y, z)).inflate(8 / 2d), e -> true).isEmpty())) {
+						entity.lookAt(EntityAnchorArgument.Anchor.EYES, new Vec3(((findEntityInWorldRange(world, Player.class, x, y, z, 128)).getX()), ((findEntityInWorldRange(world, Player.class, x, y, z, 128)).getY()),
+								((findEntityInWorldRange(world, Player.class, x, y, z, 128)).getZ())));
+						if (entity instanceof Mob _entity)
+							_entity.getNavigation().moveTo(((findEntityInWorldRange(world, Player.class, x, y, z, 128)).getX()), ((findEntityInWorldRange(world, Player.class, x, y, z, 128)).getY()),
+									((findEntityInWorldRange(world, Player.class, x, y, z, 128)).getZ()), 1);
+					} else if (!(!world.getEntitiesOfClass(DarkSoldierEntity.class, new AABB(Vec3.ZERO, Vec3.ZERO).move(new Vec3(x, y, z)).inflate(8 / 2d), e -> true).isEmpty())) {
+						entity.lookAt(EntityAnchorArgument.Anchor.EYES, new Vec3(((findEntityInWorldRange(world, Player.class, x, y, z, 128)).getX()), ((findEntityInWorldRange(world, Player.class, x, y, z, 128)).getY()),
+								((findEntityInWorldRange(world, Player.class, x, y, z, 128)).getZ())));
+						if (entity instanceof Mob _entity)
+							_entity.getNavigation().moveTo(((findEntityInWorldRange(world, Player.class, x, y, z, 128)).getX()), ((findEntityInWorldRange(world, Player.class, x, y, z, 128)).getY()),
+									((findEntityInWorldRange(world, Player.class, x, y, z, 128)).getZ()), 1);
+					} else if (!(!world.getEntitiesOfClass(EnemyArcherEntity.class, new AABB(Vec3.ZERO, Vec3.ZERO).move(new Vec3(x, y, z)).inflate(8 / 2d), e -> true).isEmpty())) {
+						entity.lookAt(EntityAnchorArgument.Anchor.EYES, new Vec3(((findEntityInWorldRange(world, Player.class, x, y, z, 128)).getX()), ((findEntityInWorldRange(world, Player.class, x, y, z, 128)).getY()),
+								((findEntityInWorldRange(world, Player.class, x, y, z, 128)).getZ())));
+						if (entity instanceof Mob _entity)
+							_entity.getNavigation().moveTo(((findEntityInWorldRange(world, Player.class, x, y, z, 128)).getX()), ((findEntityInWorldRange(world, Player.class, x, y, z, 128)).getY()),
+									((findEntityInWorldRange(world, Player.class, x, y, z, 128)).getZ()), 1);
+					}
+				}
+			}
+		}
 		if (!world.isClientSide()) {
 			actionState = entity instanceof KnightEntity _datEntI ? _datEntI.getEntityData().get(KnightEntity.DATA_actionstate) : 0;
 			if (actionState == 0) {
-				entity.getPersistentData().putDouble("ticks", (entity.getPersistentData().getDouble("ticks") + 1));
-				if (entity.getPersistentData().getDouble("ticks") > 4) {
+				entity.getPersistentData().putDouble("ticks", (entity.getPersistentData().getDoubleOr("ticks", 0) + 1));
+				if (entity.getPersistentData().getDoubleOr("ticks", 0) > 4) {
 					entity.getPersistentData().putDouble("ticks", 0);
 					target = entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null;
 					if (target != null) {
@@ -59,37 +110,42 @@ public class KnightOnEntityTickUpdateProcedure {
 					}
 				}
 			} else {
-				entity.getPersistentData().putDouble("actionTicks", (entity.getPersistentData().getDouble("actionTicks") + 1));
+				entity.getPersistentData().putDouble("actionTicks", (entity.getPersistentData().getDoubleOr("actionTicks", 0) + 1));
 				if (actionState < 4) {
-					AttackDamage = entity instanceof LivingEntity _livingEntity27 && _livingEntity27.getAttributes().hasAttribute(Attributes.ATTACK_DAMAGE) ? _livingEntity27.getAttribute(Attributes.ATTACK_DAMAGE).getValue() : 0;
-					if (entity.getPersistentData().getDouble("actionTicks") == 4) {
+					AttackDamage = entity instanceof LivingEntity _livingEntity93 && _livingEntity93.getAttributes().hasAttribute(Attributes.ATTACK_DAMAGE) ? _livingEntity93.getAttribute(Attributes.ATTACK_DAMAGE).getValue() : 0;
+					if (entity.getPersistentData().getDoubleOr("actionTicks", 0) == 4) {
 						for (Entity entityiterator : world.getEntities(null, new AABB((x + (entity.getLookAngle().x * 0.6 + 0.5) * entity.getBbWidth()), y, (z + (entity.getLookAngle().z * 0.6 + 0.5) * entity.getBbWidth()),
 								(x + (entity.getLookAngle().x * 0.6 - 0.5) * entity.getBbWidth()), (y + entity.getBbHeight()), (z + (entity.getLookAngle().z * 0.6 - 0.5) * entity.getBbWidth())))) {
 							if (!(entity == entityiterator)) {
-								entityiterator.hurt(new DamageSource(world.holderOrThrow(DamageTypes.MOB_ATTACK), entity), (float) AttackDamage);
+								{
+									Entity _ent = entityiterator;
+									if (_ent.level() instanceof ServerLevel _serverLevel) {
+										_ent.hurtServer(_serverLevel, new DamageSource(world.holderOrThrow(DamageTypes.MOB_ATTACK), entity), (float) AttackDamage);
+									}
+								}
 							}
 							if (world instanceof Level _level) {
 								if (!_level.isClientSide()) {
-									_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("entity.player.attack.sweep")), SoundSource.NEUTRAL, 1, 1);
+									_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.getValue(Identifier.parse("entity.player.attack.sweep")), SoundSource.NEUTRAL, 1, 1);
 								} else {
-									_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("entity.player.attack.sweep")), SoundSource.NEUTRAL, 1, 1, false);
+									_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.getValue(Identifier.parse("entity.player.attack.sweep")), SoundSource.NEUTRAL, 1, 1, false);
 								}
 							}
 						}
-					} else if (entity.getPersistentData().getDouble("actionTicks") == 14) {
+					} else if (entity.getPersistentData().getDoubleOr("actionTicks", 0) == 14) {
 						if (entity instanceof KnightEntity _datEntSetI)
 							_datEntSetI.getEntityData().set(KnightEntity.DATA_actionstate, 0);
 						entity.getPersistentData().putDouble("actionTicks", 0);
 					}
 				} else if (actionState == 1000) {
-					if (entity.getPersistentData().getDouble("actionTicks") > 20) {
+					if (entity.getPersistentData().getDoubleOr("actionTicks", 0) > 20) {
 						if (world instanceof ServerLevel _level)
 							_level.sendParticles(ParticleTypes.POOF, x, y, z, 5, (entity.getBbWidth() / 2d), (entity.getBbWidth() / 2d), (entity.getBbWidth() / 2d), 1);
 						if (world instanceof Level _level) {
 							if (!_level.isClientSide()) {
-								_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("item.armor.equip_iron")), SoundSource.NEUTRAL, 1, 1);
+								_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.getValue(Identifier.parse("item.armor.equip_iron")), SoundSource.NEUTRAL, 1, 1);
 							} else {
-								_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("item.armor.equip_iron")), SoundSource.NEUTRAL, 1, 1, false);
+								_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.getValue(Identifier.parse("item.armor.equip_iron")), SoundSource.NEUTRAL, 1, 1, false);
 							}
 						}
 						if (!entity.level().isClientSide())
@@ -107,7 +163,7 @@ public class KnightOnEntityTickUpdateProcedure {
 				if (!(findEntityInWorldRange(world, MadievalHorseEntity.class, x, y, z, 2)).level().isClientSide())
 					(findEntityInWorldRange(world, MadievalHorseEntity.class, x, y, z, 2)).discard();
 				if (world instanceof ServerLevel _level) {
-					Entity entityToSpawn = TheMiddleAgesModEntities.KNIGHT_RIDING_HORSE.get().spawn(_level, BlockPos.containing(x, y, z), MobSpawnType.MOB_SUMMONED);
+					Entity entityToSpawn = TheMiddleAgesModEntities.KNIGHT_RIDING_HORSE.get().spawn(_level, BlockPos.containing(x, y, z), EntitySpawnReason.MOB_SUMMONED);
 					if (entityToSpawn != null) {
 						entityToSpawn.setYRot(world.getRandom().nextFloat() * 360F);
 					}

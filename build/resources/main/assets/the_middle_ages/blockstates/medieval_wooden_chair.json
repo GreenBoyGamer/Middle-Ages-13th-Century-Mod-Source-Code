@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "the_middle_ages:block/medieval_wooden_chair"
+    },
+    "facing=east": {
+      "model": "the_middle_ages:block/medieval_wooden_chair",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "the_middle_ages:block/medieval_wooden_chair",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "the_middle_ages:block/medieval_wooden_chair",
+      "y": 270
+    }
+  }
+}

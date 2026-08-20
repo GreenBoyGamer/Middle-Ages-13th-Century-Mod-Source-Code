@@ -7,7 +7,7 @@ import net.neoforged.bus.api.SubscribeEvent;
 
 import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.player.Player;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.network.protocol.common.custom.CustomPacketPayload;
 import net.minecraft.network.protocol.PacketFlow;
 import net.minecraft.network.codec.StreamCodec;
@@ -15,12 +15,13 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.network.RegistryFriendlyByteBuf;
 import net.minecraft.core.SectionPos;
 
+import net.mcreator.themiddleages.procedures.PeaceClicksProcedure;
 import net.mcreator.themiddleages.procedures.AttackclicksProcedure;
 import net.mcreator.themiddleages.TheMiddleAgesMod;
 
 @EventBusSubscriber
 public record KingStatsGUIButtonMessage(int buttonID, int x, int y, int z) implements CustomPacketPayload {
-	public static final Type<KingStatsGUIButtonMessage> TYPE = new Type<>(ResourceLocation.fromNamespaceAndPath(TheMiddleAgesMod.MODID, "king_stats_gui_buttons"));
+	public static final Type<KingStatsGUIButtonMessage> TYPE = new Type<>(Identifier.fromNamespaceAndPath(TheMiddleAgesMod.MODID, "king_stats_gui_buttons"));
 	public static final StreamCodec<RegistryFriendlyByteBuf, KingStatsGUIButtonMessage> STREAM_CODEC = StreamCodec.of((RegistryFriendlyByteBuf buffer, KingStatsGUIButtonMessage message) -> {
 		buffer.writeInt(message.buttonID);
 		buffer.writeInt(message.x);
@@ -50,6 +51,10 @@ public record KingStatsGUIButtonMessage(int buttonID, int x, int y, int z) imple
 		if (buttonID == 0) {
 
 			AttackclicksProcedure.execute(world, x, y, z, entity);
+		}
+		if (buttonID == 1) {
+
+			PeaceClicksProcedure.execute(world, entity);
 		}
 	}
 

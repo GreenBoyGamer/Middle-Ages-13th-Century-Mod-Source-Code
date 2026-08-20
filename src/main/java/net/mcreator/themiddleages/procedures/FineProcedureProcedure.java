@@ -19,12 +19,9 @@ public class FineProcedureProcedure {
 			if ((findEntityInWorldRange(world, DarkSoldierEntity.class, x, y, z, 4)) instanceof DarkSoldierEntity _datEntSetI)
 				_datEntSetI.getEntityData().set(DarkSoldierEntity.DATA_Scared, 0);
 		}
-		{
-			TheMiddleAgesModVariables.PlayerVariables _vars = entity.getData(TheMiddleAgesModVariables.PLAYER_VARIABLES);
-			_vars.Wealth = entity.getData(TheMiddleAgesModVariables.PLAYER_VARIABLES).Wealth + 15;
-			_vars.Dignity = entity.getData(TheMiddleAgesModVariables.PLAYER_VARIABLES).Dignity - 1;
-			_vars.markSyncDirty();
-		}
+		TheMiddleAgesModVariables.MapVariables.get(world).Wealth = TheMiddleAgesModVariables.MapVariables.get(world).Wealth + 15;
+		TheMiddleAgesModVariables.MapVariables.get(world).Dignity = TheMiddleAgesModVariables.MapVariables.get(world).Dignity - 1;
+		TheMiddleAgesModVariables.MapVariables.get(world).markSyncDirty();
 		if (entity instanceof Player _player)
 			_player.closeContainer();
 	}

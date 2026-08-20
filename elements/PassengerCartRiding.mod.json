@@ -4,8 +4,8 @@
   "definition": {
     "mobName": "Passenger Cart",
     "mobLabel": "",
-    "mobModelName": "ModelMadievalHorseCartss",
-    "mobModelTexture": "madieval_horse_cart.png",
+    "mobModelName": "Modelmadieval_passenger_cart_operator",
+    "mobModelTexture": "madieval_horse_cart_ride.png",
     "transparentModelCondition": {
       "fixedValue": false
     },
@@ -24,19 +24,19 @@
     "modelLayers": [],
     "animations": [
       {
-        "animation": "CUSTOM:MadievalHorseCartssAnimation.idle",
+        "animation": "CUSTOM:madieval_passenger_cart_operatorAnimation.idle",
         "speed": 1.0,
         "walking": false,
         "amplitude": 1.0
       },
       {
-        "animation": "CUSTOM:MadievalHorseCartssAnimation.moving",
+        "animation": "CUSTOM:madieval_passenger_cart_operatorAnimation.moving",
         "speed": 1.0,
         "walking": true,
         "amplitude": 1.0
       },
       {
-        "animation": "CUSTOM:MadievalHorseCartssAnimation.die",
+        "animation": "CUSTOM:madieval_passenger_cart_operatorAnimation.die",
         "speed": 1.0,
         "condition": "KnightRidingHorseSpawnPlaybackCondition",
         "walking": false,
@@ -53,7 +53,7 @@
       "falpha": 0.0
     },
     "spawnEggDotColor": {
-      "value": -1,
+      "value": -16737997,
       "falpha": 0.0
     },
     "spawnEggTexture": "",
@@ -77,8 +77,8 @@
     "movementSpeed": 0.3,
     "stepHeight": 0.6,
     "armorBaseValue": 0.0,
-    "trackingRange": 64,
-    "followRange": 16,
+    "trackingRange": 2048,
+    "followRange": 1024,
     "health": 1,
     "xpAmount": 0,
     "waterMob": false,
@@ -128,9 +128,17 @@
         "name": "dead",
         "type": "integer",
         "value": 0
+      },
+      {
+        "min": -2147483648,
+        "max": 2147483647,
+        "name": "move",
+        "type": "integer",
+        "value": 0
       }
     ],
     "whenMobDies": "PassengerCartRidingEntityDies",
+    "onRightClickedOn": "PassengerCartRidingRightclickedOnEntity",
     "onMobTickUpdate": "PassengerCartRidingOnEntityTickUpdate",
     "hasAI": true,
     "aiBase": "(none)",
@@ -143,8 +151,8 @@
     "rangedItemType": "Default item",
     "rangedAttackInterval": 20,
     "rangedAttackRadius": 10.0,
-    "spawnThisMob": true,
-    "doesDespawnWhenIdle": true,
+    "spawnThisMob": false,
+    "doesDespawnWhenIdle": false,
     "spawningProbability": 20,
     "mobSpawningType": "monster",
     "minNumberOfMobsPerGroup": 4,

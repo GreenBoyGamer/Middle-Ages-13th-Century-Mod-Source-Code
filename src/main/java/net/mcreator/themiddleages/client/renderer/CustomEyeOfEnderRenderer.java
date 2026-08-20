@@ -5,36 +5,31 @@ import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.api.distmarker.Dist;
 
-import net.minecraft.world.item.Items;
-import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.ItemDisplayContext;
-import net.minecraft.resources.ResourceLocation;
 import net.minecraft.core.BlockPos;
-import net.minecraft.client.renderer.texture.OverlayTexture;
-import net.minecraft.client.renderer.entity.ItemRenderer;
+import net.minecraft.client.renderer.state.level.CameraRenderState;
+import net.minecraft.client.renderer.item.ItemModelResolver;
+import net.minecraft.client.renderer.entity.state.ThrownItemRenderState;
 import net.minecraft.client.renderer.entity.EntityRendererProvider;
 import net.minecraft.client.renderer.entity.EntityRenderer;
-import net.minecraft.client.renderer.MultiBufferSource;
+import net.minecraft.client.renderer.SubmitNodeCollector;
 
 import net.mcreator.themiddleages.entity.CustomEyeOfEnderEntity;
 
-import com.mojang.math.Axis;
 import com.mojang.blaze3d.vertex.PoseStack;
 
 @EventBusSubscriber(value = Dist.CLIENT)
-public class CustomEyeOfEnderRenderer extends EntityRenderer<CustomEyeOfEnderEntity> {
+public class CustomEyeOfEnderRenderer extends EntityRenderer<CustomEyeOfEnderEntity, CustomEyeOfEnderRenderer.CustomEyeRenderState> {
 	@SubscribeEvent
 	public static void registerRenderer(EntityRenderersEvent.RegisterRenderers event) {
-		if (CustomEyeOfEnderEntity.TYPE != null) {
-			event.registerEntityRenderer(CustomEyeOfEnderEntity.TYPE, CustomEyeOfEnderRenderer::new);
-		}
+		event.registerEntityRenderer(CustomEyeOfEnderEntity.TYPE, CustomEyeOfEnderRenderer::new);
 	}
 
-	private final ItemRenderer itemRenderer;
+	private final ItemModelResolver itemModelResolver;
 
 	public CustomEyeOfEnderRenderer(EntityRendererProvider.Context context) {
 		super(context);
-		this.itemRenderer = context.getItemRenderer();
+		this.itemModelResolver = context.getItemModelResolver();
 	}
 
 	@Override
@@ -43,22 +38,28 @@ public class CustomEyeOfEnderRenderer extends EntityRenderer<CustomEyeOfEnderEnt
 	}
 
 	@Override
-	public ResourceLocation getTextureLocation(CustomEyeOfEnderEntity entity) {
-		return ResourceLocation.withDefaultNamespace("textures/atlas/blocks.png");
+	public CustomEyeRenderState createRenderState() {
+		return new CustomEyeRenderState();
 	}
 
 	@Override
-	public void render(CustomEyeOfEnderEntity entity, float entityYaw, float partialTicks, PoseStack poseStack, MultiBufferSource buffer, int packedLight) {
-		poseStack.pushPose();
-		poseStack.scale(2.0F, 2.0F, 2.0F);
-		poseStack.mulPose(this.entityRenderDispatcher.cameraOrientation());
-		poseStack.mulPose(Axis.YP.rotationDegrees(180.0F));
-		ItemStack itemStack = entity.getItem();
-		if (itemStack.isEmpty()) {
-			itemStack = new ItemStack(Items.ENDER_EYE);
+	public void extractRenderState(CustomEyeOfEnderEntity entity, CustomEyeRenderState state, float partialTick) {
+		super.extractRenderState(entity, state, partialTick);
+		this.itemModelResolver.updateForNonLiving(state.item, entity.getItem(), ItemDisplayContext.GROUND, entity);
+	}
+
+	@Override
+	public void submit(CustomEyeRenderState state, PoseStack poseStack, SubmitNodeCollector submitNodeCollector, CameraRenderState camera) {
+		if (!state.item.isEmpty()) {
+			poseStack.pushPose();
+			poseStack.mulPose(camera.orientation);
+			poseStack.scale(2F, 2F, 2F);
+			state.item.submit(poseStack, submitNodeCollector, 15728880, 0, 0);
+			poseStack.popPose();
 		}
-		this.itemRenderer.renderStatic(itemStack, ItemDisplayContext.GROUND, packedLight, OverlayTexture.NO_OVERLAY, poseStack, buffer, entity.level(), entity.getId());
-		poseStack.popPose();
-		super.render(entity, entityYaw, partialTicks, poseStack, buffer, packedLight);
+		super.submit(state, poseStack, submitNodeCollector, camera);
+	}
+
+	public static class CustomEyeRenderState extends ThrownItemRenderState {
 	}
 }

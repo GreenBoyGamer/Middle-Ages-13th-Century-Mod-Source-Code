@@ -10,11 +10,12 @@ import net.minecraft.util.RandomSource;
 import net.minecraft.util.Mth;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.server.level.ServerLevel;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.core.BlockPos;
 
+import net.mcreator.themiddleages.network.TheMiddleAgesModVariables;
 import net.mcreator.themiddleages.entity.Civilian1Entity;
 import net.mcreator.themiddleages.entity.BuyerEntity;
 
@@ -28,20 +29,20 @@ public class BuyerOnEntityTickUpdateProcedure {
 			if (((findEntityInWorldRange(world, Civilian1Entity.class, x, y, z, 5)) instanceof Civilian1Entity _datEntI ? _datEntI.getEntityData().get(Civilian1Entity.DATA_carry) : 0) == 1) {
 				if (entity instanceof BuyerEntity _datEntSetI)
 					_datEntSetI.getEntityData().set(BuyerEntity.DATA_giveThanks, 1);
-				entity.getPersistentData().putDouble("buyerBuyingTicks", (entity.getPersistentData().getDouble("buyerBuyingTicks") + 1));
-				if (entity.getPersistentData().getDouble("buyerBuyingTicks") > 25) {
+				entity.getPersistentData().putDouble("buyerBuyingTicks", (entity.getPersistentData().getDoubleOr("buyerBuyingTicks", 0) + 1));
+				if (entity.getPersistentData().getDoubleOr("buyerBuyingTicks", 0) > 25) {
 					if (world instanceof Level _level) {
 						if (!_level.isClientSide()) {
-							_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("the_middle_ages:huming")), SoundSource.NEUTRAL, 1, (float) 1.3);
+							_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.getValue(Identifier.parse("the_middle_ages:huming")), SoundSource.NEUTRAL, 1, (float) 1.3);
 						} else {
-							_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("the_middle_ages:huming")), SoundSource.NEUTRAL, 1, (float) 1.3, false);
+							_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.getValue(Identifier.parse("the_middle_ages:huming")), SoundSource.NEUTRAL, 1, (float) 1.3, false);
 						}
 					}
 					if (world instanceof Level _level) {
 						if (!_level.isClientSide()) {
-							_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("entity.item.pickup")), SoundSource.NEUTRAL, 1, 1);
+							_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.getValue(Identifier.parse("entity.item.pickup")), SoundSource.NEUTRAL, 1, 1);
 						} else {
-							_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("entity.item.pickup")), SoundSource.NEUTRAL, 1, 1, false);
+							_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.getValue(Identifier.parse("entity.item.pickup")), SoundSource.NEUTRAL, 1, 1, false);
 						}
 					}
 					if (entity instanceof BuyerEntity _datEntSetI)
@@ -52,23 +53,27 @@ public class BuyerOnEntityTickUpdateProcedure {
 				}
 			}
 			if ((entity instanceof BuyerEntity _datEntI ? _datEntI.getEntityData().get(BuyerEntity.DATA_buy) : 0) == 1) {
-				entity.getPersistentData().putDouble("BuyingDone", (entity.getPersistentData().getDouble("BuyingDone") + 1));
-				if (entity.getPersistentData().getDouble("BuyingDone") > 30) {
+				entity.getPersistentData().putDouble("BuyingDone", (entity.getPersistentData().getDoubleOr("BuyingDone", 0) + 1));
+				if (entity.getPersistentData().getDoubleOr("BuyingDone", 0) > 30) {
 					if (entity instanceof BuyerEntity _datEntSetI)
 						_datEntSetI.getEntityData().set(BuyerEntity.DATA_buy, 0);
 					if (!world.getEntitiesOfClass(Civilian1Entity.class, new AABB(Vec3.ZERO, Vec3.ZERO).move(new Vec3(x, y, z)).inflate(7 / 2d), e -> true).isEmpty()) {
+						if (TheMiddleAgesModVariables.MapVariables.get(world).world_Time > 16000) {
+							if ((findEntityInWorldRange(world, Civilian1Entity.class, x, y, z, 7)) instanceof Civilian1Entity _datEntSetI)
+								_datEntSetI.getEntityData().set(Civilian1Entity.DATA_stop, 0);
+						}
 						if ((findEntityInWorldRange(world, Civilian1Entity.class, x, y, z, 7)) instanceof Civilian1Entity _datEntSetI)
 							_datEntSetI.getEntityData().set(Civilian1Entity.DATA_carry, 0);
 						if ((findEntityInWorldRange(world, Civilian1Entity.class, x, y, z, 7)) instanceof Civilian1Entity _datEntSetI)
 							_datEntSetI.getEntityData().set(Civilian1Entity.DATA_Vegetables, 0);
 						if ((findEntityInWorldRange(world, Civilian1Entity.class, x, y, z, 7)) instanceof Civilian1Entity _datEntSetI)
 							_datEntSetI.getEntityData().set(Civilian1Entity.DATA_Money,
-									(int) ((entity instanceof Civilian1Entity _datEntI ? _datEntI.getEntityData().get(Civilian1Entity.DATA_Vegetables) : 0) + Mth.nextInt(RandomSource.create(), 5, 10)));
+									(int) ((entity instanceof Civilian1Entity _datEntI ? _datEntI.getEntityData().get(Civilian1Entity.DATA_Vegetables) : 0) + Mth.nextInt(RandomSource.create(), 3, 7)));
 						if (world instanceof Level _level) {
 							if (!_level.isClientSide()) {
-								_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("entity.experience_orb.pickup")), SoundSource.NEUTRAL, 1, 1);
+								_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.getValue(Identifier.parse("entity.experience_orb.pickup")), SoundSource.NEUTRAL, 1, 1);
 							} else {
-								_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("entity.experience_orb.pickup")), SoundSource.NEUTRAL, 1, 1, false);
+								_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.getValue(Identifier.parse("entity.experience_orb.pickup")), SoundSource.NEUTRAL, 1, 1, false);
 							}
 						}
 					}
@@ -76,15 +81,15 @@ public class BuyerOnEntityTickUpdateProcedure {
 			}
 		}
 		if ((entity instanceof BuyerEntity _datEntI ? _datEntI.getEntityData().get(BuyerEntity.DATA_TimeToDie) : 0) == 1) {
-			entity.getPersistentData().putDouble("AmDying", (entity.getPersistentData().getDouble("AmDying") + 1));
-			if (entity.getPersistentData().getDouble("AmDying") > 30) {
+			entity.getPersistentData().putDouble("AmDying", (entity.getPersistentData().getDoubleOr("AmDying", 0) + 1));
+			if (entity.getPersistentData().getDoubleOr("AmDying", 0) > 30) {
 				if (world instanceof ServerLevel _level)
 					_level.sendParticles(ParticleTypes.POOF, x, y, z, 5, (entity.getBbWidth() / 2d), (entity.getBbWidth() / 2d), (entity.getBbWidth() / 2d), 1);
 				if (world instanceof Level _level) {
 					if (!_level.isClientSide()) {
-						_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("the_middle_ages:dying_sound")), SoundSource.NEUTRAL, 1, (float) 1.3);
+						_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.getValue(Identifier.parse("the_middle_ages:dying_sound")), SoundSource.NEUTRAL, 1, (float) 1.3);
 					} else {
-						_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("the_middle_ages:dying_sound")), SoundSource.NEUTRAL, 1, (float) 1.3, false);
+						_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.getValue(Identifier.parse("the_middle_ages:dying_sound")), SoundSource.NEUTRAL, 1, (float) 1.3, false);
 					}
 				}
 				if (!entity.level().isClientSide())

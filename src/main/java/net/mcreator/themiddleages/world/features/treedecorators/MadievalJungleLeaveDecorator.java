@@ -10,7 +10,7 @@ import net.minecraft.world.level.levelgen.feature.treedecorators.LeaveVineDecora
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.Rotation;
 import net.minecraft.world.level.block.Blocks;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.core.Direction;
 import net.minecraft.core.BlockPos;
@@ -24,7 +24,7 @@ public class MadievalJungleLeaveDecorator extends LeaveVineDecorator {
 
 	@SubscribeEvent
 	public static void registerTreeDecorator(RegisterEvent event) {
-		event.register(Registries.TREE_DECORATOR_TYPE, ResourceLocation.parse("the_middle_ages:madieval_jungle_tree_leave_decorator"), () -> DECORATOR_TYPE);
+		event.register(Registries.TREE_DECORATOR_TYPE, Identifier.parse("the_middle_ages:medieval_jungle_tree_leave_decorator"), () -> DECORATOR_TYPE);
 	}
 
 	public MadievalJungleLeaveDecorator() {

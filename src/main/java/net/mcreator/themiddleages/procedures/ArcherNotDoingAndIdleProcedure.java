@@ -8,6 +8,6 @@ public class ArcherNotDoingAndIdleProcedure {
 	public static boolean execute(Entity entity) {
 		if (entity == null)
 			return false;
-		return (entity instanceof ArcherEntity _datEntI ? _datEntI.getEntityData().get(ArcherEntity.DATA_actionstate) : 0) != 100 && (entity instanceof ArcherEntity _datEntI ? _datEntI.getEntityData().get(ArcherEntity.DATA_fightingState) : 0) == 0;
+		return (entity instanceof ArcherEntity _datEntI ? _datEntI.getEntityData().get(ArcherEntity.DATA_actionstate) : 0) != 100;
 	}
 }

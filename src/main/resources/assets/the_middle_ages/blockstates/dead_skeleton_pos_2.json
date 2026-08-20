@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "the_middle_ages:block/dead_skeleton_pos_2"
+    },
+    "facing=east": {
+      "model": "the_middle_ages:block/dead_skeleton_pos_2",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "the_middle_ages:block/dead_skeleton_pos_2",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "the_middle_ages:block/dead_skeleton_pos_2",
+      "y": 270
+    }
+  }
+}

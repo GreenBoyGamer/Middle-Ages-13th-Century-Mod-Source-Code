@@ -5,24 +5,21 @@ import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.api.distmarker.Dist;
 
-import net.minecraft.world.item.Items;
-import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.ItemDisplayContext;
-import net.minecraft.resources.ResourceLocation;
 import net.minecraft.core.BlockPos;
-import net.minecraft.client.renderer.texture.OverlayTexture;
-import net.minecraft.client.renderer.entity.ItemRenderer;
+import net.minecraft.client.renderer.state.level.CameraRenderState;
+import net.minecraft.client.renderer.item.ItemModelResolver;
+import net.minecraft.client.renderer.entity.state.ThrownItemRenderState;
 import net.minecraft.client.renderer.entity.EntityRendererProvider;
 import net.minecraft.client.renderer.entity.EntityRenderer;
-import net.minecraft.client.renderer.MultiBufferSource;
+import net.minecraft.client.renderer.SubmitNodeCollector;
 
 import net.mcreator.themiddleages.entity.CustomFireballEntity;
 
-import com.mojang.math.Axis;
 import com.mojang.blaze3d.vertex.PoseStack;
 
 @EventBusSubscriber(value = Dist.CLIENT)
-public class CustomFireballRenderer extends EntityRenderer<CustomFireballEntity> {
+public class CustomFireballRenderer extends EntityRenderer<CustomFireballEntity, CustomFireballRenderer.CustomFireballRenderState> {
 	@SubscribeEvent
 	public static void registerRenderer(EntityRenderersEvent.RegisterRenderers event) {
 		if (CustomFireballEntity.TYPE != null) {
@@ -30,11 +27,11 @@ public class CustomFireballRenderer extends EntityRenderer<CustomFireballEntity>
 		}
 	}
 
-	private final ItemRenderer itemRenderer;
+	private final ItemModelResolver itemModelResolver;
 
 	public CustomFireballRenderer(EntityRendererProvider.Context context) {
 		super(context);
-		this.itemRenderer = context.getItemRenderer();
+		this.itemModelResolver = context.getItemModelResolver();
 	}
 
 	@Override
@@ -43,23 +40,31 @@ public class CustomFireballRenderer extends EntityRenderer<CustomFireballEntity>
 	}
 
 	@Override
-	public ResourceLocation getTextureLocation(CustomFireballEntity entity) {
-		return ResourceLocation.withDefaultNamespace("textures/atlas/blocks.png");
+	public CustomFireballRenderState createRenderState() {
+		return new CustomFireballRenderState();
 	}
 
 	@Override
-	public void render(CustomFireballEntity entity, float entityYaw, float partialTicks, PoseStack poseStack, MultiBufferSource buffer, int packedLight) {
-		poseStack.pushPose();
-		float scale = entity.getCustomSize();
-		poseStack.scale(scale, scale, scale);
-		poseStack.mulPose(this.entityRenderDispatcher.cameraOrientation());
-		poseStack.mulPose(Axis.YP.rotationDegrees(180.0F));
-		ItemStack itemStack = entity.getItem();
-		if (itemStack.isEmpty()) {
-			itemStack = new ItemStack(Items.FIRE_CHARGE);
+	public void extractRenderState(CustomFireballEntity entity, CustomFireballRenderState state, float partialTick) {
+		super.extractRenderState(entity, state, partialTick);
+		state.customScale = entity.getCustomSize();
+		this.itemModelResolver.updateForNonLiving(state.item, entity.getItem(), ItemDisplayContext.GROUND, entity);
+	}
+
+	@Override
+	public void submit(CustomFireballRenderState state, PoseStack poseStack, SubmitNodeCollector submitNodeCollector, CameraRenderState camera) {
+		if (!state.item.isEmpty()) {
+			poseStack.pushPose();
+			poseStack.mulPose(camera.orientation);
+			float scale = state.customScale;
+			poseStack.scale(scale, scale, scale);
+			state.item.submit(poseStack, submitNodeCollector, 15728880, 0, 0);
+			poseStack.popPose();
 		}
-		this.itemRenderer.renderStatic(itemStack, ItemDisplayContext.GROUND, packedLight, OverlayTexture.NO_OVERLAY, poseStack, buffer, entity.level(), entity.getId());
-		poseStack.popPose();
-		super.render(entity, entityYaw, partialTicks, poseStack, buffer, packedLight);
+		super.submit(state, poseStack, submitNodeCollector, camera);
+	}
+
+	public static class CustomFireballRenderState extends ThrownItemRenderState {
+		public float customScale = 1.0F;
 	}
 }

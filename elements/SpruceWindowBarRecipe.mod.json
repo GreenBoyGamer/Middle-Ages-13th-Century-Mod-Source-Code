@@ -1,0 +1,33 @@
+{
+  "_fv": 89,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Crafting",
+    "recipeRetstackSize": 1,
+    "group": "",
+    "unlockingItems": [
+      "Blocks.PLANKS#1",
+      "Items.STICK",
+      "Blocks.SPRUCE_FENCE"
+    ],
+    "cookingBookCategory": "MISC",
+    "xpReward": 0.0,
+    "cookingTime": 200,
+    "craftingBookCategory": "MISC",
+    "recipeShapeless": false,
+    "recipeSlots": [
+      "Blocks.PLANKS#1",
+      "Items.STICK",
+      "Blocks.PLANKS#1",
+      "Items.STICK",
+      "Blocks.SPRUCE_FENCE",
+      "Items.STICK",
+      "Blocks.PLANKS#1",
+      "Items.STICK",
+      "Blocks.PLANKS#1"
+    ],
+    "recipeReturnStack": "CUSTOM:MedievalSpruceWindowBars",
+    "name": "spruce_window_bar_recipe",
+    "namespace": "mod"
+  }
+}

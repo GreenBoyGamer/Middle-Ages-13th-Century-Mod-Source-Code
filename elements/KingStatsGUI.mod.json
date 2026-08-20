@@ -267,14 +267,14 @@
         "data": {
           "name": "label_enemies_preparing",
           "text": {
-            "fixedValue": "Enemies Preparing?"
+            "fixedValue": "Your Statics GUI"
           },
           "color": {
             "value": -12829636,
             "falpha": 0.0
           },
           "hasShadow": false,
-          "x": 164,
+          "x": 168,
           "y": 20,
           "locked": false
         }
@@ -388,60 +388,14 @@
         }
       },
       {
-        "type": "label",
-        "data": {
-          "name": "label_yes",
-          "text": {
-            "fixedValue": "Yes"
-          },
-          "color": {
-            "value": -65536,
-            "falpha": 0.0
-          },
-          "hasShadow": false,
-          "displayCondition": "AttackingTrueHai",
-          "x": 207,
-          "y": 34,
-          "locked": false
-        }
-      },
-      {
-        "type": "image",
-        "data": {
-          "image": "danger.png",
-          "use1Xscale": true,
-          "x": 188,
-          "y": 31,
-          "locked": false
-        }
-      },
-      {
-        "type": "label",
-        "data": {
-          "name": "label_nope",
-          "text": {
-            "fixedValue": "Nope"
-          },
-          "color": {
-            "value": -14745856,
-            "falpha": 0.0
-          },
-          "hasShadow": false,
-          "displayCondition": "AttackingIsFalse",
-          "x": 206,
-          "y": 34,
-          "locked": false
-        }
-      },
-      {
         "type": "imagebutton",
         "data": {
           "name": "imagebutton_basebuttons",
           "image": "basebuttons.png",
           "hoveredImage": "basebuttonhover.png",
           "onClick": "Attackclicks",
-          "x": 180,
-          "y": 54,
+          "x": 178,
+          "y": 35,
           "locked": false
         }
       },
@@ -457,7 +411,56 @@
             "falpha": 0.0
           },
           "hasShadow": false,
-          "x": 196,
+          "x": 195,
+          "y": 38,
+          "locked": false
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "swordclashiamge.png",
+          "use1Xscale": true,
+          "x": 243,
+          "y": 34,
+          "locked": false
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_basebuttons1",
+          "image": "basebuttons.png",
+          "hoveredImage": "basebuttonhover.png",
+          "onClick": "PeaceClicks",
+          "x": 178,
+          "y": 54,
+          "locked": false
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "world.png",
+          "use1Xscale": true,
+          "x": 243,
+          "y": 52,
+          "locked": false
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_piece",
+          "text": {
+            "fixedValue": "Peace"
+          },
+          "color": {
+            "value": -16777216,
+            "falpha": 0.0
+          },
+          "hasShadow": false,
+          "x": 198,
           "y": 56,
           "locked": false
         }

@@ -66,9 +66,8 @@
         "amplitude": 1.0
       },
       {
-        "animation": "CUSTOM:civilian1Animation.idle",
+        "animation": "CUSTOM:SoldierAnimation.idle",
         "speed": 1.0,
-        "condition": "SoldierNotPlaybackCondition",
         "walking": false,
         "amplitude": 1.0
       }
@@ -174,8 +173,8 @@
     "rangedItemType": "Default item",
     "rangedAttackInterval": 20,
     "rangedAttackRadius": 10.0,
-    "spawnThisMob": true,
-    "doesDespawnWhenIdle": true,
+    "spawnThisMob": false,
+    "doesDespawnWhenIdle": false,
     "spawningProbability": 20,
     "mobSpawningType": "monster",
     "minNumberOfMobsPerGroup": 4,

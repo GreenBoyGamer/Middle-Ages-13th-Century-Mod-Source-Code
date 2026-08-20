@@ -4,7 +4,7 @@
   "definition": {
     "mobName": "Archer",
     "mobLabel": "",
-    "mobModelName": "Modelarchermodel",
+    "mobModelName": "Modelarchermodelmanhus",
     "mobModelTexture": "archer.png",
     "transparentModelCondition": {
       "fixedValue": false
@@ -24,30 +24,28 @@
     "modelLayers": [],
     "animations": [
       {
-        "animation": "CUSTOM:archermodelAnimation.walking",
+        "animation": "CUSTOM:archermodelmanhusAnimation.idle",
         "speed": 1.0,
-        "condition": "ArcherNotDoingAndIdle",
-        "walking": true,
+        "walking": false,
         "amplitude": 1.0
       },
       {
-        "animation": "CUSTOM:archermodelAnimation.attack",
+        "animation": "CUSTOM:archermodelmanhusAnimation.attack",
         "speed": 1.0,
         "condition": "ArcherAttackPlaybackCondition",
         "walking": false,
         "amplitude": 1.0
       },
       {
-        "animation": "CUSTOM:archermodelAnimation.die",
+        "animation": "CUSTOM:archermodelmanhusAnimation.walking",
         "speed": 1.0,
-        "condition": "ArcherDiesPlaybackCondition",
-        "walking": false,
+        "walking": true,
         "amplitude": 1.0
       },
       {
-        "animation": "CUSTOM:archermodelAnimation.idle",
+        "animation": "CUSTOM:archermodelmanhusAnimation.die",
         "speed": 1.0,
-        "condition": "ArcherNotDoingAndIdle",
+        "condition": "ArcherDiesPlaybackCondition",
         "walking": false,
         "amplitude": 1.0
       }
@@ -156,7 +154,7 @@
     "spawnThisMob": false,
     "doesDespawnWhenIdle": false,
     "spawningProbability": 20,
-    "mobSpawningType": "monster",
+    "mobSpawningType": "creature",
     "minNumberOfMobsPerGroup": 4,
     "maxNumberOfMobsPerGroup": 4,
     "restrictionBiomes": [],

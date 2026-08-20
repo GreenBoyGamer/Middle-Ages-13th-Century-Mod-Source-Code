@@ -17,14 +17,10 @@
     "horizontalNoiseSize": 1,
     "verticalNoiseSize": 2,
     "defaultEffects": "overworld",
-    "useCustomEffects": true,
+    "useCustomEffects": false,
     "hasClouds": true,
     "cloudHeight": 192,
     "skyType": "NORMAL",
-    "airColor": {
-      "value": -4734260,
-      "falpha": 0.0
-    },
     "sunHeightAffectsFog": true,
     "canRespawnHere": true,
     "hasFog": false,

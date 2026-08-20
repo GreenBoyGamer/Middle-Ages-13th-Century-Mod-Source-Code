@@ -5,15 +5,14 @@ import net.minecraft.world.item.context.UseOnContext;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.core.BlockPos;
 
 import net.mcreator.themiddleages.block.MadievalDimensionPortalBlock;
 
 public class MadievalDimensionItem extends Item {
-	public MadievalDimensionItem() {
-		super(new Item.Properties()
+	public MadievalDimensionItem(Item.Properties properties) {
+		super(properties
 
 				.durability(64));
 	}
@@ -33,7 +32,7 @@ public class MadievalDimensionItem extends Item {
 			boolean success = false;
 			if (world.isEmptyBlock(pos) && true) {
 				MadievalDimensionPortalBlock.portalSpawn(world, pos);
-				itemstack.hurtAndBreak(1, entity, LivingEntity.getSlotForHand(context.getHand()));
+				itemstack.hurtAndBreak(1, entity, context.getHand().asEquipmentSlot());
 				success = true;
 			}
 			return success ? InteractionResult.SUCCESS : InteractionResult.FAIL;

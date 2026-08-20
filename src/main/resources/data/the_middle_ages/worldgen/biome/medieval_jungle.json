@@ -1,0 +1,43 @@
+{
+  "has_precipitation": true,
+  "temperature": 0.5,
+  "downfall": 0.5,
+  "effects": {
+    "foliage_color": -8934609,
+    "grass_color": -7226023,
+    "water_color": -12618012
+  },
+  "attributes": {
+    "minecraft:visual/sky_color": 7972607,
+    "minecraft:visual/fog_color": 12638463,
+    "minecraft:visual/water_fog_color": -16448205
+  },
+  "spawners": {
+    "monster": [],
+    "creature": [],
+    "ambient": [],
+    "axolotls": [],
+    "underground_water_creature": [],
+    "water_creature": [],
+    "water_ambient": [],
+    "misc": []
+  },
+  "spawn_costs": {},
+  "carvers": [],
+  "features": [
+    [],
+    [],
+    [],
+    [],
+    [],
+    [],
+    [],
+    [],
+    [],
+    [
+      "the_middle_ages:medieval_jungle_tree",
+      "minecraft:patch_grass_jungle"
+    ],
+    []
+  ]
+}

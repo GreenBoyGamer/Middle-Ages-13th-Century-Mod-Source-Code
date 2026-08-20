@@ -2,7 +2,7 @@
   "_fv": 89,
   "_type": "structure",
   "definition": {
-    "structure": "madiaval_big_town",
+    "structure": "medieval_big_town",
     "projection": "rigid",
     "ignoredBlocks": [
       "Blocks.STRUCTURE_BLOCK"
@@ -14,11 +14,11 @@
     ],
     "terrainAdaptation": "beard_box",
     "generationStep": "SURFACE_STRUCTURES",
-    "surfaceDetectionType": "WORLD_SURFACE_WG",
-    "useStartHeight": false,
+    "surfaceDetectionType": "WORLD_SURFACE",
+    "useStartHeight": true,
     "startHeightProviderType": "UNIFORM",
-    "startHeightMin": 0,
-    "startHeightMax": 128,
+    "startHeightMin": 64,
+    "startHeightMax": 65,
     "size": 1,
     "maxDistanceFromCenter": 64,
     "jigsawPools": []

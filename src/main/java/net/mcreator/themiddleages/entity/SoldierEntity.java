@@ -2,7 +2,8 @@ package net.mcreator.themiddleages.entity;
 
 import net.neoforged.neoforge.event.entity.RegisterSpawnPlacementsEvent;
 
-import net.minecraft.world.level.levelgen.Heightmap;
+import net.minecraft.world.level.storage.ValueOutput;
+import net.minecraft.world.level.storage.ValueInput;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.ServerLevelAccessor;
 import net.minecraft.world.level.Level;
@@ -18,18 +19,15 @@ import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
 import net.minecraft.world.entity.*;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.DifficultyInstance;
-import net.minecraft.world.Difficulty;
 import net.minecraft.sounds.SoundEvent;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.network.syncher.SynchedEntityData;
 import net.minecraft.network.syncher.EntityDataSerializers;
 import net.minecraft.network.syncher.EntityDataAccessor;
-import net.minecraft.nbt.CompoundTag;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.BlockPos;
 
 import net.mcreator.themiddleages.procedures.*;
-import net.mcreator.themiddleages.init.TheMiddleAgesModEntities;
 
 import javax.annotation.Nullable;
 
@@ -47,6 +45,7 @@ public class SoldierEntity extends Monster {
 		super(type, world);
 		xpReward = 10;
 		setNoAi(false);
+		setPersistenceRequired();
 	}
 
 	@Override
@@ -135,18 +134,23 @@ public class SoldierEntity extends Monster {
 	}
 
 	@Override
+	public boolean removeWhenFarAway(double distanceToClosestPlayer) {
+		return false;
+	}
+
+	@Override
 	public void playStepSound(BlockPos pos, BlockState blockIn) {
-		this.playSound(BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("item.armor.equip_iron")), 0.15f, 1);
+		this.playSound(BuiltInRegistries.SOUND_EVENT.getValue(Identifier.parse("item.armor.equip_iron")), 0.15f, 1);
 	}
 
 	@Override
 	public SoundEvent getHurtSound(DamageSource ds) {
-		return BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("entity.generic.hurt"));
+		return BuiltInRegistries.SOUND_EVENT.getValue(Identifier.parse("entity.generic.hurt"));
 	}
 
 	@Override
 	public SoundEvent getDeathSound() {
-		return BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("entity.generic.death"));
+		return BuiltInRegistries.SOUND_EVENT.getValue(Identifier.parse("entity.generic.death"));
 	}
 
 	@Override
@@ -156,26 +160,24 @@ public class SoldierEntity extends Monster {
 	}
 
 	@Override
-	public SpawnGroupData finalizeSpawn(ServerLevelAccessor world, DifficultyInstance difficulty, MobSpawnType reason, @Nullable SpawnGroupData livingdata) {
+	public SpawnGroupData finalizeSpawn(ServerLevelAccessor world, DifficultyInstance difficulty, EntitySpawnReason reason, @Nullable SpawnGroupData livingdata) {
 		SpawnGroupData retval = super.finalizeSpawn(world, difficulty, reason, livingdata);
-		SoldierOnInitialEntitySpawnProcedure.execute(this);
+		SoldierOnInitialEntitySpawnProcedure.execute(world);
 		return retval;
 	}
 
 	@Override
-	public void addAdditionalSaveData(CompoundTag compound) {
-		super.addAdditionalSaveData(compound);
-		compound.putInt("Dataactionstate", this.entityData.get(DATA_actionstate));
-		compound.putInt("DatafightingState", this.entityData.get(DATA_fightingState));
+	public void addAdditionalSaveData(ValueOutput valueOutput) {
+		super.addAdditionalSaveData(valueOutput);
+		valueOutput.putInt("Dataactionstate", this.entityData.get(DATA_actionstate));
+		valueOutput.putInt("DatafightingState", this.entityData.get(DATA_fightingState));
 	}
 
 	@Override
-	public void readAdditionalSaveData(CompoundTag compound) {
-		super.readAdditionalSaveData(compound);
-		if (compound.contains("Dataactionstate"))
-			this.entityData.set(DATA_actionstate, compound.getInt("Dataactionstate"));
-		if (compound.contains("DatafightingState"))
-			this.entityData.set(DATA_fightingState, compound.getInt("DatafightingState"));
+	public void readAdditionalSaveData(ValueInput valueInput) {
+		super.readAdditionalSaveData(valueInput);
+		this.entityData.set(DATA_actionstate, valueInput.getIntOr("Dataactionstate", 0));
+		this.entityData.set(DATA_fightingState, valueInput.getIntOr("DatafightingState", 0));
 	}
 
 	@Override
@@ -187,7 +189,7 @@ public class SoldierEntity extends Monster {
 			this.animationState3.animateWhen(SoldierAttack1PlaybackConditionProcedure.execute(this), this.tickCount);
 			this.animationState4.animateWhen(SoldierPlaybackConditionProcedure.execute(this), this.tickCount);
 			this.animationState5.animateWhen(SoldierOndeathPlaybackConditionProcedure.execute(this), this.tickCount);
-			this.animationState6.animateWhen(SoldierNotPlaybackConditionProcedure.execute(this), this.tickCount);
+			this.animationState6.animateWhen(true, this.tickCount);
 		}
 	}
 
@@ -198,9 +200,6 @@ public class SoldierEntity extends Monster {
 	}
 
 	public static void init(RegisterSpawnPlacementsEvent event) {
-		event.register(TheMiddleAgesModEntities.SOLDIER.get(), SpawnPlacementTypes.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES,
-				(entityType, world, reason, pos, random) -> (world.getDifficulty() != Difficulty.PEACEFUL && Monster.isDarkEnoughToSpawn(world, pos, random) && Mob.checkMobSpawnRules(entityType, world, reason, pos, random)),
-				RegisterSpawnPlacementsEvent.Operation.REPLACE);
 	}
 
 	public static AttributeSupplier.Builder createAttributes() {

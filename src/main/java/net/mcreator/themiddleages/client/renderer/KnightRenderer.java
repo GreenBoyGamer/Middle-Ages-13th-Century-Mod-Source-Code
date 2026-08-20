@@ -1,10 +1,18 @@
 package net.mcreator.themiddleages.client.renderer;
 
-import net.minecraft.resources.ResourceLocation;
+import net.neoforged.neoforge.client.renderstate.RegisterRenderStateModifiersEvent;
+import net.neoforged.fml.common.EventBusSubscriber;
+import net.neoforged.bus.api.SubscribeEvent;
+import net.neoforged.api.distmarker.Dist;
+
+import net.minecraft.util.context.ContextKey;
+import net.minecraft.resources.Identifier;
+import net.minecraft.client.renderer.entity.state.LivingEntityRenderState;
 import net.minecraft.client.renderer.entity.MobRenderer;
 import net.minecraft.client.renderer.entity.EntityRendererProvider;
 import net.minecraft.client.model.geom.ModelPart;
-import net.minecraft.client.model.HierarchicalModel;
+import net.minecraft.client.animation.KeyframeAnimation;
+import net.minecraft.client.animation.AnimationDefinition;
 
 import net.mcreator.themiddleages.procedures.KnightnotPlaybackConditionProcedure;
 import net.mcreator.themiddleages.procedures.KnightPlaybackConditionProcedure;
@@ -12,50 +20,82 @@ import net.mcreator.themiddleages.entity.KnightEntity;
 import net.mcreator.themiddleages.client.model.animations.knightAnimation;
 import net.mcreator.themiddleages.client.model.Modelknight;
 
-public class KnightRenderer extends MobRenderer<KnightEntity, Modelknight<KnightEntity>> {
-	private final ResourceLocation entityTexture = ResourceLocation.parse("the_middle_ages:textures/entities/knight.png");
+import java.util.Map;
+
+public class KnightRenderer extends MobRenderer<KnightEntity, LivingEntityRenderState, Modelknight> {
+	private final Identifier entityTexture = Identifier.parse("the_middle_ages:textures/entities/knight.png");
 
 	public KnightRenderer(EntityRendererProvider.Context context) {
 		super(context, new AnimatedModel(context.bakeLayer(Modelknight.LAYER_LOCATION)), 0.5f);
 	}
 
 	@Override
-	public ResourceLocation getTextureLocation(KnightEntity entity) {
+	public LivingEntityRenderState createRenderState() {
+		return new LivingEntityRenderState();
+	}
+
+	@Override
+	public void extractRenderState(KnightEntity entity, LivingEntityRenderState state, float partialTicks) {
+		super.extractRenderState(entity, state, partialTicks);
+	}
+
+	@Override
+	public Identifier getTextureLocation(LivingEntityRenderState state) {
 		return entityTexture;
 	}
 
-	private static final class AnimatedModel extends Modelknight<KnightEntity> {
-		private final ModelPart root;
-		private final HierarchicalModel animator = new HierarchicalModel<KnightEntity>() {
-			@Override
-			public ModelPart root() {
-				return root;
-			}
-
-			@Override
-			public void setupAnim(KnightEntity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
-				this.root().getAllParts().forEach(ModelPart::resetPose);
-				this.animate(entity.animationState0, knightAnimation.idle, ageInTicks, 1f);
-				if (KnightnotPlaybackConditionProcedure.execute(entity))
-					this.animateWalk(knightAnimation.walking, limbSwing, limbSwingAmount, 1f, 1f);
-				if (KnightPlaybackConditionProcedure.execute(entity))
-					this.animateWalk(knightAnimation.sprint, limbSwing, limbSwingAmount, 1f, 1f);
-				this.animate(entity.animationState3, knightAnimation.attack, ageInTicks, 1f);
-				this.animate(entity.animationState4, knightAnimation.attack2, ageInTicks, 1f);
-				this.animate(entity.animationState5, knightAnimation.attack3, ageInTicks, 1f);
-				this.animate(entity.animationState6, knightAnimation.die, ageInTicks, 1f);
-			}
-		};
+	private static final class AnimatedModel extends Modelknight {
+		private final KeyframeAnimation keyframeAnimation0;
+		private final KeyframeAnimation keyframeAnimation1;
+		private final KeyframeAnimation keyframeAnimation2;
+		private final KeyframeAnimation keyframeAnimation3;
+		private final KeyframeAnimation keyframeAnimation4;
+		private final KeyframeAnimation keyframeAnimation5;
+		private final KeyframeAnimation keyframeAnimation6;
 
 		public AnimatedModel(ModelPart root) {
 			super(root);
-			this.root = root;
+			this.keyframeAnimation0 = safeBake(knightAnimation.idle);
+			this.keyframeAnimation1 = safeBake(knightAnimation.walking);
+			this.keyframeAnimation2 = safeBake(knightAnimation.sprint);
+			this.keyframeAnimation3 = safeBake(knightAnimation.attack);
+			this.keyframeAnimation4 = safeBake(knightAnimation.attack2);
+			this.keyframeAnimation5 = safeBake(knightAnimation.attack3);
+			this.keyframeAnimation6 = safeBake(knightAnimation.die);
+		}
+
+		private KeyframeAnimation safeBake(AnimationDefinition source) {
+			try {
+				return source.bake(root);
+			} catch (IllegalArgumentException e) {
+				return new AnimationDefinition(0, false, Map.of()).bake(root);
+			}
 		}
 
 		@Override
-		public void setupAnim(KnightEntity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
-			animator.setupAnim(entity, limbSwing, limbSwingAmount, ageInTicks, netHeadYaw, headPitch);
-			super.setupAnim(entity, limbSwing, limbSwingAmount, ageInTicks, netHeadYaw, headPitch);
+		public void setupAnim(LivingEntityRenderState state) {
+			this.root().getAllParts().forEach(ModelPart::resetPose);
+			KnightEntity entity = state.getRenderData(ENTITY_KEY);
+			this.keyframeAnimation0.apply(entity.animationState0, state.ageInTicks, 1f);
+			if (KnightnotPlaybackConditionProcedure.execute(entity))
+				this.keyframeAnimation1.applyWalk(state.walkAnimationPos, state.walkAnimationSpeed, 1f, 1f);
+			if (KnightPlaybackConditionProcedure.execute(entity))
+				this.keyframeAnimation2.applyWalk(state.walkAnimationPos, state.walkAnimationSpeed, 1f, 1f);
+			this.keyframeAnimation3.apply(entity.animationState3, state.ageInTicks, 1f);
+			this.keyframeAnimation4.apply(entity.animationState4, state.ageInTicks, 1f);
+			this.keyframeAnimation5.apply(entity.animationState5, state.ageInTicks, 1f);
+			this.keyframeAnimation6.apply(entity.animationState6, state.ageInTicks, 1f);
+			super.setupAnim(state);
+		}
+	}
+
+	public static final ContextKey<KnightEntity> ENTITY_KEY = new ContextKey<>(Identifier.parse("the_middle_ages:knight_entity"));
+
+	@EventBusSubscriber(Dist.CLIENT)
+	public static class EntityStateAdder {
+		@SubscribeEvent
+		private static void registerRenderStateModifiersEvent(RegisterRenderStateModifiersEvent event) {
+			event.registerEntityModifier(KnightRenderer.class, (entity, state) -> state.setRenderData(ENTITY_KEY, entity));
 		}
 	}
 }

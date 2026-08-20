@@ -20,11 +20,8 @@ public class FinishProcedureProcedure {
 			TheMiddleAgesModVariables.MapVariables.get(world).markSyncDirty();
 			if (!(findEntityInWorldRange(world, DarkSoldierEntity.class, x, y, z, 4)).level().isClientSide())
 				(findEntityInWorldRange(world, DarkSoldierEntity.class, x, y, z, 4)).discard();
-			{
-				TheMiddleAgesModVariables.PlayerVariables _vars = entity.getData(TheMiddleAgesModVariables.PLAYER_VARIABLES);
-				_vars.Dignity = entity.getData(TheMiddleAgesModVariables.PLAYER_VARIABLES).Dignity + 0.3;
-				_vars.markSyncDirty();
-			}
+			TheMiddleAgesModVariables.MapVariables.get(world).Dignity = TheMiddleAgesModVariables.MapVariables.get(world).Dignity + 0.3;
+			TheMiddleAgesModVariables.MapVariables.get(world).markSyncDirty();
 		}
 		if (entity instanceof Player _player)
 			_player.closeContainer();

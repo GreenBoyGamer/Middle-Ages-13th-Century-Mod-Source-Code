@@ -128,6 +128,13 @@
         "name": "actionState",
         "type": "integer",
         "value": 0
+      },
+      {
+        "min": -2147483648,
+        "max": 2147483647,
+        "name": "nowWhat",
+        "type": "integer",
+        "value": 0
       }
     ],
     "whenMobDies": "MadievalHorseEntityDies",
@@ -146,12 +153,14 @@
     "rangedAttackInterval": 20,
     "rangedAttackRadius": 10.0,
     "spawnThisMob": true,
-    "doesDespawnWhenIdle": true,
-    "spawningProbability": 20,
-    "mobSpawningType": "monster",
-    "minNumberOfMobsPerGroup": 4,
-    "maxNumberOfMobsPerGroup": 4,
-    "restrictionBiomes": [],
+    "doesDespawnWhenIdle": false,
+    "spawningProbability": 2,
+    "mobSpawningType": "creature",
+    "minNumberOfMobsPerGroup": 1,
+    "maxNumberOfMobsPerGroup": 1,
+    "restrictionBiomes": [
+      "CUSTOM:MadievalJungle"
+    ],
     "spawnInDungeons": false,
     "raidSpawnsCount": [
       4,

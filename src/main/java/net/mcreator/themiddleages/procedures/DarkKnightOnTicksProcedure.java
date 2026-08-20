@@ -14,7 +14,7 @@ import net.minecraft.util.RandomSource;
 import net.minecraft.util.Mth;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.server.level.ServerLevel;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.core.BlockPos;
@@ -34,8 +34,8 @@ public class DarkKnightOnTicksProcedure {
 		if (!world.isClientSide()) {
 			actionState = entity instanceof DarkKnightEntity _datEntI ? _datEntI.getEntityData().get(DarkKnightEntity.DATA_actionstate) : 0;
 			if (actionState == 0) {
-				entity.getPersistentData().putDouble("ticks", (entity.getPersistentData().getDouble("ticks") + 1));
-				if (entity.getPersistentData().getDouble("ticks") > 4) {
+				entity.getPersistentData().putDouble("ticks", (entity.getPersistentData().getDoubleOr("ticks", 0) + 1));
+				if (entity.getPersistentData().getDoubleOr("ticks", 0) > 4) {
 					entity.getPersistentData().putDouble("ticks", 0);
 					target = entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null;
 					if (target != null) {
@@ -54,37 +54,42 @@ public class DarkKnightOnTicksProcedure {
 					}
 				}
 			} else {
-				entity.getPersistentData().putDouble("actionTicks", (entity.getPersistentData().getDouble("actionTicks") + 1));
+				entity.getPersistentData().putDouble("actionTicks", (entity.getPersistentData().getDoubleOr("actionTicks", 0) + 1));
 				if (actionState < 4) {
 					AttackDamage = entity instanceof LivingEntity _livingEntity27 && _livingEntity27.getAttributes().hasAttribute(Attributes.ATTACK_DAMAGE) ? _livingEntity27.getAttribute(Attributes.ATTACK_DAMAGE).getValue() : 0;
-					if (entity.getPersistentData().getDouble("actionTicks") == 4) {
+					if (entity.getPersistentData().getDoubleOr("actionTicks", 0) == 4) {
 						for (Entity entityiterator : world.getEntities(null, new AABB((x + (entity.getLookAngle().x * 0.6 + 0.5) * entity.getBbWidth()), y, (z + (entity.getLookAngle().z * 0.6 + 0.5) * entity.getBbWidth()),
 								(x + (entity.getLookAngle().x * 0.6 - 0.5) * entity.getBbWidth()), (y + entity.getBbHeight()), (z + (entity.getLookAngle().z * 0.6 - 0.5) * entity.getBbWidth())))) {
 							if (!(entity == entityiterator)) {
-								entityiterator.hurt(new DamageSource(world.holderOrThrow(DamageTypes.MOB_ATTACK), entity), (float) AttackDamage);
+								{
+									Entity _ent = entityiterator;
+									if (_ent.level() instanceof ServerLevel _serverLevel) {
+										_ent.hurtServer(_serverLevel, new DamageSource(world.holderOrThrow(DamageTypes.MOB_ATTACK), entity), (float) AttackDamage);
+									}
+								}
 							}
 							if (world instanceof Level _level) {
 								if (!_level.isClientSide()) {
-									_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("entity.player.attack.sweep")), SoundSource.NEUTRAL, 1, 1);
+									_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.getValue(Identifier.parse("entity.player.attack.sweep")), SoundSource.NEUTRAL, 1, 1);
 								} else {
-									_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("entity.player.attack.sweep")), SoundSource.NEUTRAL, 1, 1, false);
+									_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.getValue(Identifier.parse("entity.player.attack.sweep")), SoundSource.NEUTRAL, 1, 1, false);
 								}
 							}
 						}
-					} else if (entity.getPersistentData().getDouble("actionTicks") == 14) {
+					} else if (entity.getPersistentData().getDoubleOr("actionTicks", 0) == 14) {
 						if (entity instanceof DarkKnightEntity _datEntSetI)
 							_datEntSetI.getEntityData().set(DarkKnightEntity.DATA_actionstate, 0);
 						entity.getPersistentData().putDouble("actionTicks", 0);
 					}
 				} else if (actionState == 1000) {
-					if (entity.getPersistentData().getDouble("actionTicks") > 20) {
+					if (entity.getPersistentData().getDoubleOr("actionTicks", 0) > 20) {
 						if (world instanceof ServerLevel _level)
 							_level.sendParticles(ParticleTypes.POOF, x, y, z, 5, (entity.getBbWidth() / 2d), (entity.getBbWidth() / 2d), (entity.getBbWidth() / 2d), 1);
 						if (world instanceof Level _level) {
 							if (!_level.isClientSide()) {
-								_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("item.armor.equip_iron")), SoundSource.NEUTRAL, 1, 1);
+								_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.getValue(Identifier.parse("item.armor.equip_iron")), SoundSource.NEUTRAL, 1, 1);
 							} else {
-								_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("item.armor.equip_iron")), SoundSource.NEUTRAL, 1, 1, false);
+								_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.getValue(Identifier.parse("item.armor.equip_iron")), SoundSource.NEUTRAL, 1, 1, false);
 							}
 						}
 						if (!entity.level().isClientSide())

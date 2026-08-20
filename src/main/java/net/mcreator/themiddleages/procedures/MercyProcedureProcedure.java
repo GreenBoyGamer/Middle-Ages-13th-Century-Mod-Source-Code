@@ -5,13 +5,13 @@ import net.minecraft.world.phys.AABB;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.entity.MobSpawnType;
+import net.minecraft.world.entity.EntitySpawnReason;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.util.RandomSource;
 import net.minecraft.util.Mth;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.server.level.ServerLevel;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.network.chat.Component;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.particles.ParticleTypes;
@@ -28,21 +28,18 @@ public class MercyProcedureProcedure {
 		if (entity == null)
 			return;
 		if (!world.getEntitiesOfClass(DarkSoldierEntity.class, new AABB(Vec3.ZERO, Vec3.ZERO).move(new Vec3(x, y, z)).inflate(4 / 2d), e -> true).isEmpty()) {
-			{
-				TheMiddleAgesModVariables.PlayerVariables _vars = entity.getData(TheMiddleAgesModVariables.PLAYER_VARIABLES);
-				_vars.Dignity = entity.getData(TheMiddleAgesModVariables.PLAYER_VARIABLES).Dignity + Mth.nextInt(RandomSource.create(), 1, 2);
-				_vars.Wealth = entity.getData(TheMiddleAgesModVariables.PLAYER_VARIABLES).Wealth + Mth.nextInt(RandomSource.create(), 2, 3);
-				_vars.Soldiers = entity.getData(TheMiddleAgesModVariables.PLAYER_VARIABLES).Soldiers + 1;
-				_vars.markSyncDirty();
-			}
+			TheMiddleAgesModVariables.MapVariables.get(world).Dignity = TheMiddleAgesModVariables.MapVariables.get(world).Dignity + Mth.nextInt(RandomSource.create(), 1, 2);
+			TheMiddleAgesModVariables.MapVariables.get(world).Wealth = TheMiddleAgesModVariables.MapVariables.get(world).Wealth + Mth.nextInt(RandomSource.create(), 2, 3);
+			TheMiddleAgesModVariables.MapVariables.get(world).Soldiers = TheMiddleAgesModVariables.MapVariables.get(world).Soldiers + 1;
+			TheMiddleAgesModVariables.MapVariables.get(world).markSyncDirty();
 			if (world instanceof ServerLevel _level) {
 				_level.getServer().getPlayerList().broadcastSystemMessage(Component.literal("<Dark_Soldier> Th.. Thank You. MR King For Sparing My Life.. I Will Return Everything To This Man. And Now I Am On Your Side."), false);
 			}
 			if (world instanceof Level _level) {
 				if (!_level.isClientSide()) {
-					_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("entity.experience_orb.pickup")), SoundSource.NEUTRAL, 1, 1);
+					_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.getValue(Identifier.parse("entity.experience_orb.pickup")), SoundSource.NEUTRAL, 1, 1);
 				} else {
-					_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("entity.experience_orb.pickup")), SoundSource.NEUTRAL, 1, 1, false);
+					_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.getValue(Identifier.parse("entity.experience_orb.pickup")), SoundSource.NEUTRAL, 1, 1, false);
 				}
 			}
 			if (world instanceof ServerLevel _level)
@@ -51,7 +48,7 @@ public class MercyProcedureProcedure {
 			if (!(findEntityInWorldRange(world, DarkSoldierEntity.class, x, y, z, 4)).level().isClientSide())
 				(findEntityInWorldRange(world, DarkSoldierEntity.class, x, y, z, 4)).discard();
 			if (world instanceof ServerLevel _level) {
-				Entity entityToSpawn = TheMiddleAgesModEntities.SOLDIER.get().spawn(_level, BlockPos.containing(x, y, z), MobSpawnType.MOB_SUMMONED);
+				Entity entityToSpawn = TheMiddleAgesModEntities.SOLDIER.get().spawn(_level, BlockPos.containing(x, y, z), EntitySpawnReason.MOB_SUMMONED);
 				if (entityToSpawn != null) {
 					entityToSpawn.setYRot(world.getRandom().nextFloat() * 360F);
 				}

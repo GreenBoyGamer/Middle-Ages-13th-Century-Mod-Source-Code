@@ -38,5 +38,21 @@
         "stream": false
       }
     ]
+  },
+  "female_huming": {
+    "sounds": [
+      {
+        "name": "the_middle_ages:female_huming",
+        "stream": false
+      }
+    ]
+  },
+  "female_dies": {
+    "sounds": [
+      {
+        "name": "the_middle_ages:female_dies",
+        "stream": false
+      }
+    ]
   }
 }

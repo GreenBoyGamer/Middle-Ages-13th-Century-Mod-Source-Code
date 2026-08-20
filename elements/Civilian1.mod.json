@@ -4,7 +4,7 @@
   "definition": {
     "mobName": "Civilian",
     "mobLabel": "",
-    "mobModelName": "Modelcivilian1",
+    "mobModelName": "Modelmadieval_farmer_civilian",
     "mobModelTexture": "civi1.png",
     "transparentModelCondition": {
       "fixedValue": false
@@ -24,70 +24,77 @@
     "modelLayers": [],
     "animations": [
       {
-        "animation": "CUSTOM:civilian1Animation.idle",
+        "animation": "CUSTOM:madieval_farmer_civilianAnimation.idle",
         "speed": 1.0,
         "walking": false,
         "amplitude": 1.0
       },
       {
-        "animation": "CUSTOM:civilian1Animation.walking",
+        "animation": "CUSTOM:madieval_farmer_civilianAnimation.walking",
         "speed": 1.0,
         "walking": true,
         "amplitude": 1.0
       },
       {
-        "animation": "CUSTOM:civilian1Animation.panic",
+        "animation": "CUSTOM:madieval_farmer_civilianAnimation.panic",
         "speed": 2.1,
         "condition": "Civilian1PlaybackCondition",
         "walking": false,
         "amplitude": 1.0
       },
       {
-        "animation": "CUSTOM:civilian1Animation.farming",
+        "animation": "CUSTOM:madieval_farmer_civilianAnimation.farming",
         "speed": 1.0,
         "condition": "Civilian1DarmingPlaybackCondition",
         "walking": false,
         "amplitude": 1.0
       },
       {
-        "animation": "CUSTOM:civilian1Animation.sleep",
+        "animation": "CUSTOM:madieval_farmer_civilianAnimation.sleep",
         "speed": 1.0,
         "condition": "Civilian1sleepPlaybackCondition",
         "walking": false,
         "amplitude": 1.0
       },
       {
-        "animation": "CUSTOM:civilian1Animation.wake",
+        "animation": "CUSTOM:madieval_farmer_civilianAnimation.wake",
         "speed": 1.0,
         "condition": "CiviliansWakeupPlaybackCondition",
         "walking": false,
         "amplitude": 1.0
       },
       {
-        "animation": "CUSTOM:civilian1Animation.buy",
+        "animation": "CUSTOM:madieval_farmer_civilianAnimation.buy",
         "speed": 1.0,
         "condition": "Civilian1BuyPlaybackCondition",
         "walking": false,
         "amplitude": 1.0
       },
       {
-        "animation": "CUSTOM:civilian1Animation.eat",
+        "animation": "CUSTOM:madieval_farmer_civilianAnimation.eat",
         "speed": 1.0,
         "condition": "Civilian1EatPlaybackCondition",
         "walking": false,
         "amplitude": 1.0
       },
       {
-        "animation": "CUSTOM:civilian1Animation.die",
+        "animation": "CUSTOM:madieval_farmer_civilianAnimation.die",
         "speed": 1.0,
         "condition": "Civilian1IsondeathPlaybackCondition",
         "walking": false,
         "amplitude": 1.0
       },
       {
-        "animation": "CUSTOM:civilian1Animation.carrying",
+        "animation": "CUSTOM:madieval_farmer_civilianAnimation.carrying",
         "speed": 1.0,
         "condition": "Civilian1CarryPlaybackCondition",
+        "walking": false,
+        "amplitude": 1.0
+      },
+      {
+        "animation": "CUSTOM:madieval_farmer_civilianAnimation.meet",
+        "speed": 1.0,
+        "condition": "Civilian1MeetPlaybackCondition",
         "walking": false,
         "amplitude": 1.0
       }
@@ -138,7 +145,8 @@
       "fixedValue": true
     },
     "flyingMob": false,
-    "inventorySize": 9,
+    "guiBoundTo": "Civilian1GUI",
+    "inventorySize": 0,
     "inventoryStackSize": 99,
     "disableCollisions": false,
     "ridable": false,
@@ -262,6 +270,34 @@
         "name": "carry",
         "type": "integer",
         "value": 0
+      },
+      {
+        "min": -2147483648,
+        "max": 2147483647,
+        "name": "stop",
+        "type": "integer",
+        "value": 0
+      },
+      {
+        "min": -2147483648,
+        "max": 2147483647,
+        "name": "hum",
+        "type": "integer",
+        "value": 0
+      },
+      {
+        "min": -2147483648,
+        "max": 2147483647,
+        "name": "meet",
+        "type": "integer",
+        "value": 0
+      },
+      {
+        "min": -2147483648,
+        "max": 2147483647,
+        "name": "Dontdo",
+        "type": "integer",
+        "value": 0
       }
     ],
     "whenMobDies": "Civilian1EntityDiesReached",
@@ -269,7 +305,7 @@
     "onInitialSpawn": "Civilian1OnInitialEntitySpawn",
     "hasAI": true,
     "aiBase": "(none)",
-    "aixml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"aitasks_container\" deletable=\"false\" x=\"40\" y=\"40\"><next><block type=\"look_around\"><field name=\"condition\">null,null</field><next><block type=\"wander\"><field name=\"speed\">1</field><field name=\"condition\">null,null</field><next><block type=\"swim_in_water\"><field name=\"condition\">null,null</field><next><block type=\"panic_when_attacked\"><field name=\"speed\">2</field><field name=\"condition\">null,null</field><next><block type=\"doors_open\"><field name=\"condition\">null,null</field><next><block type=\"doors_close\"><field name=\"condition\">null,null</field><next><block type=\"move_indoors\"><field name=\"condition\">null,null</field><next><block type=\"avoid_entity\"><field name=\"entity\">CUSTOM:DarkKnight</field><field name=\"radius\">6</field><field name=\"farspeed\">1</field><field name=\"nearspeed\">1.2</field><field name=\"condition\">null,null</field><next><block type=\"avoid_entity\"><field name=\"entity\">CUSTOM:EnemyArcher</field><field name=\"radius\">6</field><field name=\"farspeed\">1</field><field name=\"nearspeed\">1.2</field><field name=\"condition\">null,null</field><next><block type=\"avoid_entity\"><field name=\"entity\">CUSTOM:DarkSoldier</field><field name=\"radius\">6</field><field name=\"farspeed\">1</field><field name=\"nearspeed\">1.2</field><field name=\"condition\">null,null</field></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></xml>",
+    "aixml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"aitasks_container\" deletable=\"false\" x=\"40\" y=\"40\"><next><block type=\"look_around\"><field name=\"condition\">null,null</field><next><block type=\"wander\"><field name=\"speed\">1</field><field name=\"condition\">null,null</field><next><block type=\"swim_in_water\"><field name=\"condition\">null,null</field><next><block type=\"panic_when_attacked\"><field name=\"speed\">1</field><field name=\"condition\">null,null</field><next><block type=\"doors_open\"><field name=\"condition\">null,null</field><next><block type=\"doors_close\"><field name=\"condition\">null,null</field><next><block type=\"move_indoors\"><field name=\"condition\">null,null</field><next><block type=\"avoid_entity\"><field name=\"entity\">CUSTOM:DarkKnight</field><field name=\"radius\">6</field><field name=\"farspeed\">1</field><field name=\"nearspeed\">1.2</field><field name=\"condition\">null,null</field><next><block type=\"avoid_entity\"><field name=\"entity\">CUSTOM:EnemyArcher</field><field name=\"radius\">6</field><field name=\"farspeed\">1</field><field name=\"nearspeed\">1.2</field><field name=\"condition\">null,null</field><next><block type=\"avoid_entity\"><field name=\"entity\">CUSTOM:DarkSoldier</field><field name=\"radius\">6</field><field name=\"farspeed\">1</field><field name=\"nearspeed\">1.2</field><field name=\"condition\">null,null</field></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></xml>",
     "breedable": false,
     "tameable": false,
     "breedTriggerItems": [],

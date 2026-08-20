@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "the_middle_ages:block/wooden_plate_raw_chicken"
+    },
+    "facing=east": {
+      "model": "the_middle_ages:block/wooden_plate_raw_chicken",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "the_middle_ages:block/wooden_plate_raw_chicken",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "the_middle_ages:block/wooden_plate_raw_chicken",
+      "y": 270
+    }
+  }
+}

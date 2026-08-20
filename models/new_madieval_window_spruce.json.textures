@@ -1,0 +1,10 @@
+{
+  "mappings": {
+    "default": {
+      "name": "default",
+      "map": {
+        "1": "window_spruce_bar_window"
+      }
+    }
+  }
+}

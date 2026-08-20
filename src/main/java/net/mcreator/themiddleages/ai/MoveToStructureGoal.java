@@ -5,8 +5,8 @@ import net.minecraft.world.entity.ai.goal.Goal;
 import net.minecraft.world.entity.Mob;
 import net.minecraft.tags.TagKey;
 import net.minecraft.server.level.ServerLevel;
-import net.minecraft.resources.ResourceLocation;
 import net.minecraft.resources.ResourceKey;
+import net.minecraft.resources.Identifier;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.core.HolderSet;
 import net.minecraft.core.BlockPos;
@@ -50,11 +50,11 @@ public class MoveToStructureGoal extends Goal {
 		HolderSet<Structure> holderSet = null;
 		var registry = level.registryAccess().lookupOrThrow(Registries.STRUCTURE);
 		if (input.startsWith("#")) {
-			ResourceLocation tagLoc = ResourceLocation.parse(input.substring(1));
+			Identifier tagLoc = Identifier.parse(input.substring(1));
 			TagKey<Structure> structTag = TagKey.create(Registries.STRUCTURE, tagLoc);
 			holderSet = registry.get(structTag).orElse(null);
 		} else {
-			ResourceLocation structLoc = ResourceLocation.parse(input);
+			Identifier structLoc = Identifier.parse(input);
 			ResourceKey<Structure> structKey = ResourceKey.create(Registries.STRUCTURE, structLoc);
 			var holderOpt = registry.get(structKey);
 			if (holderOpt.isPresent()) {

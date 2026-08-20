@@ -7,7 +7,7 @@ import net.neoforged.bus.api.SubscribeEvent;
 
 import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.player.Player;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.network.protocol.common.custom.CustomPacketPayload;
 import net.minecraft.network.protocol.PacketFlow;
 import net.minecraft.network.codec.StreamCodec;
@@ -20,7 +20,7 @@ import net.mcreator.themiddleages.TheMiddleAgesMod;
 
 @EventBusSubscriber
 public record StatsMessage(int eventType, int pressedms) implements CustomPacketPayload {
-	public static final Type<StatsMessage> TYPE = new Type<>(ResourceLocation.fromNamespaceAndPath(TheMiddleAgesMod.MODID, "key_stats"));
+	public static final Type<StatsMessage> TYPE = new Type<>(Identifier.fromNamespaceAndPath(TheMiddleAgesMod.MODID, "key_stats"));
 	public static final StreamCodec<RegistryFriendlyByteBuf, StatsMessage> STREAM_CODEC = StreamCodec.of((RegistryFriendlyByteBuf buffer, StatsMessage message) -> {
 		buffer.writeInt(message.eventType);
 		buffer.writeInt(message.pressedms);

@@ -1,0 +1,32 @@
+{
+  "_fv": 89,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Crafting",
+    "recipeRetstackSize": 1,
+    "group": "",
+    "unlockingItems": [
+      "Blocks.PLANKS#0",
+      "Items.STICK"
+    ],
+    "cookingBookCategory": "MISC",
+    "xpReward": 0.0,
+    "cookingTime": 200,
+    "craftingBookCategory": "MISC",
+    "recipeShapeless": false,
+    "recipeSlots": [
+      "Blocks.PLANKS#0",
+      "",
+      "",
+      "Blocks.PLANKS#0",
+      "Blocks.PLANKS#0",
+      "Blocks.PLANKS#0",
+      "Items.STICK",
+      "",
+      "Items.STICK"
+    ],
+    "recipeReturnStack": "CUSTOM:MedievalWoodenChairOak",
+    "name": "chair_oak",
+    "namespace": "mod"
+  }
+}

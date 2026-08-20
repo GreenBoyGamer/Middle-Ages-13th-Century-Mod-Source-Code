@@ -8,7 +8,7 @@ import net.minecraft.world.entity.Mob;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.server.level.ServerLevel;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.core.BlockPos;
@@ -24,13 +24,13 @@ public class MadievalHorseOnEntityTickUpdateProcedure {
 			return;
 		boolean riding = false;
 		if ((entity instanceof MadievalHorseEntity _datEntI ? _datEntI.getEntityData().get(MadievalHorseEntity.DATA_actionState) : 0) == 100) {
-			entity.getPersistentData().putDouble("HorseDying", (entity.getPersistentData().getDouble("HorseDying") + 1));
-			if (entity.getPersistentData().getDouble("HorseDying") == 100) {
+			entity.getPersistentData().putDouble("HorseDying", (entity.getPersistentData().getDoubleOr("HorseDying", 0) + 1));
+			if (entity.getPersistentData().getDoubleOr("HorseDying", 0) == 100) {
 				if (world instanceof Level _level) {
 					if (!_level.isClientSide()) {
-						_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("entity.horse.hurt")), SoundSource.NEUTRAL, 1, 1);
+						_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.getValue(Identifier.parse("entity.horse.hurt")), SoundSource.NEUTRAL, 1, 1);
 					} else {
-						_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("entity.horse.hurt")), SoundSource.NEUTRAL, 1, 1, false);
+						_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.getValue(Identifier.parse("entity.horse.hurt")), SoundSource.NEUTRAL, 1, 1, false);
 					}
 				}
 				if (world instanceof ServerLevel _level)
@@ -41,14 +41,21 @@ public class MadievalHorseOnEntityTickUpdateProcedure {
 			}
 		}
 		if (!world.getEntitiesOfClass(PassengerCartEntity.class, new AABB(Vec3.ZERO, Vec3.ZERO).move(new Vec3(x, y, z)).inflate(2 / 2d), e -> true).isEmpty()) {
+			if (entity instanceof MadievalHorseEntity _datEntSetI)
+				_datEntSetI.getEntityData().set(MadievalHorseEntity.DATA_nowWhat, 1);
 			if (entity instanceof Mob _entity)
 				_entity.getNavigation().stop();
 		} else if (!world.getEntitiesOfClass(PassengerCartEntity.class, new AABB(Vec3.ZERO, Vec3.ZERO).move(new Vec3(x, y, z)).inflate(8 / 2d), e -> true).isEmpty()) {
 			if (!(findEntityInWorldRange(world, PassengerCartEntity.class, x, y, z, 8)).isVehicle()) {
+				if (entity instanceof MadievalHorseEntity _datEntSetI)
+					_datEntSetI.getEntityData().set(MadievalHorseEntity.DATA_nowWhat, 0);
 				if (entity instanceof Mob _entity)
 					_entity.getNavigation().moveTo(((findEntityInWorldRange(world, PassengerCartEntity.class, x, y, z, 8)).getX()), ((findEntityInWorldRange(world, PassengerCartEntity.class, x, y, z, 8)).getY()),
 							((findEntityInWorldRange(world, PassengerCartEntity.class, x, y, z, 8)).getZ()), 1);
 			}
+		} else {
+			if (entity instanceof MadievalHorseEntity _datEntSetI)
+				_datEntSetI.getEntityData().set(MadievalHorseEntity.DATA_nowWhat, 0);
 		}
 	}
 

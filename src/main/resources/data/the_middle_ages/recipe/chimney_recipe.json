@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "a",
+    "b",
+    "b"
+  ],
+  "key": {
+    "a": "#minecraft:slabs",
+    "b": "minecraft:bricks"
+  },
+  "result": {
+    "id": "the_middle_ages:medieval_chimney",
+    "count": 1
+  }
+}

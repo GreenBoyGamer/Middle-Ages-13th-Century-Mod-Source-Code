@@ -4,6 +4,5 @@
     "all": "the_middle_ages:block/grave",
     "particle": "the_middle_ages:block/grave",
     "1": "the_middle_ages:block/grave"
-  },
-  "render_type": "solid"
+  }
 }

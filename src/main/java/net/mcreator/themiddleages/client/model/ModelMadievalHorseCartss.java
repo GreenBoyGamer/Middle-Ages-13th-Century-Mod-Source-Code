@@ -1,7 +1,7 @@
 package net.mcreator.themiddleages.client.model;
 
-import net.minecraft.world.entity.Entity;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
+import net.minecraft.client.renderer.entity.state.LivingEntityRenderState;
 import net.minecraft.client.model.geom.builders.PartDefinition;
 import net.minecraft.client.model.geom.builders.MeshDefinition;
 import net.minecraft.client.model.geom.builders.LayerDefinition;
@@ -12,16 +12,13 @@ import net.minecraft.client.model.geom.ModelPart;
 import net.minecraft.client.model.geom.ModelLayerLocation;
 import net.minecraft.client.model.EntityModel;
 
-import com.mojang.blaze3d.vertex.VertexConsumer;
-import com.mojang.blaze3d.vertex.PoseStack;
-
 // Made with Blockbench 5.1.6
 // Exported for Minecraft version 1.17 or later with Mojang mappings
 // Paste this class into your mod and generate all required imports
-public class ModelMadievalHorseCartss<T extends Entity> extends EntityModel<T> {
+public class ModelMadievalHorseCartss extends EntityModel<LivingEntityRenderState> {
 	// This layer location should be baked with EntityRendererProvider.Context in
 	// the entity renderer and passed into this model's constructor
-	public static final ModelLayerLocation LAYER_LOCATION = new ModelLayerLocation(ResourceLocation.fromNamespaceAndPath("the_middle_ages", "model_madieval_horse_cartss"), "main");
+	public static final ModelLayerLocation LAYER_LOCATION = new ModelLayerLocation(Identifier.fromNamespaceAndPath("the_middle_ages", "model_madieval_horse_cartss"), "main");
 	public final ModelPart main_cart;
 	public final ModelPart cart;
 	public final ModelPart bone;
@@ -78,6 +75,7 @@ public class ModelMadievalHorseCartss<T extends Entity> extends EntityModel<T> {
 	public final ModelPart RightLeg2;
 
 	public ModelMadievalHorseCartss(ModelPart root) {
+		super(root);
 		this.main_cart = root.getChild("main_cart");
 		this.cart = this.main_cart.getChild("cart");
 		this.bone = this.cart.getChild("bone");
@@ -440,11 +438,12 @@ public class ModelMadievalHorseCartss<T extends Entity> extends EntityModel<T> {
 		return LayerDefinition.create(meshdefinition, 260, 518);
 	}
 
-	@Override
-	public void renderToBuffer(PoseStack poseStack, VertexConsumer vertexConsumer, int packedLight, int packedOverlay, int rgb) {
-		main_cart.render(poseStack, vertexConsumer, packedLight, packedOverlay, rgb);
-	}
+	public void setupAnim(LivingEntityRenderState state) {
+		float limbSwing = state.walkAnimationPos;
+		float limbSwingAmount = state.walkAnimationSpeed;
+		float ageInTicks = state.ageInTicks;
+		float netHeadYaw = state.yRot;
+		float headPitch = state.xRot;
 
-	public void setupAnim(T entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
 	}
 }

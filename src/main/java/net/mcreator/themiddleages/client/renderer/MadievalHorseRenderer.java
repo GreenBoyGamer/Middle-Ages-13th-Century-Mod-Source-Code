@@ -1,63 +1,97 @@
 package net.mcreator.themiddleages.client.renderer;
 
-import net.minecraft.resources.ResourceLocation;
+import net.neoforged.neoforge.client.renderstate.RegisterRenderStateModifiersEvent;
+import net.neoforged.fml.common.EventBusSubscriber;
+import net.neoforged.bus.api.SubscribeEvent;
+import net.neoforged.api.distmarker.Dist;
+
+import net.minecraft.util.context.ContextKey;
+import net.minecraft.resources.Identifier;
+import net.minecraft.client.renderer.entity.state.LivingEntityRenderState;
 import net.minecraft.client.renderer.entity.MobRenderer;
 import net.minecraft.client.renderer.entity.EntityRendererProvider;
 import net.minecraft.client.model.geom.ModelPart;
-import net.minecraft.client.model.HierarchicalModel;
+import net.minecraft.client.animation.KeyframeAnimation;
+import net.minecraft.client.animation.AnimationDefinition;
 
 import net.mcreator.themiddleages.procedures.MadievalHorseSprintPlaybackConditionProcedure;
 import net.mcreator.themiddleages.entity.MadievalHorseEntity;
 import net.mcreator.themiddleages.client.model.animations.MadievalHorseAnimation;
 import net.mcreator.themiddleages.client.model.ModelMadievalHorse;
 
+import java.util.Map;
+
 import com.mojang.blaze3d.vertex.PoseStack;
 
-public class MadievalHorseRenderer extends MobRenderer<MadievalHorseEntity, ModelMadievalHorse<MadievalHorseEntity>> {
-	private final ResourceLocation entityTexture = ResourceLocation.parse("the_middle_ages:textures/entities/madieval_horse.png");
+public class MadievalHorseRenderer extends MobRenderer<MadievalHorseEntity, LivingEntityRenderState, ModelMadievalHorse> {
+	private final Identifier entityTexture = Identifier.parse("the_middle_ages:textures/entities/madieval_horse.png");
 
 	public MadievalHorseRenderer(EntityRendererProvider.Context context) {
 		super(context, new AnimatedModel(context.bakeLayer(ModelMadievalHorse.LAYER_LOCATION)), 0.5f);
 	}
 
 	@Override
-	protected void scale(MadievalHorseEntity entity, PoseStack poseStack, float f) {
-		poseStack.scale(entity.getAgeScale(), entity.getAgeScale(), entity.getAgeScale());
+	public LivingEntityRenderState createRenderState() {
+		return new LivingEntityRenderState();
 	}
 
 	@Override
-	public ResourceLocation getTextureLocation(MadievalHorseEntity entity) {
+	public void extractRenderState(MadievalHorseEntity entity, LivingEntityRenderState state, float partialTicks) {
+		super.extractRenderState(entity, state, partialTicks);
+	}
+
+	@Override
+	public Identifier getTextureLocation(LivingEntityRenderState state) {
 		return entityTexture;
 	}
 
-	private static final class AnimatedModel extends ModelMadievalHorse<MadievalHorseEntity> {
-		private final ModelPart root;
-		private final HierarchicalModel animator = new HierarchicalModel<MadievalHorseEntity>() {
-			@Override
-			public ModelPart root() {
-				return root;
-			}
+	@Override
+	protected void scale(LivingEntityRenderState state, PoseStack poseStack) {
+		poseStack.scale(state.ageScale, state.ageScale, state.ageScale);
+	}
 
-			@Override
-			public void setupAnim(MadievalHorseEntity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
-				this.root().getAllParts().forEach(ModelPart::resetPose);
-				this.animate(entity.animationState0, MadievalHorseAnimation.idle, ageInTicks, 1f);
-				this.animateWalk(MadievalHorseAnimation.moving, limbSwing, limbSwingAmount, 1f, 1f);
-				if (MadievalHorseSprintPlaybackConditionProcedure.execute(entity))
-					this.animateWalk(MadievalHorseAnimation.sprint, limbSwing, limbSwingAmount, 1f, 1f);
-				this.animate(entity.animationState3, MadievalHorseAnimation.die, ageInTicks, 1f);
-			}
-		};
+	private static final class AnimatedModel extends ModelMadievalHorse {
+		private final KeyframeAnimation keyframeAnimation0;
+		private final KeyframeAnimation keyframeAnimation1;
+		private final KeyframeAnimation keyframeAnimation2;
+		private final KeyframeAnimation keyframeAnimation3;
 
 		public AnimatedModel(ModelPart root) {
 			super(root);
-			this.root = root;
+			this.keyframeAnimation0 = safeBake(MadievalHorseAnimation.idle);
+			this.keyframeAnimation1 = safeBake(MadievalHorseAnimation.moving);
+			this.keyframeAnimation2 = safeBake(MadievalHorseAnimation.sprint);
+			this.keyframeAnimation3 = safeBake(MadievalHorseAnimation.die);
+		}
+
+		private KeyframeAnimation safeBake(AnimationDefinition source) {
+			try {
+				return source.bake(root);
+			} catch (IllegalArgumentException e) {
+				return new AnimationDefinition(0, false, Map.of()).bake(root);
+			}
 		}
 
 		@Override
-		public void setupAnim(MadievalHorseEntity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
-			animator.setupAnim(entity, limbSwing, limbSwingAmount, ageInTicks, netHeadYaw, headPitch);
-			super.setupAnim(entity, limbSwing, limbSwingAmount, ageInTicks, netHeadYaw, headPitch);
+		public void setupAnim(LivingEntityRenderState state) {
+			this.root().getAllParts().forEach(ModelPart::resetPose);
+			MadievalHorseEntity entity = state.getRenderData(ENTITY_KEY);
+			this.keyframeAnimation0.apply(entity.animationState0, state.ageInTicks, 1f);
+			this.keyframeAnimation1.applyWalk(state.walkAnimationPos, state.walkAnimationSpeed, 1f, 1f);
+			if (MadievalHorseSprintPlaybackConditionProcedure.execute(entity))
+				this.keyframeAnimation2.applyWalk(state.walkAnimationPos, state.walkAnimationSpeed, 1f, 1f);
+			this.keyframeAnimation3.apply(entity.animationState3, state.ageInTicks, 1f);
+			super.setupAnim(state);
+		}
+	}
+
+	public static final ContextKey<MadievalHorseEntity> ENTITY_KEY = new ContextKey<>(Identifier.parse("the_middle_ages:medieval_horse_entity"));
+
+	@EventBusSubscriber(Dist.CLIENT)
+	public static class EntityStateAdder {
+		@SubscribeEvent
+		private static void registerRenderStateModifiersEvent(RegisterRenderStateModifiersEvent event) {
+			event.registerEntityModifier(MadievalHorseRenderer.class, (entity, state) -> state.setRenderData(ENTITY_KEY, entity));
 		}
 	}
 }
