@@ -49,6 +49,7 @@
     "maxMonsterSpawnLightLimit": 7,
     "monsterSpawnBlockLightLimit": 0,
     "onPlayerEntersDimension": "MadievalDimensionPlayerEntersDimension",
+    "onPlayerLeavesDimension": "MadievalDimensionPlayerLeavesDimension",
     "portalFrame": "Blocks.STONEBRICK#1",
     "portalParticles": "WHITE_ASH",
     "portalLuminance": 2,

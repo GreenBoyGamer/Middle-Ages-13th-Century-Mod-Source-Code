@@ -4,6 +4,6 @@
 java.base/java.lang.invoke=ALL-UNNAMED
 --add-exports
 jdk.naming.dns/com.sun.jndi.dns=java.naming
--Dlog4j2.configurationFile=C:\\Users\\Greenboy\\MCreatorWorkspaces\\the_middle_ages\\build\\moddev\\serverLog4j2.xml
+-Dlog4j2.configurationFile=G:\\FinalWorkspace\\MCreatorWorkspaces\\the_middle_ages\\build\\moddev\\serverLog4j2.xml
 -Djava.net.preferIPv6Addresses=system
 -Dforge.logging.markers=REGISTRIES

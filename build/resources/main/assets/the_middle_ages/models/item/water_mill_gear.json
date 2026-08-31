@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "minecraft:item/apple"
+    "layer0": "the_middle_ages:item/water_mill_gear"
   }
 }

@@ -102,7 +102,7 @@
     },
     "spawnEggTexture": "",
     "creativeTabs": [
-      "MISC"
+      "CUSTOM:TheMiddleAgesEntities"
     ],
     "isBoss": false,
     "bossBarColor": "PINK",
@@ -119,11 +119,11 @@
     "attackKnockback": 1.0,
     "knockbackResistance": 2.0,
     "movementSpeed": 0.3,
-    "stepHeight": 0.6,
+    "stepHeight": 3.0,
     "armorBaseValue": 8.0,
     "trackingRange": 64,
     "followRange": 16,
-    "health": 60,
+    "health": 120,
     "xpAmount": 10,
     "waterMob": false,
     "breatheUnderwater": {
@@ -191,6 +191,41 @@
         "name": "StopRobbing",
         "type": "integer",
         "value": 0
+      },
+      {
+        "min": -2147483648,
+        "max": 2147483647,
+        "name": "Peasents_Carry_Amount",
+        "type": "integer",
+        "value": 0
+      },
+      {
+        "min": -2147483648,
+        "max": 2147483647,
+        "name": "Peasents_Amount2",
+        "type": "integer",
+        "value": 0
+      },
+      {
+        "min": -2147483648,
+        "max": 2147483647,
+        "name": "Peasents_Amount3",
+        "type": "integer",
+        "value": 0
+      },
+      {
+        "min": -2147483648,
+        "max": 2147483647,
+        "name": "Peasents_Amount4",
+        "type": "integer",
+        "value": 0
+      },
+      {
+        "min": -2147483648,
+        "max": 2147483647,
+        "name": "Peasents_Amount5",
+        "type": "integer",
+        "value": 0
       }
     ],
     "whenMobDies": "DarkSoldierDies",
@@ -198,7 +233,7 @@
     "onMobTickUpdate": "DarkSoldierOnEntityTicks",
     "hasAI": true,
     "aiBase": "(none)",
-    "aixml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"aitasks_container\" deletable=\"false\" x=\"40\" y=\"40\"><next><block type=\"attack_with_range\"><field name=\"range\">0</field><field name=\"speed\">1.2</field><field name=\"longmemory\">FALSE</field><field name=\"condition\">Set0Soldier,Set0Soldier</field><next><block type=\"wander\"><field name=\"speed\">1</field><field name=\"condition\">Set0Soldier,Set0Soldier</field><next><block type=\"attack_action\"><field name=\"callhelp\">FALSE</field><field name=\"condition\">null,null</field><next><block type=\"look_around\"><field name=\"condition\">Set0Soldier,Set0Soldier</field><next><block type=\"swim_in_water\"><field name=\"condition\">null,null</field><next><block type=\"attack_entity\"><field name=\"insight\">FALSE</field><field name=\"nearby\">FALSE</field><field name=\"entity\">CUSTOM:Knight</field><field name=\"condition\">null,null</field><next><block type=\"attack_entity\"><field name=\"insight\">FALSE</field><field name=\"nearby\">FALSE</field><field name=\"entity\">CUSTOM:Soldier</field><field name=\"condition\">null,null</field><next><block type=\"avoid_entity\"><field name=\"entity\">EntityPlayer</field><field name=\"radius\">12</field><field name=\"farspeed\">1.2</field><field name=\"nearspeed\">1.2</field><field name=\"condition\">null,null</field><next><block type=\"follow_entity\"><field name=\"speed\">1</field><field name=\"maxrange\">10</field><field name=\"followarea\">5</field><field name=\"condition\">null,null</field></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></xml>",
+    "aixml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"aitasks_container\" deletable=\"false\" x=\"40\" y=\"40\"><next><block type=\"attack_with_range\"><field name=\"range\">0</field><field name=\"speed\">1.2</field><field name=\"longmemory\">FALSE</field><field name=\"condition\">Set0Soldier,Set0Soldier</field><next><block type=\"wander\"><field name=\"speed\">1</field><field name=\"condition\">Set0Soldier,Set0Soldier</field><next><block type=\"attack_action\"><field name=\"callhelp\">FALSE</field><field name=\"condition\">null,null</field><next><block type=\"look_around\"><field name=\"condition\">Set0Soldier,Set0Soldier</field><next><block type=\"swim_in_water\"><field name=\"condition\">null,null</field><next><block type=\"attack_entity\"><field name=\"insight\">FALSE</field><field name=\"nearby\">FALSE</field><field name=\"entity\">CUSTOM:Knight</field><field name=\"condition\">null,null</field><next><block type=\"attack_entity\"><field name=\"insight\">FALSE</field><field name=\"nearby\">FALSE</field><field name=\"entity\">CUSTOM:Soldier</field><field name=\"condition\">null,null</field><next><block type=\"attack_entity\"><field name=\"insight\">FALSE</field><field name=\"nearby\">FALSE</field><field name=\"entity\">CUSTOM:Archer</field><field name=\"condition\">null,null</field><next><block type=\"attack_entity\"><field name=\"insight\">FALSE</field><field name=\"nearby\">FALSE</field><field name=\"entity\">EntityPlayer</field><field name=\"condition\">null,null</field><next><block type=\"attack_entity\"><field name=\"insight\">FALSE</field><field name=\"nearby\">FALSE</field><field name=\"entity\">CUSTOM:KnightRidingHorse</field><field name=\"condition\">null,null</field><next><block type=\"avoid_entity\"><field name=\"entity\">EntityPlayer</field><field name=\"radius\">12</field><field name=\"farspeed\">1.2</field><field name=\"nearspeed\">1.2</field><field name=\"condition\">null,null</field><next><block type=\"follow_entity\"><field name=\"speed\">1</field><field name=\"maxrange\">10</field><field name=\"followarea\">5</field><field name=\"condition\">null,null</field></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></xml>",
     "breedable": false,
     "tameable": false,
     "breedTriggerItems": [],

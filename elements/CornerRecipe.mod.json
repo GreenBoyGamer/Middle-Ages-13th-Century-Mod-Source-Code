@@ -1,0 +1,33 @@
+{
+  "_fv": 89,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Crafting",
+    "recipeRetstackSize": 1,
+    "group": "",
+    "unlockingItems": [
+      "Blocks.PLANKS",
+      "Items.REDSTONE",
+      "Blocks.WOODEN_SLAB"
+    ],
+    "cookingBookCategory": "MISC",
+    "xpReward": 0.0,
+    "cookingTime": 200,
+    "craftingBookCategory": "MISC",
+    "recipeShapeless": false,
+    "recipeSlots": [
+      "Blocks.WOODEN_SLAB",
+      "Blocks.WOODEN_SLAB",
+      "Blocks.WOODEN_SLAB",
+      "Blocks.WOODEN_SLAB",
+      "CUSTOM:WaterMillExtender",
+      "Blocks.WOODEN_SLAB",
+      "Blocks.WOODEN_SLAB",
+      "Blocks.WOODEN_SLAB",
+      "Blocks.WOODEN_SLAB"
+    ],
+    "recipeReturnStack": "CUSTOM:WaterMillExtenderCorner",
+    "name": "corner_recipe",
+    "namespace": "mod"
+  }
+}

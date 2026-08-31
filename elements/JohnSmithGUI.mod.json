@@ -1,0 +1,438 @@
+{
+  "_fv": 89,
+  "_type": "gui",
+  "definition": {
+    "type": 0,
+    "width": 176,
+    "height": 166,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
+    "renderBgLayer": false,
+    "doesPauseGame": true,
+    "components": [
+      {
+        "type": "image",
+        "data": {
+          "image": "background.png",
+          "use1Xscale": false,
+          "x": 126,
+          "y": 38,
+          "locked": true
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "backgroundbasetwo.png",
+          "use1Xscale": false,
+          "x": 154,
+          "y": 32,
+          "locked": false
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_john_smiths_inventory",
+          "text": {
+            "fixedValue": "John Smith's Inventory"
+          },
+          "color": {
+            "value": -16777216,
+            "falpha": 0.0
+          },
+          "hasShadow": false,
+          "x": 159,
+          "y": 46,
+          "locked": false
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_armory",
+          "text": {
+            "fixedValue": "[Armory]"
+          },
+          "color": {
+            "value": -16777216,
+            "falpha": 0.0
+          },
+          "hasShadow": false,
+          "x": 197,
+          "y": 58,
+          "locked": false
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_basebuttons",
+          "image": "basebuttons.png",
+          "hoveredImage": "basebuttonhover.png",
+          "onClick": "Swordbuyclicks",
+          "x": 136,
+          "y": 104,
+          "locked": false
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_buy",
+          "text": {
+            "fixedValue": "BUY"
+          },
+          "color": {
+            "value": -16751104,
+            "falpha": 0.0
+          },
+          "hasShadow": false,
+          "x": 160,
+          "y": 106,
+          "locked": false
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "basebuttonhover.png",
+          "use1Xscale": false,
+          "x": 202,
+          "y": 104,
+          "locked": false
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_soldier_sword",
+          "text": {
+            "fixedValue": "sword"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "hasShadow": false,
+          "x": 221,
+          "y": 106,
+          "locked": false
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "peace.png",
+          "use1Xscale": false,
+          "x": 203,
+          "y": 72,
+          "locked": false
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "wealth.png",
+          "use1Xscale": true,
+          "x": 267,
+          "y": 104,
+          "locked": false
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_x3",
+          "text": {
+            "fixedValue": "x3"
+          },
+          "color": {
+            "value": -16777216,
+            "falpha": 0.0
+          },
+          "hasShadow": false,
+          "x": 281,
+          "y": 106,
+          "locked": false
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_basebuttons1",
+          "image": "basebuttons.png",
+          "hoveredImage": "basebuttonhover.png",
+          "onClick": "Armorbuyclicks",
+          "x": 136,
+          "y": 125,
+          "locked": false
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_buy1",
+          "text": {
+            "fixedValue": "BUY"
+          },
+          "color": {
+            "value": -16751104,
+            "falpha": 0.0
+          },
+          "hasShadow": false,
+          "x": 160,
+          "y": 127,
+          "locked": false
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "basebuttonhover.png",
+          "use1Xscale": false,
+          "x": 202,
+          "y": 125,
+          "locked": false
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_armor",
+          "text": {
+            "fixedValue": "armor"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "hasShadow": false,
+          "x": 221,
+          "y": 127,
+          "locked": false
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "wealth.png",
+          "use1Xscale": true,
+          "x": 267,
+          "y": 126,
+          "locked": false
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_x31",
+          "text": {
+            "fixedValue": "x6"
+          },
+          "color": {
+            "value": -16777216,
+            "falpha": 0.0
+          },
+          "hasShadow": false,
+          "x": 281,
+          "y": 127,
+          "locked": false
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_basebuttons2",
+          "image": "basebuttons.png",
+          "hoveredImage": "basebuttonhover.png",
+          "onClick": "TablesBuyClicks",
+          "x": 136,
+          "y": 146,
+          "locked": false
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_buy2",
+          "text": {
+            "fixedValue": "BUY"
+          },
+          "color": {
+            "value": -16751104,
+            "falpha": 0.0
+          },
+          "hasShadow": false,
+          "x": 160,
+          "y": 148,
+          "locked": false
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "basebuttonhover.png",
+          "use1Xscale": false,
+          "x": 202,
+          "y": 146,
+          "locked": false
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_tables",
+          "text": {
+            "fixedValue": "tables"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "hasShadow": false,
+          "x": 219,
+          "y": 148,
+          "locked": false
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "wealth.png",
+          "use1Xscale": true,
+          "x": 267,
+          "y": 147,
+          "locked": false
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_x2",
+          "text": {
+            "fixedValue": "x2"
+          },
+          "color": {
+            "value": -16777216,
+            "falpha": 0.0
+          },
+          "hasShadow": false,
+          "x": 282,
+          "y": 148,
+          "locked": false
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_basebuttons3",
+          "image": "basebuttons.png",
+          "hoveredImage": "basebuttonhover.png",
+          "onClick": "DecorBuyClicks",
+          "x": 136,
+          "y": 167,
+          "locked": false
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_buy3",
+          "text": {
+            "fixedValue": "BUY"
+          },
+          "color": {
+            "value": -16751104,
+            "falpha": 0.0
+          },
+          "hasShadow": false,
+          "x": 160,
+          "y": 169,
+          "locked": false
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "basebuttonhover.png",
+          "use1Xscale": false,
+          "x": 202,
+          "y": 167,
+          "locked": false
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_wooden_items",
+          "text": {
+            "fixedValue": "decor"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "hasShadow": false,
+          "x": 223,
+          "y": 169,
+          "locked": false
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "wealth.png",
+          "use1Xscale": true,
+          "x": 267,
+          "y": 168,
+          "locked": false
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_x4",
+          "text": {
+            "fixedValue": "x4"
+          },
+          "color": {
+            "value": -16777216,
+            "falpha": 0.0
+          },
+          "hasShadow": false,
+          "x": 282,
+          "y": 170,
+          "locked": false
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "world.png",
+          "use1Xscale": true,
+          "x": 239,
+          "y": 56,
+          "locked": false
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "world.png",
+          "use1Xscale": true,
+          "x": 176,
+          "y": 56,
+          "locked": false
+        }
+      }
+    ],
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": false
+    }
+  }
+}

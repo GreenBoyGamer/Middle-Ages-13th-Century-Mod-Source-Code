@@ -1,0 +1,33 @@
+{
+  "_fv": 89,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Crafting",
+    "recipeRetstackSize": 1,
+    "group": "",
+    "unlockingItems": [
+      "Blocks.WOOL#14",
+      "Items.IRON_HELMET",
+      "Blocks.CHAIN"
+    ],
+    "cookingBookCategory": "MISC",
+    "xpReward": 0.0,
+    "cookingTime": 200,
+    "craftingBookCategory": "MISC",
+    "recipeShapeless": false,
+    "recipeSlots": [
+      "Blocks.CHAIN",
+      "Blocks.WOOL#14",
+      "Blocks.CHAIN",
+      "Blocks.CHAIN",
+      "Items.IRON_HELMET",
+      "Blocks.CHAIN",
+      "Blocks.CHAIN",
+      "Blocks.CHAIN",
+      "Blocks.CHAIN"
+    ],
+    "recipeReturnStack": "CUSTOM:SoldierArmor.helmet",
+    "name": "soldier_armor_recipe",
+    "namespace": "mod"
+  }
+}

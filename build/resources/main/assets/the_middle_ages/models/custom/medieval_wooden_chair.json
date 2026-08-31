@@ -1,6 +1,7 @@
 {
-  "format_version": "1.9.0",
+  "format_version": "1.21.11",
   "credit": "Made with Blockbench",
+  "ambientocclusion": false,
   "texture_size": [
     64,
     64
@@ -866,7 +867,7 @@
       ],
       "rotation": {
         "angle": 0,
-        "axis": "z",
+        "axis": "y",
         "origin": [
           4.93333,
           24.26432,
@@ -943,7 +944,7 @@
       ],
       "rotation": {
         "angle": 0,
-        "axis": "z",
+        "axis": "y",
         "origin": [
           12.13333,
           24.26432,
@@ -1020,7 +1021,7 @@
       ],
       "rotation": {
         "angle": 0,
-        "axis": "z",
+        "axis": "y",
         "origin": [
           7.98333,
           28.26432,
@@ -1097,7 +1098,7 @@
       ],
       "rotation": {
         "angle": 0,
-        "axis": "z",
+        "axis": "y",
         "origin": [
           7.98333,
           20.36432,
@@ -1660,7 +1661,7 @@
       "rotation": [
         -180,
         56,
-        180
+        -180
       ],
       "translation": [
         -2.25,

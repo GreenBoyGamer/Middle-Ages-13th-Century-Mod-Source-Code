@@ -1,8 +1,0 @@
-{
-  "parent": "the_middle_ages:custom/dead_skeleton_pos1",
-  "textures": {
-    "all": "minecraft:block/andesite",
-    "particle": "minecraft:block/andesite",
-    "0": "the_middle_ages:block/skeleton_pos"
-  }
-}

@@ -26,7 +26,7 @@
         "condition": "WaterMillHubidlePlaybackCondition"
       }
     ],
-    "itemTexture": "minecraft:barrier",
+    "itemTexture": "water_mill",
     "particleTexture": "",
     "blockSetType": "OAK",
     "leavesParticleChance": 0.0,

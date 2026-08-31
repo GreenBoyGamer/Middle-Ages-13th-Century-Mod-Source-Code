@@ -2,23 +2,23 @@
   "_fv": 89,
   "_type": "structure",
   "definition": {
-    "structure": "medieval_big_town",
+    "structure": "middle_ages_main_town",
     "projection": "rigid",
     "ignoredBlocks": [
       "Blocks.STRUCTURE_BLOCK"
     ],
-    "spacing": 4045,
-    "separation": 4043,
+    "spacing": 80,
+    "separation": 60,
     "restrictionBiomes": [
-      "CUSTOM:NullBiome"
+      "CUSTOM:MadievalPlains"
     ],
     "terrainAdaptation": "beard_box",
     "generationStep": "SURFACE_STRUCTURES",
-    "surfaceDetectionType": "WORLD_SURFACE",
-    "useStartHeight": true,
+    "surfaceDetectionType": "WORLD_SURFACE_WG",
+    "useStartHeight": false,
     "startHeightProviderType": "UNIFORM",
-    "startHeightMin": 64,
-    "startHeightMax": 65,
+    "startHeightMin": 60,
+    "startHeightMax": 61,
     "size": 1,
     "maxDistanceFromCenter": 64,
     "jigsawPools": []

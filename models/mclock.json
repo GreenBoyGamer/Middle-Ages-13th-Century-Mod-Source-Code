@@ -1,6 +1,7 @@
 {
-	"format_version": "1.9.0",
+	"format_version": "1.21.11",
 	"credit": "Made with Blockbench",
+	"ambientocclusion": false,
 	"texture_size": [
 		128,
 		128
@@ -3334,7 +3335,7 @@
 			],
 			"rotation": {
 				"angle": 0,
-				"axis": "z",
+				"axis": "y",
 				"origin": [
 					5.09895,
 					21.56262,
@@ -3411,7 +3412,7 @@
 			],
 			"rotation": {
 				"angle": 0,
-				"axis": "z",
+				"axis": "y",
 				"origin": [
 					5.09895,
 					21.56262,
@@ -3488,7 +3489,7 @@
 			],
 			"rotation": {
 				"angle": 0,
-				"axis": "z",
+				"axis": "y",
 				"origin": [
 					5.09895,
 					21.36262,
@@ -4181,7 +4182,7 @@
 			],
 			"rotation": {
 				"angle": 0,
-				"axis": "z",
+				"axis": "y",
 				"origin": [
 					7.98112,
 					18.60495,
@@ -4258,7 +4259,7 @@
 			],
 			"rotation": {
 				"angle": 0,
-				"axis": "z",
+				"axis": "y",
 				"origin": [
 					9.37808,
 					18.8857,
@@ -4412,7 +4413,7 @@
 			],
 			"rotation": {
 				"angle": 0,
-				"axis": "z",
+				"axis": "y",
 				"origin": [
 					9.37808,
 					18.8857,
@@ -4489,7 +4490,7 @@
 			],
 			"rotation": {
 				"angle": 0,
-				"axis": "z",
+				"axis": "y",
 				"origin": [
 					9.37808,
 					18.8857,
@@ -5490,7 +5491,7 @@
 			],
 			"rotation": {
 				"angle": 0,
-				"axis": "z",
+				"axis": "y",
 				"origin": [
 					10.77604,
 					21.53542,
@@ -5952,7 +5953,7 @@
 			],
 			"rotation": {
 				"angle": 0,
-				"axis": "z",
+				"axis": "y",
 				"origin": [
 					7.88333,
 					21.53334,
@@ -6645,7 +6646,7 @@
 			],
 			"rotation": {
 				"angle": 0,
-				"axis": "z",
+				"axis": "y",
 				"origin": [
 					7.88333,
 					21.53334,

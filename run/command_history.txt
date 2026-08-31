@@ -1,50 +1,50 @@
-/time set ady
-/time set day
-/tick rate 500
-/kill @e[type=the_middle_ages:wanderer]
-/time set ady
-/time set day
+/tp 1542 ~ 223
+/time set 23999
+/time set 99
+/tp 1542 ~7 223
+/time set 23999
+/tp 1542 ~7 223
+/time set 23999
+/time set 23999t
+/time set 23999
+/tp 1542 ~7 223
+/time set 23999
+/tp 1542 ~7 223
+/time set 23999
+/tp 1542 ~7 223
+/time set 23999
+/tp 1542 ~7 223
+/time set 23999
+/tp 1542 ~7 223
+/time set 23999
+/tp 1542 ~7 223
+/locate structure the_middle_ages:jungle_wooden_house
+/tp @s 240 ~ 240
+/kill
+/tp 1542 ~ 223
+/time set 23999
+/tp 1542 ~ 223
+/time set 23999
+/tp 1542 ~ 223
+/time set 23999
+/tp 1542 ~ 223
+/effect give @p strength 1000000 255 true
+/tp 1542 ~ 223
+/time set 23999
+/tp 1542 ~ 223
+/effect give @p strength 1000000 255 true
+/locate structure the_middle_ages:medieval_town
+/tick rate 200
 /tick rate 20
-/time set night
-/time set day
-/locate biome the_middle_ages:medieval_plains
-/tp @s 885 74 -312
-/summon the_middle_ages:passenger_cart_riding
-/kill @e[type=the_middle_ages:entity_path_finder]
-/locate biome the_middle_ages:medieval_plains
-/tp @s 332 78 968
-/locate biome the_middle_ages:medieval_plains
-/tp @s 326 149 916
-/locate biome plains
-/kill
-/locate structure the_middle_ages:medeival_enemy_camps
-/tp @s 112 ~ 640
-/locate biome the_middle_ages:medieval_forest
-/tp @s -36 72 754
-/kill
-/kill @e[type=chicken]
-/ill @e[type=item]
-/kill @e[type=item]
-/kill @e[type=chicken]
-/kill @e[type=item]
-/time set night
-/time set 1000
-/time set night
-/time set day
-/time set night
-/time set day
-/time set night
-/time set day
-/time set 3000
-/weather clear
-/time set ady
-/time set day
-/weather clear
-/time set ady
-/time set day
-/tp Dev 500
-/TIME SET DAY
-/time et day
-/time set day
-/weather clear
-/time set day
+/kill @e[type=knight]
+/kill @e[type=the_middle_ages:dark_knight]
+/kill @e[type=the_middle_ages:dark_soldier]
+/kill @e[type=the_middle_ages:enemy_archer
+/kill @e[type=the_middle_ages:enemy_archer]
+/time set 1600
+/time set 0
+/time set 1600
+/time set 0
+/time set 1600
+/time set 1700
+/time set 4800

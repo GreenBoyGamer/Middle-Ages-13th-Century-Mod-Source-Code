@@ -1,8 +1,0 @@
-{
-  "parent": "the_middle_ages:custom/medieval_wooden_plate_chicken_cooked",
-  "textures": {
-    "all": "minecraft:block/spruce_planks",
-    "particle": "minecraft:block/spruce_planks",
-    "1": "the_middle_ages:block/cooked_chicken"
-  }
-}

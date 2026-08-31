@@ -285,6 +285,35 @@
           "y": 104,
           "locked": false
         }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_basebuttons2",
+          "image": "basebuttons.png",
+          "hoveredImage": "basebuttonhover.png",
+          "onClick": "Cv1help",
+          "x": 210,
+          "y": 148,
+          "locked": false
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_help",
+          "text": {
+            "fixedValue": "help"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "hasShadow": false,
+          "x": 230,
+          "y": 150,
+          "locked": false
+        }
       }
     ],
     "gridSettings": {

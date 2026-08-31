@@ -65,7 +65,7 @@
     },
     "spawnEggTexture": "",
     "creativeTabs": [
-      "MISC"
+      "CUSTOM:TheMiddleAgesEntities"
     ],
     "isBoss": false,
     "bossBarColor": "PINK",
@@ -96,7 +96,8 @@
       "fixedValue": true
     },
     "flyingMob": false,
-    "inventorySize": 9,
+    "guiBoundTo": "BreadSellerGUI",
+    "inventorySize": 0,
     "inventoryStackSize": 99,
     "disableCollisions": false,
     "ridable": false,
@@ -142,7 +143,7 @@
     "onInitialSpawn": "BreadSellerOnInitialEntitySpawn",
     "hasAI": true,
     "aiBase": "(none)",
-    "aixml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"aitasks_container\" deletable=\"false\" x=\"40\" y=\"40\"><next><block type=\"panic_when_attacked\"><field name=\"speed\">1.2</field><field name=\"condition\">null,null</field><next><block type=\"look_around\"><field name=\"condition\">null,null</field><next><block type=\"swim_in_water\"><field name=\"condition\">null,null</field></block></next></block></next></block></next></block></xml>",
+    "aixml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"aitasks_container\" deletable=\"false\" x=\"40\" y=\"40\"><next><block type=\"panic_when_attacked\"><field name=\"speed\">1.2</field><field name=\"condition\">null,null</field><next><block type=\"look_around\"><field name=\"condition\">null,null</field><next><block type=\"swim_in_water\"><field name=\"condition\">null,null</field><next><block type=\"avoid_entity\"><field name=\"entity\">CUSTOM:DarkKnight</field><field name=\"radius\">6</field><field name=\"farspeed\">1</field><field name=\"nearspeed\">1.2</field><field name=\"condition\">null,null</field><next><block type=\"avoid_entity\"><field name=\"entity\">CUSTOM:DarkSoldier</field><field name=\"radius\">6</field><field name=\"farspeed\">1</field><field name=\"nearspeed\">1.2</field><field name=\"condition\">null,null</field><next><block type=\"avoid_entity\"><field name=\"entity\">CUSTOM:EnemyArcher</field><field name=\"radius\">6</field><field name=\"farspeed\">1</field><field name=\"nearspeed\">1.2</field><field name=\"condition\">null,null</field></block></next></block></next></block></next></block></next></block></next></block></next></block></xml>",
     "breedable": false,
     "tameable": false,
     "breedTriggerItems": [],

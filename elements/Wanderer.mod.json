@@ -72,7 +72,7 @@
     },
     "spawnEggTexture": "",
     "creativeTabs": [
-      "MISC"
+      "CUSTOM:TheMiddleAgesEntities"
     ],
     "isBoss": false,
     "bossBarColor": "PINK",
@@ -168,8 +168,9 @@
     "rangedAttackRadius": 10.0,
     "spawnThisMob": true,
     "doesDespawnWhenIdle": false,
+    "spawningCondition": "WandererNaturalEntitySpawningCondition",
     "spawningProbability": 1,
-    "mobSpawningType": "monster",
+    "mobSpawningType": "creature",
     "minNumberOfMobsPerGroup": 1,
     "maxNumberOfMobsPerGroup": 1,
     "restrictionBiomes": [

@@ -3,7 +3,7 @@
     "default": {
       "name": "default",
       "map": {
-        "1": "new_window_oak_bar"
+        "1": "m_window_oak"
       }
     }
   }

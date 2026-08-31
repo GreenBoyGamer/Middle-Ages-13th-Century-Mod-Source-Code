@@ -7,7 +7,7 @@
     "ignoredBlocks": [
       "Blocks.STRUCTURE_BLOCK"
     ],
-    "spacing": 50,
+    "spacing": 12,
     "separation": 5,
     "restrictionBiomes": [
       "CUSTOM:MadievalPlains",

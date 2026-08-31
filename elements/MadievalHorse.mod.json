@@ -2,7 +2,7 @@
   "_fv": 89,
   "_type": "livingentity",
   "definition": {
-    "mobName": "Madieval Horse",
+    "mobName": "Medieval Horse",
     "mobLabel": "",
     "mobModelName": "ModelMadievalHorse",
     "mobModelTexture": "madieval_horse.png",
@@ -65,7 +65,7 @@
     },
     "spawnEggTexture": "",
     "creativeTabs": [
-      "MISC"
+      "CUSTOM:TheMiddleAgesEntities"
     ],
     "isBoss": false,
     "bossBarColor": "PINK",

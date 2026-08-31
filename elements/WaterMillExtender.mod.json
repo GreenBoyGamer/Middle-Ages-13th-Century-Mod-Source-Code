@@ -87,7 +87,7 @@
     "jumpFactor": 1.0,
     "reactionToPushing": "NORMAL",
     "isNotColidable": false,
-    "soundOnStep": "GROUND",
+    "soundOnStep": "WOOD",
     "isCustomSoundType": false,
     "breakSound": "",
     "fallSound": "",

@@ -51,7 +51,7 @@
     },
     "spawnEggTexture": "cart",
     "creativeTabs": [
-      "CUSTOM:TheMiddleAgesBlocks"
+      "CUSTOM:TheMiddleAgesEntities"
     ],
     "isBoss": false,
     "bossBarColor": "PINK",

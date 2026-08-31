@@ -65,7 +65,7 @@
     },
     "spawnEggTexture": "",
     "creativeTabs": [
-      "MISC"
+      "CUSTOM:TheMiddleAgesEntities"
     ],
     "isBoss": false,
     "bossBarColor": "PINK",
@@ -82,7 +82,7 @@
     "attackKnockback": 1.0,
     "knockbackResistance": 2.0,
     "movementSpeed": 0.3,
-    "stepHeight": 0.6,
+    "stepHeight": 3.0,
     "armorBaseValue": 8.0,
     "trackingRange": 64,
     "followRange": 16,
@@ -142,7 +142,7 @@
     "onInitialSpawn": "ArcherInitialEntitySpawn",
     "hasAI": true,
     "aiBase": "(none)",
-    "aixml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"aitasks_container\" deletable=\"false\" x=\"40\" y=\"40\"><next><block type=\"attack_with_range\"><field name=\"range\">0</field><field name=\"speed\">1.2</field><field name=\"longmemory\">FALSE</field><field name=\"condition\">Set0Archer,Set0Archer</field><next><block type=\"wander\"><field name=\"speed\">1</field><field name=\"condition\">Set0Archer,Set0Archer</field><next><block type=\"attack_action\"><field name=\"callhelp\">FALSE</field><field name=\"condition\">DontFightItslefArcher,DontFightItslefArcher</field><next><block type=\"look_around\"><field name=\"condition\">Set0Archer,Set0Archer</field><next><block type=\"swim_in_water\"><field name=\"condition\">null,null</field><next><block type=\"attack_entity\"><field name=\"insight\">FALSE</field><field name=\"nearby\">FALSE</field><field name=\"entity\">CUSTOM:DarkKnight</field><field name=\"condition\">null,null</field><next><block type=\"attack_entity\"><field name=\"insight\">FALSE</field><field name=\"nearby\">FALSE</field><field name=\"entity\">CUSTOM:DarkSoldier</field><field name=\"condition\">null,null</field><next><block type=\"attack_entity\"><field name=\"insight\">FALSE</field><field name=\"nearby\">FALSE</field><field name=\"entity\">CUSTOM:EnemyArcher</field><field name=\"condition\">null,null</field></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></xml>",
+    "aixml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"aitasks_container\" deletable=\"false\" x=\"40\" y=\"40\"><next><block type=\"attack_with_range\"><field name=\"range\">0</field><field name=\"speed\">1.2</field><field name=\"longmemory\">FALSE</field><field name=\"condition\">Set0Archer,Set0Archer</field><next><block type=\"wander\"><field name=\"speed\">1</field><field name=\"condition\">Set0Archer,Set0Archer</field><next><block type=\"attack_action\"><field name=\"callhelp\">FALSE</field><field name=\"condition\">DontFightItslefArcher,DontFightItslefArcher</field><next><block type=\"look_around\"><field name=\"condition\">Set0Archer,Set0Archer</field><next><block type=\"swim_in_water\"><field name=\"condition\">null,null</field><next><block type=\"attack_entity\"><field name=\"insight\">FALSE</field><field name=\"nearby\">FALSE</field><field name=\"entity\">CUSTOM:DarkKnight</field><field name=\"condition\">null,null</field><next><block type=\"attack_entity\"><field name=\"insight\">FALSE</field><field name=\"nearby\">FALSE</field><field name=\"entity\">CUSTOM:DarkSoldier</field><field name=\"condition\">null,null</field><next><block type=\"attack_entity\"><field name=\"insight\">FALSE</field><field name=\"nearby\">FALSE</field><field name=\"entity\">CUSTOM:EnemyArcher</field><field name=\"condition\">null,null</field><next><block type=\"attack_entity\"><field name=\"insight\">FALSE</field><field name=\"nearby\">FALSE</field><field name=\"entity\">CUSTOM:Darkking</field><field name=\"condition\">null,null</field></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></xml>",
     "breedable": false,
     "tameable": false,
     "breedTriggerItems": [],

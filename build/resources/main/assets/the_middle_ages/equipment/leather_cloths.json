@@ -1,0 +1,14 @@
+{
+  "layers": {
+    "humanoid": [
+      {
+        "texture": "the_middle_ages:leather_cloths"
+      }
+    ],
+    "humanoid_leggings": [
+      {
+        "texture": "the_middle_ages:leather_cloths"
+      }
+    ]
+  }
+}

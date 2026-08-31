@@ -3,7 +3,7 @@
     "default": {
       "name": "default",
       "map": {
-        "0": "medeival_table"
+        "0": "medeival_table_spruce"
       }
     }
   }

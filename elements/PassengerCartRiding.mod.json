@@ -34,20 +34,13 @@
         "speed": 1.0,
         "walking": true,
         "amplitude": 1.0
-      },
-      {
-        "animation": "CUSTOM:madieval_passenger_cart_operatorAnimation.die",
-        "speed": 1.0,
-        "condition": "KnightRidingHorseSpawnPlaybackCondition",
-        "walking": false,
-        "amplitude": 1.0
       }
     ],
     "modelWidth": 0.6,
     "modelHeight": 1.8,
     "modelShadowSize": 0.5,
     "mountedYOffset": -1.0,
-    "hasSpawnEgg": true,
+    "hasSpawnEgg": false,
     "spawnEggBaseColor": {
       "value": -1,
       "falpha": 0.0
@@ -58,7 +51,7 @@
     },
     "spawnEggTexture": "",
     "creativeTabs": [
-      "MISC"
+      "CUSTOM:TheMiddleAgesEntities"
     ],
     "isBoss": false,
     "bossBarColor": "PINK",
@@ -75,7 +68,7 @@
     "attackKnockback": 0.0,
     "knockbackResistance": 0.0,
     "movementSpeed": 0.3,
-    "stepHeight": 0.6,
+    "stepHeight": 2.0,
     "armorBaseValue": 0.0,
     "trackingRange": 2048,
     "followRange": 1024,
@@ -137,7 +130,6 @@
         "value": 0
       }
     ],
-    "whenMobDies": "PassengerCartRidingEntityDies",
     "onRightClickedOn": "PassengerCartRidingRightclickedOnEntity",
     "onMobTickUpdate": "PassengerCartRidingOnEntityTickUpdate",
     "hasAI": true,

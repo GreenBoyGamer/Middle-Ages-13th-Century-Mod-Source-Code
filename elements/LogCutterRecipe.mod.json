@@ -1,0 +1,33 @@
+{
+  "_fv": 89,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Crafting",
+    "recipeRetstackSize": 1,
+    "group": "",
+    "unlockingItems": [
+      "Blocks.PLANKS",
+      "Items.REDSTONE",
+      "Blocks.WOODEN_SLAB"
+    ],
+    "cookingBookCategory": "MISC",
+    "xpReward": 0.0,
+    "cookingTime": 200,
+    "craftingBookCategory": "MISC",
+    "recipeShapeless": false,
+    "recipeSlots": [
+      "CUSTOM:Wheel",
+      "CUSTOM:Wheel",
+      "CUSTOM:Wheel",
+      "Blocks.PLANKS",
+      "Items.IRON_INGOT",
+      "Blocks.PLANKS",
+      "CUSTOM:Wheel",
+      "CUSTOM:Wheel",
+      "CUSTOM:Wheel"
+    ],
+    "recipeReturnStack": "CUSTOM:WaterMillLogCutter",
+    "name": "log_cutter_recipe",
+    "namespace": "mod"
+  }
+}

@@ -1,8 +1,0 @@
-{
-  "parent": "the_middle_ages:custom/medieval_chimney",
-  "textures": {
-    "all": "minecraft:block/bricks",
-    "particle": "minecraft:block/bricks",
-    "0": "the_middle_ages:block/medieval_chimney"
-  }
-}

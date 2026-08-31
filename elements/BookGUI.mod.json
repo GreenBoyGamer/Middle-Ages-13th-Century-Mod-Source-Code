@@ -240,6 +240,16 @@
           "y": 110,
           "locked": false
         }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "backgroundbasetwo.png",
+          "use1Xscale": false,
+          "x": 148,
+          "y": 128,
+          "locked": false
+        }
       }
     ],
     "gridSettings": {

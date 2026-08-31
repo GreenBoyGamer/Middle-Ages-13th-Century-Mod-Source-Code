@@ -22,13 +22,13 @@
       "value": -16448205,
       "falpha": 0.0
     },
-    "ambientSound": "",
+    "ambientSound": "CUSTOM:ambience_birds",
     "additionsSound": "",
     "music": "",
     "moodSound": "",
     "moodSoundDelay": 6000,
     "spawnParticles": false,
-    "particleToSpawn": "CUSTOM:Sleeping",
+    "particleToSpawn": "ASH",
     "particlesProbability": 0.5,
     "rainingPossibility": 0.5,
     "temperature": 0.5,
@@ -36,19 +36,19 @@
     "spawnInCaves": false,
     "spawnBiomeNether": false,
     "genTemperature": {
-      "min": -0.5,
-      "max": 0.5
+      "min": -1.0,
+      "max": 1.0
     },
     "genHumidity": {
-      "min": -0.5,
-      "max": 0.5
+      "min": -1.0,
+      "max": 1.0
     },
     "genContinentalness": {
       "min": 0.3,
       "max": 1.0
     },
     "genErosion": {
-      "min": -0.5,
+      "min": 0.05,
       "max": 0.5
     },
     "genWeirdness": {
@@ -59,7 +59,7 @@
       "min": 0.2,
       "max": 0.6
     },
-    "treesPerChunk": 0,
+    "treesPerChunk": 1,
     "vanillaTreeType": "Default",
     "treeType": 0,
     "minHeight": 7,
@@ -69,7 +69,8 @@
     "treeFruits": "",
     "defaultFeatures": [
       "PlainsTallGrass",
-      "ForestFlowers"
+      "ForestFlowers",
+      "ForestGrass"
     ],
     "spawnStronghold": false,
     "spawnMineshaft": false,

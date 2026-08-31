@@ -11,7 +11,7 @@ jdk.naming.dns/com.sun.jndi.dns=java.naming
 -Dcom.sun.management.jmxremote.ssl=false
 -Dcom.sun.management.jmxremote.authenticate=false
 
--Dlog4j2.configurationFile=C:\\Users\\Greenboy\\MCreatorWorkspaces\\the_middle_ages\\build\\moddev\\clientLog4j2.xml
+-Dlog4j2.configurationFile=G:\\FinalWorkspace\\MCreatorWorkspaces\\the_middle_ages\\build\\moddev\\clientLog4j2.xml
 -Djava.net.preferIPv6Addresses=system
 -Dneoforge.enableGameTest=true
 -Dforge.logging.markers=REGISTRIES

@@ -1,15 +1,11 @@
 {
   "workspacePanelIconSize": "TILES",
-  "workspacePanelSortType": "CREATED",
+  "workspacePanelSortType": "NAME",
   "workspacePanelSortAscending": true,
   "projectBrowserState": {
     "expandedPaths": [
       "[, The Middle Ages]",
-      "[, The Middle Ages, Source (Gradle)]",
-      "[, The Middle Ages, Source (Gradle), C:\\Users\\Greenboy\\MCreatorWorkspaces\\the_middle_ages\\src\\main\\java\\net]",
-      "[, The Middle Ages, Source (Gradle), C:\\Users\\Greenboy\\MCreatorWorkspaces\\the_middle_ages\\src\\main\\java\\net, C:\\Users\\Greenboy\\MCreatorWorkspaces\\the_middle_ages\\src\\main\\java\\net\\mcreator]",
-      "[, The Middle Ages, Source (Gradle), C:\\Users\\Greenboy\\MCreatorWorkspaces\\the_middle_ages\\src\\main\\java\\net, C:\\Users\\Greenboy\\MCreatorWorkspaces\\the_middle_ages\\src\\main\\java\\net\\mcreator, C:\\Users\\Greenboy\\MCreatorWorkspaces\\the_middle_ages\\src\\main\\java\\net\\mcreator\\themiddleages]",
-      "[, The Middle Ages, Source (Gradle), C:\\Users\\Greenboy\\MCreatorWorkspaces\\the_middle_ages\\src\\main\\java\\net, C:\\Users\\Greenboy\\MCreatorWorkspaces\\the_middle_ages\\src\\main\\java\\net\\mcreator, C:\\Users\\Greenboy\\MCreatorWorkspaces\\the_middle_ages\\src\\main\\java\\net\\mcreator\\themiddleages, C:\\Users\\Greenboy\\MCreatorWorkspaces\\the_middle_ages\\src\\main\\java\\net\\mcreator\\themiddleages\\network]"
+      "[, The Middle Ages, Resources (Gradle)]"
     ]
   },
   "leftDockState": {
@@ -22,8 +18,9 @@
     "dockSizes": {}
   },
   "bottomDockState": {
+    "expandedDock": "console",
     "dockSizes": {
-      "console": 937,
+      "console": 712,
       "code_viewer": 300,
       "debugger": 300
     }

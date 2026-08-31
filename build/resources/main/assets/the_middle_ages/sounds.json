@@ -54,5 +54,13 @@
         "stream": false
       }
     ]
+  },
+  "ambience_birds": {
+    "sounds": [
+      {
+        "name": "the_middle_ages:ambience_birds",
+        "stream": false
+      }
+    ]
   }
 }

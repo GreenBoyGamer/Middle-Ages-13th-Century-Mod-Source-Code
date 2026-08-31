@@ -22,13 +22,13 @@
       "value": -16448205,
       "falpha": 0.0
     },
-    "ambientSound": "",
+    "ambientSound": "CUSTOM:ambience_birds",
     "additionsSound": "",
     "music": "",
     "moodSound": "",
     "moodSoundDelay": 6000,
     "spawnParticles": false,
-    "particleToSpawn": "CUSTOM:Sleeping",
+    "particleToSpawn": "ASH",
     "particlesProbability": 0.5,
     "rainingPossibility": 0.5,
     "temperature": 0.5,
@@ -36,24 +36,24 @@
     "spawnInCaves": false,
     "spawnBiomeNether": false,
     "genTemperature": {
-      "min": -0.15,
-      "max": 0.45
-    },
-    "genHumidity": {
-      "min": 0.15,
-      "max": 0.85
-    },
-    "genContinentalness": {
-      "min": 0.1,
+      "min": -0.5,
       "max": 0.5
     },
+    "genHumidity": {
+      "min": -0.5,
+      "max": 0.5
+    },
+    "genContinentalness": {
+      "min": 0.3,
+      "max": 1.0
+    },
     "genErosion": {
-      "min": -0.375,
-      "max": 0.05
+      "min": 0.05,
+      "max": 0.5
     },
     "genWeirdness": {
-      "min": -0.333,
-      "max": 0.333
+      "min": -0.9,
+      "max": 0.9
     },
     "genDepth": {
       "min": 0.2,

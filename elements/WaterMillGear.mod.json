@@ -2,7 +2,7 @@
   "_fv": 89,
   "_type": "block",
   "definition": {
-    "texture": "minecraft:oak_planks",
+    "texture": "log_cutter",
     "textureTop": "",
     "textureLeft": "",
     "textureFront": "",
@@ -21,7 +21,7 @@
         "speed": 1.0
       }
     ],
-    "itemTexture": "minecraft:apple",
+    "itemTexture": "water_mill_gear",
     "particleTexture": "",
     "blockSetType": "OAK",
     "leavesParticleChance": 0.0,
@@ -127,6 +127,7 @@
     "fluidCapacity": 8000,
     "fluidRestrictions": [],
     "onBlockAdded": "WaterMillGearBlockAdded",
+    "onNeighbourBlockChanges": "WaterMillGearNeighbourBlockChanges",
     "generateFeature": false,
     "restrictionBiomes": [],
     "blocksToReplace": [

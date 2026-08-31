@@ -3,6 +3,6 @@
   "textures": {
     "all": "minecraft:block/oak_planks",
     "particle": "minecraft:block/oak_planks",
-    "1": "the_middle_ages:block/new_window_oak_bar"
+    "1": "the_middle_ages:block/m_window_oak"
   }
 }
