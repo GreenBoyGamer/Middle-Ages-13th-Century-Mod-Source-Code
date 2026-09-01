@@ -1,0 +1,7 @@
+{
+  "parent": "the_middle_ages:custom/medieval_iron_sword",
+  "textures": {
+    "0": "the_middle_ages:block/sword_iron",
+    "particle": "the_middle_ages:item/sword_iron"
+  }
+}

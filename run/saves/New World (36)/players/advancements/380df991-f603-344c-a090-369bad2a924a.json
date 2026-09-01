@@ -1,0 +1,63 @@
+{
+  "minecraft:recipes/decorations/crafting_table": {
+    "criteria": {
+      "unlock_right_away": "2026-08-24 01:39:47 +0500"
+    },
+    "done": true
+  },
+  "minecraft:adventure/adventuring_time": {
+    "criteria": {
+      "minecraft:plains": "2026-08-24 01:40:37 +0500"
+    },
+    "done": false
+  },
+  "minecraft:recipes/decorations/armor_stand": {
+    "criteria": {
+      "has_stone_slab": "2026-08-24 01:40:41 +0500"
+    },
+    "done": true
+  },
+  "the_middle_ages:recipes/chimney_recipe": {
+    "criteria": {
+      "has_ingredient_1": "2026-08-24 01:40:41 +0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/blast_furnace": {
+    "criteria": {
+      "has_smooth_stone": "2026-08-24 01:40:42 +0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/smooth_stone_slab": {
+    "criteria": {
+      "has_smooth_stone": "2026-08-24 01:40:42 +0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/smooth_stone_slab_from_smooth_stone_stonecutting": {
+    "criteria": {
+      "has_smooth_stone": "2026-08-24 01:40:42 +0500"
+    },
+    "done": true
+  },
+  "minecraft:adventure/root": {
+    "criteria": {
+      "killed_something": "2026-08-24 02:34:04 +0500"
+    },
+    "done": true
+  },
+  "the_middle_ages:the_ruler": {
+    "criteria": {
+      "the_ruler_1": "2026-08-24 03:25:05 +0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/chest": {
+    "criteria": {
+      "has_lots_of_items": "2026-08-24 03:25:49 +0500"
+    },
+    "done": true
+  },
+  "DataVersion": 4790
+}

@@ -1,0 +1,50 @@
+/time set 9000
+/time set 13000
+/time set 9000
+/time set 1600
+/time set 9000
+/time set 1600
+/data get entity b285daa7-d56f-480a-b29f-64704471bf3a
+/time set 9000
+/time set 1600
+/time set 9000
+/time set 13000
+/time set 9000
+/time set 1600
+/time set 9000
+/time set 1600
+/time set 9000
+/time set 1600
+/time set 9000
+/time set 1600
+/time set 9000
+/time set night
+/time set minecraft:midnight
+/locate structure the_middle_ages:medieval_town
+/tp @s -1120 ~ -1232
+/time set night
+/time set minecraft:midnight
+/tp 0 ~ 0
+/locate structure the_middle_ages:medieval_town
+/summon the_middle_ages:passenger_cart_riding
+/locate structure the_middle_ages:medieval_town
+/summon the_middle_ages:passenger_cart_riding
+/effect give @p strength 1000000 255 true
+/summon king
+/summon the_middle_ages:darkking
+/effect give @p strength 1000000 255 true
+/summon the_middle_ages:darkking
+/time set 23999
+/kill
+/summon the_middle_ages:darkking
+/effect give @p strength 1000000 255 true
+/summon the_middle_ages:darkking
+/effect give @p strength 1000000 255 true
+/kill
+/time set 60000
+/time set 60000t
+/time set 60000
+/time set 60000t
+/time set 60000tt
+/time set 60000
+/time set 60000t

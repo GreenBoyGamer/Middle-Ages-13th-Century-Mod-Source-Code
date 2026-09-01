@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "a  ",
+    "aaa",
+    "b b"
+  ],
+  "key": {
+    "a": "minecraft:spruce_planks",
+    "b": "minecraft:stick"
+  },
+  "result": {
+    "id": "the_middle_ages:medieval_wooden_chair",
+    "count": 1
+  }
+}

@@ -1,0 +1,268 @@
+{
+  "_fv": 89,
+  "_type": "livingentity",
+  "definition": {
+    "mobName": "Dark Soldier",
+    "mobLabel": "",
+    "mobModelName": "ModelEnemySoldier",
+    "mobModelTexture": "soldierenemy.png",
+    "transparentModelCondition": {
+      "fixedValue": false
+    },
+    "isShakingCondition": {
+      "fixedValue": false
+    },
+    "solidBoundingBox": {
+      "fixedValue": false
+    },
+    "visualScale": {
+      "fixedValue": 1.0
+    },
+    "boundingBoxScale": {
+      "fixedValue": 1.0
+    },
+    "modelLayers": [],
+    "animations": [
+      {
+        "animation": "CUSTOM:EnemySoldierAnimation.block",
+        "speed": 1.0,
+        "condition": "DarkSoldierBlockingPlaybackCondition",
+        "walking": false,
+        "amplitude": 1.0
+      },
+      {
+        "animation": "CUSTOM:EnemySoldierAnimation.walking",
+        "speed": 1.0,
+        "condition": "DarkSoldierNotAnythuingDoingMeansIdle",
+        "walking": true,
+        "amplitude": 1.0
+      },
+      {
+        "animation": "CUSTOM:EnemySoldierAnimation.sprint",
+        "speed": 2.0,
+        "condition": "SoldierSprintPlaybackCondition",
+        "walking": false,
+        "amplitude": 1.0
+      },
+      {
+        "animation": "CUSTOM:EnemySoldierAnimation.attack",
+        "speed": 1.0,
+        "condition": "DarkSoldierPlaybackCondition",
+        "walking": false,
+        "amplitude": 1.0
+      },
+      {
+        "animation": "CUSTOM:EnemySoldierAnimation.attack2",
+        "speed": 1.0,
+        "condition": "DarkSoldierAttack2PlaybackCondition",
+        "walking": false,
+        "amplitude": 1.0
+      },
+      {
+        "animation": "CUSTOM:EnemySoldierAnimation.die",
+        "speed": 1.0,
+        "condition": "DarkSoldierDeadPlaybackCondition",
+        "walking": false,
+        "amplitude": 1.0
+      },
+      {
+        "animation": "CUSTOM:EnemySoldierAnimation.idle",
+        "speed": 1.0,
+        "condition": "DarkSoldierNotAnythuingDoingMeansIdle",
+        "walking": false,
+        "amplitude": 1.0
+      },
+      {
+        "animation": "CUSTOM:EnemySoldierAnimation.threaten",
+        "speed": 1.0,
+        "condition": "DarkSoldierThreatPlaybackCondition",
+        "walking": false,
+        "amplitude": 1.0
+      },
+      {
+        "animation": "CUSTOM:EnemySoldierAnimation.scared",
+        "speed": 1.0,
+        "condition": "DarkSoldierScaredPlaybackCondition",
+        "walking": false,
+        "amplitude": 1.0
+      }
+    ],
+    "modelWidth": 0.6,
+    "modelHeight": 1.8,
+    "modelShadowSize": 0.5,
+    "mountedYOffset": 0.0,
+    "hasSpawnEgg": true,
+    "spawnEggBaseColor": {
+      "value": -13421773,
+      "falpha": 0.0
+    },
+    "spawnEggDotColor": {
+      "value": -16777216,
+      "falpha": 0.0
+    },
+    "spawnEggTexture": "",
+    "creativeTabs": [
+      "CUSTOM:TheMiddleAgesEntities"
+    ],
+    "isBoss": false,
+    "bossBarColor": "PINK",
+    "bossBarType": "PROGRESS",
+    "equipmentMainHand": "",
+    "equipmentOffHand": "",
+    "equipmentHelmet": "",
+    "equipmentBody": "",
+    "equipmentLeggings": "",
+    "equipmentBoots": "",
+    "mobBehaviourType": "Mob",
+    "mobCreatureType": "UNDEFINED",
+    "attackStrength": 5,
+    "attackKnockback": 1.0,
+    "knockbackResistance": 2.0,
+    "movementSpeed": 0.3,
+    "stepHeight": 3.0,
+    "armorBaseValue": 8.0,
+    "trackingRange": 64,
+    "followRange": 16,
+    "health": 120,
+    "xpAmount": 10,
+    "waterMob": false,
+    "breatheUnderwater": {
+      "fixedValue": false
+    },
+    "pushedByFluids": {
+      "fixedValue": true
+    },
+    "flyingMob": false,
+    "inventorySize": 9,
+    "inventoryStackSize": 99,
+    "disableCollisions": false,
+    "ridable": false,
+    "canControlForward": false,
+    "canControlStrafe": false,
+    "immuneToFire": false,
+    "immuneToArrows": false,
+    "immuneToFallDamage": false,
+    "immuneToCactus": false,
+    "immuneToDrowning": false,
+    "immuneToLightning": false,
+    "immuneToPotions": false,
+    "immuneToPlayer": false,
+    "immuneToExplosion": false,
+    "immuneToTrident": false,
+    "immuneToAnvil": false,
+    "immuneToWither": false,
+    "immuneToDragonBreath": false,
+    "mobDrop": "",
+    "livingSound": "",
+    "hurtSound": "entity.generic.hurt",
+    "deathSound": "entity.generic.death",
+    "stepSound": "item.armor.equip_iron",
+    "raidCelebrationSound": "",
+    "entityDataEntries": [
+      {
+        "min": -2147483648,
+        "max": 2147483647,
+        "name": "actionstate",
+        "type": "integer",
+        "value": 0
+      },
+      {
+        "min": -2147483648,
+        "max": 2147483647,
+        "name": "fightingState",
+        "type": "integer",
+        "value": 0
+      },
+      {
+        "name": "notgonnarob",
+        "type": "logic",
+        "value": false
+      },
+      {
+        "min": -2147483648,
+        "max": 2147483647,
+        "name": "Scared",
+        "type": "integer",
+        "value": 0
+      },
+      {
+        "min": -2147483648,
+        "max": 2147483647,
+        "name": "StopRobbing",
+        "type": "integer",
+        "value": 0
+      },
+      {
+        "min": -2147483648,
+        "max": 2147483647,
+        "name": "Peasents_Carry_Amount",
+        "type": "integer",
+        "value": 0
+      },
+      {
+        "min": -2147483648,
+        "max": 2147483647,
+        "name": "Peasents_Amount2",
+        "type": "integer",
+        "value": 0
+      },
+      {
+        "min": -2147483648,
+        "max": 2147483647,
+        "name": "Peasents_Amount3",
+        "type": "integer",
+        "value": 0
+      },
+      {
+        "min": -2147483648,
+        "max": 2147483647,
+        "name": "Peasents_Amount4",
+        "type": "integer",
+        "value": 0
+      },
+      {
+        "min": -2147483648,
+        "max": 2147483647,
+        "name": "Peasents_Amount5",
+        "type": "integer",
+        "value": 0
+      }
+    ],
+    "whenMobDies": "DarkSoldierDies",
+    "onRightClickedOn": "DarkSoldierRightclickedOnEntity",
+    "onMobTickUpdate": "DarkSoldierOnEntityTicks",
+    "hasAI": true,
+    "aiBase": "(none)",
+    "aixml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"aitasks_container\" deletable=\"false\" x=\"40\" y=\"40\"><next><block type=\"attack_with_range\"><field name=\"range\">0</field><field name=\"speed\">1.2</field><field name=\"longmemory\">FALSE</field><field name=\"condition\">Set0Soldier,Set0Soldier</field><next><block type=\"wander\"><field name=\"speed\">1</field><field name=\"condition\">Set0Soldier,Set0Soldier</field><next><block type=\"attack_action\"><field name=\"callhelp\">FALSE</field><field name=\"condition\">null,null</field><next><block type=\"look_around\"><field name=\"condition\">Set0Soldier,Set0Soldier</field><next><block type=\"swim_in_water\"><field name=\"condition\">null,null</field><next><block type=\"attack_entity\"><field name=\"insight\">FALSE</field><field name=\"nearby\">FALSE</field><field name=\"entity\">CUSTOM:Knight</field><field name=\"condition\">null,null</field><next><block type=\"attack_entity\"><field name=\"insight\">FALSE</field><field name=\"nearby\">FALSE</field><field name=\"entity\">CUSTOM:Soldier</field><field name=\"condition\">null,null</field><next><block type=\"attack_entity\"><field name=\"insight\">FALSE</field><field name=\"nearby\">FALSE</field><field name=\"entity\">CUSTOM:Archer</field><field name=\"condition\">null,null</field><next><block type=\"attack_entity\"><field name=\"insight\">FALSE</field><field name=\"nearby\">FALSE</field><field name=\"entity\">EntityPlayer</field><field name=\"condition\">null,null</field><next><block type=\"attack_entity\"><field name=\"insight\">FALSE</field><field name=\"nearby\">FALSE</field><field name=\"entity\">CUSTOM:KnightRidingHorse</field><field name=\"condition\">null,null</field><next><block type=\"avoid_entity\"><field name=\"entity\">EntityPlayer</field><field name=\"radius\">12</field><field name=\"farspeed\">1.2</field><field name=\"nearspeed\">1.2</field><field name=\"condition\">null,null</field><next><block type=\"follow_entity\"><field name=\"speed\">1</field><field name=\"maxrange\">10</field><field name=\"followarea\">5</field><field name=\"condition\">null,null</field></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></xml>",
+    "breedable": false,
+    "tameable": false,
+    "breedTriggerItems": [],
+    "ranged": false,
+    "rangedAttackItem": "",
+    "rangedItemType": "Default item",
+    "rangedAttackInterval": 20,
+    "rangedAttackRadius": 10.0,
+    "spawnThisMob": false,
+    "doesDespawnWhenIdle": false,
+    "spawningProbability": 20,
+    "mobSpawningType": "creature",
+    "minNumberOfMobsPerGroup": 4,
+    "maxNumberOfMobsPerGroup": 4,
+    "restrictionBiomes": [],
+    "spawnInDungeons": false,
+    "raidSpawnsCount": [
+      4,
+      3,
+      3,
+      4,
+      4,
+      4,
+      2
+    ],
+    "sensitiveToVibration": false,
+    "vibrationalEvents": [],
+    "vibrationSensitivityRadius": {
+      "fixedValue": 7.0
+    }
+  }
+}

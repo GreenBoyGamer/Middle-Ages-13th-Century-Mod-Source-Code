@@ -1,0 +1,33 @@
+{
+  "_fv": 89,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Crafting",
+    "recipeRetstackSize": 1,
+    "group": "",
+    "unlockingItems": [
+      "Blocks.PLANKS",
+      "Blocks.WOOL",
+      "TAG:the_middle_ages:beds"
+    ],
+    "cookingBookCategory": "MISC",
+    "xpReward": 0.0,
+    "cookingTime": 200,
+    "craftingBookCategory": "MISC",
+    "recipeShapeless": false,
+    "recipeSlots": [
+      "",
+      "",
+      "",
+      "Blocks.WOOL",
+      "Blocks.WOOL",
+      "Blocks.WOOL",
+      "Blocks.PLANKS",
+      "Blocks.BED",
+      "Blocks.PLANKS"
+    ],
+    "recipeReturnStack": "CUSTOM:Madievalbed",
+    "name": "medieval_bed_recipe",
+    "namespace": "mod"
+  }
+}

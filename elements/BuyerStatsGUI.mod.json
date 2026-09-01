@@ -1,0 +1,327 @@
+{
+  "_fv": 89,
+  "_type": "gui",
+  "definition": {
+    "type": 0,
+    "width": 176,
+    "height": 166,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
+    "renderBgLayer": false,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "image",
+        "data": {
+          "image": "background.png",
+          "use1Xscale": false,
+          "x": 123,
+          "y": 36,
+          "locked": false
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "backgroundbasetwo.png",
+          "use1Xscale": true,
+          "x": 120,
+          "y": 28,
+          "locked": false
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_statics",
+          "text": {
+            "fixedValue": "STATICS "
+          },
+          "color": {
+            "value": -16777216,
+            "falpha": 0.0
+          },
+          "hasShadow": false,
+          "x": 132,
+          "y": 38,
+          "locked": false
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "backgroundbasetwo.png",
+          "use1Xscale": false,
+          "x": 127,
+          "y": 64,
+          "locked": false
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_name",
+          "text": {
+            "fixedValue": "Name:"
+          },
+          "color": {
+            "value": -16777216,
+            "falpha": 0.0
+          },
+          "hasShadow": false,
+          "x": 138,
+          "y": 76,
+          "locked": false
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_mr_robert",
+          "text": {
+            "fixedValue": "Richard"
+          },
+          "color": {
+            "value": -10092493,
+            "falpha": 0.0
+          },
+          "hasShadow": false,
+          "x": 172,
+          "y": 76,
+          "locked": false
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_age",
+          "text": {
+            "fixedValue": "Age:"
+          },
+          "color": {
+            "value": -16777216,
+            "falpha": 0.0
+          },
+          "hasShadow": false,
+          "x": 138,
+          "y": 91,
+          "locked": false
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_68_years",
+          "text": {
+            "fixedValue": "26 Years"
+          },
+          "color": {
+            "value": -16777216,
+            "falpha": 0.0
+          },
+          "hasShadow": false,
+          "x": 172,
+          "y": 91,
+          "locked": false
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_job",
+          "text": {
+            "fixedValue": "Job:"
+          },
+          "color": {
+            "value": -16777216,
+            "falpha": 0.0
+          },
+          "hasShadow": false,
+          "x": 138,
+          "y": 107,
+          "locked": false
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_farmer",
+          "text": {
+            "fixedValue": "Exchange"
+          },
+          "color": {
+            "value": -16724992,
+            "falpha": 0.0
+          },
+          "hasShadow": false,
+          "x": 172,
+          "y": 106,
+          "locked": false
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "backgroundbasetwo.png",
+          "use1Xscale": true,
+          "x": 120,
+          "y": 130,
+          "locked": false
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_actions",
+          "text": {
+            "fixedValue": "ACTIONS"
+          },
+          "color": {
+            "value": -16777216,
+            "falpha": 0.0
+          },
+          "hasShadow": false,
+          "x": 133,
+          "y": 140,
+          "locked": false
+        }
+      },
+      {
+        "type": "entitymodel",
+        "data": {
+          "entityModel": "ModelRendererForRichard",
+          "scale": 45,
+          "rotationX": 40,
+          "followMouseMovement": false,
+          "x": 250,
+          "y": 122,
+          "locked": false
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_basebuttons",
+          "image": "basebuttons.png",
+          "hoveredImage": "basebuttonhover.png",
+          "onClick": "ExecuteClicksBuyer",
+          "x": 135,
+          "y": 171,
+          "locked": false
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_execute",
+          "text": {
+            "fixedValue": "execute"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "hasShadow": false,
+          "x": 148,
+          "y": 173,
+          "locked": false
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_basebuttons1",
+          "image": "basebuttons.png",
+          "hoveredImage": "basebuttonhover.png",
+          "onClick": "ExileClicksBuyer",
+          "x": 210,
+          "y": 171,
+          "locked": false
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_exile",
+          "text": {
+            "fixedValue": "exile"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "hasShadow": false,
+          "x": 228,
+          "y": 173,
+          "locked": false
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "peace.png",
+          "use1Xscale": true,
+          "x": 185,
+          "y": 37,
+          "locked": false
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "swordclashiamge.png",
+          "use1Xscale": true,
+          "x": 186,
+          "y": 138,
+          "locked": false
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "wealth.png",
+          "use1Xscale": true,
+          "x": 217,
+          "y": 104,
+          "locked": false
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_basebuttons2",
+          "image": "basebuttons.png",
+          "hoveredImage": "basebuttonhover.png",
+          "onClick": "TradeClicksBuyer",
+          "x": 210,
+          "y": 148,
+          "locked": false
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_help",
+          "text": {
+            "fixedValue": "Trade"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "hasShadow": false,
+          "x": 229,
+          "y": 149,
+          "locked": false
+        }
+      }
+    ],
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": false
+    }
+  }
+}

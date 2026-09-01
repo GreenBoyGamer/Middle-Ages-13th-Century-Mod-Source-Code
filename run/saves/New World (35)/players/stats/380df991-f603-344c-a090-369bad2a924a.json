@@ -1,0 +1,52 @@
+{
+  "stats": {
+    "minecraft:custom": {
+      "minecraft:talked_to_villager": 1,
+      "minecraft:time_since_rest": 43816,
+      "minecraft:walk_one_cm": 41622,
+      "minecraft:leave_game": 3,
+      "minecraft:mob_kills": 15,
+      "minecraft:damage_dealt": 6753,
+      "minecraft:play_time": 21908,
+      "minecraft:jump": 131,
+      "minecraft:time_since_death": 21908,
+      "minecraft:drop": 1,
+      "minecraft:sprint_one_cm": 10410,
+      "minecraft:total_world_time": 213336,
+      "minecraft:fly_one_cm": 58337,
+      "minecraft:interact_with_anvil": 1,
+      "minecraft:crouch_one_cm": 1330,
+      "minecraft:sneak_time": 711
+    },
+    "minecraft:killed": {
+      "minecraft:slime": 9,
+      "minecraft:zombie": 1,
+      "the_middle_ages:civilian_5": 1,
+      "minecraft:enderman": 1,
+      "minecraft:iron_golem": 1,
+      "minecraft:villager": 1,
+      "the_middle_ages:bread_seller": 1
+    },
+    "minecraft:dropped": {
+      "minecraft:skeleton_horse_spawn_egg": 1
+    },
+    "minecraft:used": {
+      "the_middle_ages:bread_seller_spawn_egg": 12,
+      "minecraft:smooth_stone": 15,
+      "minecraft:barrier": 8,
+      "minecraft:netherite_sword": 65,
+      "minecraft:anvil": 27,
+      "minecraft:skeleton_horse_spawn_egg": 5,
+      "the_middle_ages:civilian_5_spawn_egg": 7,
+      "minecraft:tnt_minecart": 173,
+      "minecraft:rail": 30
+    },
+    "minecraft:picked_up": {
+      "minecraft:rail": 1,
+      "minecraft:bone": 2,
+      "minecraft:skeleton_horse_spawn_egg": 1,
+      "minecraft:rotten_flesh": 1
+    }
+  },
+  "DataVersion": 4790
+}

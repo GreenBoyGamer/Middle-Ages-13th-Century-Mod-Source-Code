@@ -1,0 +1,23 @@
+{
+  "stats": {
+    "minecraft:custom": {
+      "minecraft:time_since_rest": 1524,
+      "minecraft:walk_one_cm": 423,
+      "minecraft:total_world_time": 762,
+      "minecraft:leave_game": 1,
+      "minecraft:fly_one_cm": 14677,
+      "minecraft:walk_under_water_one_cm": 1039,
+      "minecraft:walk_on_water_one_cm": 419,
+      "minecraft:crouch_one_cm": 7,
+      "minecraft:sneak_time": 26,
+      "minecraft:play_time": 762,
+      "minecraft:jump": 2,
+      "minecraft:time_since_death": 762
+    },
+    "minecraft:used": {
+      "the_middle_ages:medieval_dimension": 1,
+      "minecraft:mossy_stone_bricks": 14
+    }
+  },
+  "DataVersion": 4790
+}

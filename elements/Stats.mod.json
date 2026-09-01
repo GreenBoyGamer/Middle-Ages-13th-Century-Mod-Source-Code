@@ -1,0 +1,10 @@
+{
+  "_fv": 89,
+  "_type": "keybind",
+  "definition": {
+    "triggerKey": "I",
+    "keyBindingName": "Stats",
+    "keyBindingCategoryKey": "madieval",
+    "onKeyPressed": "StatsOnKeyPressed"
+  }
+}

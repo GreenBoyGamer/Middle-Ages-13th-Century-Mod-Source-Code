@@ -1,0 +1,584 @@
+{
+  "_fv": 89,
+  "_type": "gui",
+  "definition": {
+    "type": 0,
+    "width": 176,
+    "height": 166,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
+    "renderBgLayer": false,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "image",
+        "data": {
+          "image": "background.png",
+          "use1Xscale": false,
+          "x": 126,
+          "y": 37,
+          "locked": false
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "backgroundbasetwo.png",
+          "use1Xscale": true,
+          "x": 139,
+          "y": 92,
+          "locked": false
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "backgroundbasetwo.png",
+          "use1Xscale": true,
+          "x": 139,
+          "y": 124,
+          "locked": false
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "backgroundbasetwo.png",
+          "use1Xscale": true,
+          "x": 139,
+          "y": 166,
+          "locked": false
+        }
+      },
+      {
+        "type": "entitymodel",
+        "data": {
+          "entityModel": "ModelRendererForKing",
+          "scale": 50,
+          "rotationX": 45,
+          "followMouseMovement": false,
+          "x": 253,
+          "y": 170,
+          "locked": false
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "backgroundbasetwo.png",
+          "use1Xscale": false,
+          "x": 148,
+          "y": 12,
+          "locked": false
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_statics",
+          "text": {
+            "fixedValue": "STATICS"
+          },
+          "color": {
+            "value": -16777216,
+            "falpha": 0.0
+          },
+          "hasShadow": false,
+          "x": 153,
+          "y": 80,
+          "locked": false
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_locals",
+          "text": {
+            "fixedValue": "Locals"
+          },
+          "color": {
+            "value": -16777216,
+            "falpha": 0.0
+          },
+          "hasShadow": false,
+          "x": 155,
+          "y": 155,
+          "locked": false
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_locals1",
+          "text": {
+            "fixedValue": "Locals:"
+          },
+          "color": {
+            "value": -16711707,
+            "falpha": 0.0
+          },
+          "hasShadow": false,
+          "x": 142,
+          "y": 169,
+          "locked": false
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_danger",
+          "text": {
+            "fixedValue": "Danger:"
+          },
+          "color": {
+            "value": -16711724,
+            "falpha": 0.0
+          },
+          "hasShadow": false,
+          "x": 142,
+          "y": 181,
+          "locked": false
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_your_local_civilians_that_are_in",
+          "text": {
+            "fixedValue": "Your Local Civilians That Are In Danger"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 141,
+          "y": 183,
+          "locked": false
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_wealth",
+          "text": {
+            "fixedValue": "Wealth:"
+          },
+          "color": {
+            "value": -16711900,
+            "falpha": 0.0
+          },
+          "hasShadow": false,
+          "x": 142,
+          "y": 96,
+          "locked": false
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "civilians.png",
+          "use1Xscale": true,
+          "x": 201,
+          "y": 165,
+          "locked": false
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "danger.png",
+          "use1Xscale": true,
+          "x": 200,
+          "y": 182,
+          "locked": false
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "wealth.png",
+          "use1Xscale": true,
+          "x": 202,
+          "y": 93,
+          "locked": false
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_dignity",
+          "text": {
+            "fixedValue": "Dignity:"
+          },
+          "color": {
+            "value": -15794432,
+            "falpha": 0.0
+          },
+          "hasShadow": false,
+          "x": 141,
+          "y": 107,
+          "locked": false
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "dignity.png",
+          "use1Xscale": true,
+          "x": 205,
+          "y": 107,
+          "locked": false
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_soldiers",
+          "text": {
+            "fixedValue": "Soldier:"
+          },
+          "color": {
+            "value": -16777216,
+            "falpha": 0.0
+          },
+          "hasShadow": false,
+          "x": 143,
+          "y": 127,
+          "locked": false
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_knight",
+          "text": {
+            "fixedValue": "Knight:"
+          },
+          "color": {
+            "value": -16777216,
+            "falpha": 0.0
+          },
+          "hasShadow": false,
+          "x": 144,
+          "y": 138,
+          "locked": false
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_enemies_preparing",
+          "text": {
+            "fixedValue": "Your Statics GUI"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "hasShadow": false,
+          "x": 168,
+          "y": 20,
+          "locked": false
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_wealth_redner",
+          "text": {
+            "fixedValue": "",
+            "name": "WealthRedner"
+          },
+          "color": {
+            "value": -16777216,
+            "falpha": 0.0
+          },
+          "hasShadow": false,
+          "x": 181,
+          "y": 96,
+          "locked": false
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_100",
+          "text": {
+            "fixedValue": "100",
+            "name": "MercyRender"
+          },
+          "color": {
+            "value": -16777216,
+            "falpha": 0.0
+          },
+          "hasShadow": false,
+          "x": 184,
+          "y": 108,
+          "locked": false
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_soldier_renders",
+          "text": {
+            "fixedValue": "",
+            "name": "SoldierRenders"
+          },
+          "color": {
+            "value": -16777216,
+            "falpha": 0.0
+          },
+          "hasShadow": false,
+          "x": 186,
+          "y": 127,
+          "locked": false
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_knights_render",
+          "text": {
+            "fixedValue": "",
+            "name": "KnightsRender"
+          },
+          "color": {
+            "value": -16777216,
+            "falpha": 0.0
+          },
+          "hasShadow": false,
+          "x": 182,
+          "y": 138,
+          "locked": false
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_civlian_renders",
+          "text": {
+            "fixedValue": "",
+            "name": "CivlianRenders"
+          },
+          "color": {
+            "value": -16777216,
+            "falpha": 0.0
+          },
+          "hasShadow": false,
+          "x": 180,
+          "y": 169,
+          "locked": false
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_danger_civlians_render",
+          "text": {
+            "fixedValue": "",
+            "name": "DangerCivliansRender"
+          },
+          "color": {
+            "value": -16777216,
+            "falpha": 0.0
+          },
+          "hasShadow": false,
+          "x": 180,
+          "y": 182,
+          "locked": false
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_basebuttons",
+          "image": "basebuttons.png",
+          "hoveredImage": "basebuttonhover.png",
+          "onClick": "Attackclicks",
+          "x": 178,
+          "y": 35,
+          "locked": false
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_attack",
+          "text": {
+            "fixedValue": "Attack"
+          },
+          "color": {
+            "value": -65536,
+            "falpha": 0.0
+          },
+          "hasShadow": false,
+          "x": 195,
+          "y": 38,
+          "locked": false
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "swordclashiamge.png",
+          "use1Xscale": true,
+          "x": 243,
+          "y": 34,
+          "locked": false
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_basebuttons1",
+          "image": "basebuttons.png",
+          "hoveredImage": "basebuttonhover.png",
+          "onClick": "PeaceClicks",
+          "x": 178,
+          "y": 54,
+          "locked": false
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "world.png",
+          "use1Xscale": true,
+          "x": 243,
+          "y": 52,
+          "locked": false
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_piece",
+          "text": {
+            "fixedValue": "Peace"
+          },
+          "color": {
+            "value": -16777216,
+            "falpha": 0.0
+          },
+          "hasShadow": false,
+          "x": 198,
+          "y": 56,
+          "locked": false
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "backgroundbasetwo.png",
+          "use1Xscale": true,
+          "x": 101,
+          "y": 37,
+          "locked": false
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_basebuttons2",
+          "image": "basebuttons.png",
+          "hoveredImage": "basebuttonhover.png",
+          "onClick": "WagonerClicks",
+          "x": 89,
+          "y": 44,
+          "locked": false
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_wagoner",
+          "text": {
+            "fixedValue": "wagoner"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "hasShadow": false,
+          "x": 103,
+          "y": 45,
+          "locked": false
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "backgroundbasetwo.png",
+          "use1Xscale": true,
+          "x": 268,
+          "y": 36,
+          "locked": false
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_basebuttons3",
+          "image": "basebuttons.png",
+          "hoveredImage": "basebuttonhover.png",
+          "onClick": "FollowClicks",
+          "x": 277,
+          "y": 31,
+          "locked": false
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_follow",
+          "text": {
+            "fixedValue": "Follow"
+          },
+          "color": {
+            "value": -16777216,
+            "falpha": 0.0
+          },
+          "hasShadow": false,
+          "x": 291,
+          "y": 33,
+          "locked": false
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_basebuttons4",
+          "image": "basebuttons.png",
+          "hoveredImage": "basebuttonhover.png",
+          "onClick": "FollowNoClicks",
+          "x": 277,
+          "y": 50,
+          "locked": false
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_unfollow",
+          "text": {
+            "fixedValue": "Unfollow"
+          },
+          "color": {
+            "value": -16777216,
+            "falpha": 0.0
+          },
+          "hasShadow": false,
+          "x": 288,
+          "y": 53,
+          "locked": false
+        }
+      }
+    ],
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": false
+    }
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "aba",
+    "bcb",
+    "aba"
+  ],
+  "key": {
+    "a": "minecraft:spruce_planks",
+    "b": "minecraft:stick",
+    "c": "minecraft:spruce_fence"
+  },
+  "result": {
+    "id": "the_middle_ages:medieval_spruce_window_bars",
+    "count": 1
+  }
+}

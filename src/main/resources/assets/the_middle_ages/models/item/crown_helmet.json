@@ -1,0 +1,7 @@
+{
+  "parent": "the_middle_ages:custom/crown_block",
+  "textures": {
+    "0": "the_middle_ages:block/crown",
+    "particle": "minecraft:item/golden_helmet"
+  }
+}

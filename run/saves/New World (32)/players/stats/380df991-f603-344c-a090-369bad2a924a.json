@@ -1,0 +1,49 @@
+{
+  "stats": {
+    "minecraft:picked_up": {
+      "the_middle_ages:civilian_1_spawn_egg": 128,
+      "minecraft:anvil": 2,
+      "minecraft:carrot": 2,
+      "the_middle_ages:civilian_5_spawn_egg": 2,
+      "minecraft:water_bucket": 2,
+      "minecraft:slime_ball": 6,
+      "minecraft:chicken": 1,
+      "minecraft:smooth_stone": 128,
+      "minecraft:farmland": 128,
+      "minecraft:netherite_sword": 2
+    },
+    "minecraft:killed": {
+      "minecraft:slime": 2,
+      "the_middle_ages:civilian_5": 12,
+      "minecraft:chicken": 1,
+      "the_middle_ages:civilian_1": 1
+    },
+    "minecraft:used": {
+      "minecraft:farmland": 21,
+      "minecraft:smooth_stone": 4,
+      "minecraft:water_bucket": 2,
+      "minecraft:netherite_sword": 34,
+      "the_middle_ages:civilian_1_spawn_egg": 2,
+      "minecraft:anvil": 3,
+      "the_middle_ages:civilian_5_spawn_egg": 42
+    },
+    "minecraft:custom": {
+      "minecraft:time_since_rest": 6878,
+      "minecraft:walk_one_cm": 34602,
+      "minecraft:leave_game": 11,
+      "minecraft:mob_kills": 16,
+      "minecraft:damage_dealt": 2950,
+      "minecraft:play_time": 15524,
+      "minecraft:jump": 152,
+      "minecraft:time_since_death": 3381,
+      "minecraft:sprint_one_cm": 25035,
+      "minecraft:total_world_time": 58765,
+      "minecraft:fly_one_cm": 33862,
+      "minecraft:walk_on_water_one_cm": 9,
+      "minecraft:crouch_one_cm": 978,
+      "minecraft:sneak_time": 219,
+      "minecraft:deaths": 2
+    }
+  },
+  "DataVersion": 4790
+}

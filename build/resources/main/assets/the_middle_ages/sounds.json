@@ -1,0 +1,66 @@
+{
+  "yawn_male": {
+    "sounds": [
+      {
+        "name": "the_middle_ages:male_yawn",
+        "stream": false
+      }
+    ]
+  },
+  "yawn_female": {
+    "sounds": [
+      {
+        "name": "the_middle_ages:female_wake_up",
+        "stream": false
+      }
+    ]
+  },
+  "attack_shout": {
+    "sounds": [
+      {
+        "name": "the_middle_ages:attack",
+        "stream": false
+      }
+    ]
+  },
+  "dying_sound": {
+    "sounds": [
+      {
+        "name": "the_middle_ages:die",
+        "stream": false
+      }
+    ]
+  },
+  "huming": {
+    "sounds": [
+      {
+        "name": "the_middle_ages:humph",
+        "stream": false
+      }
+    ]
+  },
+  "female_huming": {
+    "sounds": [
+      {
+        "name": "the_middle_ages:female_huming",
+        "stream": false
+      }
+    ]
+  },
+  "female_dies": {
+    "sounds": [
+      {
+        "name": "the_middle_ages:female_dies",
+        "stream": false
+      }
+    ]
+  },
+  "ambience_birds": {
+    "sounds": [
+      {
+        "name": "the_middle_ages:ambience_birds",
+        "stream": false
+      }
+    ]
+  }
+}

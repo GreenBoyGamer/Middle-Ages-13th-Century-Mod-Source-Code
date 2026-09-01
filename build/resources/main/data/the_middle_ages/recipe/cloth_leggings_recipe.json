@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "aaa",
+    "b b",
+    "a a"
+  ],
+  "key": {
+    "a": "minecraft:leather",
+    "b": "#minecraft:wool"
+  },
+  "result": {
+    "id": "the_middle_ages:leather_cloths_leggings",
+    "count": 1
+  }
+}

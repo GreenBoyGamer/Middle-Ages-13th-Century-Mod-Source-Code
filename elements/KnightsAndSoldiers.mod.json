@@ -1,0 +1,716 @@
+{
+  "_fv": 89,
+  "_type": "gui",
+  "definition": {
+    "type": 0,
+    "width": 176,
+    "height": 166,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
+    "renderBgLayer": false,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "image",
+        "data": {
+          "image": "background.png",
+          "use1Xscale": false,
+          "x": 126,
+          "y": 36,
+          "locked": false
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "backgroundbasetwo.png",
+          "use1Xscale": false,
+          "x": 147,
+          "y": 10,
+          "locked": false
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_knights_or_soldiers",
+          "text": {
+            "fixedValue": "Knights Or Soldiers"
+          },
+          "color": {
+            "value": -16777216,
+            "falpha": 0.0
+          },
+          "hasShadow": false,
+          "x": 159,
+          "y": 34,
+          "locked": false
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_hiring_gui",
+          "text": {
+            "fixedValue": "Hiring GUI"
+          },
+          "color": {
+            "value": -16777216,
+            "falpha": 0.0
+          },
+          "hasShadow": false,
+          "x": 183,
+          "y": 50,
+          "locked": false
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "peace.png",
+          "use1Xscale": true,
+          "x": 163,
+          "y": 49,
+          "locked": false
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "backgroundbasetwo.png",
+          "use1Xscale": true,
+          "x": 143,
+          "y": 84,
+          "locked": false
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_knight",
+          "text": {
+            "fixedValue": "KNIGHT"
+          },
+          "color": {
+            "value": -16777216,
+            "falpha": 0.0
+          },
+          "hasShadow": false,
+          "x": 157,
+          "y": 94,
+          "locked": false
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "swordclashiamge.png",
+          "use1Xscale": true,
+          "x": 139,
+          "y": 92,
+          "locked": false
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_basebuttons",
+          "image": "basebuttons.png",
+          "hoveredImage": "basebuttonhover.png",
+          "onClick": "HireKnightClick",
+          "x": 212,
+          "y": 99,
+          "locked": false
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_3",
+          "text": {
+            "fixedValue": "3"
+          },
+          "color": {
+            "value": -16777216,
+            "falpha": 0.0
+          },
+          "hasShadow": false,
+          "x": 213,
+          "y": 85,
+          "locked": false
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "wealth.png",
+          "use1Xscale": true,
+          "x": 216,
+          "y": 82,
+          "locked": false
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_hire",
+          "text": {
+            "fixedValue": "Hire"
+          },
+          "color": {
+            "value": -16777216,
+            "falpha": 0.0
+          },
+          "hasShadow": false,
+          "x": 231,
+          "y": 101,
+          "locked": false
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "backgroundbasetwo.png",
+          "use1Xscale": true,
+          "x": 143,
+          "y": 123,
+          "locked": false
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_soldier",
+          "text": {
+            "fixedValue": "Archer"
+          },
+          "color": {
+            "value": -16777216,
+            "falpha": 0.0
+          },
+          "hasShadow": false,
+          "x": 157,
+          "y": 133,
+          "locked": false
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "peace.png",
+          "use1Xscale": true,
+          "x": 138,
+          "y": 131,
+          "locked": false
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "wealth.png",
+          "use1Xscale": true,
+          "x": 216,
+          "y": 124,
+          "locked": false
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_1",
+          "text": {
+            "fixedValue": "2"
+          },
+          "color": {
+            "value": -16777216,
+            "falpha": 0.0
+          },
+          "hasShadow": false,
+          "x": 212,
+          "y": 127,
+          "locked": false
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_basebuttons1",
+          "image": "basebuttons.png",
+          "hoveredImage": "basebuttonhover.png",
+          "onClick": "HireArcherClicks",
+          "x": 212,
+          "y": 140,
+          "locked": false
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_hire1",
+          "text": {
+            "fixedValue": "Hire"
+          },
+          "color": {
+            "value": -16777216,
+            "falpha": 0.0
+          },
+          "hasShadow": false,
+          "x": 231,
+          "y": 142,
+          "locked": false
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "backgroundbasetwo.png",
+          "use1Xscale": true,
+          "x": 144,
+          "y": 163,
+          "locked": false
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_archer",
+          "text": {
+            "fixedValue": "Soldier"
+          },
+          "color": {
+            "value": -16777216,
+            "falpha": 0.0
+          },
+          "hasShadow": false,
+          "x": 157,
+          "y": 173,
+          "locked": false
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "peace.png",
+          "use1Xscale": true,
+          "x": 138,
+          "y": 171,
+          "locked": false
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "wealth.png",
+          "use1Xscale": true,
+          "x": 216,
+          "y": 163,
+          "locked": false
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_11",
+          "text": {
+            "fixedValue": "1"
+          },
+          "color": {
+            "value": -16777216,
+            "falpha": 0.0
+          },
+          "hasShadow": false,
+          "x": 212,
+          "y": 165,
+          "locked": false
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_basebuttons2",
+          "image": "basebuttons.png",
+          "hoveredImage": "basebuttonhover.png",
+          "onClick": "HireSoldierClicks",
+          "x": 212,
+          "y": 179,
+          "locked": false
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_hire2",
+          "text": {
+            "fixedValue": "Hire"
+          },
+          "color": {
+            "value": -16777216,
+            "falpha": 0.0
+          },
+          "hasShadow": false,
+          "x": 231,
+          "y": 181,
+          "locked": false
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "world.png",
+          "use1Xscale": true,
+          "x": 277,
+          "y": 97,
+          "locked": false
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "world.png",
+          "use1Xscale": true,
+          "x": 278,
+          "y": 139,
+          "locked": false
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "world.png",
+          "use1Xscale": true,
+          "x": 278,
+          "y": 178,
+          "locked": false
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "backgroundbasetwo.png",
+          "use1Xscale": false,
+          "x": 265,
+          "y": 33,
+          "locked": false
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_spawn_civilians",
+          "text": {
+            "fixedValue": "Spawn Civilians"
+          },
+          "color": {
+            "value": -16777216,
+            "falpha": 0.0
+          },
+          "hasShadow": false,
+          "x": 268,
+          "y": 36,
+          "locked": false
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_basebuttons3",
+          "image": "basebuttons.png",
+          "hoveredImage": "basebuttonhover.png",
+          "onClick": "CV1clics",
+          "x": 253,
+          "y": 51,
+          "locked": false
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_farmer",
+          "text": {
+            "fixedValue": "Robert x4"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "hasShadow": false,
+          "x": 263,
+          "y": 53,
+          "locked": false
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_basebuttons4",
+          "image": "basebuttons.png",
+          "hoveredImage": "basebuttonhover.png",
+          "onClick": "CV2clics",
+          "x": 319,
+          "y": 50,
+          "locked": false
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_wagoner",
+          "text": {
+            "fixedValue": "William x4"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "hasShadow": false,
+          "x": 324,
+          "y": 52,
+          "locked": false
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_basebuttons5",
+          "image": "basebuttons.png",
+          "hoveredImage": "basebuttonhover.png",
+          "onClick": "CV3clics",
+          "x": 253,
+          "y": 71,
+          "locked": false
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_lisa",
+          "text": {
+            "fixedValue": "Lisa x4"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "hasShadow": false,
+          "x": 267,
+          "y": 73,
+          "locked": false
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_basebuttons6",
+          "image": "basebuttons.png",
+          "hoveredImage": "basebuttonhover.png",
+          "onClick": "CV4clics",
+          "x": 319,
+          "y": 70,
+          "locked": false
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_alice",
+          "text": {
+            "fixedValue": "Alice x4"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "hasShadow": false,
+          "x": 332,
+          "y": 72,
+          "locked": false
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_basebuttons7",
+          "image": "basebuttons.png",
+          "hoveredImage": "basebuttonhover.png",
+          "onClick": "CV5clics",
+          "x": 352,
+          "y": 30,
+          "locked": false
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_john",
+          "text": {
+            "fixedValue": "John x8"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "hasShadow": false,
+          "x": 364,
+          "y": 32,
+          "locked": false
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "backgroundbasetwo.png",
+          "use1Xscale": false,
+          "x": 27,
+          "y": 20,
+          "locked": false
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_seller_buyer",
+          "text": {
+            "fixedValue": "Seller & Buyer"
+          },
+          "color": {
+            "value": -16777216,
+            "falpha": 0.0
+          },
+          "hasShadow": false,
+          "x": 54,
+          "y": 24,
+          "locked": false
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_basebuttons8",
+          "image": "basebuttons.png",
+          "hoveredImage": "basebuttonhover.png",
+          "onClick": "SellerCLicks",
+          "x": 36,
+          "y": 39,
+          "locked": false
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_basebuttons9",
+          "image": "basebuttons.png",
+          "hoveredImage": "basebuttonhover.png",
+          "onClick": "ExchangerClicks",
+          "x": 36,
+          "y": 58,
+          "locked": false
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_bread_seller",
+          "text": {
+            "fixedValue": "Food Seller"
+          },
+          "color": {
+            "value": -16777216,
+            "falpha": 0.0
+          },
+          "hasShadow": false,
+          "x": 39,
+          "y": 41,
+          "locked": false
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_exchanger",
+          "text": {
+            "fixedValue": "Exchanger"
+          },
+          "color": {
+            "value": -16777216,
+            "falpha": 0.0
+          },
+          "hasShadow": false,
+          "x": 42,
+          "y": 60,
+          "locked": false
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_x8",
+          "text": {
+            "fixedValue": "x8"
+          },
+          "color": {
+            "value": -16777216,
+            "falpha": 0.0
+          },
+          "hasShadow": false,
+          "x": 102,
+          "y": 39,
+          "locked": false
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_x81",
+          "text": {
+            "fixedValue": "x8"
+          },
+          "color": {
+            "value": -16777216,
+            "falpha": 0.0
+          },
+          "hasShadow": false,
+          "x": 102,
+          "y": 59,
+          "locked": false
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "wealth.png",
+          "use1Xscale": true,
+          "x": 110,
+          "y": 37,
+          "locked": false
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "wealth.png",
+          "use1Xscale": true,
+          "x": 110,
+          "y": 57,
+          "locked": false
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "swordclashiamge.png",
+          "use1Xscale": false,
+          "x": 194,
+          "y": 3,
+          "locked": false
+        }
+      }
+    ],
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": false
+    }
+  }
+}

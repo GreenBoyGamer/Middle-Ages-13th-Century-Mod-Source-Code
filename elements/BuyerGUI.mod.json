@@ -1,0 +1,306 @@
+{
+  "_fv": 89,
+  "_type": "gui",
+  "definition": {
+    "type": 0,
+    "width": 176,
+    "height": 166,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
+    "renderBgLayer": false,
+    "doesPauseGame": true,
+    "components": [
+      {
+        "type": "image",
+        "data": {
+          "image": "background.png",
+          "use1Xscale": false,
+          "x": 126,
+          "y": 38,
+          "locked": true
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "backgroundbasetwo.png",
+          "use1Xscale": false,
+          "x": 154,
+          "y": 32,
+          "locked": false
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_john_smiths_inventory",
+          "text": {
+            "fixedValue": "Richard's Inventory"
+          },
+          "color": {
+            "value": -16777216,
+            "falpha": 0.0
+          },
+          "hasShadow": false,
+          "x": 166,
+          "y": 46,
+          "locked": false
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_armory",
+          "text": {
+            "fixedValue": "[EXCHANGE]"
+          },
+          "color": {
+            "value": -16777216,
+            "falpha": 0.0
+          },
+          "hasShadow": false,
+          "x": 189,
+          "y": 58,
+          "locked": false
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_basebuttons",
+          "image": "basebuttons.png",
+          "hoveredImage": "basebuttonhover.png",
+          "onClick": "ExchangeMoneyClicks",
+          "x": 136,
+          "y": 104,
+          "locked": false
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_buy",
+          "text": {
+            "fixedValue": "Exchange"
+          },
+          "color": {
+            "value": -16751104,
+            "falpha": 0.0
+          },
+          "hasShadow": false,
+          "x": 148,
+          "y": 106,
+          "locked": false
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "basebuttonhover.png",
+          "use1Xscale": false,
+          "x": 202,
+          "y": 104,
+          "locked": false
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_soldier_sword",
+          "text": {
+            "fixedValue": "Wealth"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "hasShadow": false,
+          "x": 218,
+          "y": 106,
+          "locked": false
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "peace.png",
+          "use1Xscale": false,
+          "x": 203,
+          "y": 72,
+          "locked": false
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "wealth.png",
+          "use1Xscale": true,
+          "x": 267,
+          "y": 104,
+          "locked": false
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_x3",
+          "text": {
+            "fixedValue": "inf"
+          },
+          "color": {
+            "value": -16777216,
+            "falpha": 0.0
+          },
+          "hasShadow": false,
+          "x": 280,
+          "y": 106,
+          "locked": false
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "world.png",
+          "use1Xscale": true,
+          "x": 239,
+          "y": 56,
+          "locked": false
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "world.png",
+          "use1Xscale": true,
+          "x": 176,
+          "y": 56,
+          "locked": false
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_increase_your_wealth",
+          "text": {
+            "fixedValue": "(INCREASE YOUR WEALTH)"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "hasShadow": false,
+          "x": 144,
+          "y": 122,
+          "locked": false
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_basebuttons1",
+          "image": "basebuttons.png",
+          "hoveredImage": "basebuttonhover.png",
+          "onClick": "ExchangeVegClicks",
+          "x": 136,
+          "y": 135,
+          "locked": false
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_exchange",
+          "text": {
+            "fixedValue": "Exchange"
+          },
+          "color": {
+            "value": -16751104,
+            "falpha": 0.0
+          },
+          "hasShadow": false,
+          "x": 148,
+          "y": 137,
+          "locked": false
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "basebuttonhover.png",
+          "use1Xscale": false,
+          "x": 202,
+          "y": 135,
+          "locked": false
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_vegies",
+          "text": {
+            "fixedValue": "Vegetable"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "hasShadow": false,
+          "x": 211,
+          "y": 137,
+          "locked": false
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_empty",
+          "text": {
+            "fixedValue": "->"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "hasShadow": false,
+          "x": 268,
+          "y": 137,
+          "locked": false
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "wealth.png",
+          "use1Xscale": true,
+          "x": 281,
+          "y": 135,
+          "locked": false
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_exchange_vegetables_for_wealth",
+          "text": {
+            "fixedValue": "(Exchange Vegetables For Wealth)"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "hasShadow": false,
+          "x": 129,
+          "y": 155,
+          "locked": false
+        }
+      }
+    ],
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": false
+    }
+  }
+}

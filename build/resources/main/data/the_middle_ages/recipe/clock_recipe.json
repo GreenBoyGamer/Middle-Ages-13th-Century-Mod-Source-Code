@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "aba",
+    "aca",
+    "ada"
+  ],
+  "key": {
+    "a": "#minecraft:planks",
+    "b": "minecraft:clock",
+    "c": "#minecraft:wooden_slabs",
+    "d": "minecraft:stick"
+  },
+  "result": {
+    "id": "the_middle_ages:medieval_clock",
+    "count": 1
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "stats": {
+    "minecraft:used": {
+      "the_middle_ages:bread_seller_spawn_egg": 3,
+      "the_middle_ages:wanderer_spawn_egg": 2,
+      "the_middle_ages:civilian_1_spawn_egg": 2,
+      "the_middle_ages:dark_soldier_spawn_egg": 2,
+      "the_middle_ages:medieval_dimension": 1,
+      "the_middle_ages:water_mill_hub": 2,
+      "the_middle_ages:water_mill_extender": 1,
+      "the_middle_ages:civilian_3_spawn_egg": 3,
+      "the_middle_ages:dark_knight_spawn_egg": 2,
+      "the_middle_ages:civilian_4_spawn_egg": 1,
+      "minecraft:water_bucket": 2,
+      "minecraft:brown_bed": 1,
+      "the_middle_ages:water_mill_water_pump": 3,
+      "the_middle_ages:water_mill_gear": 3,
+      "minecraft:mossy_stone_bricks": 14
+    },
+    "minecraft:custom": {
+      "minecraft:time_since_rest": 22752,
+      "minecraft:walk_one_cm": 27039,
+      "minecraft:leave_game": 7,
+      "minecraft:mob_kills": 1,
+      "minecraft:walk_under_water_one_cm": 1258,
+      "minecraft:damage_dealt": 16,
+      "minecraft:play_time": 11376,
+      "minecraft:jump": 64,
+      "minecraft:time_since_death": 11376,
+      "minecraft:sprint_one_cm": 17708,
+      "minecraft:total_world_time": 23333,
+      "minecraft:fly_one_cm": 73824,
+      "minecraft:interact_with_anvil": 1,
+      "minecraft:walk_on_water_one_cm": 771,
+      "minecraft:crouch_one_cm": 319,
+      "minecraft:sneak_time": 243
+    },
+    "minecraft:picked_up": {
+      "minecraft:wheat_seeds": 1
+    }
+  },
+  "DataVersion": 4790
+}

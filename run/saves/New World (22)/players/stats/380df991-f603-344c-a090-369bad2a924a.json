@@ -1,0 +1,23 @@
+{
+  "stats": {
+    "minecraft:used": {
+      "the_middle_ages:civilian_1_spawn_egg": 4,
+      "minecraft:gray_bed": 42
+    },
+    "minecraft:custom": {
+      "minecraft:sprint_one_cm": 588,
+      "minecraft:time_since_rest": 8168,
+      "minecraft:walk_one_cm": 14466,
+      "minecraft:total_world_time": 27743,
+      "minecraft:leave_game": 7,
+      "minecraft:fly_one_cm": 406,
+      "minecraft:crouch_one_cm": 62,
+      "minecraft:sneak_time": 11,
+      "minecraft:play_time": 4084,
+      "minecraft:damage_dealt": 70,
+      "minecraft:jump": 5,
+      "minecraft:time_since_death": 4084
+    }
+  },
+  "DataVersion": 4790
+}

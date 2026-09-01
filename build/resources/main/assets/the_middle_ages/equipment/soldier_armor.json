@@ -1,0 +1,14 @@
+{
+  "layers": {
+    "humanoid": [
+      {
+        "texture": "the_middle_ages:soldier_armor"
+      }
+    ],
+    "humanoid_leggings": [
+      {
+        "texture": "the_middle_ages:soldier_armor"
+      }
+    ]
+  }
+}

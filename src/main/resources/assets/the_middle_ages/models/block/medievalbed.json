@@ -1,0 +1,8 @@
+{
+  "parent": "the_middle_ages:custom/madieval_bed",
+  "textures": {
+    "all": "minecraft:block/black_terracotta",
+    "particle": "minecraft:block/black_terracotta",
+    "0": "the_middle_ages:block/madieval_bed"
+  }
+}

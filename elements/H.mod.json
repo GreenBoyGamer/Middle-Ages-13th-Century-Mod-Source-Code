@@ -1,0 +1,93 @@
+{
+  "_fv": 89,
+  "_type": "overlay",
+  "definition": {
+    "priority": "NORMAL",
+    "components": [
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_worldld",
+          "text": {
+            "fixedValue": "",
+            "name": "Worldld"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "hasShadow": false,
+          "anchorPoint": "TOP_LEFT",
+          "x": 39,
+          "y": 8,
+          "locked": false
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_days",
+          "text": {
+            "fixedValue": "Days:"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "hasShadow": false,
+          "anchorPoint": "TOP_LEFT",
+          "x": 8,
+          "y": 8,
+          "locked": false
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_target_coords",
+          "text": {
+            "fixedValue": "Coords:"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "hasShadow": false,
+          "anchorPoint": "TOP_LEFT",
+          "x": 8,
+          "y": 21,
+          "locked": false
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_worldld_coords",
+          "text": {
+            "fixedValue": "",
+            "name": "WorldldCoords"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "hasShadow": false,
+          "anchorPoint": "TOP_LEFT",
+          "x": 47,
+          "y": 21,
+          "locked": false
+        }
+      }
+    ],
+    "baseTexture": "",
+    "overlayTarget": "Ingame",
+    "displayCondition": "HDisplayOverlayIngame",
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": false
+    }
+  }
+}

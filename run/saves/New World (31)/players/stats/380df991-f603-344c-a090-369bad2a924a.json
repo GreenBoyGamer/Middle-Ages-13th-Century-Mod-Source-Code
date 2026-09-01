@@ -1,0 +1,41 @@
+{
+  "stats": {
+    "minecraft:killed": {
+      "the_middle_ages:civilian_5": 1,
+      "the_middle_ages:civilian_1": 5
+    },
+    "minecraft:picked_up": {
+      "the_middle_ages:passenger_cart_spawn_egg": 1,
+      "minecraft:carrot": 191,
+      "minecraft:emerald": 162
+    },
+    "minecraft:used": {
+      "minecraft:farmland": 7,
+      "minecraft:smooth_stone": 3,
+      "minecraft:water_bucket": 2,
+      "the_middle_ages:civilian_1_spawn_egg": 5,
+      "the_middle_ages:medieval_dimension": 1,
+      "minecraft:anvil": 7,
+      "minecraft:oak_planks": 1,
+      "minecraft:diamond_sword": 15,
+      "the_middle_ages:civilian_5_spawn_egg": 6,
+      "minecraft:mossy_stone_bricks": 14
+    },
+    "minecraft:custom": {
+      "minecraft:time_since_rest": 23108,
+      "minecraft:walk_one_cm": 22138,
+      "minecraft:leave_game": 5,
+      "minecraft:mob_kills": 6,
+      "minecraft:damage_dealt": 1270,
+      "minecraft:play_time": 11554,
+      "minecraft:jump": 32,
+      "minecraft:time_since_death": 11554,
+      "minecraft:sprint_one_cm": 10831,
+      "minecraft:total_world_time": 34812,
+      "minecraft:fly_one_cm": 42122,
+      "minecraft:crouch_one_cm": 510,
+      "minecraft:sneak_time": 174
+    }
+  },
+  "DataVersion": 4790
+}

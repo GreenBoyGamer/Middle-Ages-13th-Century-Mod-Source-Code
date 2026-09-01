@@ -1,0 +1,27 @@
+{
+  "workspacePanelIconSize": "TILES",
+  "workspacePanelSortType": "NAME",
+  "workspacePanelSortAscending": true,
+  "projectBrowserState": {
+    "expandedPaths": [
+      "[, The Middle Ages]",
+      "[, The Middle Ages, Resources (Gradle)]"
+    ]
+  },
+  "leftDockState": {
+    "dockSizes": {
+      "project_browser": 376,
+      "local_history": 280
+    }
+  },
+  "rightDockState": {
+    "dockSizes": {}
+  },
+  "bottomDockState": {
+    "dockSizes": {
+      "console": 712,
+      "code_viewer": 300,
+      "debugger": 300
+    }
+  }
+}

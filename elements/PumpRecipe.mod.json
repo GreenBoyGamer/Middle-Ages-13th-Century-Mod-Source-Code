@@ -1,0 +1,34 @@
+{
+  "_fv": 89,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Crafting",
+    "recipeRetstackSize": 1,
+    "group": "",
+    "unlockingItems": [
+      "Blocks.PLANKS",
+      "Items.REDSTONE",
+      "Blocks.WOODEN_SLAB",
+      "CUSTOM:Wheel"
+    ],
+    "cookingBookCategory": "MISC",
+    "xpReward": 0.0,
+    "cookingTime": 200,
+    "craftingBookCategory": "MISC",
+    "recipeShapeless": false,
+    "recipeSlots": [
+      "Blocks.PLANKS",
+      "Blocks.WOODEN_SLAB",
+      "Blocks.PLANKS",
+      "Blocks.WOODEN_SLAB",
+      "CUSTOM:Wheel",
+      "Blocks.WOODEN_SLAB",
+      "",
+      "Items.STICK",
+      ""
+    ],
+    "recipeReturnStack": "CUSTOM:WaterMillWaterPump",
+    "name": "pump_recipe",
+    "namespace": "mod"
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "stats": {
+    "minecraft:used": {
+      "the_middle_ages:bread_seller_spawn_egg": 1,
+      "minecraft:smooth_stone": 5,
+      "the_middle_ages:medieval_anvil": 10,
+      "the_middle_ages:civilian_1_spawn_egg": 1,
+      "the_middle_ages:civilian_2_spawn_egg": 1,
+      "minecraft:anvil": 11,
+      "the_middle_ages:civilian_3_spawn_egg": 1,
+      "minecraft:diamond_sword": 2,
+      "the_middle_ages:civilian_5_spawn_egg": 8,
+      "the_middle_ages:crown_block": 3
+    },
+    "minecraft:custom": {
+      "minecraft:time_since_rest": 5838,
+      "minecraft:walk_one_cm": 37883,
+      "minecraft:leave_game": 6,
+      "minecraft:mob_kills": 2,
+      "minecraft:damage_dealt": 530,
+      "minecraft:play_time": 14004,
+      "minecraft:jump": 57,
+      "minecraft:time_since_death": 2780,
+      "minecraft:sprint_one_cm": 13705,
+      "minecraft:total_world_time": 62806,
+      "minecraft:fly_one_cm": 21440,
+      "minecraft:crouch_one_cm": 264,
+      "minecraft:sneak_time": 67,
+      "minecraft:deaths": 1
+    },
+    "minecraft:killed": {
+      "the_middle_ages:civilian_5": 1,
+      "the_middle_ages:civilian_1": 1
+    },
+    "minecraft:picked_up": {
+      "the_middle_ages:civilian_1_spawn_egg": 64,
+      "minecraft:anvil": 1,
+      "minecraft:diamond_sword": 1,
+      "the_middle_ages:civilian_5_spawn_egg": 64,
+      "the_middle_ages:civilian_3_spawn_egg": 64,
+      "minecraft:smooth_stone": 1,
+      "the_middle_ages:medieval_anvil": 64,
+      "the_middle_ages:bread_seller_spawn_egg": 64,
+      "the_middle_ages:civilian_2_spawn_egg": 64
+    }
+  },
+  "DataVersion": 4790
+}

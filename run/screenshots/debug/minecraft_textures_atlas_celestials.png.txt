@@ -1,0 +1,11 @@
+minecraft:end_flash	x=0	y=0	w=64	h=64
+minecraft:missingno	x=36	y=68	w=16	h=16
+minecraft:moon/first_quarter	x=0	y=68	w=32	h=32
+minecraft:moon/full_moon	x=68	y=0	w=32	h=32
+minecraft:moon/new_moon	x=68	y=36	w=32	h=32
+minecraft:moon/third_quarter	x=68	y=72	w=32	h=32
+minecraft:moon/waning_crescent	x=128	y=0	w=32	h=32
+minecraft:moon/waning_gibbous	x=128	y=36	w=32	h=32
+minecraft:moon/waxing_crescent	x=128	y=72	w=32	h=32
+minecraft:moon/waxing_gibbous	x=164	y=0	w=32	h=32
+minecraft:sun	x=164	y=36	w=32	h=32

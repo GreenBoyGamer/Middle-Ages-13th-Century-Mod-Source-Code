@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "aba",
+    "bcb",
+    "aba"
+  ],
+  "key": {
+    "a": "minecraft:dark_oak_planks",
+    "b": "minecraft:stick",
+    "c": "minecraft:dark_oak_fence"
+  },
+  "result": {
+    "id": "the_middle_ages:medieval_dark_oak_window_bar",
+    "count": 1
+  }
+}

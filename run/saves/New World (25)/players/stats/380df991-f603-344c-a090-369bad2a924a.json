@@ -1,0 +1,26 @@
+{
+  "stats": {
+    "minecraft:custom": {
+      "minecraft:time_since_rest": 8396,
+      "minecraft:walk_one_cm": 8933,
+      "minecraft:leave_game": 2,
+      "minecraft:play_time": 4198,
+      "minecraft:damage_dealt": 10,
+      "minecraft:jump": 6,
+      "minecraft:time_since_death": 4198,
+      "minecraft:sprint_one_cm": 770,
+      "minecraft:total_world_time": 7898,
+      "minecraft:fly_one_cm": 2102,
+      "minecraft:interact_with_anvil": 1,
+      "minecraft:crouch_one_cm": 65,
+      "minecraft:sneak_time": 75
+    },
+    "minecraft:used": {
+      "minecraft:anvil": 4,
+      "the_middle_ages:anvil": 8,
+      "the_middle_ages:civilian_5_spawn_egg": 8,
+      "the_middle_ages:crown_block": 1
+    }
+  },
+  "DataVersion": 4790
+}

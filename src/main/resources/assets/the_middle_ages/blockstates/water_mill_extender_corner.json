@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "the_middle_ages:block/water_mill_extender_corner"
+    },
+    "facing=east": {
+      "model": "the_middle_ages:block/water_mill_extender_corner",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "the_middle_ages:block/water_mill_extender_corner",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "the_middle_ages:block/water_mill_extender_corner",
+      "y": 270
+    }
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "stats": {
+    "minecraft:used": {
+      "the_middle_ages:bread_seller_spawn_egg": 1,
+      "minecraft:smooth_stone": 8,
+      "minecraft:water_bucket": 1,
+      "the_middle_ages:civilian_1_spawn_egg": 12,
+      "minecraft:anvil": 41,
+      "minecraft:diamond_sword": 7,
+      "the_middle_ages:civilian_5_spawn_egg": 21
+    },
+    "minecraft:killed": {
+      "minecraft:slime": 1,
+      "the_middle_ages:civilian_5": 3,
+      "the_middle_ages:bread_seller": 1
+    },
+    "minecraft:picked_up": {
+      "minecraft:anvil": 64,
+      "minecraft:diamond_sword": 1,
+      "the_middle_ages:civilian_5_spawn_egg": 64,
+      "minecraft:slime_ball": 4,
+      "minecraft:smooth_stone": 64
+    },
+    "minecraft:custom": {
+      "minecraft:time_since_rest": 3634,
+      "minecraft:walk_one_cm": 70615,
+      "minecraft:leave_game": 9,
+      "minecraft:mob_kills": 5,
+      "minecraft:damage_dealt": 1081,
+      "minecraft:play_time": 24935,
+      "minecraft:jump": 115,
+      "minecraft:time_since_death": 1731,
+      "minecraft:sprint_one_cm": 15236,
+      "minecraft:total_world_time": 98932,
+      "minecraft:fly_one_cm": 23697,
+      "minecraft:interact_with_anvil": 1,
+      "minecraft:crouch_one_cm": 800,
+      "minecraft:sneak_time": 289,
+      "minecraft:deaths": 2
+    }
+  },
+  "DataVersion": 4790
+}

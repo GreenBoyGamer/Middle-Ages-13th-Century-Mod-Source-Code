@@ -1,0 +1,30 @@
+{
+  "stats": {
+    "minecraft:used": {
+      "the_middle_ages:bread_seller_spawn_egg": 1,
+      "minecraft:netherite_sword": 8,
+      "minecraft:anvil": 11,
+      "the_middle_ages:civilian_5_spawn_egg": 5
+    },
+    "minecraft:custom": {
+      "minecraft:time_since_rest": 14500,
+      "minecraft:walk_one_cm": 18761,
+      "minecraft:leave_game": 4,
+      "minecraft:mob_kills": 3,
+      "minecraft:play_time": 7250,
+      "minecraft:damage_dealt": 540,
+      "minecraft:jump": 33,
+      "minecraft:time_since_death": 7250,
+      "minecraft:sprint_one_cm": 4950,
+      "minecraft:total_world_time": 23383,
+      "minecraft:fly_one_cm": 20628,
+      "minecraft:crouch_one_cm": 452,
+      "minecraft:sneak_time": 94
+    },
+    "minecraft:killed": {
+      "minecraft:slime": 1,
+      "the_middle_ages:civilian_5": 2
+    }
+  },
+  "DataVersion": 4790
+}

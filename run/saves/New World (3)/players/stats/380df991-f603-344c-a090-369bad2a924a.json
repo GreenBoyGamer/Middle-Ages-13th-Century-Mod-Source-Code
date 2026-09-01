@@ -1,0 +1,22 @@
+{
+  "stats": {
+    "minecraft:used": {
+      "minecraft:mossy_stone_bricks": 15
+    },
+    "minecraft:custom": {
+      "minecraft:time_since_rest": 6428,
+      "minecraft:walk_one_cm": 5147,
+      "minecraft:total_world_time": 7292,
+      "minecraft:leave_game": 2,
+      "minecraft:fly_one_cm": 80877,
+      "minecraft:walk_under_water_one_cm": 3038,
+      "minecraft:walk_on_water_one_cm": 282,
+      "minecraft:crouch_one_cm": 37,
+      "minecraft:sneak_time": 191,
+      "minecraft:play_time": 6346,
+      "minecraft:jump": 4,
+      "minecraft:time_since_death": 6346
+    }
+  },
+  "DataVersion": 4790
+}

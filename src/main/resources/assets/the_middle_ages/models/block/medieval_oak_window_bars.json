@@ -1,0 +1,8 @@
+{
+  "parent": "the_middle_ages:custom/oak_window_bar_new",
+  "textures": {
+    "all": "minecraft:block/oak_planks",
+    "particle": "minecraft:block/oak_planks",
+    "1": "the_middle_ages:block/m_window_oak"
+  }
+}

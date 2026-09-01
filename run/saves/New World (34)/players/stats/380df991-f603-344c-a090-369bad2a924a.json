@@ -1,0 +1,27 @@
+{
+  "stats": {
+    "minecraft:used": {
+      "minecraft:smooth_stone": 23,
+      "the_middle_ages:medieval_anvil": 5,
+      "minecraft:chest": 4,
+      "minecraft:anvil": 7,
+      "the_middle_ages:civilian_5_spawn_egg": 10
+    },
+    "minecraft:custom": {
+      "minecraft:time_since_rest": 29916,
+      "minecraft:walk_one_cm": 22570,
+      "minecraft:leave_game": 5,
+      "minecraft:play_time": 14958,
+      "minecraft:damage_dealt": 200,
+      "minecraft:jump": 37,
+      "minecraft:time_since_death": 14958,
+      "minecraft:sprint_one_cm": 12575,
+      "minecraft:open_chest": 2,
+      "minecraft:total_world_time": 28428,
+      "minecraft:fly_one_cm": 27147,
+      "minecraft:crouch_one_cm": 448,
+      "minecraft:sneak_time": 337
+    }
+  },
+  "DataVersion": 4790
+}

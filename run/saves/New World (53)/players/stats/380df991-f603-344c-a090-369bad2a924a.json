@@ -1,0 +1,53 @@
+{
+  "stats": {
+    "minecraft:killed_by": {
+      "the_middle_ages:dark_knight": 1
+    },
+    "minecraft:used": {
+      "the_middle_ages:bread_seller_spawn_egg": 2,
+      "the_middle_ages:civilian_1_spawn_egg": 1,
+      "the_middle_ages:medieval_dimension": 1,
+      "minecraft:anvil": 1,
+      "minecraft:oak_planks": 35,
+      "minecraft:netherite_hoe": 6,
+      "minecraft:iron_sword": 27,
+      "minecraft:mossy_stone_bricks": 14
+    },
+    "minecraft:custom": {
+      "minecraft:time_since_rest": 39444,
+      "minecraft:walk_one_cm": 28895,
+      "minecraft:leave_game": 11,
+      "minecraft:mob_kills": 4,
+      "minecraft:walk_under_water_one_cm": 3817,
+      "minecraft:damage_taken": 370,
+      "minecraft:damage_dealt": 1517,
+      "minecraft:play_time": 29851,
+      "minecraft:jump": 246,
+      "minecraft:time_since_death": 19701,
+      "minecraft:drop": 1,
+      "minecraft:open_barrel": 4,
+      "minecraft:sprint_one_cm": 41949,
+      "minecraft:fall_one_cm": 4100,
+      "minecraft:total_world_time": 34462,
+      "minecraft:fly_one_cm": 231443,
+      "minecraft:walk_on_water_one_cm": 3465,
+      "minecraft:crouch_one_cm": 1086,
+      "minecraft:sneak_time": 993,
+      "minecraft:deaths": 1
+    },
+    "minecraft:killed": {
+      "the_middle_ages:passenger_cart_riding": 2,
+      "the_middle_ages:entity_path_finder": 1,
+      "the_middle_ages:dark_knight": 1
+    },
+    "minecraft:dropped": {
+      "minecraft:oak_planks": 1
+    },
+    "minecraft:picked_up": {
+      "minecraft:lily_of_the_valley": 1,
+      "the_middle_ages:passenger_cart_spawn_egg": 1,
+      "minecraft:oak_planks": 1
+    }
+  },
+  "DataVersion": 4790
+}

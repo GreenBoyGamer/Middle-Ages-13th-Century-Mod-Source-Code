@@ -1,0 +1,8 @@
+{
+  "parent": "the_middle_ages:custom/mclock",
+  "textures": {
+    "all": "the_middle_ages:block/clock",
+    "particle": "the_middle_ages:block/clock",
+    "2": "the_middle_ages:block/clock"
+  }
+}

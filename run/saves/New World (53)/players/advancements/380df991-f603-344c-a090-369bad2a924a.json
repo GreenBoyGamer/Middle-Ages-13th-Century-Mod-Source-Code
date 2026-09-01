@@ -1,0 +1,309 @@
+{
+  "minecraft:recipes/decorations/crafting_table": {
+    "criteria": {
+      "unlock_right_away": "2026-08-30 22:55:58 +0500"
+    },
+    "done": true
+  },
+  "minecraft:adventure/adventuring_time": {
+    "criteria": {
+      "minecraft:plains": "2026-08-30 22:55:58 +0500"
+    },
+    "done": false
+  },
+  "minecraft:recipes/building_blocks/stone_brick_stairs": {
+    "criteria": {
+      "has_stone_bricks": "2026-08-30 22:56:09 +0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/chiseled_stone_bricks": {
+    "criteria": {
+      "has_tag": "2026-08-30 22:56:09 +0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/mossy_stone_brick_wall": {
+    "criteria": {
+      "has_mossy_stone_bricks": "2026-08-30 22:56:09 +0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/mossy_stone_brick_wall_from_mossy_stone_bricks_stonecutting": {
+    "criteria": {
+      "has_mossy_stone_bricks": "2026-08-30 22:56:09 +0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/mossy_stone_brick_slab": {
+    "criteria": {
+      "has_mossy_stone_bricks": "2026-08-30 22:56:09 +0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/mossy_stone_brick_slab_from_mossy_stone_bricks_stonecutting": {
+    "criteria": {
+      "has_mossy_stone_bricks": "2026-08-30 22:56:09 +0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/mossy_stone_brick_stairs": {
+    "criteria": {
+      "has_mossy_stone_bricks": "2026-08-30 22:56:09 +0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/stone_brick_slab": {
+    "criteria": {
+      "has_stone_bricks": "2026-08-30 22:56:09 +0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/mossy_stone_brick_stairs_from_mossy_stone_bricks_stonecutting": {
+    "criteria": {
+      "has_mossy_stone_bricks": "2026-08-30 22:56:09 +0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/misc/iron_nugget_from_smelting": {
+    "criteria": {
+      "has_iron_sword": "2026-08-30 22:56:33 +0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/misc/iron_nugget_from_blasting": {
+    "criteria": {
+      "has_iron_sword": "2026-08-30 22:56:33 +0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/transportation/cherry_boat": {
+    "criteria": {
+      "in_water": "2026-08-30 22:59:31 +0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/transportation/bamboo_raft": {
+    "criteria": {
+      "in_water": "2026-08-30 22:59:31 +0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/transportation/spruce_boat": {
+    "criteria": {
+      "in_water": "2026-08-30 22:59:31 +0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/transportation/birch_boat": {
+    "criteria": {
+      "in_water": "2026-08-30 22:59:31 +0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/transportation/oak_boat": {
+    "criteria": {
+      "in_water": "2026-08-30 22:59:31 +0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/transportation/mangrove_boat": {
+    "criteria": {
+      "in_water": "2026-08-30 22:59:31 +0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/transportation/acacia_boat": {
+    "criteria": {
+      "in_water": "2026-08-30 22:59:31 +0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/transportation/pale_oak_boat": {
+    "criteria": {
+      "in_water": "2026-08-30 22:59:31 +0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/transportation/jungle_boat": {
+    "criteria": {
+      "in_water": "2026-08-30 22:59:31 +0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/transportation/dark_oak_boat": {
+    "criteria": {
+      "in_water": "2026-08-30 22:59:31 +0500"
+    },
+    "done": true
+  },
+  "minecraft:adventure/root": {
+    "criteria": {
+      "killed_something": "2026-08-30 23:00:13 +0500"
+    },
+    "done": true
+  },
+  "the_middle_ages:recipes/clock_recipe": {
+    "criteria": {
+      "has_ingredient_0": "2026-08-30 23:47:58 +0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/oak_sign": {
+    "criteria": {
+      "has_planks": "2026-08-30 23:47:58 +0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/redstone/oak_trapdoor": {
+    "criteria": {
+      "has_planks": "2026-08-30 23:47:58 +0500"
+    },
+    "done": true
+  },
+  "the_middle_ages:recipes/table_oak_recipe": {
+    "criteria": {
+      "has_ingredient_0": "2026-08-30 23:47:58 +0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/misc/stick": {
+    "criteria": {
+      "has_planks": "2026-08-30 23:47:58 +0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/oak_stairs": {
+    "criteria": {
+      "has_planks": "2026-08-30 23:47:58 +0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/oak_fence": {
+    "criteria": {
+      "has_planks": "2026-08-30 23:47:58 +0500"
+    },
+    "done": true
+  },
+  "the_middle_ages:recipes/extender_recipe": {
+    "criteria": {
+      "has_ingredient_0": "2026-08-30 23:47:58 +0500"
+    },
+    "done": true
+  },
+  "the_middle_ages:recipes/hub_recipe": {
+    "criteria": {
+      "has_ingredient_0": "2026-08-30 23:47:58 +0500"
+    },
+    "done": true
+  },
+  "the_middle_ages:recipes/pump_recipe": {
+    "criteria": {
+      "has_ingredient_0": "2026-08-30 23:47:58 +0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/redstone/oak_button": {
+    "criteria": {
+      "has_planks": "2026-08-30 23:47:58 +0500"
+    },
+    "done": true
+  },
+  "the_middle_ages:recipes/medieval_candle_recipe": {
+    "criteria": {
+      "has_ingredient_0": "2026-08-30 23:47:58 +0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/oak_slab": {
+    "criteria": {
+      "has_planks": "2026-08-30 23:47:58 +0500"
+    },
+    "done": true
+  },
+  "the_middle_ages:recipes/shelf_recipe": {
+    "criteria": {
+      "has_ingredient_0": "2026-08-30 23:47:58 +0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/redstone/oak_fence_gate": {
+    "criteria": {
+      "has_planks": "2026-08-30 23:47:58 +0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/redstone/oak_pressure_plate": {
+    "criteria": {
+      "has_planks": "2026-08-30 23:47:58 +0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/redstone/oak_door": {
+    "criteria": {
+      "has_planks": "2026-08-30 23:47:58 +0500"
+    },
+    "done": true
+  },
+  "the_middle_ages:recipes/oak_window_bar_recipe": {
+    "criteria": {
+      "has_ingredient_0": "2026-08-30 23:47:58 +0500"
+    },
+    "done": true
+  },
+  "the_middle_ages:recipes/wheel_recipe": {
+    "criteria": {
+      "has_ingredient_0": "2026-08-30 23:47:58 +0500"
+    },
+    "done": true
+  },
+  "the_middle_ages:recipes/log_cutter_recipe": {
+    "criteria": {
+      "has_ingredient_0": "2026-08-30 23:47:58 +0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/barrel": {
+    "criteria": {
+      "has_planks": "2026-08-30 23:47:58 +0500"
+    },
+    "done": true
+  },
+  "the_middle_ages:recipes/corner_recipe": {
+    "criteria": {
+      "has_ingredient_0": "2026-08-30 23:47:58 +0500"
+    },
+    "done": true
+  },
+  "the_middle_ages:recipes/gear_recipe": {
+    "criteria": {
+      "has_ingredient_0": "2026-08-30 23:47:58 +0500"
+    },
+    "done": true
+  },
+  "the_middle_ages:recipes/chair_oak": {
+    "criteria": {
+      "has_ingredient_0": "2026-08-30 23:47:58 +0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/food/suspicious_stew_from_lily_of_the_valley": {
+    "criteria": {
+      "has_lily_of_the_valley": "2026-08-30 23:48:44 +0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/misc/white_dye_from_lily_of_the_valley": {
+    "criteria": {
+      "has_lily_of_the_valley": "2026-08-30 23:48:44 +0500"
+    },
+    "done": true
+  },
+  "minecraft:husbandry/obtain_netherite_hoe": {
+    "criteria": {
+      "netherite_hoe": "2026-08-31 00:10:22 +0500"
+    },
+    "done": true
+  },
+  "DataVersion": 4790
+}

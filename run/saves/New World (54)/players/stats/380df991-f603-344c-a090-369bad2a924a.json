@@ -1,0 +1,93 @@
+{
+  "stats": {
+    "minecraft:dropped": {
+      "the_middle_ages:ghost_summoner": 1,
+      "minecraft:bone_meal": 1,
+      "the_middle_ages:written": 2,
+      "the_middle_ages:history": 3
+    },
+    "minecraft:killed": {
+      "minecraft:slime": 1,
+      "minecraft:parched": 9,
+      "the_middle_ages:ghost_of_cruel_king": 3,
+      "the_middle_ages:passenger_cart_riding": 3,
+      "the_middle_ages:enemy_archer": 1,
+      "minecraft:warden": 1,
+      "the_middle_ages:soldier": 4,
+      "the_middle_ages:darkking": 3,
+      "minecraft:sheep": 1,
+      "the_middle_ages:dark_soldier": 4,
+      "the_middle_ages:knight": 3,
+      "the_middle_ages:archer": 4,
+      "the_middle_ages:dark_knight": 5
+    },
+    "minecraft:picked_up": {
+      "minecraft:tipped_arrow": 4,
+      "minecraft:carrot": 2,
+      "minecraft:sculk_catalyst": 3,
+      "minecraft:white_wool": 1,
+      "minecraft:wheat_seeds": 1,
+      "minecraft:mutton": 2,
+      "minecraft:bone": 19,
+      "minecraft:arrow": 17,
+      "the_middle_ages:history": 3,
+      "the_middle_ages:written": 6,
+      "the_middle_ages:ghost_summoner": 128,
+      "minecraft:bone_meal": 1
+    },
+    "minecraft:used": {
+      "minecraft:warden_spawn_egg": 2,
+      "minecraft:diamond_hoe": 5,
+      "minecraft:yellow_bed": 2,
+      "minecraft:netherite_sword": 93,
+      "the_middle_ages:civilian_1_spawn_egg": 5,
+      "the_middle_ages:medieval_dimension": 4,
+      "the_middle_ages:ghost_of_cruel_king_spawn_egg": 1,
+      "minecraft:iron_sword": 56,
+      "the_middle_ages:medieval_iron_sword": 48,
+      "the_middle_ages:bounty_provider_spawn_egg": 3,
+      "minecraft:bone_meal": 50,
+      "minecraft:carrot": 12,
+      "the_middle_ages:ghost_summoner": 4,
+      "the_middle_ages:medieval_wooden_chair": 1,
+      "minecraft:anvil": 2,
+      "minecraft:oak_planks": 20,
+      "the_middle_ages:civilian_5_spawn_egg": 2,
+      "minecraft:mossy_stone_bricks": 58,
+      "the_middle_ages:buyer_spawn_egg": 4
+    },
+    "minecraft:killed_by": {
+      "the_middle_ages:darkking": 3,
+      "the_middle_ages:dark_knight": 2,
+      "minecraft:slime": 1,
+      "the_middle_ages:dark_soldier": 3,
+      "minecraft:warden": 2
+    },
+    "minecraft:custom": {
+      "minecraft:damage_resisted": 4105,
+      "minecraft:time_since_rest": 84256,
+      "minecraft:walk_one_cm": 179169,
+      "minecraft:leave_game": 39,
+      "minecraft:walk_under_water_one_cm": 575,
+      "minecraft:mob_kills": 51,
+      "minecraft:damage_taken": 4393,
+      "minecraft:play_time": 106674,
+      "minecraft:damage_dealt": 30787,
+      "minecraft:jump": 463,
+      "minecraft:time_since_death": 42101,
+      "minecraft:drop": 7,
+      "minecraft:sprint_one_cm": 58173,
+      "minecraft:fall_one_cm": 23550,
+      "minecraft:total_world_time": 181885,
+      "minecraft:fly_one_cm": 273577,
+      "minecraft:walk_on_water_one_cm": 1001,
+      "minecraft:crouch_one_cm": 2960,
+      "minecraft:sneak_time": 1326,
+      "minecraft:deaths": 15
+    },
+    "minecraft:mined": {
+      "minecraft:short_grass": 6
+    }
+  },
+  "DataVersion": 4790
+}

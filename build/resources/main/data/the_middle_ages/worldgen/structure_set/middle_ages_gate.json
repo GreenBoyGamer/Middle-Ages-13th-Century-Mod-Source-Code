@@ -1,0 +1,14 @@
+{
+  "structures": [
+    {
+      "structure": "the_middle_ages:middle_ages_gate",
+      "weight": 1
+    }
+  ],
+  "placement": {
+    "type": "minecraft:random_spread",
+    "spacing": 12,
+    "separation": 5,
+    "salt": 1481164413
+  }
+}

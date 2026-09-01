@@ -1,0 +1,82 @@
+{
+  "stats": {
+    "minecraft:killed_by": {
+      "the_middle_ages:darkking": 1
+    },
+    "minecraft:used": {
+      "minecraft:piston": 6,
+      "minecraft:repeater": 10,
+      "minecraft:redstone_block": 68,
+      "minecraft:netherite_sword": 45,
+      "the_middle_ages:medieval_dimension": 4,
+      "minecraft:redstone": 25,
+      "the_middle_ages:water_mill_hub": 15,
+      "the_middle_ages:knight_spawn_egg": 8,
+      "the_middle_ages:water_mill_extender": 83,
+      "the_middle_ages:crown_block": 1,
+      "minecraft:slime_block": 3,
+      "minecraft:water_bucket": 17,
+      "minecraft:sticky_piston": 3,
+      "the_middle_ages:water_mill_extender_corner": 18,
+      "minecraft:item_frame": 46,
+      "minecraft:redstone_torch": 12,
+      "minecraft:note_block": 10,
+      "the_middle_ages:wooden_plate": 10,
+      "the_middle_ages:water_mill_log_cutter": 6,
+      "minecraft:oak_planks": 48,
+      "the_middle_ages:water_mill_water_pump": 57,
+      "the_middle_ages:water_mill_gear": 32,
+      "minecraft:mossy_stone_bricks": 61
+    },
+    "minecraft:custom": {
+      "minecraft:damage_resisted": 27755,
+      "minecraft:time_since_rest": 2916,
+      "minecraft:walk_one_cm": 141294,
+      "minecraft:leave_game": 20,
+      "minecraft:mob_kills": 38,
+      "minecraft:damage_taken": 524,
+      "minecraft:play_time": 66852,
+      "minecraft:damage_dealt": 23654,
+      "minecraft:jump": 157,
+      "minecraft:time_since_death": 1427,
+      "minecraft:drop": 2,
+      "minecraft:sprint_one_cm": 38384,
+      "minecraft:fall_one_cm": 26994,
+      "minecraft:tune_noteblock": 1,
+      "minecraft:total_world_time": 592326,
+      "minecraft:fly_one_cm": 94538,
+      "minecraft:walk_on_water_one_cm": 3420,
+      "minecraft:crouch_one_cm": 1987,
+      "minecraft:sneak_time": 1255,
+      "minecraft:deaths": 3
+    },
+    "minecraft:picked_up": {
+      "minecraft:spruce_log": 58,
+      "minecraft:water_bucket": 1,
+      "minecraft:redstone_torch": 1,
+      "minecraft:oak_planks": 2,
+      "minecraft:wheat_seeds": 5,
+      "minecraft:slime_ball": 7,
+      "minecraft:note_block": 1,
+      "the_middle_ages:water_mill_hub": 1,
+      "minecraft:leather": 1,
+      "minecraft:item_frame": 13,
+      "minecraft:bread": 1,
+      "minecraft:beef": 2
+    },
+    "minecraft:killed": {
+      "minecraft:slime": 14,
+      "the_middle_ages:knight_riding_horse": 1,
+      "the_middle_ages:soldier": 1,
+      "the_middle_ages:darkking": 5,
+      "the_middle_ages:dark_soldier": 4,
+      "the_middle_ages:dark_knight": 11,
+      "the_middle_ages:enemy_archer": 1
+    },
+    "minecraft:dropped": {
+      "minecraft:water_bucket": 1,
+      "minecraft:note_block": 1
+    }
+  },
+  "DataVersion": 4790
+}

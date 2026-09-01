@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "aba",
+    "cac"
+  ],
+  "key": {
+    "a": "minecraft:iron_ingot",
+    "b": "minecraft:torch",
+    "c": "minecraft:iron_nugget"
+  },
+  "result": {
+    "id": "the_middle_ages:medieval_wall_torch",
+    "count": 1
+  }
+}

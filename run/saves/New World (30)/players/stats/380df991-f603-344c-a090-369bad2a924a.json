@@ -1,0 +1,40 @@
+{
+  "stats": {
+    "minecraft:picked_up": {
+      "minecraft:carrot": 1
+    },
+    "minecraft:killed": {
+      "the_middle_ages:civilian_1": 1
+    },
+    "minecraft:used": {
+      "the_middle_ages:bread_seller_spawn_egg": 1,
+      "minecraft:farmland": 22,
+      "minecraft:smooth_stone": 4,
+      "minecraft:water_bucket": 4,
+      "the_middle_ages:civilian_1_spawn_egg": 18,
+      "the_middle_ages:civilian_2_spawn_egg": 1,
+      "minecraft:anvil": 1,
+      "the_middle_ages:civilian_3_spawn_egg": 1,
+      "the_middle_ages:civilian_5_spawn_egg": 3,
+      "the_middle_ages:buyer_spawn_egg": 1,
+      "the_middle_ages:crown_block": 5
+    },
+    "minecraft:custom": {
+      "minecraft:time_since_rest": 23580,
+      "minecraft:walk_one_cm": 40471,
+      "minecraft:leave_game": 3,
+      "minecraft:mob_kills": 1,
+      "minecraft:damage_dealt": 380,
+      "minecraft:play_time": 11790,
+      "minecraft:jump": 9,
+      "minecraft:time_since_death": 11790,
+      "minecraft:sprint_one_cm": 8418,
+      "minecraft:total_world_time": 13547,
+      "minecraft:fly_one_cm": 10387,
+      "minecraft:interact_with_anvil": 1,
+      "minecraft:crouch_one_cm": 299,
+      "minecraft:sneak_time": 83
+    }
+  },
+  "DataVersion": 4790
+}

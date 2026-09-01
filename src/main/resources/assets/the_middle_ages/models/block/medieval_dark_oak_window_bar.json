@@ -1,0 +1,8 @@
+{
+  "parent": "the_middle_ages:custom/madieval_window_dark",
+  "textures": {
+    "all": "minecraft:block/dark_oak_planks",
+    "particle": "minecraft:block/dark_oak_planks",
+    "1": "the_middle_ages:block/dark_oak_bar_window"
+  }
+}

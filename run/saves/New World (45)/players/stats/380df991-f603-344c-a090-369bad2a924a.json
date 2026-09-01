@@ -1,0 +1,26 @@
+{
+  "stats": {
+    "minecraft:picked_up": {
+      "minecraft:emerald": 27
+    },
+    "minecraft:custom": {
+      "minecraft:open_barrel": 1,
+      "minecraft:sprint_one_cm": 2594,
+      "minecraft:time_since_rest": 6610,
+      "minecraft:walk_one_cm": 1639,
+      "minecraft:total_world_time": 8718,
+      "minecraft:leave_game": 1,
+      "minecraft:fly_one_cm": 96437,
+      "minecraft:crouch_one_cm": 101,
+      "minecraft:sneak_time": 240,
+      "minecraft:play_time": 3305,
+      "minecraft:jump": 4,
+      "minecraft:time_since_death": 3305
+    },
+    "minecraft:used": {
+      "the_middle_ages:medieval_dimension": 1,
+      "minecraft:mossy_stone_bricks": 14
+    }
+  },
+  "DataVersion": 4790
+}

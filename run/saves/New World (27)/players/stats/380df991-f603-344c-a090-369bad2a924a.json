@@ -1,0 +1,18 @@
+{
+  "stats": {
+    "minecraft:used": {
+      "the_middle_ages:civilian_1_spawn_egg": 6,
+      "minecraft:netherite_hoe": 2
+    },
+    "minecraft:custom": {
+      "minecraft:sprint_one_cm": 11828,
+      "minecraft:time_since_rest": 5188,
+      "minecraft:walk_one_cm": 12129,
+      "minecraft:total_world_time": 3678,
+      "minecraft:play_time": 2594,
+      "minecraft:damage_dealt": 90,
+      "minecraft:time_since_death": 2594
+    }
+  },
+  "DataVersion": 4790
+}

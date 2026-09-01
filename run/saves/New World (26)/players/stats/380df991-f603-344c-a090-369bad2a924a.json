@@ -1,0 +1,22 @@
+{
+  "stats": {
+    "minecraft:used": {
+      "the_middle_ages:anvil": 1,
+      "the_middle_ages:civilian_5_spawn_egg": 9
+    },
+    "minecraft:custom": {
+      "minecraft:time_since_rest": 2392,
+      "minecraft:walk_one_cm": 1135,
+      "minecraft:total_world_time": 3399,
+      "minecraft:leave_game": 2,
+      "minecraft:fly_one_cm": 53,
+      "minecraft:crouch_one_cm": 3,
+      "minecraft:sneak_time": 7,
+      "minecraft:play_time": 1196,
+      "minecraft:damage_dealt": 20,
+      "minecraft:jump": 3,
+      "minecraft:time_since_death": 1196
+    }
+  },
+  "DataVersion": 4790
+}
