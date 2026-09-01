@@ -1,8 +1,0 @@
-{
-  "parent": "the_middle_ages:custom/medieval_candle",
-  "textures": {
-    "all": "minecraft:block/cartography_table_side3",
-    "particle": "minecraft:block/cartography_table_side3",
-    "1": "the_middle_ages:block/medieval_candle"
-  }
-}

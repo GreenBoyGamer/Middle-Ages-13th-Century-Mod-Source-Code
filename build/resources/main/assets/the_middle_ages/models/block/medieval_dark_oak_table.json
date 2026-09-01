@@ -1,8 +1,0 @@
-{
-  "parent": "the_middle_ages:custom/medieval_wooden_table_dark",
-  "textures": {
-    "all": "minecraft:block/dark_oak_planks",
-    "particle": "minecraft:block/dark_oak_planks",
-    "0": "the_middle_ages:block/medeival_table_dark"
-  }
-}

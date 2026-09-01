@@ -1,8 +1,0 @@
-{
-  "parent": "the_middle_ages:custom/walltorch",
-  "textures": {
-    "all": "minecraft:block/brown_terracotta",
-    "particle": "minecraft:block/brown_terracotta",
-    "1": "the_middle_ages:block/walltorch"
-  }
-}

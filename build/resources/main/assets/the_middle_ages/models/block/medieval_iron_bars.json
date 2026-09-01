@@ -1,8 +1,0 @@
-{
-  "parent": "the_middle_ages:custom/madieval_iron_bars",
-  "textures": {
-    "all": "minecraft:block/iron_block",
-    "particle": "minecraft:block/iron_block",
-    "0": "the_middle_ages:block/iron_bars_medieval"
-  }
-}
