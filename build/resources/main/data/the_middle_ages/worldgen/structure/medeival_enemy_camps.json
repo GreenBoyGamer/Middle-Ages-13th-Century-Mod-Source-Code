@@ -9,7 +9,7 @@
   "start_height": {
     "absolute": 0
   },
-  "project_start_to_heightmap": "WORLD_SURFACE",
+  "project_start_to_heightmap": "WORLD_SURFACE_WG",
   "biomes": [
     "the_middle_ages:medieval_plains",
     "the_middle_ages:medieval_forest"

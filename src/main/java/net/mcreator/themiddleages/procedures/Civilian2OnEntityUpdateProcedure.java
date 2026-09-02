@@ -373,7 +373,7 @@ public class Civilian2OnEntityUpdateProcedure {
 							}
 						}
 					}
-				} else if (!world.getEntitiesOfClass(MadievalHorseEntity.class, new AABB(Vec3.ZERO, Vec3.ZERO).move(new Vec3(x, y, z)).inflate(64 / 2d), e -> true).isEmpty()) {
+				} else if (!world.getEntitiesOfClass(MadievalHorseEntity.class, new AABB(Vec3.ZERO, Vec3.ZERO).move(new Vec3(x, y, z)).inflate(128 / 2d), e -> true).isEmpty()) {
 					if (((findEntityInWorldRange(world, MadievalHorseEntity.class, x, y, z, 64)) instanceof MadievalHorseEntity _datEntI ? _datEntI.getEntityData().get(MadievalHorseEntity.DATA_nowWhat) : 0) == 1) {
 						if (entity instanceof Mob _entity)
 							_entity.getNavigation().moveTo(((findEntityInWorldRange(world, MadievalHorseEntity.class, x, y, z, 64)).getX()), ((findEntityInWorldRange(world, MadievalHorseEntity.class, x, y, z, 64)).getY()),

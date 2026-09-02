@@ -57,7 +57,7 @@
     "movementSpeed": 0.3,
     "stepHeight": 0.6,
     "armorBaseValue": 0.0,
-    "trackingRange": 64,
+    "trackingRange": 2048,
     "followRange": 16,
     "health": 512,
     "xpAmount": 0,

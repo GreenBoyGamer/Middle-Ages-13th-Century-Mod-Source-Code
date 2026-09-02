@@ -55,6 +55,10 @@ public class KingEntityDiesProcedure {
 				_sp.connection.send(new net.minecraft.network.protocol.game.ClientboundSetTitleTextPacket(_comp));
 			}
 		}
+		if (sourceentity instanceof Player _player) {
+			ItemStack _stktoremove = new ItemStack(TheMiddleAgesModItems.CROWN_HELMET.get());
+			_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), 1, _player.inventoryMenu.getCraftSlots());
+		}
 		if (!world.getEntitiesOfClass(DarkKnightEntity.class, new AABB(Vec3.ZERO, Vec3.ZERO).move(new Vec3(x, y, z)).inflate(128 / 2d), e -> true).isEmpty()) {
 			if (!(findEntityInWorldRange(world, DarkKnightEntity.class, x, y, z, 128)).level().isClientSide())
 				(findEntityInWorldRange(world, DarkKnightEntity.class, x, y, z, 128)).discard();

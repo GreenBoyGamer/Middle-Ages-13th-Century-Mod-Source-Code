@@ -150,51 +150,15 @@
     },
     "done": true
   },
-  "minecraft:recipes/decorations/ladder": {
+  "minecraft:story/root": {
     "criteria": {
-      "has_stick": "2026-09-02 00:47:04 +0500"
-    },
-    "done": true
-  },
-  "the_middle_ages:recipes/chair_dark_oak": {
-    "criteria": {
-      "has_ingredient_1": "2026-09-02 00:47:04 +0500"
-    },
-    "done": true
-  },
-  "minecraft:recipes/combat/iron_leggings": {
-    "criteria": {
-      "has_iron_ingot": "2026-09-02 00:49:14 +0500"
-    },
-    "done": true
-  },
-  "the_middle_ages:recipes/soldier_leggings_chest_recipe": {
-    "criteria": {
-      "has_ingredient_1": "2026-09-02 00:52:03 +0500"
+      "crafting_table": "2026-09-02 00:46:52 +0500"
     },
     "done": true
   },
   "the_middle_ages:recipes/clock_recipe": {
     "criteria": {
       "has_ingredient_0": "2026-09-02 00:46:59 +0500"
-    },
-    "done": true
-  },
-  "minecraft:story/obtain_armor": {
-    "criteria": {
-      "iron_helmet": "2026-09-02 00:52:16 +0500"
-    },
-    "done": true
-  },
-  "minecraft:recipes/misc/iron_nugget_from_smelting": {
-    "criteria": {
-      "has_iron_helmet": "2026-09-02 00:52:16 +0500"
-    },
-    "done": true
-  },
-  "minecraft:recipes/combat/iron_chestplate": {
-    "criteria": {
-      "has_iron_ingot": "2026-09-02 00:49:14 +0500"
     },
     "done": true
   },
@@ -207,6 +171,246 @@
   "minecraft:recipes/redstone/oak_trapdoor": {
     "criteria": {
       "has_planks": "2026-09-02 00:46:59 +0500"
+    },
+    "done": true
+  },
+  "the_middle_ages:recipes/table_oak_recipe": {
+    "criteria": {
+      "has_ingredient_0": "2026-09-02 00:46:59 +0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/misc/stick": {
+    "criteria": {
+      "has_planks": "2026-09-02 00:46:59 +0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/oak_stairs": {
+    "criteria": {
+      "has_planks": "2026-09-02 00:46:59 +0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/oak_fence": {
+    "criteria": {
+      "has_planks": "2026-09-02 00:46:59 +0500"
+    },
+    "done": true
+  },
+  "the_middle_ages:recipes/extender_recipe": {
+    "criteria": {
+      "has_ingredient_0": "2026-09-02 00:46:59 +0500"
+    },
+    "done": true
+  },
+  "the_middle_ages:recipes/hub_recipe": {
+    "criteria": {
+      "has_ingredient_0": "2026-09-02 00:46:59 +0500"
+    },
+    "done": true
+  },
+  "the_middle_ages:recipes/pump_recipe": {
+    "criteria": {
+      "has_ingredient_0": "2026-09-02 00:46:59 +0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/redstone/oak_button": {
+    "criteria": {
+      "has_planks": "2026-09-02 00:46:59 +0500"
+    },
+    "done": true
+  },
+  "the_middle_ages:recipes/medieval_candle_recipe": {
+    "criteria": {
+      "has_ingredient_0": "2026-09-02 00:46:59 +0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/oak_slab": {
+    "criteria": {
+      "has_planks": "2026-09-02 00:46:59 +0500"
+    },
+    "done": true
+  },
+  "the_middle_ages:recipes/shelf_recipe": {
+    "criteria": {
+      "has_ingredient_0": "2026-09-02 00:46:59 +0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/redstone/oak_fence_gate": {
+    "criteria": {
+      "has_planks": "2026-09-02 00:46:59 +0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/redstone/oak_pressure_plate": {
+    "criteria": {
+      "has_planks": "2026-09-02 00:46:59 +0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/redstone/oak_door": {
+    "criteria": {
+      "has_planks": "2026-09-02 00:46:59 +0500"
+    },
+    "done": true
+  },
+  "the_middle_ages:recipes/oak_window_bar_recipe": {
+    "criteria": {
+      "has_ingredient_0": "2026-09-02 00:46:59 +0500"
+    },
+    "done": true
+  },
+  "the_middle_ages:recipes/wheel_recipe": {
+    "criteria": {
+      "has_ingredient_0": "2026-09-02 00:46:59 +0500"
+    },
+    "done": true
+  },
+  "the_middle_ages:recipes/log_cutter_recipe": {
+    "criteria": {
+      "has_ingredient_0": "2026-09-02 00:46:59 +0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/barrel": {
+    "criteria": {
+      "has_planks": "2026-09-02 00:46:59 +0500"
+    },
+    "done": true
+  },
+  "the_middle_ages:recipes/corner_recipe": {
+    "criteria": {
+      "has_ingredient_0": "2026-09-02 00:46:59 +0500"
+    },
+    "done": true
+  },
+  "the_middle_ages:recipes/gear_recipe": {
+    "criteria": {
+      "has_ingredient_0": "2026-09-02 00:46:59 +0500"
+    },
+    "done": true
+  },
+  "the_middle_ages:recipes/chair_oak": {
+    "criteria": {
+      "has_ingredient_0": "2026-09-02 00:46:59 +0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/composter": {
+    "criteria": {
+      "has_wood_slab": "2026-09-02 00:47:00 +0500"
+    },
+    "done": true
+  },
+  "the_middle_ages:recipes/medieval_iron_sword_recipe": {
+    "criteria": {
+      "has_ingredient_0": "2026-09-02 00:47:00 +0500"
+    },
+    "done": true
+  },
+  "the_middle_ages:recipes/chimney_recipe": {
+    "criteria": {
+      "has_ingredient_1": "2026-09-02 00:47:00 +0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/ladder": {
+    "criteria": {
+      "has_stick": "2026-09-02 00:47:04 +0500"
+    },
+    "done": true
+  },
+  "the_middle_ages:recipes/chair_dark_oak": {
+    "criteria": {
+      "has_ingredient_1": "2026-09-02 00:47:04 +0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/tools/wooden_axe": {
+    "criteria": {
+      "has_stick": "2026-09-02 00:47:04 +0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/combat/wooden_spear": {
+    "criteria": {
+      "has_stick": "2026-09-02 00:47:04 +0500"
+    },
+    "done": true
+  },
+  "the_middle_ages:recipes/dar_k_oak_table_recipe": {
+    "criteria": {
+      "has_ingredient_1": "2026-09-02 00:47:04 +0500"
+    },
+    "done": true
+  },
+  "the_middle_ages:recipes/chair_spruce": {
+    "criteria": {
+      "has_ingredient_1": "2026-09-02 00:47:04 +0500"
+    },
+    "done": true
+  },
+  "the_middle_ages:recipes/spruce_window_bar_recipe": {
+    "criteria": {
+      "has_ingredient_1": "2026-09-02 00:47:04 +0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/campfire": {
+    "criteria": {
+      "has_stick": "2026-09-02 00:47:04 +0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/tools/wooden_hoe": {
+    "criteria": {
+      "has_stick": "2026-09-02 00:47:04 +0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/tools/wooden_pickaxe": {
+    "criteria": {
+      "has_stick": "2026-09-02 00:47:04 +0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/tools/wooden_shovel": {
+    "criteria": {
+      "has_stick": "2026-09-02 00:47:04 +0500"
+    },
+    "done": true
+  },
+  "the_middle_ages:recipes/dark_oak_window_barrecipe": {
+    "criteria": {
+      "has_ingredient_2": "2026-09-02 00:47:04 +0500"
+    },
+    "done": true
+  },
+  "the_middle_ages:recipes/table_spruce_recipe": {
+    "criteria": {
+      "has_ingredient_1": "2026-09-02 00:47:04 +0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/combat/wooden_sword": {
+    "criteria": {
+      "has_stick": "2026-09-02 00:47:04 +0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/combat/iron_leggings": {
+    "criteria": {
+      "has_iron_ingot": "2026-09-02 00:49:14 +0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/combat/iron_chestplate": {
+    "criteria": {
+      "has_iron_ingot": "2026-09-02 00:49:14 +0500"
     },
     "done": true
   },
@@ -246,51 +450,9 @@
     },
     "done": true
   },
-  "the_middle_ages:recipes/table_oak_recipe": {
-    "criteria": {
-      "has_ingredient_0": "2026-09-02 00:46:59 +0500"
-    },
-    "done": true
-  },
-  "minecraft:recipes/tools/wooden_axe": {
-    "criteria": {
-      "has_stick": "2026-09-02 00:47:04 +0500"
-    },
-    "done": true
-  },
-  "minecraft:recipes/combat/wooden_spear": {
-    "criteria": {
-      "has_stick": "2026-09-02 00:47:04 +0500"
-    },
-    "done": true
-  },
-  "minecraft:recipes/decorations/painting": {
-    "criteria": {
-      "has_wool": "2026-09-02 00:52:22 +0500"
-    },
-    "done": true
-  },
-  "minecraft:recipes/decorations/composter": {
-    "criteria": {
-      "has_wood_slab": "2026-09-02 00:47:00 +0500"
-    },
-    "done": true
-  },
-  "the_middle_ages:recipes/dar_k_oak_table_recipe": {
-    "criteria": {
-      "has_ingredient_1": "2026-09-02 00:47:04 +0500"
-    },
-    "done": true
-  },
   "minecraft:story/smelt_iron": {
     "criteria": {
       "iron": "2026-09-02 00:49:14 +0500"
-    },
-    "done": true
-  },
-  "minecraft:recipes/decorations/chest": {
-    "criteria": {
-      "has_lots_of_items": "2026-09-02 00:52:22 +0500"
     },
     "done": true
   },
@@ -300,57 +462,9 @@
     },
     "done": true
   },
-  "minecraft:recipes/misc/stick": {
-    "criteria": {
-      "has_planks": "2026-09-02 00:46:59 +0500"
-    },
-    "done": true
-  },
-  "the_middle_ages:recipes/soldier_armor_recipe": {
-    "criteria": {
-      "has_ingredient_2": "2026-09-02 00:52:03 +0500"
-    },
-    "done": true
-  },
-  "the_middle_ages:recipes/cloth_leggings_recipe": {
-    "criteria": {
-      "has_ingredient_0": "2026-09-02 00:52:22 +0500"
-    },
-    "done": true
-  },
-  "the_middle_ages:recipes/medieval_iron_sword_recipe": {
-    "criteria": {
-      "has_ingredient_0": "2026-09-02 00:47:00 +0500"
-    },
-    "done": true
-  },
-  "minecraft:recipes/building_blocks/oak_stairs": {
-    "criteria": {
-      "has_planks": "2026-09-02 00:46:59 +0500"
-    },
-    "done": true
-  },
-  "minecraft:recipes/decorations/oak_fence": {
-    "criteria": {
-      "has_planks": "2026-09-02 00:46:59 +0500"
-    },
-    "done": true
-  },
-  "the_middle_ages:recipes/cloth_boots_recipe": {
-    "criteria": {
-      "has_ingredient_1": "2026-09-02 00:52:22 +0500"
-    },
-    "done": true
-  },
   "minecraft:recipes/building_blocks/iron_block": {
     "criteria": {
       "has_iron_ingot": "2026-09-02 00:49:14 +0500"
-    },
-    "done": true
-  },
-  "the_middle_ages:recipes/cloth_upper_recipe": {
-    "criteria": {
-      "has_ingredient_1": "2026-09-02 00:52:22 +0500"
     },
     "done": true
   },
@@ -360,39 +474,9 @@
     },
     "done": true
   },
-  "the_middle_ages:recipes/extender_recipe": {
-    "criteria": {
-      "has_ingredient_0": "2026-09-02 00:46:59 +0500"
-    },
-    "done": true
-  },
-  "the_middle_ages:recipes/chair_spruce": {
-    "criteria": {
-      "has_ingredient_1": "2026-09-02 00:47:04 +0500"
-    },
-    "done": true
-  },
-  "the_middle_ages:recipes/hub_recipe": {
-    "criteria": {
-      "has_ingredient_0": "2026-09-02 00:46:59 +0500"
-    },
-    "done": true
-  },
-  "the_middle_ages:recipes/pump_recipe": {
-    "criteria": {
-      "has_ingredient_0": "2026-09-02 00:46:59 +0500"
-    },
-    "done": true
-  },
   "minecraft:recipes/decorations/lodestone": {
     "criteria": {
       "has_iron_ingot": "2026-09-02 00:49:14 +0500"
-    },
-    "done": true
-  },
-  "minecraft:recipes/redstone/oak_button": {
-    "criteria": {
-      "has_planks": "2026-09-02 00:46:59 +0500"
     },
     "done": true
   },
@@ -426,45 +510,9 @@
     },
     "done": true
   },
-  "minecraft:recipes/decorations/red_carpet": {
-    "criteria": {
-      "has_red_wool": "2026-09-02 00:52:22 +0500"
-    },
-    "done": true
-  },
-  "the_middle_ages:recipes/medieval_candle_recipe": {
-    "criteria": {
-      "has_ingredient_0": "2026-09-02 00:46:59 +0500"
-    },
-    "done": true
-  },
-  "minecraft:recipes/building_blocks/oak_slab": {
-    "criteria": {
-      "has_planks": "2026-09-02 00:46:59 +0500"
-    },
-    "done": true
-  },
-  "minecraft:recipes/decorations/red_banner": {
-    "criteria": {
-      "has_red_wool": "2026-09-02 00:52:22 +0500"
-    },
-    "done": true
-  },
   "minecraft:recipes/combat/iron_boots": {
     "criteria": {
       "has_iron_ingot": "2026-09-02 00:49:14 +0500"
-    },
-    "done": true
-  },
-  "the_middle_ages:recipes/spruce_window_bar_recipe": {
-    "criteria": {
-      "has_ingredient_1": "2026-09-02 00:47:04 +0500"
-    },
-    "done": true
-  },
-  "the_middle_ages:recipes/soldier_leggings_boots_recipe": {
-    "criteria": {
-      "has_ingredient_0": "2026-09-02 00:52:03 +0500"
     },
     "done": true
   },
@@ -474,45 +522,9 @@
     },
     "done": true
   },
-  "minecraft:recipes/decorations/campfire": {
-    "criteria": {
-      "has_stick": "2026-09-02 00:47:04 +0500"
-    },
-    "done": true
-  },
   "the_middle_ages:recipes/wall_torch_recipe": {
     "criteria": {
       "has_ingredient_0": "2026-09-02 00:49:14 +0500"
-    },
-    "done": true
-  },
-  "minecraft:recipes/tools/wooden_hoe": {
-    "criteria": {
-      "has_stick": "2026-09-02 00:47:04 +0500"
-    },
-    "done": true
-  },
-  "minecraft:recipes/tools/name_tag": {
-    "criteria": {
-      "has_metal_nugget": "2026-09-02 00:51:59 +0500"
-    },
-    "done": true
-  },
-  "the_middle_ages:recipes/shelf_recipe": {
-    "criteria": {
-      "has_ingredient_0": "2026-09-02 00:46:59 +0500"
-    },
-    "done": true
-  },
-  "minecraft:recipes/redstone/oak_fence_gate": {
-    "criteria": {
-      "has_planks": "2026-09-02 00:46:59 +0500"
-    },
-    "done": true
-  },
-  "the_middle_ages:recipes/soldier_armor_chest_recipe": {
-    "criteria": {
-      "has_ingredient_0": "2026-09-02 00:52:03 +0500"
     },
     "done": true
   },
@@ -522,81 +534,15 @@
     },
     "done": true
   },
-  "minecraft:recipes/tools/wooden_pickaxe": {
-    "criteria": {
-      "has_stick": "2026-09-02 00:47:04 +0500"
-    },
-    "done": true
-  },
   "minecraft:recipes/tools/iron_shovel": {
     "criteria": {
       "has_iron_ingot": "2026-09-02 00:49:14 +0500"
     },
     "done": true
   },
-  "minecraft:recipes/redstone/oak_pressure_plate": {
-    "criteria": {
-      "has_planks": "2026-09-02 00:46:59 +0500"
-    },
-    "done": true
-  },
-  "minecraft:recipes/redstone/oak_door": {
-    "criteria": {
-      "has_planks": "2026-09-02 00:46:59 +0500"
-    },
-    "done": true
-  },
-  "minecraft:recipes/misc/iron_ingot_from_iron_block": {
-    "criteria": {
-      "has_iron_block": "2026-09-02 00:52:00 +0500"
-    },
-    "done": true
-  },
-  "the_middle_ages:recipes/oak_window_bar_recipe": {
-    "criteria": {
-      "has_ingredient_0": "2026-09-02 00:46:59 +0500"
-    },
-    "done": true
-  },
-  "minecraft:recipes/tools/wooden_shovel": {
-    "criteria": {
-      "has_stick": "2026-09-02 00:47:04 +0500"
-    },
-    "done": true
-  },
-  "the_middle_ages:recipes/dark_oak_window_barrecipe": {
-    "criteria": {
-      "has_ingredient_2": "2026-09-02 00:47:04 +0500"
-    },
-    "done": true
-  },
-  "the_middle_ages:recipes/wheel_recipe": {
-    "criteria": {
-      "has_ingredient_0": "2026-09-02 00:46:59 +0500"
-    },
-    "done": true
-  },
   "minecraft:recipes/redstone/iron_trapdoor": {
     "criteria": {
       "has_iron_ingot": "2026-09-02 00:49:14 +0500"
-    },
-    "done": true
-  },
-  "the_middle_ages:recipes/log_cutter_recipe": {
-    "criteria": {
-      "has_ingredient_0": "2026-09-02 00:46:59 +0500"
-    },
-    "done": true
-  },
-  "the_middle_ages:recipes/table_spruce_recipe": {
-    "criteria": {
-      "has_ingredient_1": "2026-09-02 00:47:04 +0500"
-    },
-    "done": true
-  },
-  "minecraft:recipes/combat/wooden_sword": {
-    "criteria": {
-      "has_stick": "2026-09-02 00:47:04 +0500"
     },
     "done": true
   },
@@ -612,51 +558,9 @@
     },
     "done": true
   },
-  "minecraft:recipes/misc/iron_nugget_from_blasting": {
-    "criteria": {
-      "has_iron_helmet": "2026-09-02 00:52:16 +0500"
-    },
-    "done": true
-  },
-  "minecraft:recipes/decorations/barrel": {
-    "criteria": {
-      "has_planks": "2026-09-02 00:46:59 +0500"
-    },
-    "done": true
-  },
-  "the_middle_ages:recipes/chimney_recipe": {
-    "criteria": {
-      "has_ingredient_1": "2026-09-02 00:47:00 +0500"
-    },
-    "done": true
-  },
   "minecraft:recipes/combat/iron_spear": {
     "criteria": {
       "has_iron_ingot": "2026-09-02 00:49:14 +0500"
-    },
-    "done": true
-  },
-  "minecraft:recipes/decorations/anvil": {
-    "criteria": {
-      "has_iron_block": "2026-09-02 00:52:00 +0500"
-    },
-    "done": true
-  },
-  "the_middle_ages:recipes/corner_recipe": {
-    "criteria": {
-      "has_ingredient_0": "2026-09-02 00:46:59 +0500"
-    },
-    "done": true
-  },
-  "the_middle_ages:recipes/gear_recipe": {
-    "criteria": {
-      "has_ingredient_0": "2026-09-02 00:46:59 +0500"
-    },
-    "done": true
-  },
-  "minecraft:story/root": {
-    "criteria": {
-      "crafting_table": "2026-09-02 00:46:52 +0500"
     },
     "done": true
   },
@@ -666,15 +570,15 @@
     },
     "done": true
   },
-  "the_middle_ages:recipes/chair_oak": {
+  "minecraft:recipes/redstone/heavy_weighted_pressure_plate": {
     "criteria": {
-      "has_ingredient_0": "2026-09-02 00:46:59 +0500"
+      "has_iron_ingot": "2026-09-02 00:49:14 +0500"
     },
     "done": true
   },
-  "minecraft:recipes/decorations/red_bed": {
+  "minecraft:recipes/tools/name_tag": {
     "criteria": {
-      "has_red_wool": "2026-09-02 00:52:22 +0500"
+      "has_metal_nugget": "2026-09-02 00:51:59 +0500"
     },
     "done": true
   },
@@ -684,9 +588,105 @@
     },
     "done": true
   },
-  "minecraft:recipes/redstone/heavy_weighted_pressure_plate": {
+  "minecraft:recipes/misc/iron_ingot_from_iron_block": {
     "criteria": {
-      "has_iron_ingot": "2026-09-02 00:49:14 +0500"
+      "has_iron_block": "2026-09-02 00:52:00 +0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/anvil": {
+    "criteria": {
+      "has_iron_block": "2026-09-02 00:52:00 +0500"
+    },
+    "done": true
+  },
+  "the_middle_ages:recipes/soldier_leggings_chest_recipe": {
+    "criteria": {
+      "has_ingredient_1": "2026-09-02 00:52:03 +0500"
+    },
+    "done": true
+  },
+  "the_middle_ages:recipes/soldier_armor_recipe": {
+    "criteria": {
+      "has_ingredient_2": "2026-09-02 00:52:03 +0500"
+    },
+    "done": true
+  },
+  "the_middle_ages:recipes/soldier_leggings_boots_recipe": {
+    "criteria": {
+      "has_ingredient_0": "2026-09-02 00:52:03 +0500"
+    },
+    "done": true
+  },
+  "the_middle_ages:recipes/soldier_armor_chest_recipe": {
+    "criteria": {
+      "has_ingredient_0": "2026-09-02 00:52:03 +0500"
+    },
+    "done": true
+  },
+  "minecraft:story/obtain_armor": {
+    "criteria": {
+      "iron_helmet": "2026-09-02 00:52:16 +0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/misc/iron_nugget_from_smelting": {
+    "criteria": {
+      "has_iron_helmet": "2026-09-02 00:52:16 +0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/misc/iron_nugget_from_blasting": {
+    "criteria": {
+      "has_iron_helmet": "2026-09-02 00:52:16 +0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/painting": {
+    "criteria": {
+      "has_wool": "2026-09-02 00:52:22 +0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/chest": {
+    "criteria": {
+      "has_lots_of_items": "2026-09-02 00:52:22 +0500"
+    },
+    "done": true
+  },
+  "the_middle_ages:recipes/cloth_leggings_recipe": {
+    "criteria": {
+      "has_ingredient_0": "2026-09-02 00:52:22 +0500"
+    },
+    "done": true
+  },
+  "the_middle_ages:recipes/cloth_boots_recipe": {
+    "criteria": {
+      "has_ingredient_1": "2026-09-02 00:52:22 +0500"
+    },
+    "done": true
+  },
+  "the_middle_ages:recipes/cloth_upper_recipe": {
+    "criteria": {
+      "has_ingredient_1": "2026-09-02 00:52:22 +0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/red_carpet": {
+    "criteria": {
+      "has_red_wool": "2026-09-02 00:52:22 +0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/red_banner": {
+    "criteria": {
+      "has_red_wool": "2026-09-02 00:52:22 +0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/red_bed": {
+    "criteria": {
+      "has_red_wool": "2026-09-02 00:52:22 +0500"
     },
     "done": true
   },

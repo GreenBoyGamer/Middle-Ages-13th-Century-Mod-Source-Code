@@ -1,0 +1,38 @@
+{
+  "stats": {
+    "minecraft:used": {
+      "the_middle_ages:wanderer_spawn_egg": 1,
+      "the_middle_ages:medieval_iron_sword": 46,
+      "the_middle_ages:ghost_summoner": 1,
+      "minecraft:netherite_sword": 17,
+      "the_middle_ages:civilian_1_spawn_egg": 2,
+      "the_middle_ages:dark_soldier_spawn_egg": 2,
+      "the_middle_ages:medieval_dimension": 1,
+      "the_middle_ages:dark_knight_spawn_egg": 1,
+      "minecraft:mossy_stone_bricks": 16,
+      "the_middle_ages:crown_block": 1
+    },
+    "minecraft:custom": {
+      "minecraft:time_since_rest": 8852,
+      "minecraft:walk_one_cm": 2008,
+      "minecraft:leave_game": 2,
+      "minecraft:mob_kills": 6,
+      "minecraft:damage_dealt": 6089,
+      "minecraft:play_time": 4426,
+      "minecraft:jump": 99,
+      "minecraft:time_since_death": 4426,
+      "minecraft:sprint_one_cm": 722,
+      "minecraft:total_world_time": 7849,
+      "minecraft:fly_one_cm": 2054,
+      "minecraft:crouch_one_cm": 17,
+      "minecraft:sneak_time": 49
+    },
+    "minecraft:killed": {
+      "the_middle_ages:ghost_of_cruel_king": 1,
+      "the_middle_ages:dark_soldier": 2,
+      "the_middle_ages:civilian_1": 2,
+      "the_middle_ages:dark_knight": 1
+    }
+  },
+  "DataVersion": 4790
+}

@@ -1,0 +1,43 @@
+{
+  "stats": {
+    "minecraft:picked_up": {
+      "minecraft:dandelion": 1,
+      "minecraft:leather": 1,
+      "minecraft:beef": 2
+    },
+    "minecraft:killed": {
+      "minecraft:cow": 1,
+      "the_middle_ages:dark_soldier": 1,
+      "the_middle_ages:dark_knight": 9,
+      "the_middle_ages:enemy_archer": 1
+    },
+    "minecraft:used": {
+      "the_middle_ages:medieval_iron_sword": 11,
+      "minecraft:water_bucket": 1,
+      "the_middle_ages:medieval_dimension": 1,
+      "the_middle_ages:water_mill_hub": 3,
+      "the_middle_ages:water_mill_extender": 23,
+      "the_middle_ages:water_mill_water_pump": 12,
+      "the_middle_ages:water_mill_gear": 5,
+      "the_middle_ages:dark_knight_spawn_egg": 9,
+      "minecraft:mossy_stone_bricks": 14
+    },
+    "minecraft:custom": {
+      "minecraft:time_since_rest": 11682,
+      "minecraft:walk_one_cm": 7581,
+      "minecraft:leave_game": 4,
+      "minecraft:mob_kills": 12,
+      "minecraft:damage_dealt": 13340,
+      "minecraft:play_time": 5841,
+      "minecraft:jump": 22,
+      "minecraft:time_since_death": 5841,
+      "minecraft:sprint_one_cm": 2341,
+      "minecraft:total_world_time": 8760,
+      "minecraft:fly_one_cm": 15129,
+      "minecraft:walk_on_water_one_cm": 3093,
+      "minecraft:crouch_one_cm": 350,
+      "minecraft:sneak_time": 368
+    }
+  },
+  "DataVersion": 4790
+}

@@ -11,7 +11,7 @@ public class DarkKnight0Procedure {
 	public static void execute(LevelAccessor world, Entity entity) {
 		if (entity == null)
 			return;
-		TheMiddleAgesModVariables.MapVariables.get(world).Dignity = TheMiddleAgesModVariables.MapVariables.get(world).Dignity + 0.4;
+		TheMiddleAgesModVariables.MapVariables.get(world).Dignity = TheMiddleAgesModVariables.MapVariables.get(world).Dignity + 1;
 		TheMiddleAgesModVariables.MapVariables.get(world).markSyncDirty();
 		if (entity instanceof DarkKnightEntity _datEntSetI)
 			_datEntSetI.getEntityData().set(DarkKnightEntity.DATA_actionstate, 1000);

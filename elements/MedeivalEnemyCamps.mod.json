@@ -15,7 +15,7 @@
     ],
     "terrainAdaptation": "beard_box",
     "generationStep": "SURFACE_STRUCTURES",
-    "surfaceDetectionType": "WORLD_SURFACE",
+    "surfaceDetectionType": "WORLD_SURFACE_WG",
     "useStartHeight": false,
     "startHeightProviderType": "UNIFORM",
     "startHeightMin": 64,

@@ -87,7 +87,7 @@ public class TheMiddleAgesModEntities {
 
 					.notInPeaceful().sized(0.6f, 1.8f));
 	public static final DeferredHolder<EntityType<?>, EntityType<EntityPathFinderEntity>> ENTITY_PATH_FINDER = register("entity_path_finder", EntityType.Builder.<EntityPathFinderEntity>of(EntityPathFinderEntity::new, MobCategory.MONSTER)
-			.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).fireImmune().ridingOffset(-0.6f).notInPeaceful().sized(0.6f, 1.8f));
+			.setShouldReceiveVelocityUpdates(true).setTrackingRange(2048).setUpdateInterval(3).fireImmune().ridingOffset(-0.6f).notInPeaceful().sized(0.6f, 1.8f));
 	public static final DeferredHolder<EntityType<?>, EntityType<SitEntity>> SIT = register("sit",
 			EntityType.Builder.<SitEntity>of(SitEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).fireImmune().ridingOffset(-0.6f).notInPeaceful().sized(0.6f, 1.4f));
 	public static final DeferredHolder<EntityType<?>, EntityType<WandererEntity>> WANDERER = register("wanderer",

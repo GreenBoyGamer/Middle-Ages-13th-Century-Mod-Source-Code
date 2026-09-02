@@ -11,7 +11,7 @@ public class EnemyArcherDiesProcedure {
 	public static void execute(LevelAccessor world, Entity entity) {
 		if (entity == null)
 			return;
-		TheMiddleAgesModVariables.MapVariables.get(world).Dignity = TheMiddleAgesModVariables.MapVariables.get(world).Dignity + 0.4;
+		TheMiddleAgesModVariables.MapVariables.get(world).Dignity = TheMiddleAgesModVariables.MapVariables.get(world).Dignity + 1;
 		TheMiddleAgesModVariables.MapVariables.get(world).markSyncDirty();
 		if (entity instanceof EnemyArcherEntity _datEntSetI)
 			_datEntSetI.getEntityData().set(EnemyArcherEntity.DATA_actionstate, 100);

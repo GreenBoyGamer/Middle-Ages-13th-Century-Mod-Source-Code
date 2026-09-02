@@ -35,16 +35,26 @@ public class MadievalDimensionPlayerEntersDimensionProcedure {
 			TheMiddleAgesModVariables.MapVariables.get(world).markSyncDirty();
 			if (world instanceof ServerLevel _level)
 				_level.getServer().getCommands().performPrefixedCommand(
-						new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, LevelBasedPermissionSet.OWNER, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(), "tp @p 1200 79 210");
-			world.setBlock(new BlockPos(420, world.getHeight(Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, 420, 177), 177), TheMiddleAgesModBlocks.DEAD_SKELETON.get().defaultBlockState(), 3);
-			world.setBlock(new BlockPos(412, world.getHeight(Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, 412, 172), 172), TheMiddleAgesModBlocks.DEAD_SKELETON_POS_2.get().defaultBlockState(), 3);
-			world.setBlock(new BlockPos(424, world.getHeight(Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, 424, 172), 172), TheMiddleAgesModBlocks.DEAD_SKELETON_POS_3.get().defaultBlockState(), 3);
+						new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, LevelBasedPermissionSet.OWNER, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(), "tp @p 421 91 100");
+			if (world instanceof ServerLevel _level)
+				_level.getServer().getCommands().performPrefixedCommand(
+						new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, LevelBasedPermissionSet.OWNER, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
+						"effect give @p resistance 10 255 true");
+			world.setBlock(new BlockPos(421, world.getHeight(Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, 421, 100), 100), TheMiddleAgesModBlocks.DEAD_SKELETON.get().defaultBlockState(), 3);
+			world.setBlock(new BlockPos(421, world.getHeight(Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, 421, 102), 102), TheMiddleAgesModBlocks.CROWN_BLOCK.get().defaultBlockState(), 3);
+			world.setBlock(new BlockPos(423, world.getHeight(Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, 423, 101), 101), TheMiddleAgesModBlocks.DEAD_SKELETON_POS_2.get().defaultBlockState(), 3);
+			world.setBlock(new BlockPos(419, world.getHeight(Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, 419, 97), 97), TheMiddleAgesModBlocks.DEAD_SKELETON_POS_3.get().defaultBlockState(), 3);
 			if (entity instanceof LivingEntity _entity) {
-				ItemStack _setstack7 = new ItemStack(TheMiddleAgesModItems.MEDIEVAL_IRON_SWORD.get()).copy();
-				_setstack7.setCount(1);
-				_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack7);
+				ItemStack _setstack10 = new ItemStack(TheMiddleAgesModItems.MEDIEVAL_IRON_SWORD.get()).copy();
+				_setstack10.setCount(1);
+				_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack10);
 				if (_entity instanceof Player _player)
 					_player.getInventory().setChanged();
+			}
+			if (entity instanceof Player _player) {
+				ItemStack _setstack = new ItemStack(TheMiddleAgesModItems.REMOTE.get()).copy();
+				_setstack.setCount(1);
+				_player.getInventory().placeItemBackInInventory(_setstack);
 			}
 			if (entity instanceof Player) {
 				if (entity.level().isClientSide()) {

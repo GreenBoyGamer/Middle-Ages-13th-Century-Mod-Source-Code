@@ -16,7 +16,7 @@ public class DarkSoldierDiesProcedure {
 		if (entity == null)
 			return;
 		if ((entity instanceof DarkSoldierEntity _datEntI ? _datEntI.getEntityData().get(DarkSoldierEntity.DATA_Peasents_Carry_Amount) : 0) > 0) {
-			for (int index0 = 0; index0 < (int) (entity instanceof DarkSoldierEntity _datEntI ? _datEntI.getEntityData().get(DarkSoldierEntity.DATA_Peasents_Carry_Amount) : 0); index0++) {
+			for (int index170 = 0; index170 < (int) (entity instanceof DarkSoldierEntity _datEntI ? _datEntI.getEntityData().get(DarkSoldierEntity.DATA_Peasents_Carry_Amount) : 0); index170++) {
 				if (world instanceof ServerLevel _level) {
 					Entity entityToSpawn = TheMiddleAgesModEntities.CIVILIAN_1.get().spawn(_level, BlockPos.containing(x, y, z), EntitySpawnReason.MOB_SUMMONED);
 					if (entityToSpawn != null) {
@@ -28,7 +28,7 @@ public class DarkSoldierDiesProcedure {
 			}
 		}
 		if ((entity instanceof DarkSoldierEntity _datEntI ? _datEntI.getEntityData().get(DarkSoldierEntity.DATA_Peasents_Amount2) : 0) > 0) {
-			for (int index1 = 0; index1 < (int) (entity instanceof DarkSoldierEntity _datEntI ? _datEntI.getEntityData().get(DarkSoldierEntity.DATA_Peasents_Amount2) : 0); index1++) {
+			for (int index171 = 0; index171 < (int) (entity instanceof DarkSoldierEntity _datEntI ? _datEntI.getEntityData().get(DarkSoldierEntity.DATA_Peasents_Amount2) : 0); index171++) {
 				if (world instanceof ServerLevel _level) {
 					Entity entityToSpawn = TheMiddleAgesModEntities.CIVILIAN_2.get().spawn(_level, BlockPos.containing(x, y, z), EntitySpawnReason.MOB_SUMMONED);
 					if (entityToSpawn != null) {
@@ -40,7 +40,7 @@ public class DarkSoldierDiesProcedure {
 			}
 		}
 		if ((entity instanceof DarkSoldierEntity _datEntI ? _datEntI.getEntityData().get(DarkSoldierEntity.DATA_Peasents_Amount3) : 0) > 0) {
-			for (int index2 = 0; index2 < (int) (entity instanceof DarkSoldierEntity _datEntI ? _datEntI.getEntityData().get(DarkSoldierEntity.DATA_Peasents_Amount3) : 0); index2++) {
+			for (int index172 = 0; index172 < (int) (entity instanceof DarkSoldierEntity _datEntI ? _datEntI.getEntityData().get(DarkSoldierEntity.DATA_Peasents_Amount3) : 0); index172++) {
 				if (world instanceof ServerLevel _level) {
 					Entity entityToSpawn = TheMiddleAgesModEntities.CIVILIAN_3.get().spawn(_level, BlockPos.containing(x, y, z), EntitySpawnReason.MOB_SUMMONED);
 					if (entityToSpawn != null) {
@@ -52,7 +52,7 @@ public class DarkSoldierDiesProcedure {
 			}
 		}
 		if ((entity instanceof DarkSoldierEntity _datEntI ? _datEntI.getEntityData().get(DarkSoldierEntity.DATA_Peasents_Amount4) : 0) > 0) {
-			for (int index3 = 0; index3 < (int) (entity instanceof DarkSoldierEntity _datEntI ? _datEntI.getEntityData().get(DarkSoldierEntity.DATA_Peasents_Amount4) : 0); index3++) {
+			for (int index173 = 0; index173 < (int) (entity instanceof DarkSoldierEntity _datEntI ? _datEntI.getEntityData().get(DarkSoldierEntity.DATA_Peasents_Amount4) : 0); index173++) {
 				if (world instanceof ServerLevel _level) {
 					Entity entityToSpawn = TheMiddleAgesModEntities.CIVILIAN_4.get().spawn(_level, BlockPos.containing(x, y, z), EntitySpawnReason.MOB_SUMMONED);
 					if (entityToSpawn != null) {
@@ -64,7 +64,7 @@ public class DarkSoldierDiesProcedure {
 			}
 		}
 		if ((entity instanceof DarkSoldierEntity _datEntI ? _datEntI.getEntityData().get(DarkSoldierEntity.DATA_Peasents_Amount5) : 0) > 0) {
-			for (int index4 = 0; index4 < (int) (entity instanceof DarkSoldierEntity _datEntI ? _datEntI.getEntityData().get(DarkSoldierEntity.DATA_Peasents_Amount5) : 0); index4++) {
+			for (int index174 = 0; index174 < (int) (entity instanceof DarkSoldierEntity _datEntI ? _datEntI.getEntityData().get(DarkSoldierEntity.DATA_Peasents_Amount5) : 0); index174++) {
 				if (world instanceof ServerLevel _level) {
 					Entity entityToSpawn = TheMiddleAgesModEntities.CIVILIAN_5.get().spawn(_level, BlockPos.containing(x, y, z), EntitySpawnReason.MOB_SUMMONED);
 					if (entityToSpawn != null) {
@@ -75,10 +75,10 @@ public class DarkSoldierDiesProcedure {
 				TheMiddleAgesModVariables.MapVariables.get(world).markSyncDirty();
 			}
 		}
+		TheMiddleAgesModVariables.MapVariables.get(world).Dignity = TheMiddleAgesModVariables.MapVariables.get(world).Dignity + 1;
+		TheMiddleAgesModVariables.MapVariables.get(world).markSyncDirty();
 		if (entity instanceof DarkSoldierEntity _datEntSetI)
 			_datEntSetI.getEntityData().set(DarkSoldierEntity.DATA_actionstate, 100);
-		TheMiddleAgesModVariables.MapVariables.get(world).Dignity = TheMiddleAgesModVariables.MapVariables.get(world).Dignity + 0.4;
-		TheMiddleAgesModVariables.MapVariables.get(world).markSyncDirty();
 		if (entity instanceof DarkSoldierEntity _datEntSetI)
 			_datEntSetI.getEntityData().set(DarkSoldierEntity.DATA_fightingState, 0);
 		if (entity instanceof LivingEntity _entity)

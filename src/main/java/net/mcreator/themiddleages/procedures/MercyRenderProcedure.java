@@ -6,6 +6,6 @@ import net.mcreator.themiddleages.network.TheMiddleAgesModVariables;
 
 public class MercyRenderProcedure {
 	public static String execute(LevelAccessor world) {
-		return "" + TheMiddleAgesModVariables.MapVariables.get(world).Dignity;
+		return "" + Math.round(TheMiddleAgesModVariables.MapVariables.get(world).Dignity);
 	}
 }
